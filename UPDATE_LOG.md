@@ -1,5 +1,5 @@
 # 2017-10-12
-发布第一个release版本，以后使用框架的jar尽量不要再用release版本，发布的内容包括：
+发布第一个release版本，以后使用框架的jar尽量不要再用snapshot版本，发布的内容包括：
 1. **centit-commons** 2.2.4 版本
 2. **centit-ui** 3.0.1 版本
 3. **centit-persistence**  1.0 版本
