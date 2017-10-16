@@ -19,7 +19,8 @@
 7. get* 获得日期的属性，比如星期几、是一年的第几天、当前时分秒等等。
 8. seek* 移动到这个月的最后一天、这年的最后一天等等。
 9. truncate* 截取日期到天、周、月等等，和seek*操作相对。
-10. smartPraseDate 和 castObjectToDate 前者将字符串转换为日期，后者将object转换为日期
+10. smartPraseDate 和 castObjectToDate 前者将字符串转换为日期，后者将object转换为日期。
+11. compareTwoDate 比较两个日期大小 ,避免 发生 NullPointerException 异常。
 
 ### Lunar 类
 这个是从网络上检索来的一个计算农历的类。
@@ -36,3 +37,14 @@
 7. storedAsTree、treeToJSONArray 对属性结构的存储或者序列化。
 
 ### NumberBaseOpt 类
+和Number相关的通用方法，主要方法有：
+
+1. capitalization 将数据转换为大写，用户发票中的大写输出。
+2. uppercaseCN 将数据转换为中文，比如 2017 - 二〇一七。
+3. getNumByte 获取数据字符串中某一位上的数值，比如获取十位上的数据参数就传入 2
+4. castObjectTo* 一组类型转换算法
+5. compareTwo* 数据之间比较，主要是为了避免 NullPointerException。
+6. parse* 转换字符串为数值类型， 主要是为了避免 NullPointerException。
+
+### ReflectionOpt 类
+一组反射方面缺失功能的封装
