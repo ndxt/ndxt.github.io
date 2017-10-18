@@ -28,6 +28,8 @@
 ### ListOpt 类
 对list和array的通用操作，apache commons 和 Array、collections有的通用方法都尽量避免重复。主要的方法有：
 
+关联对象 com.centit.support.common.TreeNode<T> 。
+
 1. sortAsTree* 将list按照树形结构进行排序，这个方式是这个类最重要的一个方法，也是这个类存在的一个原因。 
 2. compareTwoList 比较两个list，将他们相同的、删除的、新增的分别找出来，刚好对应sql的 update、delete和insert操作。 
 3. listToArray 和 arrayToList 通过反射的方式简化了传入的参数。
@@ -47,4 +49,5 @@
 6. parse* 转换字符串为数值类型， 主要是为了避免 NullPointerException。
 
 ### ReflectionOpt 类
-一组反射方面缺失功能的封装
+一组反射方面缺失功能的封装。 关联对象 com.centit.support.common.JavaBeanMetaData
+
