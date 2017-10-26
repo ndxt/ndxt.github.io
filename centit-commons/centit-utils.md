@@ -41,7 +41,7 @@
 ### NumberBaseOpt 类
 和Number相关的通用方法，主要方法有：
 
-1. capitalization 将数据转换为大写，用户发票中的大写输出。
+1. capitalization 将数据转换为大写，用户发票中的大写输出。123.45 - 壹佰贰拾叁点肆伍
 2. uppercaseCN 将数据转换为中文，比如 2017 - 二〇一七。
 3. getNumByte 获取数据字符串中某一位上的数值，比如获取十位上的数据参数就传入 2
 4. castObjectTo* 一组类型转换算法
@@ -51,3 +51,14 @@
 ### ReflectionOpt 类
 一组反射方面缺失功能的封装。 关联对象 com.centit.support.common.JavaBeanMetaData
 
+1. getSetterMethod 、 getGetterMethod、getAllGetterMethod和getAllSetterMethod 获取对象的getter、setter方法
+2. getFieldValue、setFieldValue、getBooleanFieldValue、forceGetProperty、forceSetProperty 获取属性和设置属性。
+3. invoke\*Method、invoke\*Func 用反射调用方法。
+4. is* 判断类型，isPrimitiveType 判断一个类型是否是基础类型， isScalarType 判断一个类型是否为标量类型 等等。
+5. getCurrentMethodName 获取当前方法的名称。
+6. attainExpressionValue 根据表达式获取属性的值，类似于el表达式。
+7. createObjectFromMap 根据一个map创建一个对象。和 JavaBeanMetaData 类中的createBeanObjectFromMap 功能相同，但是实现的方式不一样，使用时可以仔细比较一下。
+
+### StringBaseOpt 类和 StringRegularOpt 类。
+StringBaseOpt类中主要是对字符串和字符串数组的操作，StringRegularOpt类主要是对字符串的规则验证。
+getFirstLetter
