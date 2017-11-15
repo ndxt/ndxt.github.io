@@ -1,0 +1,121 @@
+body{ margin: 0;padding: 0;font-family: "微软雅黑";overflow: hidden;}
+body,html{-webkit-text-size-adjust: none;width: 100%;height: 100%;}
+*{text-decoration: none;list-style: none;}
+img{border: 0px;}
+ul,li,dl,dd,dt,p,ol,h1,h2,h3,h4,h5{font-size: 12px;font-weight: 100;padding: 0;margin: 0;}
+.wrap{margin: 0 auto;}
+.fl{float: left;}
+.fr{float: right;}
+.index{overflow: hidden;}
+.clr{clear:both; height:0px; width:100%; font-size:1px; line-height:0px; visibility:hidden; overflow:hidden;}
+.pointer{cursor:pointer;}
+a,input,button{ outline:none; }
+::-moz-focus-inner{border:0px;}
+/*a:link {color:#0f0;text-decoration:none;}
+a:visited {color: #FFFF00; text-decoration:none;}
+a:hover {color: #00FF00; text-decoration:underline;}
+a:active {color: #0000FF; text-decoration:underline;}*/
+a{color: #000;}
+.wrapper{clear: both;width: 100%;}
+/*word-break:break-all !*文字换行*!*/
+    /*white-space:nowrap 文字不换行*/
+
+    /*默认滚动条样式修改ie9 google Firefox 等高版本浏览器有效*/
+    /*::selection {background: #D03333;color: white;text-shadow: none;}
+    ::-webkit-scrollbar-track-piece{width:10px;background-color:#f2f2f2}
+    ::-webkit-scrollbar{width:10px;height:6px}
+    ::-webkit-scrollbar-thumb{height:50px;background-color:rgba(0,0,0,.3);}
+    ::-webkit-scrollbar-thumb:hover{background:#cc0000}*/
+
+
+    /*渐变*/
+    /*background-image: -moz-linear-gradient(top, #8fa1ff, #3757fa);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ff4f02), color-stop(1, #8f2c00)); Saf4+, Chrome
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c6ff00', endColorstr='#538300', GradientType='0'); IE*/
+header{
+    height: 100px;
+    width: 100%;
+    background:url('./88c13a44d3e66fe36e5562dba82a65c8.jpg') no-repeat ;
+    opacity: 0.8;
+}
+header p{
+    font-size:50px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: 700;
+    text-shadow: grey 0px 7px 4px;
+    cursor:pointer;
+}
+#box{
+    height: 100%;
+    width: 100%;
+    border: 1px double #ccc;
+}
+#left{
+    width: 15%;
+    height: 100%;
+    float: left;
+    background-color:rgb(175,215,237);
+}
+#content{
+    width: 70%;
+    float:left;
+    height: 100%;
+}
+#right{
+    width: 15%;
+    background-color: yellow;
+    float: left;
+    height: 100%;
+}
+.title{
+    display: block;
+    text-align: center;
+    font-size:30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.level1{
+    margin-top: 15px;
+    padding:0 50px;
+    position: relative;
+}
+.level1 > span{
+    font-size:20px;
+    cursor: default;
+}
+.level1 > .minbox{
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    left: 25px;
+    margin-top: 6px;
+    border-radius: 50%;
+}
+.level1 > li{
+    padding:5px 10px;
+    display: none;
+}
+.level1 > li a{
+    width: 0;
+    height: 0;
+}
+.level1 li a:hover{
+    text-decoration:underline;
+    color:blue;
+}
+.level1:nth-of-type(1) > li:nth-last-child(1){
+    position: absolute;
+    left:120000px;
+    overflow: hidden;
+}
+.level1:nth-of-type(1) > li:nth-last-child(2){
+    position: absolute;
+    left:120000px;
+    overflow: hidden;
+}
+.level1:nth-of-type(1) > li:nth-last-child(3){
+    position: absolute;
+    left:120000px;
+    overflow: hidden;
+}
