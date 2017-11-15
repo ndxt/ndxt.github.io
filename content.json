@@ -1,9 +1,9 @@
-{"defaultPage":"readme.md",
+{"defaultPage":"readme.md", "title":"目录",
   "content" :[
     {"title":"基础算法类","type":"directory",  "subItems" :[
-      {"title":"通用算法包","type":"page","link":"/centit-commons/centit-utils.md"},
-      {"title":"逻辑编译器","type":"page","link":"/centit-commons/centit-compile.md"},
-      {"title":"数据库操作","type":"page","link":"/centit-commons/centit-database.md"}
+      {"title":"通用算法包","type":"page","link":"centit-commons/centit-utils.md"},
+      {"title":"逻辑编译器","type":"page","link":"centit-commons/centit-compile.md"},
+      {"title":"数据库操作","type":"page","link":"centit-commons/centit-database.md"}
     ]},
     {"title":"框架服务类","type":"directory",  "subItems" :[
       {"title":"框架核心","type":"page","link":"/centit-framework/centit-framework.md"},
