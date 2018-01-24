@@ -2,11 +2,11 @@
 
 发行release版本，2018年的第一个版本，这次发行的版本号还是遵循以前的规则，后面的版本号严格按照新规格执行。
 
-1. **centit-commons** 2.2.5 版本  
-2. **centit-ui** 3.1.0 版本  
-3. **centit-persistence**  1.0.2 版本  
-4. **centit-framework** 4.0.4 版本  
-5. **centit-framework-system** 4.0.4 版本
+1. **centit-commons** 2.2.5 版本；当前开发版本为 2.2-SNAPSHOT。
+2. **centit-ui** 3.1.0 版本；当前开发版本为 3.1-SNAPSHOT。
+3. **centit-persistence**  1.0.2 版本；当前开发版本为 1.0-SNAPSHOT。  
+4. **centit-framework** 4.0.4 版本；当前开发版本为 4.0-SNAPSHOT。
+5. **centit-framework-system** 4.0.4 版本；当前开发版本为 4.0-SNAPSHOT。
 
 # 2017-10-12
 
