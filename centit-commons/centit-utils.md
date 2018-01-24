@@ -6,7 +6,7 @@
 
 ### GeneralAlgorithm类
 
-目前这个类中只有两个方法 nvl 和 nvl2 方法的功能和oracle中的同名方法一样。[https://www.gitbook.com/book/siddontang/leetcode-solution/details](https://www.gitbook.com/book/siddontang/leetcode-solution/details)
+目前这个类中只有两个方法 nvl 和 nvl2 方法的功能和oracle中的同名方法一样。
 
 ### DatetimeOpt类
 
