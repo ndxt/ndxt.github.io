@@ -70,5 +70,11 @@
 ### StringBaseOpt类和StringRegularOpt类。
 
 StringBaseOpt类中主要是对字符串和字符串数组的操作，StringRegularOpt类主要是对字符串的规则验证。  
-getFirstLetter
+StringBaseOpt类中需要特别介绍的方法有：
+
+1. getFirstLetter 获取中文的拼音的首字母。
+2. nextCode 获取字符串的下个值。
+3. castObjectToString 将对象转换为字符串，添加了对null值的特别处理，不会自动转换为“null”。
+4. 
+
 

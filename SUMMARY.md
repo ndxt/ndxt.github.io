@@ -12,5 +12,6 @@
     * [工作流引擎](centit-services/centit-workflow/workflow_introduction.md)
 * [使用场景](shi-yong-chang-jing.md)
   * [新建工具类项目](xin-jian-gong-ju-lei-xiang-mu.md)
+  * 新建带系统管理的项目
 * [更新记录](UPDATE_LOG.md)
 
