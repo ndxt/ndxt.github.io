@@ -14,8 +14,13 @@
     * 集成平台
   * [服务工具类](centit-services/README.md)
     * [工作流引擎](centit-services/centit-workflow/workflow_introduction.md)
-* [使用场景](shi-yong-chang-jing.md)
+* [快速入门](shi-yong-chang-jing.md)
   * [新建工具类项目](xin-jian-gong-ju-lei-xiang-mu.md)
   * [新建带系统管理的项目](xin-jian-dai-xi-tong-guan-li-de-xiang-mu.md)
+* 前后端分离
+* 组织机构
+* 权限体系
+* 消息与通知
+* 操作日志
 * [更新记录](UPDATE_LOG.md)
 
