@@ -17,10 +17,10 @@
 * [快速入门](shi-yong-chang-jing.md)
   * [新建工具类项目](xin-jian-gong-ju-lei-xiang-mu.md)
   * [新建带系统管理的项目](xin-jian-dai-xi-tong-guan-li-de-xiang-mu.md)
-* 前后端分离
-* 组织机构
-* 权限体系
-* 消息与通知
+* [前后端分离](qian-hou-duan-fen-li.md)
+* [组织机构](zu-zhi-ji-gou.md)
+* [权限体系](quan-xian-ti-xi.md)
+* [消息与通知](xiao-xi-yu-tong-zhi.md)
 * [操作日志](cao-zuo-ri-zhi.md)
 * [更新记录](UPDATE_LOG.md)
 
