@@ -1,7 +1,15 @@
 # Summary
 
 * [概述](README.md)
-* [项目结构与环境](environment_structure.md)
+* [快速入门](shi-yong-chang-jing.md)
+  * [新建工具类项目](xin-jian-gong-ju-lei-xiang-mu.md)
+  * [新建带系统管理的项目](xin-jian-dai-xi-tong-guan-li-de-xiang-mu.md)
+* [总体设计](environment_structure.md)
+  * [技术路线](environment_structure/ji-zhu-lu-xian.md)
+  * 组织机构
+  * 权限体系
+  * [数据字典](environment_structure/zhu-shu-ju-fu-wu-ff08-shu-ju-zi-dian-ff09.md)
+  * 后台服务
 * [项目介绍](projects.md)
   * [基础算法类](centit-commons/centit-commons.md)
     * [通用算法](centit-commons/centit-utils.md)
@@ -14,13 +22,5 @@
     * 集成平台
   * [服务工具类](centit-services/README.md)
     * [工作流引擎](centit-services/centit-workflow/workflow_introduction.md)
-* [快速入门](shi-yong-chang-jing.md)
-  * [新建工具类项目](xin-jian-gong-ju-lei-xiang-mu.md)
-  * [新建带系统管理的项目](xin-jian-dai-xi-tong-guan-li-de-xiang-mu.md)
-* [前后端分离](qian-hou-duan-fen-li.md)
-* [组织机构](zu-zhi-ji-gou.md)
-* [权限体系](quan-xian-ti-xi.md)
-* [消息与通知](xiao-xi-yu-tong-zhi.md)
-* [操作日志](cao-zuo-ri-zhi.md)
 * [更新记录](UPDATE_LOG.md)
 
