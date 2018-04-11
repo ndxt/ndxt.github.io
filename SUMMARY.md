@@ -20,5 +20,9 @@
     * 集成平台
   * [服务工具类](centit-services/README.md)
     * [工作流引擎](centit-services/centit-workflow/workflow_introduction.md)
+    * 文件服务器
+    * 工单系统
+    * 统计报表
+    * 即时通讯
   * [更新记录](UPDATE_LOG.md)
 
