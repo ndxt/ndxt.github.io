@@ -6,7 +6,7 @@
 
 ### GeneralAlgorithm类
 
-目前这个类中只有两个方法 nvl 和 nvl2 方法的功能和oracle中的同名方法一样。[https://www.gitbook.com/book/siddontang/leetcode-solution/details](https://www.gitbook.com/book/siddontang/leetcode-solution/details)
+目前这个类中只有两个方法 nvl 和 nvl2 方法的功能和oracle中的同名方法一样。
 
 ### DatetimeOpt类
 
@@ -70,5 +70,11 @@
 ### StringBaseOpt类和StringRegularOpt类。
 
 StringBaseOpt类中主要是对字符串和字符串数组的操作，StringRegularOpt类主要是对字符串的规则验证。  
-getFirstLetter
+StringBaseOpt类中需要特别介绍的方法有：
+
+1. getFirstLetter 获取中文的拼音的首字母。
+2. nextCode 获取字符串的下个值。
+3. castObjectToString 将对象转换为字符串，添加了对null值的特别处理，不会自动转换为“null”。
+4. 
+
 
