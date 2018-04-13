@@ -4,10 +4,11 @@
 * [快速入门](shi-yong-chang-jing.md)
 * [总体设计](environment_structure.md)
   * [技术路线](environment_structure/ji-zhu-lu-xian.md)
-  * 组织机构
-  * 权限体系
-  * [数据字典](environment_structure/zhu-shu-ju-fu-wu-ff08-shu-ju-zi-dian-ff09.md)
-  * 后台服务
+  * [通用后台功能](environment_structure/tong-yong-hou-tai-gong-neng.md)
+    * [组织机构](environment_structure/zu-zhi-ji-gou.md)
+    * [权限体系](environment_structure/quan-xian-ti-xi.md)
+    * [数据字典](environment_structure/zhu-shu-ju-fu-wu-ff08-shu-ju-zi-dian-ff09.md)
+  * [通用的工具和模块](environment_structure/hou-tai-fu-wu.md)
 * [项目介绍](projects.md)
   * [基础算法类](centit-commons/centit-commons.md)
     * [通用算法](centit-commons/centit-utils.md)
