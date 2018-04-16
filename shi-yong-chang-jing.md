@@ -1,5 +1,7 @@
 # 快速入门
 
+## 新建一个项目
+
 架实现了系统管理、权限体系、数据服务等等业务系统通用的部分，开发人员进行系统开发时可以不考虑这些业务无关的内容。基于公司框架可以开发多种类型的应用系统。
 
 1. 开发一个传统的但应用系统，但应用系统就是只有一个工程结果只打一个war包，单独部署的系统；这样的系统有包括后台系统管理和前段业务应用。github的[centit-framework-system](https://github.com/ndxt/centit-framework-system)中有一个[framework-system-demo](https://github.com/ndxt/centit-framework-system/tree/master/framework-system-demo)模块就是一个最简明的示例。这个示例可以直接运行，其中包括了系统管理的所有实现。但依然有一下几个方面需要开发人员根据项目的情况进行修改：
@@ -19,6 +21,8 @@
    2. 项目中没有数据库持久化部分，开发人员可以根据需要从[**centit-persistence**](https://github.com/ndxt/centit-persistence)中选这持久化基础包。
 
 框架通过接口[PlatformEnvironment](https://github.com/ndxt/centit-framework/blob/master/framework-core/src/main/java/com/centit/framework/model/adapter/PlatformEnvironment.java)来屏蔽了系统组织机构、权限体系和数据服务的具体实现。**所以对开发具体的业务模块来时，无论上面的那种方式，具体的开发都是一样的。框架可以通过修改依赖的包和配置信息来切换发布方式，所以强力建议业务开发人员都基于**[**framework-web-demo**](https://github.com/ndxt/centit-framework/tree/master/framework-web-demo)**来开发业务模块，这样做无论集成和调试都最为便捷。这个也先腾框架最核心的价值。**
+
+## 新建一个功能模块
 
 
 
