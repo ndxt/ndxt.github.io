@@ -5,7 +5,6 @@
 后端采用restful风格的接口，前后端用json的数据格式交换。后端除了返回单个数字、字符串、布尔型等标量其他的json都要符合[ResponseData](http://gitlab.centit.com/gitlab/ctm/centit-framework/blob/master/framework-adapter/src/main/java/com/centit/framework/common/ResponseData.java)定义的接口标准。
 
 ```java
-
     // http://gitlab.centit.com/gitlab/ctm/centit-framework/blob/master/framework-adapter\
     // /src/main/java/com/centit/framework/common/ResponseData.java
     //JSON有三个域，其中data
@@ -18,10 +17,59 @@
     String getMessage();
     //返回数据，可以是任何类型数据包括数组，如果返回多个结果可以用Map
     Object getData();
-
 ```
 
-这个接口有两个具体的实现ResponseSingleData和ResponseMapData，在客户端接受到这个JSON时可以用ResponseJSON来解析。
+这个接口有两个具体的实现[ResponseSingleData](http://gitlab.centit.com/gitlab/ctm/centit-framework/blob/master/framework-adapter/src/main/java/com/centit/framework/common/ResponseSingleData.java)和[ResponseMapData](http://gitlab.centit.com/gitlab/ctm/centit-framework/blob/master/framework-adapter/src/main/java/com/centit/framework/common/ResponseMapData.java)，在客户端接受到这个JSON时可以用[ResponseJSON](http://gitlab.centit.com/gitlab/ctm/centit-framework/blob/master/framework-adapter/src/main/java/com/centit/framework/common/ResponseJSON.java)来解析。框架中[JsonResultUtils](http://gitlab.centit.com/gitlab/ctm/centit-framework/blob/master/framework-adapter/src/main/java/com/centit/framework/common/JsonResultUtils.java)类提供了直接向HttpServletResponse写符合上述格式要求的JSON的便捷方法。所以在controller类中可以有多种方式来实现json格式的数据返回，示例代码如下：
+
+```java
+//返回一个标量,比如:数字\字符串\布尔值等等
+     @RequestMapping(value = "/checkuserpower/{optId}/{method}", method = { RequestMethod.GET })
+     @ResponseBody
+     public boolean checkUserOptPower(@PathVariable String optId,
+                                  @PathVariable String method, HttpServletResponse response) {
+        return CodeRepositoryUtil
+                .checkUserOptPower(optId,method);
+    }
+
+    @RequestMapping(value = "/checkuserpower/{optId}/{method}", method = { RequestMethod.GET })
+    public void checkUserOptPower(@PathVariable String optId,
+                                  @PathVariable String method, HttpServletResponse response) {
+        boolean s = CodeRepositoryUtil
+                .checkUserOptPower(optId,method);
+        JsonResultUtils.writeOriginalObject(s, response);
+    }
+
+//只返回处理结果
+
+    @PutMapping(value = "/setuserposition/{userUnitId}")
+    public ResponseData setUserCurrentStaticn(@PathVariable String userUnitId,
+            HttpServletRequest request) {
+        CentitUserDetails currentUser = WebOptUtils.getLoginUser(request);
+        if(currentUser==null){
+            return new ResponseSingleData(ResponseData.ERROR_SESSION_TIMEOUT,
+                    "用户没有登录或者超时，请重新登录。");
+        }
+        return new ResponseSingleData();
+    }
+
+    @PutMapping(value = "/setuserposition/{userUnitId}")
+    public void setUserCurrentStaticn(@PathVariable String userUnitId,
+            HttpServletRequest request,HttpServletResponse response) {
+        CentitUserDetails currentUser = WebOptUtils.getLoginUser(request);
+        if(currentUser==null){
+            JsonResultUtils.writeErrorMessageJson(ResponseData.ERROR_SESSION_TIMEOUT,
+                    "用户没有登录或者超时，请重新登录。", response);
+            return;
+        }
+        JsonResultUtils.writeSuccessJson(response);
+    }
+
+//返回单个数据
+
+
+//返回多个数据
+
+```
 
 
 
