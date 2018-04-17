@@ -121,10 +121,18 @@
 
 前端获取后端返回的json字符串可以使用[ResponseJSON](http://gitlab.centit.com/gitlab/ctm/centit-framework/blob/master/framework-adapter/src/main/java/com/centit/framework/common/ResponseJSON.java)来解析。示例代码：
 
+java客户端
+
 ```java
 CloseableHttpClient client = HttpExecutor.createKeepSessionHttpClient();
 ResponseJSON resJson = ResponseJSON.valueOfJson(HttpExecutor.simpleGet(client,"url"));
 client.close();
+```
+
+js客户端
+
+```js
+//请张凯补充
 ```
 
 
