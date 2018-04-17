@@ -123,7 +123,7 @@
 
 ```java
 CloseableHttpClient client = HttpExecutor.createKeepSessionHttpClient();
-ResponseJSON.valueOfJson(HttpExecutor.simpleGet(client,"url"));
+ResponseJSON resJson = ResponseJSON.valueOfJson(HttpExecutor.simpleGet(client,"url"));
 client.close();
 ```
 
