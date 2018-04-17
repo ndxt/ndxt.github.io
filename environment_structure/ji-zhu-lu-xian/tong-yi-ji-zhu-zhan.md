@@ -4,7 +4,7 @@
 
 ## 前端技术路线
 
-目前前端有一套基于easyui的框架，正在研发一套基于vue的框架。
+目前前端有一套基于[easyui](https://github.com/ndxt/centit-ui/tree/master/framework-base-view-easyui)的框架，正在研发一套基于vue的框架。
 
 ## 后端技术路线
 
