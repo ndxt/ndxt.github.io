@@ -6,7 +6,7 @@
 
 框架的更新列表参见 [大事记、更新与发布](/UPDATE_LOG.md);框架jar包发布在[Maven Central](http://central.maven.org/maven2/com/centit/)库中。
 
-开源项目介绍[参见项目列表](/projects.md)。
+开源项目介绍[参见项目列表](./projects/README.md)。
 
 # 先腾框架平台的目标
 
