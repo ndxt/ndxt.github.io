@@ -4,7 +4,6 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '起步', link: '/guide/' },
       { text: '框架的总体设计', link: '/environment_structure/' },
       { text: '项目介绍', link: '/projects/' },
       { text: '更新记录', link: '/UPDATE_LOG' },
