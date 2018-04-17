@@ -15,7 +15,9 @@
     * [系统日志管理](environment_structure/ji-zhu-lu-xian/xi-tong-ri-zhi-guan-li.md)
     * 系统通知管理
     * [数据字典](environment_structure/zhu-shu-ju-fu-wu-ff08-shu-ju-zi-dian-ff09.md)
-    * 平台运行环境
+  * [框架体系结构](environment_structure/kuang-jia-ping-tai-jie-shao.md)
+    * [框架运行环境](environment_structure/kuang-jia-ping-tai-jie-shao/ping-tai-yun-xing-huan-jing.md)
+    * [基于框架的开发](environment_structure/kuang-jia-ping-tai-jie-shao/ji-yu-kuang-jia-ping-tai-de-kai-fa-fang-shi.md)
   * [工具和服务模块](environment_structure/hou-tai-fu-wu.md)
 * [项目介绍](projects.md)
   * [基础算法类](centit-commons/centit-commons.md)
