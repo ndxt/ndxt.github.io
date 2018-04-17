@@ -30,7 +30,7 @@
         return CodeRepositoryUtil
                 .checkUserOptPower(optId,method);
     }
-    
+
 //或者
     @RequestMapping(value = "/checkuserpower/{optId}/{method}", method = { RequestMethod.GET })
     public void checkUserOptPower(@PathVariable String optId,
@@ -52,7 +52,7 @@
         }
         return new ResponseSingleData();
     }
-    
+
 //或者
     @PutMapping(value = "/setuserposition/{userUnitId}")
     public void setUserCurrentStaticn(@PathVariable String userUnitId,
@@ -117,6 +117,14 @@
 
         JsonResultUtils.writeResponseDataAsJson(resData, response, simplePropertyPreFilter);
     }
+```
+
+前端获取后端返回的json字符串可以使用[ResponseJSON](http://gitlab.centit.com/gitlab/ctm/centit-framework/blob/master/framework-adapter/src/main/java/com/centit/framework/common/ResponseJSON.java)来解析。示例代码：
+
+```java
+CloseableHttpClient client = HttpExecutor.createKeepSessionHttpClient();
+ResponseJSON.valueOfJson(HttpExecutor.simpleGet(client,"url"));
+client.close();
 ```
 
 
