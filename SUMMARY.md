@@ -6,12 +6,14 @@
   * [技术体系设计](environment_structure/ji-zhu-lu-xian.md)
     * [统一技术栈](environment_structure/ji-zhu-lu-xian/tong-yi-ji-zhu-zhan.md)
     * [前后端数据通讯格式](environment_structure/ji-zhu-lu-xian/qian-hou-duan-shu-ju-tong-xun-ge-shi.md)
-    * [系统日志管理](environment_structure/ji-zhu-lu-xian/xi-tong-ri-zhi-guan-li.md)
-    * 系统通知管理
+    * 参数驱动SQL
+    * 数据持久化
     * MVC分层设计和脚手架
-  * [通用功能设计](environment_structure/tong-yong-hou-tai-gong-neng.md)
+  * [平台功能设计](environment_structure/tong-yong-hou-tai-gong-neng.md)
     * [组织机构](environment_structure/zu-zhi-ji-gou.md)
     * [权限体系](environment_structure/quan-xian-ti-xi.md)
+    * [系统日志管理](environment_structure/ji-zhu-lu-xian/xi-tong-ri-zhi-guan-li.md)
+    * 系统通知管理
     * [数据字典](environment_structure/zhu-shu-ju-fu-wu-ff08-shu-ju-zi-dian-ff09.md)
   * [工具和服务模块](environment_structure/hou-tai-fu-wu.md)
 * [项目介绍](projects.md)
