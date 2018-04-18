@@ -88,6 +88,8 @@
 //用JsonResultUtils直接向 HttpServletResponse response 写json字符串的方式返回json
     @PutMapping(value = "/setuserposition/{userUnitId}")
     public void forExample(HttpServletResponse response) {
+        //返回一个标量
+        JsonResultUtils.writeOriginalObject(true, response);
         //仅仅返回成功信息
         JsonResultUtils.writeSuccessJson(response);
         return;
@@ -125,10 +127,101 @@ js客户端
 
 ## 参数驱动SQL
 
+参数驱动sql它是一个sql预处理引擎，他通过条件标签[],外置条件插入标签{}和预处理标签来将对数据库查询的逻辑规则从代码中剥离出来。设计这个参数化驱动sql的主要目标有：
+1. 避免根据输入条件进行复杂的sql语句拼接工作。目标是将前段输入的条件直接转换为Map作为参数驱动sql的参数。
+2. 统一处理数据范围权限包括数据行范围和数据的列范围。
+### 条件标签[]
+语法: [(条件)(参数列表)| sql语句片段]
+
+意义是如果“条件”成立，sql语句片段将生效，并将参数列表中的参数加入最终sql语句的参数中，其中参数列表是可选的。
+
+先介绍一个名词**参数引用描述符**,它是来引用Map参数中变量的。可以直接用名称引用，也可以用value.attr的形式来引用Map中变量的属性。如果Map中的变量名称比较特殊不符合标识符规范比如中文，可以用${变量名称}。
+
+条件：条件是一个逻辑运算表达式，其中可以直接用参数引用描述符引用参数Map中的变量。
+
+参数列表：是用“，”分开的多个参数，形式为**参数引用描述符：(预处理指令列表)SQL语句变量名称**;如果参数引用描述符和sql语句变量名称一样，参数引用描述符可以省略。
+
+举个例子：
+```sql92
+-- Map中有变量 a、b、c、d
+-- 参数驱动sql如下：
+select [(a>1)| t1.col1, ] t2.col2
+from [(a>1)| table1 t1 join ] table2 t2 [(a>1)| on (t1.id=t2.id) ]
+where t2.col3> 5 [(a>1 && b>1)(b:num)| and t1.col3 > :num][ (c>1)(:c) |and t2.col4 > :c ]
+[(isnotempty(d))(:(inplace)d)| order by :d desc ]
+--如果Map的值为 a:2, b:0 , c:2 , d: 't2.col4' 转换后的语句如下
+select t1.col1, t2.col2
+from table1 t1 join  table2 t2 on (t1.id=t2.id) 
+where t2.col3> 5 and t2.col4 > :c
+order by t2.col4 desc 
+-- sql与的参数为 c:2
+```
+如果条件只是判断输入的参数是否为空有则可以将条件省略并且同时需要省略参数列表外层的（）;如果这个参数仅用于判断则参数中的sql语句变量名称也要省略。举个例子：
+```sql92
+-- Map中的变量 a：'4'、user:{name：'先腾'}、c：notnull
+select t1.col1, t1.col2
+from table1 t1
+where 1=1 [:(number)a| and t1.col3>:a] [user.name:name| and t1.name=:name ]
+   [c | and t1.col4 not null] [:e| and t1.col5 =:e]
+-- 转换后的语句为
+select t1.col1, t1.col2
+from table1 t1
+where 1=1 and t1.col3>:a and t1.name=:name 
+    and t1.col4 not null
+-- sql与的参数为 a:4 , name:'先腾'
+```
+### 外置条件插入标签{}
+语法：{数据库表名列表}, 多个表名用","分隔，表名和别名用空格或者":"分隔。
+
+示例：{table1 t1, table2 t2}
+
+这个标签作用是将针对标签中的表对应的额外的顾虑条件插入到标签所在的位置，现在这个标签只能放在where语句部分。
+
+外部语句是作为字符串列表来传入的，每个字符串为一个条件语句；条件语句为一个sql语句条件表达式，其中用[表名称.字段名]来指定字段，用{参数引用描述符：(预处理指令列表)SQL语句变量名称}来引用变量，可以是用户相关的变量、环境变量或者前端输入的变量等等。
+
+举个例子：
+```java
+    List<String> filters = new ArrayList<String> ();
+    filters.add("[table1.c] like {p1.1:ps}");
+    filters.add("[table1.b] = {p5}");
+    filters.add("[table4.b] = {p4}");
+    filters.add("([table2.f]={p2} and [table3.f]={p3})");
+    Map<String,Object> paramsMap = new HashMap<String,Object>();       
+    paramsMap.put("p1.1", "1");
+    paramsMap.put("p2", "3");
+     
+    String queryStatement = "select t1.a,t2.b,t3.c "+
+        "from table1 t1,table2 t2,table3 t3 "+
+        "where 1=1 {table1:t1} order by 1,2";
+         
+    System.out.println(QueryUtils.translateQuery(queryStatement,filters,paramsMap,true).getQuery());
+    结果是：
+    select t1.a,t2.b,t3.c from table1 t1,table2 t2,table3 t3
+    where 1=1  and (t1.c like :ps ) order by 1,2
+```
+在实际使用中可以将外置条件配置在数据库中并和具体的操作关联，在配置角色操作时同事指定对应的范围条件，条件中通过{参数引用描述符}应用用户属性。这样在具体的查询时可以获得额外的语句，根据当前用户属性获得对应的参数值。框架中[GeneralServiceImpl](https://github.com/ndxt/centit-framework-system/blob/master/framework-system-module/src/main/java/com/centit/framework/system/service/impl/GeneralServiceImpl.java) 可也作为外部条件和用户变量生产示例，具体业务可以模仿这个类来实现。
+
+### 参数预处理
+在参数前面的预处理指令列表可以是多个，预处理会按照顺序执行。预处理的主要作用有：类型转换、查询模式生产、语句替换等等。详细预处理列表参见 [QueryUtils.java](https://github.com/ndxt/centit-commons/blob/master/centit-database/src/main/java/com/centit/support/database/utils/QueryUtils.java)。
+
 ## 数据持久化
+### 统一增删改查操作
+为了照顾绝大部分开发人员，所以框架没有对持久化做严格的限制，[centit-persistence](https://github.com/ndxt/centit-persistence)分别对Spring jdbc、Hibernate、MyBatis进行了封装。推荐使用jdbc。框架对持久化封装的目标有：
+
+1. 用任意持久化框架实现**增删改**，开发人员都不需要写sql语句，sping jdbc中做了jpa的简单的实现，所以也无需写sql代码。
+2. 通过参数驱动sql执行**查询**操作，jdbc直接原生sql，Hibernate通过NativeQuery支持sql，Mybatis的Mapper文件中可以直接写sql。对参数驱动sql的支持jdbc和Hibernate都是通过先处理参数驱动sql得到最终的sql来执行，Mybatis是通过插件来[ParameterDriverSqlInterceptor.java](https://github.com/ndxt/centit-persistence/blob/master/centit-persistence-mybatis/src/main/java/com/centit/framework/mybatis/plugin/ParameterDriverSqlInterceptor.java)来实现的。
+3. 框架还实现了DatabaseOptUtils类，对常用的持久化操作进行封装，比如：调用存储过程，执行sql语句等等。
+
+### 数据源
+
+框架默认只能设置一个数据源，框架[DynamicDataSource](https://github.com/ndxt/centit-persistence/blob/master/centit-persistence-core/src/main/java/com/centit/framework/core/datasource)实现动态数据库，配合注解TargetDataSource可以实现数据源的选择。
+
+如果数据源在开发时是未知的，比如是用户通过界面设定的可以用[centit-database-datasource](https://github.com/ndxt/centit-commons/tree/master/centit-database-datasource)中的DbcpConnectPools类来管理链接，用TransactionHandler执行事务。
 
 ## MVC分层设计和脚手架
 
+在信息管理系统或则OA类等先腾的典型业务中的功能模块都会应对到数据库中的一个业务主表，所以我们的设计一般为围绕数据库表结构展开，我们推荐使用powerDesigner来做表结构设计。[centit-scaffold](https://github.com/ndxt/centit-scaffold)是一个脚手架工程，他会根据pdm中的表定义和模板文件自动生成前后台代码。生成的代码实现了增删改查功能会对应的页面。开发人员可以根据自己项目的要求编写[模板](https://github.com/ndxt/centit-scaffold/tree/master/src/main/resources)。
 
+这个脚手架目前还没有图形界面的实行，是通过[一个xml文件](https://github.com/ndxt/centit-scaffold/blob/master/src/main/resources/scaffoldtask2.xml)来描述生产策略的，通过运行[RunScaffoldTask2.java](https://github.com/ndxt/centit-scaffold/blob/master/src/main/java/com/centit/support/scaffold/RunScaffoldTask2.java)来执行转换。
 
-
+还有一个类[RunScaffoldTask.java](https://github.com/ndxt/centit-scaffold/blob/master/src/main/java/com/centit/support/scaffold/RunScaffoldTask.java)是针对struts版本的，struts处理在遗留项目外已经不允许使用。

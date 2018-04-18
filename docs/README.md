@@ -4,7 +4,7 @@ sidebar: auto
 
 [南大先腾](http://www.centit.com/)一直注重在技术领域的研发投入，公司2008年成立基础研发部（现改名为技术管理中心），公司目前有300人，其中研发人员200余人，技术管理中心有30多人，占研发团队的15%。
 
-“诚信、敬业、高效、共享”是南大先腾的企业文化。“共享”不仅仅是企业内部共享经营成果，还表示南大先腾愿意与技术领域的同仁共享技术研发成果。技术管理中心从2016年启动了开源计划，将公司技术应用经验、基础研发平台、研发工具等等从行业业务中剥离出来，并在[https://www.github.com/ndxt](https://www.github.com/ndxt)上开源，文档参见[ https://codefan.gitbooks.io/opensourceplan/content/](https://codefan.gitbooks.io/opensourceplan/content/)。 任何个人或企业都可以免费使用。
+“诚信、敬业、高效、共享”是南大先腾的企业文化。“共享”不仅仅是企业内部共享经营成果，还表示南大先腾愿意与技术领域的同仁共享技术研发成果。技术管理中心从2016年启动了开源计划，将公司技术应用经验、基础研发平台、研发工具等等从行业业务中剥离出来，并在[https://www.github.com/ndxt](https://www.github.com/ndxt)上开源，文档参见[https://ndxt.githu.io/](https://ndxt.githu.io/)。 任何个人或企业都可以免费使用。
 
 框架的更新列表参见 [大事记、更新与发布](/UPDATE_LOG.md);框架jar包发布在[Maven Central](http://central.maven.org/maven2/com/centit/)库中。
 
@@ -20,7 +20,7 @@ sidebar: auto
 4. **框架将组织机构、功能权限、数据范围权限、数据服务、操作日志等等通用的功能抽象出来，让开发人员只关心业务实现。**
 5. **框架**开发的一个**重点工作就是开发各种小的功能服务程序**，比如：文件服务、即时通讯服务、统计报表服务、工作流服务等等。这些可以任务一个粒度更大的功能封装，这样可以为业务开发节省大量的时间。
 
-# 版本说明
+## 版本说明
 
 因为框架本身的不成熟且迭代比较快，所以框架的版本一直在更新，框架的版本号有一下约定。  
   1. 版本号格式为 （主版本号）.（次版本号）\(-SNAPSHOT 或者 .修订号）。比如 1.1-snapshot ， 1.1.1710。  
@@ -30,11 +30,11 @@ sidebar: auto
   5. 框架开发过程中都使用snapshot版本。  
   6. 项目开发过程中可引用框架的snapshot版本也可以引用发行版本，但是项目一旦在正式环境部署后一定要使用发行版本。
 
-# 版权说明
+## 版权说明
 
 南大先腾所有开源项目采用[The Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)。
 
-# 交流与服务
+## 交流与服务
 
 1. 发现框架有bug或者对框架有建议可以直接在github的项目中以issue的方式提交，比如 [https://github.com/ndxt/centit-framework-system/issues](https://github.com/ndxt/centit-framework-system/issues) 。
 2. 先腾提供框架交流群，这个群是先腾提供的一个交流平台，不是服务平台，所以我们不承诺一定会回复您的问题。加群验证词为：“我对先腾框架很有兴趣希望加群交流”；群号：344548623，二维码：
