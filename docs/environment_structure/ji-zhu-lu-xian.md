@@ -60,99 +60,50 @@
 
 ```java
 //返回一个标量,比如:数字\字符串\布尔值等等
-     @RequestMapping(value = "/checkuserpower/{optId}/{method}", method = { RequestMethod.GET })
+     @RequestMapping(value = "/url", method = { RequestMethod.GET })
      @ResponseBody
      public boolean checkUserOptPower(@PathVariable String optId,
                                   @PathVariable String method, HttpServletResponse response) {
-        return CodeRepositoryUtil
-                .checkUserOptPower(optId,method);
+        return true;
     }
 
-//或者
-    @RequestMapping(value = "/checkuserpower/{optId}/{method}", method = { RequestMethod.GET })
-    public void checkUserOptPower(@PathVariable String optId,
-                                  @PathVariable String method, HttpServletResponse response) {
-        boolean s = CodeRepositoryUtil
-                .checkUserOptPower(optId,method);
-        JsonResultUtils.writeOriginalObject(s, response);
-    }
-
-//只返回处理结果
-
-    @PutMapping(value = "/setuserposition/{userUnitId}")
-    public ResponseData setUserCurrentStaticn(@PathVariable String userUnitId,
-            HttpServletRequest request) {
-        CentitUserDetails currentUser = WebOptUtils.getLoginUser(request);
-        if(currentUser==null){
-            return new ResponseSingleData(ResponseData.ERROR_SESSION_TIMEOUT,
-                    "用户没有登录或者超时，请重新登录。");
-        }
+//返回符合格式的JSON对象
+    @PutMapping(value = "/url")
+    @ResponseBody
+    public ResponseData forExample() {
+        //仅仅返回成功信息
         return new ResponseSingleData();
+        //返回错误信息
+        return new ResponseSingleData(ResponseData.ERROR_SESSION_TIMEOUT,
+                    "用户没有登录或者超时，请重新登录。");
+        //返回单个数据对象
+        return ResponseSingleData.makeResponseData(new Object[]{"hello","world"});
+        //返回多个对象
+        ResponseMapData resData = new ResponseMapData();
+        resData.addResponseData(BaseController.OBJLIST, new Object[]{"hello","world"});
+        resData.addResponseData(BaseController.PAGE_DESC, new PageDesc());
+        return resData;
     }
 
-//或者
+//用JsonResultUtils直接向 HttpServletResponse response 写json字符串的方式返回json
     @PutMapping(value = "/setuserposition/{userUnitId}")
-    public void setUserCurrentStaticn(@PathVariable String userUnitId,
-            HttpServletRequest request,HttpServletResponse response) {
-        CentitUserDetails currentUser = WebOptUtils.getLoginUser(request);
-        if(currentUser==null){
-            JsonResultUtils.writeErrorMessageJson(ResponseData.ERROR_SESSION_TIMEOUT,
-                    "用户没有登录或者超时，请重新登录。", response);
-            return;
-        }
+    public void forExample(HttpServletResponse response) {
+        //仅仅返回成功信息
         JsonResultUtils.writeSuccessJson(response);
-    }
-
-//返回单个数据
-    @GetMapping(value = "userranks/{rank}")
-    @ResponseBody
-    public ResponseData listUserUnitsByRank(@PathVariable String rank){
-        CentitUserDetails centitUserDetails = WebOptUtils.getLoginUser();
-        if(centitUserDetails == null){
-            return new ResponseSingleData(ResponseData.ERROR_UNAUTHORIZED, "用户没有登录或者超时，请重新登录");
-        }
-        return ResponseSingleData.makeResponseData(
-                DictionaryMapUtils.objectsToJSONArray(
-                CodeRepositoryUtil.listUserUnitsByRank(centitUserDetails.getUserCode(), rank)));
-    }
-//或者    
-    @GetMapping(value = "userranks/{rank}")
-    public void listUserUnitsByRank(@PathVariable String rank, HttpServletResponse response){
-        CentitUserDetails centitUserDetails = WebOptUtils.getLoginUser();
-        if(centitUserDetails == null){
-            JsonResultUtils.writeErrorMessageJson(ResponseData.ERROR_UNAUTHORIZED, 
-                "用户没有登录或者超时，请重新登录",response);
-
-            return;
-        }
-        return JsonResultUtils.writeSingleDataJson(
-                DictionaryMapUtils.objectsToJSONArray(
-                CodeRepositoryUtil.listUserUnitsByRank(centitUserDetails.getUserCode(), rank)),response );
-    }
-
-//返回多个数据
-    @RequestMapping(method = RequestMethod.GET)
-    @ResponseBody
-    public ResponseDatalist(PageDesc pageDesc,
-        HttpServletRequest request, HttpServletResponse response) {
-        Map<String, Object> searchColumn = BaseController.convertSearchColumn(request);
-        listObjects = sysUserManager.listObjects(searchColumn, pageDesc);
+        return;
+        //返回错误信息
+        JsonResultUtils.writeErrorMessageJson(ResponseData.ERROR_UNAUTHORIZED, 
+                        "用户没有登录或者超时，请重新登录",response);
+        return;
+        //返回单个数据对象
+        JsonResultUtils.writeSingleDataJson(new Object[]{"hello","world"}, response);
+        return;
+        //返回多个对象
         ResponseMapData resData = new ResponseMapData();
-        resData.addResponseData(BaseController.OBJLIST, listObjects);
-        resData.addResponseData(BaseController.PAGE_DESC, pageDesc);
-        return ResponseMapData;
-    }    
-//或者    
-    @RequestMapping(method = RequestMethod.GET)
-    public void list(PageDesc pageDesc,
-                     HttpServletRequest request, HttpServletResponse response) {
-        Map<String, Object> searchColumn = BaseController.convertSearchColumn(request);
-        listObjects = sysUserManager.listObjects(searchColumn, pageDesc);
-        ResponseMapData resData = new ResponseMapData();
-        resData.addResponseData(BaseController.OBJLIST, listObjects);
-        resData.addResponseData(BaseController.PAGE_DESC, pageDesc);
-
-        JsonResultUtils.writeResponseDataAsJson(resData, response, simplePropertyPreFilter);
+        resData.addResponseData(BaseController.OBJLIST, new Object[]{"hello","world"});
+        resData.addResponseData(BaseController.PAGE_DESC, new PageDesc());
+        JsonResultUtils.writeResponseDataAsJson(resData, response);
+        return;
     }
 ```
 
