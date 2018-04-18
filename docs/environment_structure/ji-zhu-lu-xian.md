@@ -214,7 +214,7 @@ where 1=1 and t1.col3>:a and t1.name=:name
 
 ### 数据源
 
-框架默认只能设置一个数据源，框架[DynamicDataSource](https://github.com/ndxt/centit-persistence/blob/master/centit-persistence-core/src/main/java/com/centit/framework/core/datasource)实现动态数据库，配合注解TargetDataSource可以实现数据源的选择。
+框架默认只能设置一个数据源，框架[DynamicDataSource](https://github.com/ndxt/centit-persistence/blob/master/centit-persistence-core/src/main/java/com/centit/framework/core/datasource)实现动态数据源，配合注解TargetDataSource可以实现数据源的选择。
 
 如果数据源在开发时是未知的，比如是用户通过界面设定的可以用[centit-database-datasource](https://github.com/ndxt/centit-commons/tree/master/centit-database-datasource)中的DbcpConnectPools类来管理链接，用TransactionHandler执行事务。
 
