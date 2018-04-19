@@ -1,4 +1,5 @@
-# 技术体系设计
+
+# 技术路线
 
 技术方面既要跟上快速的发展步伐又要减少学习成本同事还要兼顾开发人员的使用习惯，本身就是一个非常矛盾的事情；也是没有办法做到尽善尽美的。框架在技术方面的目标是让开发人员不需要学习太多的新的技术就可以使用框架，比如你不需要知道spring security的机制和原理，只要按照框架的约定开发，就已经应用了这个安全框架；让开发人员把跟多的精力集中在业务的理解和实现上。框架的设计理念和spring boot 非常相像，没有直接采用spring boot 的原因是在框架设计之初spring boot还没有流行，我们还不知道有这个东西；现在我们的框架已经将所有的配置信息和业务代码剥离可以直接一直到spring boot项目中。
 
@@ -42,8 +43,6 @@
 后端采用restful风格的接口，前后端用json的数据格式交换。后端除了返回单个数字、字符串、布尔型等标量其他的json都要符合[ResponseData](http://gitlab.centit.com/gitlab/ctm/centit-framework/blob/master/framework-adapter/src/main/java/com/centit/framework/common/ResponseData.java)定义的接口标准。
 
 ```java
-    // http://gitlab.centit.com/gitlab/ctm/centit-framework/blob/master/framework-adapter\
-    // /src/main/java/com/centit/framework/common/ResponseData.java
     //JSON有三个域，其中data
     String RES_CODE_FILED="code";    
     String RES_MSG_FILED="message";
@@ -59,16 +58,15 @@
 这个接口有两个具体的实现[ResponseSingleData](http://gitlab.centit.com/gitlab/ctm/centit-framework/blob/master/framework-adapter/src/main/java/com/centit/framework/common/ResponseSingleData.java)和[ResponseMapData](http://gitlab.centit.com/gitlab/ctm/centit-framework/blob/master/framework-adapter/src/main/java/com/centit/framework/common/ResponseMapData.java)，在客户端接受到这个JSON时可以用[ResponseJSON](http://gitlab.centit.com/gitlab/ctm/centit-framework/blob/master/framework-adapter/src/main/java/com/centit/framework/common/ResponseJSON.java)来解析。框架中[JsonResultUtils](http://gitlab.centit.com/gitlab/ctm/centit-framework/blob/master/framework-adapter/src/main/java/com/centit/framework/common/JsonResultUtils.java)类提供了直接向HttpServletResponse写符合上述格式要求的JSON的便捷方法。所以在controller类中可以有多种方式来实现json格式的数据返回，示例代码如下：
 
 ```java
-//返回一个标量,比如:数字\字符串\布尔值等等
-     @RequestMapping(value = "/url", method = { RequestMethod.GET })
-     @ResponseBody
-     public boolean checkUserOptPower(@PathVariable String optId,
-                                  @PathVariable String method, HttpServletResponse response) {
+    //返回一个标量,比如:数字\字符串\布尔值等等
+    @RequestMapping(value = "/url", method = { RequestMethod.GET })
+    @ResponseBody
+    public boolean checkUserOptPower() {
         return true;
     }
 
 //返回符合格式的JSON对象
-    @PutMapping(value = "/url")
+    @RequestMapping(value = "/url")
     @ResponseBody
     public ResponseData forExample() {
         //仅仅返回成功信息
@@ -86,7 +84,7 @@
     }
 
 //用JsonResultUtils直接向 HttpServletResponse response 写json字符串的方式返回json
-    @PutMapping(value = "/setuserposition/{userUnitId}")
+    @GetMapping(value = "/url")
     public void forExample(HttpServletResponse response) {
         //返回一个标量
         JsonResultUtils.writeOriginalObject(true, response);
@@ -181,6 +179,7 @@ where 1=1 and t1.col3>:a and t1.name=:name
 
 举个例子：
 ```java
+    //外部数据范围条件语句
     List<String> filters = new ArrayList<String> ();
     filters.add("[table1.c] like {p1.1:ps}");
     filters.add("[table1.b] = {p5}");
@@ -189,11 +188,9 @@ where 1=1 and t1.col3>:a and t1.name=:name
     Map<String,Object> paramsMap = new HashMap<String,Object>();       
     paramsMap.put("p1.1", "1");
     paramsMap.put("p2", "3");
-     
     String queryStatement = "select t1.a,t2.b,t3.c "+
         "from table1 t1,table2 t2,table3 t3 "+
         "where 1=1 {table1:t1} order by 1,2";
-         
     System.out.println(QueryUtils.translateQuery(queryStatement,filters,paramsMap,true).getQuery());
     结果是：
     select t1.a,t2.b,t3.c from table1 t1,table2 t2,table3 t3
@@ -208,8 +205,8 @@ where 1=1 and t1.col3>:a and t1.name=:name
 ### 统一增删改查操作
 为了照顾绝大部分开发人员，所以框架没有对持久化做严格的限制，[centit-persistence](https://github.com/ndxt/centit-persistence)分别对Spring jdbc、Hibernate、MyBatis进行了封装。推荐使用jdbc。框架对持久化封装的目标有：
 
-1. 用任意持久化框架实现**增删改**，开发人员都不需要写sql语句，sping jdbc中做了jpa的简单的实现，所以也无需写sql代码。
-2. 通过参数驱动sql执行**查询**操作，jdbc直接原生sql，Hibernate通过NativeQuery支持sql，Mybatis的Mapper文件中可以直接写sql。对参数驱动sql的支持jdbc和Hibernate都是通过先处理参数驱动sql得到最终的sql来执行，Mybatis是通过插件来[ParameterDriverSqlInterceptor.java](https://github.com/ndxt/centit-persistence/blob/master/centit-persistence-mybatis/src/main/java/com/centit/framework/mybatis/plugin/ParameterDriverSqlInterceptor.java)来实现的。
+1. 用任意持久化框架实现**增删改**，开发人员**都不需要写sql语句**，sping jdbc中做了jpa的简单的实现，所以也无需写sql代码。
+2. **用参数驱动sql执行查询操作**，jdbc直接用sql，Hibernate通过NativeQuery支持sql，Mybatis的Mapper文件中可以直接写sql。对参数驱动sql的支持jdbc和Hibernate都是通过先处理参数驱动sql得到最终的sql再来执行，Mybatis是通过插件来[ParameterDriverSqlInterceptor.java](https://github.com/ndxt/centit-persistence/blob/master/centit-persistence-mybatis/src/main/java/com/centit/framework/mybatis/plugin/ParameterDriverSqlInterceptor.java)来实现的。
 3. 框架还实现了DatabaseOptUtils类，对常用的持久化操作进行封装，比如：调用存储过程，执行sql语句等等。
 
 ### 数据源

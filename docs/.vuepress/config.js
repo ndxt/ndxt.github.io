@@ -4,17 +4,15 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '框架的总体设计', link: '/environment_structure/' },
-      { text: '项目介绍', link: '/projects/' },
+      { text: '总体设计', link: '/system_design/' },
+      { text: '相关项目', link: '/projects/' },
       { text: '更新记录', link: '/UPDATE_LOG' },
     ],
     sidebar: {
-      '/environment_structure/': [
-        '',
-        'ji-zhu-lu-xian',
-        'tong-yong-hou-tai-gong-neng',
-        'kuang-jia-ping-tai-jie-shao',
-        'hou-tai-fu-wu'
+      '/system_design/': [
+        'technical_design',
+        'concept_design',
+        'product_design'
       ],
       '/projects/': [
         '',
