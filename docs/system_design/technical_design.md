@@ -217,6 +217,13 @@ where 1=1 and t1.col3>:a and t1.name=:name
 
 ## MVC分层设计和脚手架
 
+MVC是模型(Model),视图(View)和控制(Controller)的缩写，其目的实现Web系统的职能分工。对应到代码：
+1. Po持久对象(Persisent Object)，po和数据库中的表意义对应，需要用jpa注解定义映射关系（Mybatis可以用mapper文件定义）。框架没有要求必须有DTO（传送对象）、VO（展示对象）、BO（业务对象），业务系统根据自己的需求进行裁决。
+2. Dao 对数据库的操作层，负责对数据库进行增删改查操作。一般也po或者数据库表一一对应。
+3. Services逻辑层，和某一个具体业务对应，一般会和数据库中的一个业务主表对应。数据库事务一般在这个层面上控制，系统用spring来管理事务，spring是通过jdk代理类来管理事务的，所以Services层必须抽象出接口将实现和接口分开。
+4. Controller 控制层。采用spring mvc框架，用restful风格的接口返回json格式的数据。 由于框架是在这一层控制权限的，所以每个框架需要有一个唯一的ID便于后台维护数据权限时和业务对应。
+5. View 展示层。展示层有多种实现方式，有些项目还需要支持多种平台（Android、iOS等），将展示层独立出来就是为了应付用户多种需要。
+
 在信息管理系统或则OA类等先腾的典型业务中的功能模块都会应对到数据库中的一个业务主表，所以我们的设计一般为围绕数据库表结构展开，我们推荐使用powerDesigner来做表结构设计。[centit-scaffold](https://github.com/ndxt/centit-scaffold)是一个脚手架工程，他会根据pdm中的表定义和模板文件自动生成前后台代码。生成的代码实现了增删改查功能会对应的页面。开发人员可以根据自己项目的要求编写[模板](https://github.com/ndxt/centit-scaffold/tree/master/src/main/resources)。
 
 这个脚手架目前还没有图形界面的实行，是通过[一个xml文件](https://github.com/ndxt/centit-scaffold/blob/master/src/main/resources/scaffoldtask2.xml)来描述生产策略的，通过运行[RunScaffoldTask2.java](https://github.com/ndxt/centit-scaffold/blob/master/src/main/java/com/centit/support/scaffold/RunScaffoldTask2.java)来执行转换。
