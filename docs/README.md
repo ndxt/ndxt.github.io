@@ -32,7 +32,7 @@ sidebar: auto
 
 ## 版权说明
 
-南大先腾所有开源项目采用[The Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)。
+南大先腾所有开源项目采用[The Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)授权协议。
 
 ## 交流与服务
 
