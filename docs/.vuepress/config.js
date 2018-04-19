@@ -16,9 +16,27 @@ module.exports = {
       ],
       '/projects/': [
         '',
-        'centit-commons',
+        'centit-utils',
+        'centit-compiler',
+        'centit-database',
+        'centit-presistence',
+        'centit-scaffold',
         'centit-framework',
-        'centit-services',
+        'centit-framework-system',
+        'centit-integration-platform',
+        'centit-framework-cloud',
+        'centit-ui-easyui',
+        'centit-ui-vue',
+        'centit-cas',
+        'centit-fileserver',
+        'centit-stat',
+        'centit-search',
+        'centit-webim',
+        'centit-workflow',
+        'centit-workorder',
+        'centit-msgpusher',
+        'centit-meta-form',
+        'centit-dde'
       ]
     }
   }
