@@ -55,7 +55,7 @@
     Object getData();
 ```
 
-这个接口有两个具体的实现ResponseSingleData 和 ResponseMapData，在客户端接受到这个JSON时可以用 ResponseJSON 来解析。框架中JsonResultUtils 类提供了直接向HttpServletResponse写符合上述格式要求的JSON的便捷方法。所以在controller类中可以有多种方式来实现json格式的数据返回。详情可以参见[framework-adapter/common](http://gitlab.centit.com/gitlab/ctm/centit-framework/tree/master/framework-adapter/src/main/java/com/centit/framework/common)。
+这个接口有两个具体的实现ResponseSingleData 和 ResponseMapData，在客户端接受到这个JSON时可以用 ResponseJSON 来解析。框架中JsonResultUtils 类提供了直接向HttpServletResponse写符合上述格式要求的JSON的便捷方法。所以在controller类中可以有多种方式来实现json格式的数据返回。详情可以参见[framework-adapter/common](https://github.com/ndxt/centit-framework/tree/master/framework-adapter/src/main/java/com/centit/framework/common)。
 
 ## 参数驱动SQL
 
