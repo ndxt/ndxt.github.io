@@ -1,6 +1,7 @@
 module.exports = {
   title: '南大先腾开源计划',
   description: '南大先腾开源计划',
+  port: 8888,
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
