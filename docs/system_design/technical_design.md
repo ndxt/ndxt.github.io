@@ -62,6 +62,9 @@
 参数驱动sql它是一个sql预处理引擎，他通过条件标签[],外置条件插入标签{}和预处理标签来将对数据库查询的逻辑规则从代码中剥离出来。设计这个参数化驱动sql的主要目标有：
 1. 避免根据输入条件进行复杂的sql语句拼接工作。目标是将前段输入的条件直接转换为Map作为参数驱动sql的参数。
 2. 统一处理数据范围权限包括数据行范围和数据的列范围。
+
+参数驱动sql语句是基于命名变量语句的，所有参数以":"+参数名的方式标识。不能用"?"作为参数占位符，也不能用MyBatis的方式。
+
 ### 条件标签[]
 语法: [(条件)(参数列表)| sql语句片段]
 
@@ -140,7 +143,7 @@ where 1=1 and t1.col3>:a and t1.name=:name
 为了照顾绝大部分开发人员，所以框架没有对持久化做严格的限制，[centit-persistence](https://github.com/ndxt/centit-persistence)分别对Spring jdbc、Hibernate、MyBatis进行了封装。推荐使用jdbc。框架对持久化封装的目标有：
 
 1. 用任意持久化框架实现**增删改**，开发人员**都不需要写sql语句**，sping jdbc中做了jpa的简单的实现，所以也无需写sql代码。
-2. **用参数驱动sql执行查询操作**，jdbc直接用sql，Hibernate通过NativeQuery支持sql，Mybatis的Mapper文件中可以直接写sql。对参数驱动sql的支持jdbc和Hibernate都是通过先处理参数驱动sql得到最终的sql再来执行，Mybatis是通过插件来[ParameterDriverSqlInterceptor.java](https://github.com/ndxt/centit-persistence/blob/master/centit-persistence-mybatis/src/main/java/com/centit/framework/mybatis/plugin/ParameterDriverSqlInterceptor.java)来实现的。
+2. **用参数驱动sql执行查询操作**，jdbc直接用sql，Hibernate通过NativeQuery支持sql，Mybatis的Mapper文件中可以直接写sql。对参数驱动sql的支持jdbc和Hibernate都是通过先处理参数驱动sql得到最终的sql再来执行，Mybatis是通过插件来[ParameterDriverSqlInterceptor](https://github.com/ndxt/centit-persistence/blob/master/centit-persistence-mybatis/src/main/java/com/centit/framework/mybatis/plugin)来实现的。
 3. 框架还实现了DatabaseOptUtils类，对常用的持久化操作进行封装，比如：调用存储过程，执行sql语句等等。
 
 ### 数据源

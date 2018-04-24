@@ -27,14 +27,16 @@
 
 ## 权限体系
 
-框架中的权限包括三部分：功能权限、数据范围权限、业务流程权限。
+框架中的权限包括三部分：功能权限、数据范围权限、业务流程权限。参见[框架安全体系](https://github.com/ndxt/centit-framework/tree/master/framework-security/src/main/java/com/centit/framework/security);
 
 ### 功能权限
 
 框架采用Restful+JSON的方式设计接口，关于功能权限有以下概念：
-1. 操作，一个url和http method的组合，着是框架功能权限控制的最小单位。
+1. 操作，一个url和http method的组合，着是框架功能权限控制的最小单位，每个操作有个唯一的ID(optCode)。
 2. 业务，就是一组操作的组合，通常他们有相同的url前缀，对应到代码中他们通常在一个controller类中，他们有一个唯一的ID（optId）。
 3. 角色，一个角色一般包含一组操作。用户通过拥有角色的方式获得具体操作权限。
+
+功能权限通过[Spring security](https://docs.spring.io/spring-security/site/docs/current/guides/html5/)的过滤器实现，过滤器将请求url映射到optCode，通过角色信息查找用于这个optCode所有角色，然后对比当前用户是否具有其中的一个，如果有就通过，否则提示401。
 
 ### 数据范围权限
 
@@ -55,9 +57,21 @@
 
 ## 数据字典
 
+框架将所有的人员信息、组织信息、人员组织关系、业务操作信息、角色信息等等都统称为数据字典。并且额外开发一个自定义数据字典类，参见[model/basedata](https://github.com/ndxt/centit-framework/tree/master/framework-core/src/main/java/com/centit/framework/model/basedata)中的IDataDictionary和IDataCatalog。自定义数据字典一般可以用于：
+
+1. 统一代码转换，比如：性别代码、地区。数据字典可以是列表形式的，也可以是树型结构的。
+2. 一些功能的配置参数。比如：个人参数配置项。
+
+所有的数据字典可以通过[CodeRepositoryUtil](https://github.com/ndxt/centit-framework/tree/master/framework-core/src/main/java/com/centit/framework/components)工具类中的静态方式获取。
+
 ## 操作日志
+
+
 
 ## 通知中心
 
+
+
 ## 通用模块
+
 
