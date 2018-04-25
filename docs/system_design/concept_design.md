@@ -62,7 +62,7 @@
 1. 统一代码转换，比如：性别代码、地区。数据字典可以是列表形式的，也可以是树型结构的。
 2. 一些功能的配置参数。比如：个人参数配置项。
 
-所有的数据字典可以通过[CodeRepositoryUtil](https://github.com/ndxt/centit-framework/tree/master/framework-core/src/main/java/com/centit/framework/components)工具类中的静态方式获取。
+所有的数据字典可以通过[CodeRepositoryUtil](https://github.com/ndxt/centit-framework/tree/master/framework-core/src/main/java/com/centit/framework/components)工具类中的静态方式获取。也可以通过在po类的属性上添加DictionaryMap注解映射，在转换为json是就会自动转换为字典对应值，参见[数据字典映射工具](https://github.com/ndxt/centit-framework/tree/master/framework-core/src/main/java/com/centit/framework/core/dao)。
 
 ## 操作日志
 
@@ -99,4 +99,4 @@
 
 一个典型的示例参见[centit-fileserver](https://github.com/ndxt/centit-fileserver)。
 
-目前框架已经有很多通用模块，参见[相关项目](https://ndxt.github.io/projects/)。南大先腾框架后期的建设重点就是逐步完善并开发更多的通用模块。
+目前框架已有通用模块参见[相关项目](https://ndxt.github.io/projects/)。南大先腾框架后期的建设重点就是逐步完善并开发更多的通用模块。

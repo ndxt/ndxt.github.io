@@ -57,7 +57,7 @@ sidebar: auto
    * 各个业务模块只能和集成平台之间进行数据交换，如果不同的业务模块之间需要互相调用需要显式的实现接口，并且需要知道对方的部署位置。
    * 在不借助第三方工具的情况下各个业务模块只能部署一个副本，接口调用不能做负载均衡。
    * 这样做的额主要意义是为了模块之间独立，避免互相干扰，并且可以用不同的技术栈来实现。主要应用场景是服务与性能要求不高，但是业务非常庞大和复杂的系统。比如：政府内部的业务系统，这也是南大先腾最典型的目标客户。
-3. 基于spring cloud 的分布式系统项目。框架的设计理念和spring boot 非常相像。不同的是spring boot重点是集成各个技术平台，先腾框架的重点是实现业务系统共有属性。先腾框架中的工程业务部分和配置部分都是分离的，所以将业务实现部分可以直接集成到spring cloud中，来实现基于spring cloud的分布式系统。[centit-integration-platform](https://github.com/ndxt/centit-integration-platform) 的审判日那个spring cloud的版本是 [centit-framework-cloud](https://github.com/ndxt/centit-framework-cloud)。[framework-cloud-demo](https://github.com/ndxt/centit-framework-cloud/tree/master/framework-cloud-demo) 是基于spring cloud开发的业务模块示例代码。
+3. 基于spring cloud 的分布式系统项目。框架的设计理念和spring boot 非常相像。不同的是spring boot重点是集成各个技术平台，先腾框架的重点是实现业务系统共有属性。先腾框架中的工程业务部分和配置部分都是分离的，所以将业务实现部分可以直接集成到spring cloud中，来实现基于spring cloud的分布式系统。[centit-integration-platform](https://github.com/ndxt/centit-integration-platform) 的spring cloud的版本是 [centit-framework-cloud](https://github.com/ndxt/centit-framework-cloud)。[framework-cloud-demo](https://github.com/ndxt/centit-framework-cloud/tree/master/framework-cloud-demo) 是基于spring cloud开发的业务模块示例代码。
 4. 开发工具类项目。这类项目通常比较小，并且不需要复杂的组织架构和权限体系的维护，甚至不需要数据库进行持久化，只是要实现一个具体的功能，比如：文件服务器。[framework-web-demo](https://github.com/ndxt/centit-framework/tree/master/framework-web-demo)就是一个最基本的示例代码。开发人员需要注意一下几点：
    * 这个示例代码中的所有组织架构、权限等等配置信息都写在json文件中，用户除了可以修改密码，其他的都只能通过修改配置文件来修改。
    * 项目中没有数据库持久化部分，开发人员可以根据需要从[**centit-persistence**](https://github.com/ndxt/centit-persistence)中选这持久化基础包。
