@@ -97,6 +97,6 @@
 5. 【模块名】-client，以jar包的形式发布。它是模块服务程序的客户端，通过它可以访问服务程序的接口。如果业务系统将通用模块作为独立服务运行，系统中需要引用这个client.jarl来和模块服务通讯。
 6. 【模块名】-demo，这个一般是使用示例。
 
-一个典型的示例参见[centit-fileserver](https://github.com/ndxt/centit-fileserver).
+一个典型的示例参见[centit-fileserver](https://github.com/ndxt/centit-fileserver)。
 
 目前框架已经有很多通用模块，参见[相关项目](https://ndxt.github.io/projects/)。南大先腾框架后期的建设重点就是逐步完善并开发更多的通用模块。
