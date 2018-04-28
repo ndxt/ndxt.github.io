@@ -28,6 +28,20 @@
 
 ### 启动与配置空间
 
+框架采用spring 4.* 来开发，使用了spring 配置类的新特性，将web服务中所有的配置信息用java类来实现，可能需要实施修改（配置）的内容全部集中放在system.properties这一个属性文件中。配置参数的设计原则：
+
+1. 90%以上配置参数都是有默认值的。
+2. app.* 和 login.* 是必须的，其他的都是可选的。比如：有数据就需要jdbc.\*，使用活动目录验证就要 ldap.\*。
+
+java的配置类一般位于项目的config包中。配置类一般有一下几类：
+
+1. web环境配置类，代替传统的web.xml。一般类名为 WebInitializer。
+2. ServiceConfig。
+3. NormalSpringMvcConfig。
+4. InstantiationServiceBeanPostProcessor。
+
+配置项说明参见[framework-web-demo](https://github.com/ndxt/centit-framework/tree/master/framework-web-demo)。
+
 ## 最简实现
 
 ## 带系统维护平台

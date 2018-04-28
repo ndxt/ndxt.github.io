@@ -99,4 +99,4 @@
 
 一个典型的示例参见[centit-fileserver](https://github.com/ndxt/centit-fileserver)。
 
-目前框架已有通用模块参见[相关项目](https://ndxt.github.io/projects/)。南大先腾框架后期的建设重点就是逐步完善并开发更多的通用模块。
+目前框架已有通用模块参见[相关项目](https://ndxt.github.io/projects/)。南大先腾框架后期的建设重点就是逐步完善并开发更多的通用模块。**用流行的术语就是这部分将会是南大先腾政务业务的中台，我们框架的一个重要思想就是用互联网的思维来做政府企业内部办公业务。**
