@@ -40,7 +40,7 @@ Spring security使用一组过滤器来对资源进行保护，其过滤器的�
 
 所以spring security并不要求用户一定到先登录才可以操作，不登录也可以做不受保护的操作，开发是一定要注意。详情参见[framework-security](https://github.com/ndxt/centit-framework/tree/master/framework-security)。
 
-### 启动与配置空间
+### 启动与系统配置
 
 框架采用spring 4.* 来开发，使用了spring 配置类的新特性，将web服务中所有的配置信息用java类来实现，可能需要实施修改（配置）的内容全部集中放在system.properties这一个属性文件中。配置参数的设计原则：
 

@@ -70,26 +70,77 @@ sidebar: auto
 
 1. 修改代码的包名
 
+![代码图片](./assets/web-demo-code.jpg)
+代码com.centit.framework.web.config这个包中的类为配置类，参见[启动与系统配置](./system_design/product_design.html#启动与系统配置)，这个包的名称也可以根据业务进行修改。
+
+包otherpackage中放业务代码。
+
 2. 修改配置文件
+
+  * 配置文件system.properties，配置文件中有说明。
+  * static_system_config.json 文件中可以维护框架所需的基本元素。可以在开发时维护自己所开发的页面，最终应该维护到数据库中或者集成平台中。
 
 ### 给项目添加持久化模块
 
+框架提供多种[持久化方案](./system_design/technical_design.html#数据持久化)，推荐使用jdbc方案，下面的示例都是以jdbc方案为例介绍的，其他方案类似。
+
 1. 添加持久化包依赖
+```xml
+<dependencies>
+    <!-- 添加持久化框架包和对应的配置类包，推荐jdbc 也可以使用 hibernate或者mybatis-->
+    <dependency>
+        <groupId>com.centit.framework</groupId>
+        <artifactId>centit-persistence-jdbc</artifactId>
+        <version>${centit.persistence.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>com.centit.framework</groupId>
+        <artifactId>centit-persistence-jdbc-config</artifactId>
+        <version>${centit.persistence.version}</version>
+    </dependency>
+    <!-- 添加数据库jdbc驱动包，根据项目实际情况添加-->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql.version}</version>
+        <scope>runtime</scope>
+    </dependency>
+</dependencies>    
+```
+2. 添加数据源配置信息，在system.properties添加jdbc链接信息。
 
-2. 添加数据源配置信息
+3. 添加持久化配置信息
 
+```java
+
+@Configuration
+@Import({JdbcConfig.class /*添加jdbc配置类*/,......})
+@ComponentScan(basePackages = {"com.centit","com.otherpackage"},
+        excludeFilters = @ComponentScan.Filter(value = org.springframework.stereotype.Controller.class))
+public class ServiceConfig {
+    
+}
+```
 ### 新建模块
-
 1. 添加po类
-
-2. 添加dao类
-
+  * po为和数据库表一一对应的类，通过jpa注解来实现映射关系（Mybatis方案不需要jpa注解）。
+  * 框架还采用了hibernate-validator对字段进行合法性验证。
+  * centit-persistence-jdbc对jpa进行了强化添加了字段自定义生成规则，通过注解ValueGenerator，可以用来生成主键、当前时间或者气他字段的运算结果等等。
+  * 如果是逻辑删除的类需要实现EntityWithDeleteTag接口。这样就可以让系统自动处理逻辑删除了。
+  * 对数据字典字段添加DictionaryMap注解，实现数据字典值转json时自动映射。
+2. 添加dao类。
+  * dao类扩展BaseDaoImpl基类就可以实现简单的增删改查操作。
+  * 在 getFilterField 方法中编写查询条件中的变量和过滤条件的对应关系，可以实现sql语句的自动拼装。
 3. 添加service类
-
+  * service类是控制数据库事务的地方，所以接口和实现一定要分开。
+  * 接口可以扩展BaseEntityManager接口，实现增删改查操作。业务系统也可以不从这个接口扩展，自己写基本的操作接口。
+  * 实现了对应的扩展BaseEntityManagerImpl类，自动实现BaseEntityManager中的方法。
 4. 添加controller类
-
+  * controller需要继承BaseController类，这个基类中实现了当前用户的信息获取和查询条件整理工作。
+  * 服务通过restful风格的url加上json格式的返回数据实现，参见[前后端数据通讯格式](./system_design/technical_design.html#前后端数据通讯格式)。
 5. 添加前端页面
-
+  * 由于前后端分离，所以前段界面全部用html + ajax请求的方式实现。
+  * 前端页面每个模块一个文件夹，所以的js请求代码通过放在ctrl子文件中。
 ### 其他说明
 
 在信息管理系统或则OA类等先腾的典型业务中的功能模块都会应对到数据库中的一个业务主表；在项目中就会对应一套从数据库存储、业务逻辑实现到和前段界面的交换的代码；参见[MVC分层设计和脚手架](./system_design/technical_design.html#mvc分层设计和脚手架)一节。系统需要对业务模块进行权限管理，所以每一个业务木块都要有一个标识、每一个方法可以用一个url和http请求方法来标识，请参见 权限体系 一节。数据范围权限的控制需要通过 sql来控制数据的访问，请参见[参数驱动SQL](./system_design/technical_design.html#参数驱动sql)一节。 框架提倡前后端分离的方案，前段通过ajax请求后端，后端通过类restful风格方式提供数据服务，请参见[前后端数据通讯格式](./system_design/technical_design.html#前后端数据通讯格式)一节。
