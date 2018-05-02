@@ -1,0 +1,401 @@
+@charset "utf-8";
+/* CSS Document */
+i{margin:auto 3px}
+.icon-text{display:inline-block;
+	height:100%;line-height: 100%;
+	padding:2px 0;
+	margin:auto 3px;
+}
+
+.icon-base {
+	background:url(icons/base_16.png) no-repeat;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+}
+
+.icon-base-info {
+	background-position:0px 0px;
+}
+
+.icon-base-plus {
+	background-position:-16px 0px;
+}
+
+.icon-base-telephone_book {
+	background-position:-32px 0px;
+}
+
+.icon-base-aid {
+	background-position:-48px 0px;
+}
+
+.icon-base-gear {
+	background-position:-64px 0px;
+}
+
+.icon-base-back {
+	background-position:-80px 0px;
+}
+
+.icon-base-calendar {
+	background-position:-96px 0px;
+}
+
+.icon-base-calculator {
+	background-position:-112px 0px;
+}
+
+.icon-base-forbid {
+	background-position:-128px 0px;
+}
+
+.icon-base-handcart {
+	background-position:0px -16px;
+}
+
+.icon-base-disk {
+	background-position:-16px -16px;
+}
+
+.icon-base-report {
+	background-position:-32px -16px;
+}
+
+.icon-base-ban {
+	background-position:-48px -16px;
+}
+
+.icon-base-fix {
+	background-position:-64px -16px;
+}
+
+.icon-base-copy {
+	background-position:-80px -16px;
+}
+
+.icon-base-cut {
+	background-position:-96px -16px;
+}
+
+.icon-base-symbol {
+	background-position:-112px -16px;
+}
+
+.icon-base-file {
+	background-position:-128px -16px;
+}
+
+.icon-base-down {
+	background-position:0px -32px;
+}
+
+.icon-base-pencil {
+	background-position:-16px -32px;
+}
+
+.icon-base-copy_out {
+	background-position:-32px -32px;
+}
+
+.icon-base-speed_ahead {
+	background-position:-48px -32px;
+}
+
+.icon-base-heart {
+	background-position:-64px -32px;
+}
+
+.icon-base-print {
+	background-position:-80px -32px;
+}
+
+.icon-base-flag {
+	background-position:-96px -32px;
+}
+
+.icon-base-folder {
+	background-position:-112px -32px;
+}
+
+.icon-base-forward {
+	background-position:-128px -32px;
+}
+
+.icon-base-card {
+	background-position:0px -48px;
+}
+
+.icon-base-pass {
+	background-position:-16px -48px;
+}
+
+.icon-base-user {
+	background-position:-32px -48px;
+}
+
+.icon-base-machine {
+	background-position:-48px -48px;
+}
+
+.icon-base-question {
+	background-position:-64px -48px;
+}
+
+.icon-base-break {
+	background-position:-80px -48px;
+}
+
+.icon-base-home {
+	background-position:-96px -48px;
+}
+
+.icon-base-picture {
+	background-position:-112px -48px;
+}
+
+.icon-base-copy_in {
+	background-position:-128px -48px;
+}
+
+.icon-base-computer {
+	background-position:0px -64px;
+}
+
+.icon-base-lock {
+	background-position:-16px -64px;
+}
+
+.icon-base-message {
+	background-position:-32px -64px;
+}
+
+.icon-base-take_in {
+	background-position:-48px -64px;
+}
+
+.icon-base-music {
+	background-position:-64px -64px;
+}
+
+.icon-base-add {
+	background-position:-80px -64px;
+}
+
+.icon-base-note {
+	background-position:-96px -64px;
+}
+
+.icon-base-www {
+	background-position:-112px -64px;
+}
+
+.icon-base-take_out {
+	background-position:-128px -64px;
+}
+
+.icon-base-webpage {
+	background-position:0px -80px;
+}
+
+.icon-base-tick {
+	background-position:-16px -80px;
+}
+
+.icon-base-bruch {
+	background-position:-32px -80px;
+}
+
+.icon-base-matters {
+	background-position:-48px -80px;
+}
+
+.icon-base-pause {
+	background-position:-64px -80px;
+}
+
+.icon-base-fax {
+	background-position:-80px -80px;
+}
+
+.icon-base-camera {
+	background-position:-96px -80px;
+}
+
+.icon-base-play {
+	background-position:-112px -80px;
+}
+
+.icon-base-option {
+	background-position:-128px -80px;
+}
+
+.icon-base-printer {
+	background-position:0px -96px;
+}
+
+.icon-base-search {
+	background-position:-16px -96px;
+}
+
+.icon-base-arrow_right {
+	background-position:-32px -96px;
+}
+
+.icon-base-recover {
+	background-position:-48px -96px;
+}
+
+.icon-base-minus {
+	background-position:-64px -96px;
+}
+
+.icon-base-speed_back {
+	background-position:-80px -96px;
+}
+
+.icon-base-soft_disk_qus {
+	background-position:-96px -96px;
+}
+
+.icon-base-soft_disk {
+	background-position:-112px -96px;
+}
+
+.icon-base-remind {
+	background-position:-128px -96px;
+}
+
+.icon-base-before {
+	background-position:0px -112px;
+}
+
+.icon-base-after {
+	background-position:-16px -112px;
+}
+
+.icon-base-computer2 {
+	background-position:-32px -112px;
+}
+
+.icon-base-stop {
+	background-position:-48px -112px;
+}
+
+.icon-base-magnifier {
+	background-position:-64px -112px;
+}
+
+.icon-base-forbidden {
+	background-position:-80px -112px;
+}
+
+.icon-base-clock {
+	background-position:-96px -112px;
+}
+
+.icon-base-box {
+	background-position:-112px -112px;
+}
+
+.icon-base-rubbish {
+	background-position:-128px -112px;
+}
+
+.icon-base-unlock{
+	background-position:0px -128px;
+}
+
+.icon-base-arrow_left {
+	background-position:-16px -128px;
+}
+
+.icon-base-up {
+	background-position:-32px -128px;
+}
+
+.icon-base-admin {
+	background-position:-48px -128px;
+}
+
+.icon-base-earth {
+	background-position:-64px -128px;
+}
+
+.icon-base-cap {
+	background-position:-80px -128px;
+}
+
+.icon-base-plus {
+	background-position:-96px -128px;
+}
+
+.icon-base-magnify {
+	background-position:-112px -128px;
+}
+
+.icon-base-operation_monitoring {
+	background-position:-128px -128px;
+}
+
+
+
+
+
+.icon-base-monitor_analysis {
+	background-position:0px -144px;
+}
+
+.icon-base-data_acquisition {
+	background-position:-16px -144px;
+}
+
+.icon-base-duty_words {
+	background-position:-32px -144px;
+}
+
+.icon-base-failure_monitor {
+	background-position:-48px -144px;
+}
+
+.icon-base-public_data {
+	background-position:-64px -144px;
+}
+
+.icon-base-monitor_platform {
+	background-position:-80px -144px;
+}
+
+.icon-base-data_center {
+	background-position:-96px -144px;
+}
+
+.icon-base-basic_platform {
+	background-position:-112px -144px;
+}
+
+.icon-base-daily_servicing {
+	background-position:-128px -144px;
+}
+
+
+.icon-base-special_servicing{
+	background-position:0px -160px;
+}
+
+.icon-base-material_management {
+	background-position:-16px -160px;
+}
+
+.icon-base-construction_subpackage {
+	background-position:-32px -160px;
+}
+
+.icon-base-system_management {
+	background-position:-48px -160px;
+}
+
+.icon-base-index_analysis {
+	background-position:-64px -160px;
+}
+

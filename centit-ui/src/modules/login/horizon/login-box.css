@@ -1,0 +1,113 @@
+*{margin:0;padding:0;}
+body {
+	background:#3d80b5 url(img/bg_login2.jpg) repeat-x left top;
+	font: 16px simhei;
+	color: #fff;
+}
+div {
+	font-size: 12px;
+		line-height: 24px;
+}
+
+#login-box {
+	width:877px;
+	height:705px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin: -353px 0px 0px -439px;
+	color: #000;
+	font: 16px simhei;
+	background: url(img/bg1.jpg) no-repeat left top;
+}
+
+.textfile {
+	background:url(img/bg_login_textfile.gif) no-repeat left top; 
+	padding: 0px 2px; height: 29px;
+	 width: 143px; border: 0; }
+
+#login-box img {
+	border:none;
+}
+
+#login-box-name {
+	float: left;
+	display:inline;
+	width:80px;
+	text-align: right;
+	padding: 14px 10px 0 0;
+margin: 350px 0 7px 250px;
+}
+
+#login-box-name2 {
+	float: left;
+	display:inline;
+	width:80px;
+	text-align: right;
+	padding: 14px 10px 0 0;
+margin: 12px 0 7px 250px;
+}
+
+
+#login-box-field {
+	float: left;
+	display:inline;
+	width:230px;
+	margin:0;
+	margin:20px 0 7px 0;
+}
+
+#login-box-field input  {
+	width: 221px;
+	height:30px;
+	padding: 10px 4px 6px 3px;
+	border: 1px solid #0d2c52;
+	background-color:#fff;
+	font-size: 16px;
+	color: #000;
+	margin: 342px 0 0 20px;
+}
+
+#login-box-field2 input  {
+	width: 221px;
+	height:30px;
+	padding: 10px 4px 6px 3px;
+	border: 1px solid #0d2c52;
+	background-color:#fff;
+	font-size: 16px;
+	color: #000;
+margin: 422px 0 0 -210px;
+}
+
+
+span {
+	display: block;
+	clear: both;
+	margin: 20px 0 0 360px;
+	padding: 10px 0 0 0;
+	font-size: 11px;
+}
+
+span a {
+	color: #414141;
+	font-size: 11px;
+	margin: 0 0 0 20px;
+}
+
+.login-box-btn {	
+	width:64px;
+	height:25px;
+margin: -20px 0 0 518px;
+	background: url(img/btn_login.gif) no-repeat;
+	border: none;
+}
+.footer {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	left: 0;
+	bottom: 0;
+	z-index: 100;
+	position: fixed;
+	text-align: center;
+}

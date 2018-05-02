@@ -1,0 +1,164 @@
+/*HEADER*/
+body > .layout-panel-north {
+/*     background: url(images/header.jpg) repeat-x; */
+}
+#header {
+    height: 122px;
+    border: none;
+    border-bottom: 4px solid #0070b1;
+/*     background: url(images/header-left.jpg) bottom left no-repeat; */
+}
+#header .title{
+	position: absolute;
+	top:0;
+	left:30px;
+    text-indent: -9999px;
+	width:346px;
+	height:50px;
+	background: url(images/header-title.png) no-repeat;
+}
+.tooltip {
+    background-color: #ececec;
+    border-color:#1583cf;
+    color: #000000;
+}
+body.full-screen #header .title {
+    height: 33px;
+    line-height: 33px;
+    top: 0;
+    font-size: 22px;
+    font-weight: bold;
+    background: none;
+    text-indent: 0;
+}
+
+/*HEADER > 工具栏*/
+#header .toolbar {
+    position: absolute;
+	height:60px;
+	top:0;
+	right:0;
+	background:none;
+}
+#header .l-btn-text{line-height:60px;border:none;color:white;margin-top: 0;}
+#header .l-btn-plain{padding:0;position:relative}
+#header .l-btn-plain:hover{border: none;border-radius: 0;}
+
+.full-screen #header .l-btn-large .l-btn-icon-top .l-btn-text{margin-top: 10px!important;}
+.full-screen #header .menu-mix .easyui-linkbutton{height:38px!important}
+.full-screen .l-btn-text{line-height: 35px;}
+#header .toolbar .panel-body{
+    padding: 0;
+    background: transparent;
+}
+#toolbar .l-btn-left{height:60px;width:50px;}
+#toolbar .l-btn-text{display:none}
+#toolbar .icon-addresslist{
+	width: 24px;
+    height: 30px;
+    background: url(images/tongxunlu.png) -13px center no-repeat;
+    display: inline-block;
+    top: 22px;
+    left:13px!important;
+}
+#toolbar .icon-tip {
+    width: 24px;
+    height: 30px;
+    background: url(images/huanfu.png) -14px center no-repeat;
+    display: inline-block;
+    top: 22px;
+    left: 13px!important;
+}
+#toolbar .icon-edit{
+	width: 24px;
+    height: 30px;
+    background: url(images/shezhi.png) -13px center no-repeat;
+    display: inline-block;
+    top: 22px;
+    left: 13px!important;
+}
+#toolbar .icon-back{
+	width: 24px;
+    height: 30px;
+    background: url(images/zhuxiao.png) -13px center no-repeat;
+    display: inline-block;
+    top: 22px;
+    left:13px!important;
+}
+#toolbar .icon-messagetips{
+	width: 24px;
+    height: 30px;
+    background: url(images/tixing.png) -13px center no-repeat;
+    display: inline-block;
+    top: 22px;
+    left:13px!important;
+}
+#toolbar .icon-lockscreen{
+	width: 30px;
+    height: 30px;
+    background: url(images/suoping.png) -11px center no-repeat;
+    display: inline-block;
+    top: 22px;
+    left:10px!important;
+}
+#toolbar .icon-helpcenter{
+	width: 30px;
+    height: 30px;
+    background: url(images/helpcenter.png) 0 center no-repeat;
+    display: inline-block;
+    top: 22px;
+    left:10px!important;
+}
+#tixing .tabs-header{background:none}
+#Loginuser{
+	position: absolute;
+    width: 184px;
+    height:139px;
+    background: white;
+    top: 0;
+    left: 10px;
+}
+.Loginuser{text-align: center;line-height:150%;font-size:18px;font-weight:bold}
+.Loginuser img{width: 68px;
+    height: 68px;
+    display: block;
+    margin: 5px auto -3px auto;
+    border-radius: 50%;}
+.Logintime{text-align: center;font-size:12px;}
+.Loginnumber{text-align:center;margin-top:5px;font-size:12px;}
+/*HEADER > 工具栏 > SKIN*/
+#toolbar_skin .skin {
+    border-radius: 2px;
+}
+.help_center{
+	background:url(images/helpcenter_bg.png) center -10px no-repeat
+}
+.help_center_user>img{    
+	vertical-align: middle;
+    margin: 10px 24px 10px 20px;
+    display: inline-block;
+}
+.help_center_user>p{
+	padding: 0 20px;
+    line-height: 150%;
+    font-size: 14px;
+}
+#help_center_tools>a{
+	display:inline-block;
+	height:32px;
+	width:32px;
+	margin:5px 10px
+}
+
+#ChangePassword,#AddressList,#MessageTips,#LockScreen,#DialogMessageTips,#HelpCenter{display:none}
+#help_center_tools{text-align:center}
+#help_center_tools>a.sp_icon{background:url(images/helpcenter_sp1.png)}
+#help_center_tools>a.sz_icon{background:url(images/helpcenter_sz1.png)}
+#help_center_tools>a.tx_icon{background:url(images/helpcenter_tx1.png)}
+#help_center_tools>a.bz_icon{background:url(images/helpcenter_bz1.png)}
+
+#help_center_tools>a.sp_icon:hover{background:url(images/helpcenter_sp.png)}
+#help_center_tools>a.sz_icon:hover{background:url(images/helpcenter_sz.png)}
+#help_center_tools>a.tx_icon:hover{background:url(images/helpcenter_tx.png)}
+#help_center_tools>a.bz_icon:hover{background:url(images/helpcenter_bz.png)}
+

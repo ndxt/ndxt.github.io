@@ -1,0 +1,40 @@
+<p class="codeIgnore">通过调用<b>messager</b>的<code>alert</code>方法，设置不同的参数(showType)，可创建不同的消息提示框，有<b>提醒</b>、<b>错误</b>、<b>信息</b>、<b>问题</b>和<b>警告</b>几种类型</p>
+
+<p class="codeIgnore title">警告消息</p>
+<!-- 提醒 -->
+<a href="#" class="easyui-linkbutton" onclick="alert1()">提醒</a>
+       
+<!-- 错误-->
+<a href="#" class="easyui-linkbutton" onclick="alert2()">错误</a>
+
+<!-- 信息 -->
+<a href="#" class="easyui-linkbutton" onclick="alert3()">信息</a>     
+
+<!-- 问题 -->
+<a href="#" class="easyui-linkbutton" onclick="alert4()">问题</a>
+
+<!-- 警告 -->
+<a href="#" class="easyui-linkbutton" onclick="alert5()">警告</a>
+        
+<p class="codeIgnore br"></p>
+
+   <script>
+        function alert1(){
+//<!-- @reg:我的消息=tooltip{content:'在这里设置消息框标题'} -->
+            $.messager.alert('我的消息','有一条消息!');
+        }
+        function alert2(){
+//<!-- @reg:有一条错误消息!=tooltip{content:'在这里设置提示内容'} -->
+            $.messager.alert('我的消息','有一条错误消息!','error');
+        }
+        function alert3(){
+//<!-- @reg:'info'=tooltip{content:'在这里设置不同的提示图标'} -->
+            $.messager.alert('我的消息','有一条信息!','info');
+        }
+        function alert4(){
+            $.messager.alert('我的消息','有一个问题!','question');
+        }
+        function alert5(){
+            $.messager.alert('我的消息','有一个警告!','warning');
+        }
+    </script>

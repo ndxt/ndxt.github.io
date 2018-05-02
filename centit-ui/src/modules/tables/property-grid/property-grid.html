@@ -1,0 +1,29 @@
+<ul class="example-list" id="property-grid-example-list">
+	<li>
+		<a href="#property-grid-basic" data-url="modules/tables/property-grid/demo/property-grid-basic.html">基础控件</a>
+	</li>
+	<li>
+		<a href="#property-grid-customize-columns" data-url="modules/tables/property-grid/demo/property-grid-customize-columns.html">自定义列</a>
+	</li>
+	<li>
+		<a href="#property-grid-group-format" data-url="modules/tables/property-grid/demo/property-grid-group-format.html">格式组</a>
+	</li>	
+</ul>
+
+<script>
+	
+	requirejs([
+		'widgets/example/widget.example',
+		'plugins/prettify/prettify'
+		], function(create) {
+			
+		var list = $('#property-grid-example-list');
+		create(list, function(container) {
+			prettyPrint();
+			
+			$.parser.parse(container);
+			
+			$("#menu_tab_property-grid").niceScroll({cursorcolor:"#BCBCBC"});
+		});
+	});
+</script>

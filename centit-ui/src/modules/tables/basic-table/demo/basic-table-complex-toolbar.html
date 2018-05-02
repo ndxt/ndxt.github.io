@@ -1,0 +1,70 @@
+<p class="codeIgnore">也可以在表格里嵌入复杂的搜索条件，将工具栏放到表格页脚处</p>
+<p class="codeIgnore title"></p>
+<table id="basic-table-complex-toolbar-t" style="width: 100%; height: 200px;"></table>
+<!-- @reg:<div id="complex-search-t"=tooltip{content:'先定义好一个搜索元素，这里用到了日历控件'} -->
+<div id="complex-search-t" style="padding: 2px 5px 2px 5px;">
+	<!-- @reg:easyui-datebox=tooltip{content:'只要设置<code>class=\'easyui-datebox\'</code>，就能添加一个日历控件'} -->
+	开始日期：<input class="easyui-datebox" style="width: 100px;" />
+	结束日期：<input class="easyui-datebox" style="width: 100px;" />
+	语言：<select class="easyui-combobox" panelHeight="auto" style="width: 100px;">
+		<option value="java">Java</option>
+		<option value="c">C</option>
+		<option value="basic">Basic</option>
+		<option value="perl">Perl</option>
+		<option value="python">Python</option>
+	</select>
+	<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-search">搜索</a>
+</div>
+<!-- @reg:<div id="complex-toolbar-t"=tooltip{content:'先定义好一个页脚工具元素'} -->
+<div id="complex-toolbar-t" style="padding: 2px 5px 2px 5px;">
+	<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-add" plain="true"></a>
+	<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-edit" plain="true"></a>
+	<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-save" plain="true"></a>
+	<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-cut" plain="true"></a>
+	<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-remove" plain="true"></a>
+</div>
+<script type="text/javascript">
+	$(function() {
+		$("#basic-table-complex-toolbar-t").datagrid({
+			title : "表格复杂工具",
+			rownumbers : true,
+			singleSelect : true,
+			collapsible : true,
+			//<!-- @reg:toolbar=tooltip{content:'直接设置为之前定义好的搜索元素'} -->
+			toolbar : "#complex-search-t",
+			//<!-- @reg:footer=tooltip{content:'直接设置为之前定义好的页脚工具元素'} -->
+			footer : "#complex-toolbar-t",
+			url : "modules/tables/basic-table/data/basic-table.json",
+			method : "get",
+			columns : [[{
+				field : "itemid",
+				title : "Item ID",
+				width : 100
+			}, {
+				field : "productid",
+				title : "Product",
+				width : 100
+			}, {
+				field : "listprice",
+				title : "List Price",
+				width : 100,
+				align : "right"
+			}, {
+				field : "unitcost",
+				title : "Unit Cost",
+				width : 100,
+				align : "right"
+			}, {
+				field : "attr1",
+				title : "Attribute",
+				width : 210,
+				align : "right"
+			}, {
+				field : "status",
+				title : "Status",
+				width : 60,
+				align : "center"
+			}]]
+		});
+	});
+</script>

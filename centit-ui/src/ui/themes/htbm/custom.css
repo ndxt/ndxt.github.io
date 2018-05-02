@@ -1,0 +1,725 @@
+@charset "UTF-8";
+/* 设置默认字体 */
+body,
+button, input, select, textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    font: 14px/1 'Microsoft YaHei', Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+
+.search .search-body {
+    padding-right: 50px;
+    position: relative;
+}
+.search .search-body .btn-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    font-size: 32px;
+    margin-top: -16px;
+    cursor: pointer;
+    color: #fff;
+    width: 32px;
+    height: 26px;
+    text-align: center;
+    /*
+    background: #7F8D9A;
+    */
+    background: url('images/icon_xl.png') no-repeat center;
+    border-radius: 50%;
+    vertical-align: text-bottom;
+}
+
+
+
+
+.search .search-body .btn-toggle.fa-angle-double-up {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    font-size: 32px;
+    margin-top: -16px;
+    cursor: pointer;
+    color: #fff;
+    width: 32px;
+    height: 26px;
+    text-align: center;
+    /*
+    background: #7F8D9A;
+    */
+    background: url('images/icon_xls.png') no-repeat center;
+    border-radius: 50%;
+    vertical-align: text-bottom;
+}
+
+
+
+.search .search-body .btn-toggle:hover {
+    color: #eee;
+}
+.search .search-body .btn-collapse {
+    display: none;
+}
+.search.expand .search-body .btn-expand {
+    display: none;
+}
+.search .search-collapse {
+    clear: both;
+    display: none;
+}
+.search.expand .search-collapse{
+    display: block;
+}
+.search .search-item{margin: 1px 10px 5px 0;}
+/* bootstrap grid */
+.form.centit [class^=col-] {
+    margin-bottom: 20px;
+}
+.form.centit [class^=col-] > label{
+    display: block;
+    margin: 0 0 5px;
+    color: #666;
+    font-weight: 700;
+    text-transform: none;
+}
+.centit.form label.required:after {
+    content: " *";
+    color: rgb(255,114,114);
+    vertical-align: text-bottom;
+}
+
+.combobox-item, .combobox-group, .combobox-stick {
+    padding: 8px 4px;
+}
+
+.search .search-item {
+    height: 40px;
+    line-height: 40px;
+}
+.search-item input[type=radio], .search-item input[type=checkbox] {
+    height: 40px;
+    margin-left: 5px;
+}
+
+/*弹出窗口*/
+.window {
+    border: none;
+    background: transparent;
+}
+
+.panel-tool-close {
+    background: none;
+    color: #fff;
+    width: 35px!important;
+    height: 24px;
+    display: inline-block;
+    font: normal normal normal 24px/1 FontAwesome;
+    font-size:large;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.panel-tool a:hover {
+    background-color: transparent;
+}
+.panel-tool-close:before {
+    content: "\f00d";
+}
+
+.window .window-header {
+    /*
+    background: rgb(26, 188, 156);
+    */
+    background:#16325c;
+    border-color: transparent;
+    border-radius: 10px 10px 0 0;
+}
+.window .window-body {
+    border-color: transparent;
+    padding: 5px 20px;
+    border-radius: 0 0 5px 5px;
+}
+.window .window-header > .panel-title {
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 38px;
+    color: #fff;
+}
+.window .window-header > .panel-icon {
+    display: none;
+}
+.window .dialog-button {
+    border-color: transparent;
+    border-top-color: #ddd;
+    border-radius: 0 0 10px 10px;
+    height: 30px;
+    padding: 9px 30px;
+    line-height: 29px;
+}
+.window-shadow {
+    display: none!important;
+}
+.window-mask {
+    background: #000;
+    filter: alpha(opacity=60);
+    opacity: 0.60;
+}
+
+.messager-window .messager-body {
+    padding: 20px;
+    font-size: 18px;
+}
+
+.no-icon.tree .tree-icon {
+    display: none;
+}
+
+.datagrid-tooltip {
+    background: #1ABC9C;
+    /*
+    padding: 5px 0 0 0;
+    */
+}
+.datagrid-tooltip .tooltip-content {
+    width: 32px;
+}
+.datagrid-tooltip .tooltip-content .o-btn {
+    width: 32px;
+    height: 24px;
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+    padding: 5px 0;
+}
+.datagrid-tooltip .tooltip-content .o-btn:hover {
+    background: #16A085;
+}
+
+
+/* 表格中的操作按钮 */
+.o-btn {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-style: normal;
+    color: #528864;
+    vertical-align: bottom;
+    margin-right: 4px;
+    cursor: pointer;
+}
+.o-btn:hover {
+    font-weight: bold;
+//text-shadow: 1px 1px #999;
+}
+.o-btn.green {
+    color: #528864;
+}
+.o-btn.red {
+    color: #F07070;
+}
+
+.o-btn.fa-sort-desc,
+.o-btn.fa-sort-down {
+    margin-bottom: 4px;
+}
+
+.easyui-tree.tree .tree-node,
+.easyui-tree.tree .tree-title {
+    height: 28px;
+    line-height: 28px;
+}
+.easyui-tree.tree .tree-hit,
+.easyui-tree.tree .tree-icon {
+    margin-top: 5px;
+}
+
+.datagrid-toolbar td {
+    padding-right: 20px;
+}
+.datagrid-toolbar td:last-child {
+    padding-right: 0;
+}
+.datagrid-toolbar td:nth-child(5n+1) .l-btn,
+.dialog-button .l-btn:nth-child(5n+1) {
+    background: #58b5eb;
+    border-radius: 4px;
+}
+.datagrid-toolbar td:nth-child(5n+2) .l-btn,
+.dialog-button .l-btn:nth-child(5n+2) {
+    background: #c09cf0;
+    border-radius: 4px;
+}
+
+.datagrid-toolbar td:nth-child(5n+3) .l-btn, .dialog-button .l-btn:nth-child(5n+3) {
+    background: #ebc758;
+    border-radius: 4px;
+}
+
+
+.datagrid-toolbar td:nth-child(5n+4) .l-btn, .dialog-button .l-btn:nth-child(5n+4) {
+    background: #4ab042;
+    border-radius: 4px;
+
+}
+
+
+.datagrid-toolbar td:nth-child(5n+5) .l-btn, .dialog-button .l-btn:nth-child(5n+5) {
+    background: #e9611e;
+    border-radius: 4px;
+}
+
+
+.easyui-linkbutton,
+.datagrid-toolbar .l-btn,
+.dialog-button .l-btn,
+.easyui-linkbutton > span {
+    background: #16325c;
+    border-color: transparent;
+    color: #fff;
+    border-radius: 4px;
+}
+.dialog-button .l-btn-text,
+.easyui-linkbutton .l-btn-text,
+.datagrid-toolbar .l-btn-text {
+    margin: 2px 20px;
+    font-size: 14px;
+}
+
+.dialog-button .l-btn-icon,
+.datagrid-toolbar .l-btn-icon {
+    display: none;
+}
+
+
+.centit.form {
+    padding: 10px 0 0;
+    overflow: hidden;
+}
+
+.centit.form .fields:last-child .field {
+    margin-bottom: 10px;
+}
+
+.datagrid-cell, .datagrid-cell-group, .datagrid-header-rownumber, .datagrid-cell-rownumber {
+    height: 28px;
+    line-height: 26px;
+}
+.datagrid-cell .l-btn-icon.fa {
+    font-size: 16px;
+}
+
+.search-item p {
+    float: left;
+    margin-right: 8px;
+}
+
+/* 重置字体大小 */
+.panel-body {
+    font-size: 14px;
+}
+.datagrid-cell,
+.datagrid-cell-group,
+.datagrid-header-rownumber,
+.datagrid-cell-rownumber {
+    font-size: 13px;
+}
+.datagrid-header .datagrid-cell span {
+    font-size: 13px;
+}
+.pagination-info {
+    font-size: 13px;
+}
+
+#menu_tab > .tabs-header .tabs-icon {
+    font-size: 18px;
+}
+
+.l-btn-focus {
+    outline: none;
+}
+.search form {
+    overflow: hidden;
+}
+.search .search-actions {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    margin-top: -22px;
+}
+.search .btn-search,
+.search .btn-reset{
+    margin-top: 8px;
+    border-radius: 4px;
+}
+.search .btn-search:last-child,
+.search .btn-reset:last-child{
+    margin-right: 10px;
+}
+
+.layout,
+.layout > .layout-panel > .panel-body {
+    background: #f0f5f4;
+}
+
+
+.datagrid-header-row, .datagrid-row {
+    height: 40px;
+}
+
+
+
+.datagrid-header td, .datagrid-body td, .datagrid-footer td {
+    border-width: 0 0 1px 0;
+    border-style: solid;
+}
+
+.datagrid-header {
+    background-color: #F4F4F7;
+}
+
+.datagrid-toolbar {
+    border: none;
+    height: 32px;
+    color: #ddd;
+    float: right;
+}
+
+.main-table-div .panel-title,.relproject .panel-title,.account .panel-title,.budgetmode .panel-title,.cashproject .panel-title {
+    height: 32px;
+    line-height: 32px;
+    font-size: 15px;
+    padding-left: 39px;
+    /*
+    width: 100px;
+    */
+    position: absolute;
+    z-index: 99;
+    border: none;
+    top: 11px;}
+
+.main-table-div .panel-icon,.relproject .panel-icon,.account .panel-icon,.budgetmode .panel-icon,.cashproject .panel-icon {
+    font-size: 20px;
+    margin-left: 17px;
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    z-index: 99;
+}
+
+.panel-title {
+    height: 32px;
+    line-height: 32px;
+    font-size: 15px;
+    padding-left: 26px;
+}
+
+.panel-icon {
+    font-size: 20px;
+    margin-left: 4px;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+}
+
+#center {
+    padding: 16px;
+}
+
+#menu_tab > .tabs-panels > .panel > .panel-body {
+    padding: 0;
+    background: #f0f5f4;
+}
+
+.datagrid-htable, .datagrid-btable, .datagrid-ftable {
+    color: #666;
+}
+.datagrid-btable tr.datagrid-row-over, .datagrid-btable tr.datagrid-row-selected {
+    color: #666;
+}
+
+.datagrid-wrap.panel-body {
+    padding: 0 20px 0 20px;
+}
+
+.window .datagrid-wrap.panel-body {
+    padding: 10px 10px 0 10px;
+}
+
+.datagrid-pager.pagination {
+    border: none;
+}
+
+.datagrid-header, .datagrid-toolbar, .datagrid-pager, .datagrid-footer-inner {
+    border-color: #F4F4F7;
+}
+
+.datagrid-cell .l-btn-plain:hover {
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+/*图标*/
+.datagrid-cell .green{background: url('images/icon_bj.png') no-repeat center;}
+.datagrid-cell .red{background: url('images/icon_sc.png') no-repeat center;}
+.datagrid-cell .black{background: url('images/icon_ck.png') no-repeat center;}
+.datagrid-cell .blue{background: url('images/icon_mx.png') no-repeat center;}
+
+.panel.combo-p{border-left:1px solid #333333;border-right:1px solid #333333;border-bottom:1px solid #333333;}
+
+/* 设置默认字体 */
+body,
+button, input, select, textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    font: 14px/1 'Microsoft YaHei', Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+
+/*全局input框*/
+.textbox {
+    border: 1px solid #7f8c9a;
+    color: #34495e;
+    font-family: "Lato", sans-serif;
+    border-radius: 0px;
+}
+
+/*搜索*/
+.search-item label {
+    color: #34495e;
+    min-width: 80px;
+}
+
+.search .search-actions {
+    top: 4px !important;
+    margin-top: 0 !important;
+}
+
+.search .search-body .btn-toggle {
+    top: 0 !important;
+    margin-top: 14px !important;
+}
+
+/*搜索栏*/
+.search .search-body {
+	padding: 5px 10px; margin-bottom: 10px;
+}
+
+.search .search-item {
+	float: left;
+	margin: 5px 10px 5px 0;
+	height: 30px;
+  	line-height: 30px;
+}
+
+.search-item label {
+	float:left;
+	display: inline-block;
+    text-align: right;
+	min-width: 80px;
+}
+.search-item p {
+	float:left;
+}
+.search-item label:after {
+	content: "："
+}
+
+.search-item input[type=text], .search-item select {
+	width: 100%!important;
+}
+
+.search .search-item .textbox {
+	width: 180px!important;
+}
+
+.search-item input[type=radio], .search-item input[type=checkbox] {
+	float:left;
+	height:30px;
+	vertical-align: text-top;
+}
+
+.search .btn-search {
+	margin-top: 8px;
+}
+
+.window .window-body .search .search-body{margin-bottom: 0!important;}
+
+.datagrid-toolbar {
+    float: right !important;
+}
+
+.window .window-header > .panel-title {
+    height: 45px !important;
+    line-height: 50px !important;
+}
+
+/*内容页标题*/
+#menu_tab > .tabs-header .tabs .tabs-title {
+    font-weight: normal;
+}
+
+.texter {
+    margin-top: 10px;
+}
+
+#menu_tab > .tabs-header {
+    background: #16325c !important;
+    border: none !important;
+}
+
+.tabs li a.tabs-inner {
+    padding: 0 26px !important;
+}
+
+.search .search-body {
+    margin-bottom: 16px;
+}
+
+.datagrid-toolbar {
+    padding: 10px;
+}
+
+#menu_tab > .tabs-header .tabs-tool {
+    background: #16325c !important;
+    border: none !important;
+}
+
+.l-btn:hover {
+    /*
+    border: none;
+    */
+    background: #16325c;
+    color:#fff;
+}
+
+/*内容页关闭按钮*/
+.tabs li a.tabs-close {
+    right: 11px;
+}
+
+/*
+!*去除文字样式*!
+*/
+.fa-angle-double-down:before {
+    content: none !important;
+}
+
+.fa-angle-double-up:before {
+    content: none !important;
+}
+
+.datagrid-cell .fa-pencil:before {
+    content: none !important;
+}
+
+.datagrid-cell .fa-trash:before {
+    content: none !important;
+}
+
+input[type="checkbox"]:checked {
+    -webkit-appearance: none;
+    background: url('images/icon_xz.png') no-repeat center;
+    height: 16px;
+    vertical-align: middle;
+    width: 16px;
+}
+
+[region=north] {
+    overflow: hidden;
+}
+
+.panel-header, .panel-body{border:none;}
+.panel.datagrid.easyui-fluid .panel-header{position: absolute;}
+.datagrid-header .datagrid-cell{text-align: center;}
+.datagrid-cell{text-align: center;}
+
+/*tab样式完整度*/
+.menu{background:#16325c; }
+.menu-text{color:#c5af64;}
+.menu-item.menu-active{background: none; color: #fff; border: none;}
+.menu-item.menu-active .menu-text{color: #fff;}
+
+.l-btn-icon.icon-useres{background: url("images/header-user.png");
+    width: 72px;
+    height: 36px;
+    right: 20px;
+    position: absolute;
+    top: 18px;
+    background-size: 36px;
+}
+
+
+.toolbar.main{right: 51px;
+    position: absolute;
+    top: 12px;}
+
+
+.logo_user{color: #fff;
+    position: absolute;
+    top: 23px;
+    right: 135px;
+    font-size: 14px;
+    font-family: Microsoft Yahei;}
+
+
+
+.tooltip.tooltip-bottom{width: 27px;padding: 3px 5px 0 0;
+}
+
+
+.tooltip {
+    background-color: #fff;
+    color: #444;
+    width: 100px;
+    padding: 5px;
+    border:1px solid #e5e5e5;
+    border-radius: 5px;
+    right: 50px;
+    /*
+    display: block!important;
+    */
+}
+
+
+#spawxb{
+
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+    text-align: center;
+    background: #ebf3f8;
+    line-height: 20px;
+    color: #000;
+    font-family: Microsoft Yahei;
+    cursor:pointer;
+
+}
+
+
+.tcxbc{  width: 100%;
+    height: 20px;
+    margin-top: 10px;
+    text-align: center;
+    background: #ebf3f8;
+    line-height: 20px;
+    font-family: Microsoft Yahei;
+    cursor:pointer;
+    }
+
+.tcxbc a{color: #000;}
+
+/*
+.tooltip-arrow-outer, .tooltip-arrow{display: none;}
+*/
+
+
+.toolbar.main a{
+
+    background: none!important;
+}
+
+
+.tooltip-f:hover{border: none;  padding: 1px;}
+#account_details_add{background: url('images/icon_adder.png') no-repeat center;}
+
+.centit.form input[type=text], select{width: 100%!important;}
+.textbox textarea.textbox-text{width: 100%!important; height: 100%!important;}

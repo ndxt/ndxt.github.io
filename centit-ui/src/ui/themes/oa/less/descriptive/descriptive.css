@@ -1,0 +1,76 @@
+        /*
+                                  系统描述性文字样式--优先参考此文件,
+           demo.html
+                                     各业务使用时如布局等不一致建议将样式在各自业务中维护
+        */
+        .star{width: 16px;height: 15px;background: url(image/star.png);display: inline-block;;margin-right: 5px;}
+        .stargray{width: 16px;height: 15px;background: url(image/star_gray.png);display: inline-block;;margin-right: 5px;}
+        .inforeaded{color: #1583cf;display: inline-block;margin-right: 5px;}
+        .infounreaded{color: #ffa800;display: inline-block;margin-right: 5px;}
+        .yidu{width: 16px;height: 15px;background: url(image/yidu.png) no-repeat left center;display: inline-block;;margin-right: 5px;}
+        .weidu{width: 16px;height: 15px;background: url(image/weidu.png) no-repeat left center;display: inline-block;;margin-right: 5px;}
+        .concern{width: 16px;height: 15px;background: url(image/heart.png);display: inline-block;;margin-right: 5px;}
+        .unconcern{width: 16px;height: 15px;background: url(image/heart-gray.png);display: inline-block;;margin-right: 5px;}
+        
+        .tixing{display: inline-block; border-radius: 2px;color: white;background: #e2b839;padding: 2px;margin-right: 5px;}
+        .yujing{display: inline-block; border-radius: 2px;color: white;background: #ff9c00;padding: 2px;margin-right: 5px;}
+        .baojing{display: inline-block; border-radius: 2px;color: white;background:#ff653b;padding: 2px;margin-right: 5px;}
+        
+        
+         /*         超期 */
+        .overdue{width: 16px;height: 15px;background: url(image/ycqicon.png) no-repeat left center;display: inline-block;;margin-right: 5px; }
+        .jjOverdue{width: 16px;height: 15px;background: url(image/jjcqicon.png) no-repeat left center;display: inline-block;margin-right: 5px;}
+		.unOverdue{width: 16px;height: 15px;no-repeat left center;display: inline-block;;margin-right: 5px;}   
+		.remindIco{background-position: center;display: inline-block;background-repeat:no-repeat;width: 26px; height: 26px;vertical-align: middle;  margin-bottom: 4px;}
+	    .remindIco-OOverdue{background-image: url("image/ycqclock.gif")}
+	    .remindIco-IOverdue{background-image: url("image/jjcqclock.gif")} 
+		  
+		  
+		  
+        .zhiding{display: inline-block; border-radius: 2px;color: white;background:#ff0042;padding: 2px;margin-right: 5px;}
+        .unzhiding{width: 28px; display: inline-block; border-radius: 2px;color: white;background:white;padding: 2px;margin-right: 5px;}
+        .jinghua{display: inline-block; border-radius: 2px;color: white;background:#a1c900;padding: 2px;margin-right: 5px;}
+
+        .shenqingzhong{display: inline-block; border-radius: 2px;color: white;background:#1583cf;padding: 2px;margin-right: 5px;}
+        .yianpai{display: inline-block; border-radius: 2px;color: white;background:#449100;padding: 2px;margin-right: 5px;}
+        .butongyi{display: inline-block; border-radius: 2px;color: white;background:#ff9c00;padding: 2px;margin-right: 5px;}
+        .yishiyong{display: inline-block; border-radius: 2px;color: white;background:#ff653b;padding: 2px;margin-right: 5px;}
+        .beiqiangzhan{display: inline-block; border-radius: 2px;color: white;background:#e80000;padding: 2px;margin-right: 5px;}
+        .zancun{display: inline-block; border-radius: 2px;color: white;background:#3ab2ba;padding: 2px;margin-right: 5px;}
+
+        .criticallevel5{display: inline-block; border-radius: 2px;color: white;padding: 2px;background:#ff0000;;margin-right: 5px;}
+        .criticallevel4{display: inline-block; border-radius: 2px;color: white;padding: 2px;background:#ff653b;;margin-right: 5px;}
+        .criticallevel3{display: inline-block; border-radius: 2px;color: white;padding: 2px;background:#ff9518;;margin-right: 5px;}
+        .criticallevel2{display: inline-block; border-radius: 2px;color: white;padding: 2px;background:#c635c4;;margin-right: 5px;}
+        .criticallevel1{display: inline-block; border-radius: 2px;color: white;padding: 2px;background:#1583cf;;margin-right: 5px;}
+
+        .yiguidang{display: inline-block; color: #1583cf;margin-right: 5px;}
+        .weiguidang{display: inline-block; color:#ff9c00;margin-right: 5px;}
+
+        .yifasong{display: inline-block; color: #1583cf;margin-right: 5px;}
+        .weifasong{display: inline-block; color:#ff9c00;margin-right: 5px;}
+        .fasongsibai{display: inline-block; color:#ff0000;margin-right: 5px;}
+        .zancun_message{display: inline-block; color:#791cd9;margin-right: 5px;}
+
+
+        .kongxian{display: inline-block; color: #1583cf;margin-right: 5px;}
+        .shiyongzhong{display: inline-block; color:#ff9c00;margin-right: 5px;}
+        .jinyong{display: inline-block; color:#ff0000;margin-right: 5px;}
+        .qiyong{display: inline-block; color:#791cd9;margin-right: 5px;}
+
+        .yigongxiang{display: inline-block; color: #1583cf;margin-right: 5px;}
+        .weigongxiang{display: inline-block; color:#ff9c00;margin-right: 5px;}
+
+        .zhengchang{display: inline-block; color: #1583cf;margin-right: 5px;}
+        .jijiangshixiao{display: inline-block; color: #ff9c00;margin-right: 5px;}
+        .yishixiao{display: inline-block; color: #ff0000;margin-right: 5px;}
+
+        .fawen_icon{display: inline-block;height: 18px;width: 18px;background: url(image/fawen.png) center center no-repeat;margin-right: 5px;}
+        .shouwen_icon{display: inline-block;height: 18px;width: 18px;background: url(image/shouwen.png) center center no-repeat;margin-right: 5px;}
+        .cheliang_icon{display: inline-block;height: 18px;width: 18px;background: url(image/cheliang.png) center center no-repeat;margin-right: 5px;}
+        .huiyi_icon{display: inline-block;height: 18px;width: 18px;background: url(image/huiyi.png) center center no-repeat;margin-right: 5px;}
+        .qianbao_icon{display: inline-block;height: 18px;width: 18px;background: url(image/qianbao.png) center center no-repeat;margin-right: 5px;}
+        .ziyuan_icon{display: inline-block;height: 18px;width: 18px;background: url(image/ziyuan.png) center center no-repeat;margin-right: 5px;}
+        .duanxin_icon{display: inline-block;height: 18px;width: 18px;background: url(image/duanxin.png) center center no-repeat;margin-right: 5px;}
+        .youjian_icon{display: inline-block;height: 18px;width: 18px;background: url(image/youjian.png) center center no-repeat;margin-right: 5px;}
+        .tixing_icon{display: inline-block;height: 18px;width: 18px;background: url(image/tixing.png) center center no-repeat;margin-right: 5px;}

@@ -1,0 +1,72 @@
+/*TAB*/
+#menu_tab > .tabs-header {
+    background: #DBEEFD;
+}
+
+#menu_tab > .tabs-panels > .panel > .panel-body {
+    background: #F7F7F7;
+}
+
+#menu_tab > .tabs-header .tabs-wrap {
+    height: 30px;
+}
+#menu_tab > .tabs-header .tabs {
+    position: absolute;
+    bottom: 0;
+
+    border-bottom: 2px solid #247BB6;
+}
+
+/*TAB工具栏*/
+#menu_tab > .tabs-header .tabs-tool {
+    height: 24px;
+    border-width: 0 0 2px 0;
+    border-color: #247BB6;
+}
+/*TAB工具栏 > 按钮*/
+#menu_tab > .tabs-header .tabs-tool a{
+    margin-top: 2px;
+}
+#menu_tab  > .tabs-header.tabs-scroller-left, #menu_tab > .tabs-header .tabs-scroller-right {
+    height: 24px;
+    border-width: 1px 1px 2px 1px;
+    border-color: #247BB6;
+}
+
+/*TAB > 单个TAB背景*/
+#menu_tab > .tabs-header .tabs-inner {
+    color: #0E2D5F;
+    border-color:#C0C0C0;
+    border-bottom-color: #247BB6;
+    background:url(images/tab.gif) repeat-x;
+    filter: none;
+}
+/*TAB 背景：鼠标悬停*/
+#menu_tab > .tabs-header li:hover .tabs-inner{
+    color: #0E2D5F;
+    border-color:#4cb2f7;
+    background-position:0 -44px;
+}
+/*TAB 背景：选中*/
+#menu_tab > .tabs-header li.tabs-selected .tabs-inner {
+    color: #fff;
+    border-color:#005494;
+    background-position:0 -85px;
+}
+
+/*TAB 关闭按钮*/
+#menu_tab > .tabs-header .tabs-close {
+    width: 12px;
+    right: 4px;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    background: url('images/tab-close.png') no-repeat;
+}
+/*TAB 关闭按钮：鼠标悬停*/
+#menu_tab > .tabs-header .tabs-close:hover {
+    opacity: 1;
+}
+/*TAB 关闭按钮：选中*/
+#menu_tab > .tabs-header .tabs-selected .tabs-close{
+    background-position: -50px;
+}

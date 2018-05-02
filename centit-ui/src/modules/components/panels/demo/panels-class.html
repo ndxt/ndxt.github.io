@@ -1,0 +1,28 @@
+<p class="codeIgnore">可以给面板的进行自定义样式</p>
+<!-- @reg:data-options="cls: 'ipanel', headerCls: 'ipanel-header', bodyCls: 'ipanel-body'"=tooltip{content:'设置面板、面板头、面板体的类名为<b>ipanel,ipanel-header,ipanel-body</b>'} -->
+<div class="easyui-panel" data-options="cls: 'ipanel', headerCls: 'ipanel-header', bodyCls: 'ipanel-body'" 
+	title="连云港办事处" style="width:500px;height:150px;padding:10px;">
+连云港办事处<br>
+联系人：朱主任<br>
+联系电话：18800637392
+</div>
+<!-- @reg:style=tooltip{content:'自定义<b>ipanel,ipanel-header,ipanel-body</b>的样式'} -->
+<style scoped="scoped">
+	.ipanel {
+		border-radius: 10px;
+		border-color: #fff;
+	}
+	
+	.ipanel-header {
+		background: #FCD209;
+		border-color: #fff;
+		border-radius: 10px 10px 0 0;
+	}
+	
+	.ipanel-body {
+		background: #4DB849;
+		border-color: #fff;
+		color: #fff;
+		border-radius: 0 0 10px 10px;
+	}
+</style>

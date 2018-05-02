@@ -1,0 +1,55 @@
+<p class="codeIgnore">对树（tree）可以启用拖拽功能，可以拖动任何一个节点进行移动</p>
+<div class="easyui-panel" style="margin-bottom: 10px;" id="info_tree_drag"></div>
+
+<div class="easyui-panel" style="margin-bottom: 10px;" id="info_tree_drop"></div>
+<!-- @reg:dnd=tooltip{content:'该属性设置为<code>false禁用拖拽功能、true启动拖拽功能</code>'} -->
+<ul class="easyui-tree" id="tree_drag" dnd="true"
+	url="modules/components/trees/datas/menus.json"></ul>
+	
+<script>
+	function logTreeDrag(msg) {
+		$('#info_tree_drag').panel({
+			content: msg
+		});
+	}
+	
+	function logTreeDrop(msg) {
+		$('#info_tree_drop').panel({
+			content: msg
+		});
+	}
+	
+	$('#tree_drag').tree({
+		onStartDrag: function(node) {
+			logTreeDrag("开始拖动<b>"+node.text+"</b>");
+		},
+		
+		onStopDrag: function(node) {
+			logTreeDrag("停止拖动<b>"+node.text+"</b>");
+		},
+		
+		onDragEnter: function(target, source) {
+			logTreeDrop("<b>"+source.text+"</b>进入<b>"+$(target).text()+"</b>");
+		},
+		
+		onDragOver: function(target, source) {
+			logTreeDrag("<b>"+source.text+"</b>经过<b>"+$(target).text()+"</b>");
+		},
+		
+		onDragLeave: function(target, source) {
+			logTreeDrop("<b>"+source.text+"</b>离开<b>"+$(target).text()+"</b>");
+		},
+		
+		onDrop: function(target, source, point) {
+			var d = "中";
+			if (point == 'top') {
+				d = "上方";
+			}
+			else if (point == 'bottom'){
+				d = "下方";
+			}
+			logTreeDrop("<b>"+source.text+"</b>移动到<b>"+$(target).text()+"</b>"+d);
+		}
+	});
+</script>
+	

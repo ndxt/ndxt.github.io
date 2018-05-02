@@ -1,0 +1,27 @@
+@font-face {
+	font-family: 'icomoon';
+	src: url('fonts/icomoon.eot?-he749z');
+	src: url('fonts/icomoon.eot?#iefix-he749z') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-he749z') format('woff'),
+		url('fonts/icomoon.ttf?-he749z') format('truetype'),
+		url('fonts/icomoon.svg?-he749z#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class ^="glyph-"],[class *=" glyph-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.glyph-comment:before {
+	content: "\e600";
+}

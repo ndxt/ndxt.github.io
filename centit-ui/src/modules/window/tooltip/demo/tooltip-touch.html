@@ -1,0 +1,29 @@
+<p class="codeIgnore">通过设置<code>showEvent</code>属性来更改提示框显示方式，可选值有单击、各类鼠标事件</p>
+<p class="codeIgnore title"></p>
+<div id="custom-touch" title="这是一个改变触发方式的提示消息">单击显示</div>
+<script type="text/javascript">
+	$(function() {
+		$("#custom-touch").tooltip({
+			//<!-- @reg:showEvent=tooltip{content:'当激发某种事件的时显示提示框，默认是<code>mouseenter</code>，这里是单击'} -->
+			showEvent : "click",
+			onShow : function() {
+				var self = $(this);
+				//<!-- @reg:hover=tooltip{content:'重新定义提示框的显示和隐藏'} -->
+				$(this).tooltip("tip").hover(function() {
+					$(self).tooltip("show");
+				}, function() {
+					$(self).tooltip("hide");
+				});
+			}
+		});
+	});
+</script>
+<style type="text/css">
+	#custom-touch {
+		width: 60px;
+		padding: 5px;
+		text-align: center;
+		border: 1px solid #c3d9e0;
+		cursor: pointer;
+	}
+</style>

@@ -1,0 +1,31 @@
+<p class="codeIgnore">由于<code>dialog</code>继承自<code>window</code>，而<code>window</code>又继承自<code>panel</code>，所以可以调用<code>panel</code>里的<code>refresh</code>方法来加载远程数据</p>
+<p class="codeIgnore title"></p>
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="$('#dialog-remote-d').dialog('open');">打开</a>
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="$('#dialog-remote-d').dialog('close');">关闭</a>
+<div id="dialog-remote-d" class="easyui-dialog">对话框的内容</div>
+<script type="text/javascript">
+	$(function() {
+		$("#dialog-remote-d").dialog({
+			iconCls : "icon-save",
+			title : "远程加载数据",
+			closed : true,
+			buttons : [{
+				text : "加载远程数据",
+				iconCls : "icon-add",
+				handler : function() {
+					//<!-- @reg:refresh=tooltip{content:'可以传URL地址或文件路径'} -->
+					$("#dialog-remote-d").dialog("refresh", "modules/window/dialog/data/dialog-remote.txt");
+				}
+			}]
+		});
+	});
+</script>
+<style type="text/css">
+	#dialog-remote-d {
+		width: 500px;
+		height: 300px;
+		line-height: 300px;
+		padding: 10px;
+		text-align: center;
+	}
+</style>

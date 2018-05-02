@@ -1,0 +1,42 @@
+<ul class="example-list" id="menus-example-list">
+	<li>
+		<a href="#menus-basic" data-url="modules/components/menu/demo/menus-basic.html">基础菜单</a>
+	</li>
+	<li>
+		<a href="#menus-custom" data-url="modules/components/menu/demo/menus-custom.html">自定义菜单</a>
+	</li>
+	<li>
+		<a>菜单事件</a>
+		<ul>
+			<li>
+				<a href="#menus-show" data-url="modules/components/menu/demo/menus-show.html">显示菜单</a>
+			</li>
+			<li>
+				<a href="#menus-event" data-url="modules/components/menu/demo/menus-event.html">获取菜单项的name值</a>
+			</li>
+			<li>
+				<a href="#menus-settext" data-url="modules/components/menu/demo/menus-settext.html">设置菜单项名称</a>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<script>
+	
+	requirejs([
+		'widgets/example/widget.example',
+		'plugins/prettify/prettify'
+		], function(create, datas) {
+			
+		var list = $('#menus-example-list');
+		
+		create(list, function(container) {
+			prettyPrint();
+			
+			$.parser.parse(container);
+			
+			$("#menu_tab_Menu").niceScroll({cursorcolor:"#BCBCBC"});
+		});
+	});
+	
+</script>

@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0044)http://192.168.131.101:8080/demo/Portal.html -->
+<html class="panel-fit"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Portal - jQuery EasyUI</title>
+	<link rel="stylesheet" type="text/css" href="./Portal - jQuery EasyUI_files/easyui.css">
+	<link rel="stylesheet" type="text/css" href="./Portal - jQuery EasyUI_files/icon.css">
+	<style type="text/css">
+		html,body{
+			padding:0;margin:0;background-color:#f4f4f4;
+		}
+		.title{
+			font-size:16px;
+			font-weight:bold;
+			padding:20px 10px;
+			background:#eee;
+			overflow:hidden;
+			border-bottom:1px solid #ccc;
+		}
+		.t-list{
+			padding:5px;
+		}
+		
+		.panel-header,.panel-body {
+		  border: 0;
+		}
+		.panel-header{
+			border-bottom:1px #ccc solid;
+			background:none;
+			background-color:#fff;
+			filter:none;
+		}
+		.panel-title{
+			font-size:14px;
+			color:#107dc7;
+			font-weight:normal;
+			height:24px;
+			line-height:24px;
+		}
+		.panel-tool{
+			height:30px;
+		}
+	</style>
+	<script type="text/javascript" src="./Portal - jQuery EasyUI_files/jquery.min.js"></script><style type="text/css"></style>
+	<script type="text/javascript" src="./Portal - jQuery EasyUI_files/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="./Portal - jQuery EasyUI_files/jquery.portal.js"></script>
+	<script type="text/javascript" src="./Portal - jQuery EasyUI_files/commonJs.js"></script>
+	<script>
+		$(function(){
+			$('#pp').portal({
+				border:false,
+				fit:true
+			});
+			
+			//var aaa = "<div class=\"panel-tool\"><div name='02' style='float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:5px;text-align:center;' title='办结事宜'><font style='font-size:12px;color:#656565;'>办结事宜</font></div><div name='02' style='float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:5px;text-align:center;' title='已办事宜'><font style='font-size:12px;color:#656565;'>已办事宜</font></div></div>";
+			//$("#01").parent().parent().append(aaa);
+			
+			
+			var a2 = "<div class=\"panel-tool\">";
+				a2 += "<div name='02' style='float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;' title='已办事宜'><font style='font-size:12px;color:#656565;margin-bottom:5px;'>已办事宜</font></div>";
+				a2 += "<div name='02' style='float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;' title='知会待办'><font style='font-size:12px;color:#656565;margin-bottom:5px;'>知会待办</font></div>";
+				a2 += "<div name='02' style='float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;' title='协同待办'><font style='font-size:12px;color:#656565;margin-bottom:5px;'>协同待办</font></div>";
+				a2 += "<div name='02' style='float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;' title='重要待办'><font style='font-size:12px;color:#656565;margin-bottom:5px;'>重要待办</font></div>";
+				a2 += "<div name='02' style='border-bottom:3px solid #62b7ee;float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;' title='我的待办'><font style='font-size:12px;color:#656565;margin-bottom:5px;'>我的待办</font></div>";
+				a2 += "</div>";
+			$("#02").parent().parent().append(a2);
+			
+			var a3 = "<div class=\"panel-tool\">";
+				a3 += "<div name='03' style='float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;' title='图片新闻'><font style='font-size:12px;color:#656565;margin-bottom:5px;'>图片新闻</font></div>";
+				a3 += "<div name='03' style='float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;' title='单位讨论'><font style='font-size:12px;color:#656565;margin-bottom:5px;'>单位讨论</font></div>";
+				a3 += "<div name='03' style='float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;' title='单位新闻'><font style='font-size:12px;color:#656565;margin-bottom:5px;'>单位新闻</font></div>";
+				a3 += "<div name='03' style='float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;' title='单位公告'><font style='font-size:12px;color:#656565;margin-bottom:5px;'>单位公告</font></div>";
+				a3 += "<div name='03' style='border-bottom:3px solid #62b7ee;float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;' title='新闻公告'><font style='font-size:12px;color:#656565;margin-bottom:5px;'>新闻公告</font></div>";
+				a3 += "</div>";
+			$("#03").parent().parent().append(a3);
+			
+			var a4 = "<div class=\"panel-tool\">";
+				a4 += "<div style='float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;' title='更多'><font style='font-size:12px;color:#656565;margin-bottom:5px;'>MORE&nbsp;>></font></div>";
+				a4 += "</div>";
+			$("#04").parent().parent().append(a4);
+			
+			$("div[name='02']").click(function(){
+				$("div[name='02']").each(function(){
+					$(this).css("border-bottom","0");
+				})
+				$(this).css("border-bottom","3px solid #62b7ee");
+			})
+			$("div[name='03']").click(function(){
+				$("div[name='03']").each(function(){
+					$(this).css("border-bottom","0");
+				})
+				$(this).css("border-bottom","3px solid #62b7ee");
+			})
+			
+		});
+	</script>
+<style id="easyui-portal-style">.portal{padding:0;margin:0;overflow:auto;border:1px solid #99bbe8;}.portal-noborder{border:0;}.portal .portal-panel{margin-bottom:10px;}.portal-column-td{vertical-align:top;}.portal-column{padding:10px 0 10px 10px;overflow:hidden;}.portal-column-left{padding-left:10px;}.portal-column-right{padding-right:10px;}.portal-proxy{opacity:0.6;filter:alpha(opacity=60);}.portal-spacer{border:3px dashed #eee;margin-bottom:10px;}</style></head>
+<body class="easyui-layout layout panel-noscroll">
+	<div id="pp" style="position: relative; padding-left: 10px; padding-right: 10px; width: 1900px; height: 955px;" class="portal portal-noborder">
+		
+		
+	<table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td class="portal-column-td"><div style="width: 940px;" class="portal-column-left portal-column">
+			<div class="panel portal-panel" style="width: 940px;"><div class="panel-header" style="width: 930px;"><div class="panel-title" style=""><img src="./Portal - jQuery EasyUI_files/icon001.png" style="border:none;margin-top: 3px;position: absolute;"><font style="font-size:16px;line-height: 26px;padding-left: 23px;font-family:微软雅黑;">我的专题</font></div><div class="panel-tool"></div></div><div title="" style="padding: 5px; width: 930px; height: 215px;" class="portal-p panel-body">
+				<div style="overflow:true;height:100%;width:100%;">
+					<!--当前页面嵌入的图表有问题，出现页面2次加载-->
+					<iframe name="01" src="./Portal - jQuery EasyUI_files/main_zt.html" allowtransparency="true" style="background-color=transparent" frameborder="0" width="100%" height="100%" scrolling="auto"></iframe>
+				</div>
+			</div></div>
+			<div class="panel portal-panel" style="width: 940px;"><div class="panel-header" style="width: 930px;"><div class="panel-title"><img src="./Portal - jQuery EasyUI_files/icon002.png" style="border:none;margin-top: 3px;position: absolute;"><font style="font-size:16px;line-height: 26px;padding-left: 23px;font-family:微软雅黑;" id="02">我的待办</font></div><div class="panel-tool"></div><div class="panel-tool"><div name="02" style="float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;" title="已办事宜"><font style="font-size:12px;color:#656565;margin-bottom:5px;">已办事宜</font></div><div name="02" style="float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;" title="知会待办"><font style="font-size:12px;color:#656565;margin-bottom:5px;">知会待办</font></div><div name="02" style="float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;" title="协同待办"><font style="font-size:12px;color:#656565;margin-bottom:5px;">协同待办</font></div><div name="02" style="float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;" title="重要待办"><font style="font-size:12px;color:#656565;margin-bottom:5px;">重要待办</font></div><div name="02" style="border-bottom:3px solid #62b7ee;float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;" title="我的待办"><font style="font-size:12px;color:#656565;margin-bottom:5px;">我的待办</font></div></div></div><div title="" style="padding: 5px; width: 930px; height: 215px;" class="portal-p panel-body">
+				<iframe name="02" src="./Portal - jQuery EasyUI_files/main_db.html" allowtransparency="true" style="background-color=transparent" frameborder="0" width="100%" height="100%" scrolling="auto"></iframe>
+			</div></div>
+		</div></td><td class="portal-column-td"><div style="width: 930px;" class="portal-column-right portal-column">
+			<div class="panel portal-panel" style="width: 930px;"><div class="panel-header" style="width: 920px;"><div class="panel-title"><img src="./Portal - jQuery EasyUI_files/icon003.png" style="border:none;margin-top: 3px;position: absolute;"><font style="font-size:16px;line-height: 26px;padding-left: 23px;font-family:微软雅黑;" id="03">通知公告</font></div><div class="panel-tool"></div><div class="panel-tool"><div name="03" style="float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;" title="图片新闻"><font style="font-size:12px;color:#656565;margin-bottom:5px;">图片新闻</font></div><div name="03" style="float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;" title="单位讨论"><font style="font-size:12px;color:#656565;margin-bottom:5px;">单位讨论</font></div><div name="03" style="float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;" title="单位新闻"><font style="font-size:12px;color:#656565;margin-bottom:5px;">单位新闻</font></div><div name="03" style="float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;" title="单位公告"><font style="font-size:12px;color:#656565;margin-bottom:5px;">单位公告</font></div><div name="03" style="border-bottom:3px solid #62b7ee;float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;" title="新闻公告"><font style="font-size:12px;color:#656565;margin-bottom:5px;">新闻公告</font></div></div></div><div title="" style="padding: 5px; width: 920px; height: 215px;" class="portal-p panel-body">
+				<div style="overflow:true;height:100%;width:100%;">
+					<iframe name="03" src="./Portal - jQuery EasyUI_files/main_gg.html" allowtransparency="true" style="background-color=transparent" frameborder="0" width="100%" height="100%" scrolling="auto"></iframe>
+				</div>
+			</div></div>
+			<div class="panel portal-panel" style="width: 930px;"><div class="panel-header" style="width: 920px;"><div class="panel-title"><img src="./Portal - jQuery EasyUI_files/icon004.png" style="border:none;margin-top: 3px;position: absolute;"><font style="font-size:16px;line-height: 26px;padding-left: 23px;font-family:微软雅黑;" id="04">标准规范</font></div><div class="panel-tool"></div><div class="panel-tool"><div style="float:right;margin-right:5px;cursor:pointer;width:60px;padding-top:6px;height:18px;text-align:center;z-index:1001;" title="更多"><font style="font-size:12px;color:#656565;margin-bottom:5px;">MORE&nbsp;&gt;&gt;</font></div></div></div><div title="" style="padding: 5px; width: 920px; height: 215px;" class="portal-p panel-body">
+				<iframe name="04" src="./Portal - jQuery EasyUI_files/main_gf.html" allowtransparency="true" style="background-color=transparent" frameborder="0" width="100%" height="100%" scrolling="auto"></iframe>
+			</div></div>
+		</div></td></tr></tbody></table></div>
+
+<div class="layout-split-proxy-h"></div><div class="layout-split-proxy-v"></div></body></html>

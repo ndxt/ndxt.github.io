@@ -1,0 +1,30 @@
+<p class="codeIgnore"><code>setText</code>方法可以更改菜单项的名称</p>
+<div id="m-settext" class="easyui-menu" style="width:120px;">
+		<!-- @reg:name=tooltip{content:'设置<code>name</code>属性的值'} -->
+		<div data-options="name:'new'">New</div>
+		<!-- @reg:name=tooltip{content:'设置<code>name</code>属性的值'} -->
+		<div data-options="name:'save',iconCls:'icon-save'">Save</div>
+		<!-- @reg:name=tooltip{content:'设置<code>name</code>属性的值'} -->
+		<div data-options="name:'print',iconCls:'icon-print'">Print</div>
+		<div class="menu-sep"></div>
+		<!-- @reg:name=tooltip{content:'设置<code>name</code>属性的值'} -->
+		<div data-options="name:'exit'">Exit</div>
+</div>
+<script>
+	
+var menu = $('#m-settext').menu().menu('show', {
+    left: 300,
+    top: 600
+});
+
+
+var item = menu.menu('findItem', 'Save');
+//<!-- @reg:setText=tooltip{content:'给菜单项添加<code>setText</code>方法'} -->
+menu.menu('setText', {
+	//<!-- @reg:target=tooltip{content:'设置<code>target</code>参数值'} -->
+	target: item.target,
+	//<!-- @reg:text=tooltip{content:'设置<code>text</code>参数值'} -->
+	text: 'Saving'
+});
+
+</script>

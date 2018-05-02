@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .star{width: 16px;height: 15px;background: url(image/star.png);display: inline-block;}
+        .stargray{width: 16px;height: 15px;background: url(image/star_gray.png);display: inline-block;}
+        .read{color: #1583cf;display: inline-block}
+        .unread{color: #ffa800;display: inline-block}
+        .concern{width: 16px;height: 15px;background: url(image/heart.png);display: inline-block;}
+        .unconcern{width: 16px;height: 15px;background: url(image/heart-gray.png);display: inline-block;}
+        .tixing{display: inline-block; border-radius: 2px;color: white;background: #e2b839;padding: 2px}
+        .yujing{display: inline-block; border-radius: 2px;color: white;background: #ff9c00;padding: 2px}
+        .baojing{display: inline-block; border-radius: 2px;color: white;background:#ff653b;padding: 2px}
+
+        .zhiding{display: inline-block; border-radius: 2px;color: white;background:#ff0042;padding: 2px}
+        .jinghua{display: inline-block; border-radius: 2px;color: white;background:#a1c900;padding: 2px}
+
+        .shenqingzhong{display: inline-block; border-radius: 2px;color: white;background:#1583cf;padding: 2px}
+        .yianpai{display: inline-block; border-radius: 2px;color: white;background:#449100;padding: 2px}
+        .butongyi{display: inline-block; border-radius: 2px;color: white;background:#ff9c00;padding: 2px}
+        .yishiyong{display: inline-block; border-radius: 2px;color: white;background:#ff653b;padding: 2px}
+        .beiqiangzhan{display: inline-block; border-radius: 2px;color: white;background:#e80000;padding: 2px}
+        .zancun{display: inline-block; border-radius: 2px;color: white;background:#3ab2ba;padding: 2px}
+
+        .criticallevel5{display: inline-block; border-radius: 2px;color: white;padding: 2px;background:#ff0000;}
+        .criticallevel4{display: inline-block; border-radius: 2px;color: white;padding: 2px;background:#ff653b;}
+        .criticallevel3{display: inline-block; border-radius: 2px;color: white;padding: 2px;background:#ff9518;}
+        .criticallevel2{display: inline-block; border-radius: 2px;color: white;padding: 2px;background:#c635c4;}
+        .criticallevel1{display: inline-block; border-radius: 2px;color: white;padding: 2px;background:#1583cf;}
+
+        .yiguidang{display: inline-block; color: #1583cf}
+        .weiguidang{display: inline-block; color:#ff9c00}
+
+        .yifasong{display: inline-block; color: #1583cf}
+        .weifasong{display: inline-block; color:#ff9c00}
+        .fasongsibai{display: inline-block; color:#ff0000}
+        .zancun_message{display: inline-block; color:#791cd9}
+
+
+        .kongxian{display: inline-block; color: #1583cf}
+        .shiyongzhong{display: inline-block; color:#ff9c00}
+        .jinyong{display: inline-block; color:#ff0000}
+        .qiyong{display: inline-block; color:#791cd9}
+
+        .yigongxiang{display: inline-block; color: #1583cf}
+        .weigongxiang{display: inline-block; color:#ff9c00}
+
+        .zhengchang{display: inline-block; color: #1583cf}
+        .jijiangshixiao{display: inline-block; color: #ff9c00}
+        .yishixiao{display: inline-block; color: #ff0000}
+
+        .fawen_icon{display: inline-block;height: 18px;width: 18px;background: url(image/fawen.png) center center no-repeat}
+        .shouwen_icon{display: inline-block;height: 18px;width: 18px;background: url(image/shouwen.png) center center no-repeat}
+        .cheliang_icon{display: inline-block;height: 18px;width: 18px;background: url(image/cheliang.png) center center no-repeat}
+        .huiyi_icon{display: inline-block;height: 18px;width: 18px;background: url(image/huiyi.png) center center no-repeat}
+        .qianbao_icon{display: inline-block;height: 18px;width: 18px;background: url(image/qianbao.png) center center no-repeat}
+        .ziyuan_icon{display: inline-block;height: 18px;width: 18px;background: url(image/ziyuan.png) center center no-repeat}
+        .duanxin_icon{display: inline-block;height: 18px;width: 18px;background: url(image/duanxin.png) center center no-repeat}
+        .youjian_icon{display: inline-block;height: 18px;width: 18px;background: url(image/youjian.png) center center no-repeat}
+        .tixing_icon{display: inline-block;height: 18px;width: 18px;background: url(image/tixing.png) center center no-repeat}
+    </style>
+</head>
+<body>
+    <div>收藏（已收藏，为收藏，取消收藏）<a class="star"></a><a class="stargray"></a></div>
+    <div>阅读状态（已读、未读）<span class="read">【已读】</span><span class="unread">【未读】</span></div>
+    <div>关注（已关注、未关注）<span class="concern"></span><span class="unconcern"></span> </div>
+    <div>预报警（提醒、预警、报警）<br/><br/>
+        <span class="tixing">提醒</span><br/><br/>
+        <span class="yujing">预警</span><br/><br/>
+        <span class="baojing">报警</span>
+    </div>
+    <div>置顶（置顶、精华）<br/><br/>
+        <span class="zhiding">置顶</span><br/><br/>
+        <span class="jinghua">精华</span>
+    </div>
+    <div>申请状态（申请中、已安排、不同意、已使用、被抢占、暂存、取消）<br/>
+        <span class="shenqingzhong">申请中</span><br/><br/>
+        <span class="yianpai">已安排</span><br/><br/>
+        <span class="butongyi">不同意</span><br/><br/>
+        <span class="yishiyong">已使用</span><br/><br/>
+        <span class="beiqiangzhan">被抢占</span><br/><br/>
+        <span class="zancun">暂存</span>
+    </div>
+    <div>缓急程度（一般、平急、加急、特急、特提、急件）<br/>
+        <span class="criticallevel1">一般</span><br/><br/>
+        <span class="criticallevel1">平急</span><br/><br/>
+        <span class="criticallevel2">加急</span><br/><br/>
+        <span class="criticallevel3">特急</span><br/><br/>
+        <span class="criticallevel4">特提</span><br/><br/>
+        <span class="criticallevel5">急件</span>
+    </div>
+    <div>归档标志（已归档、未归档）<br/><br/>
+        <span class="yiguidang">【已归档】</span><br/><br/>
+        <span class="weiguidang">【未归档】</span>
+    </div>
+    <div>短信状态（已发送、未发送、发送失败、暂存）<br/><br/>
+        <span class="yifasong">【已发送】</span><br/><br/>
+        <span class="weifasong">【未发送】</span><br/><br/>
+        <span class="fasongsibai">【发送失败】</span><br/><br/>
+        <span class="zancun_message">【暂存】</span>
+    </div>
+    <div>资源状态（空闲、使用中、禁用、启用）<br/><br/>
+        <span class="kongxian">【空闲】</span><br/><br/>
+        <span class="shiyongzhong">【使用中】</span><br/><br/>
+        <span class="jinyong">【禁用】</span><br/><br/>
+        <span class="qiyong">【启用】</span>
+    </div>
+    <div>共享状态（已共享、未共享）<br/><br/>
+        <span class="yigongxiang">【已共享】</span><br/><br/>
+        <span class="weigongxiang">【未共享】</span>
+    </div>
+    <div>时效状态（正常、即将失效、已失效）<br/><br/>
+        <span class="zhengchang">【正常】</span><br/><br/>
+        <span class="jijiangshixiao">【即将失效】</span><br/><br/>
+        <span class="yishixiao">【已失效】</span>
+    </div>
+    <div>业务类别（发文、收文、车辆、会议、签报、资源、短信、邮件、提醒）<br/><br/>
+        发文<a class="fawen_icon"></a><br></a><br>
+        收文<a class="shouwen_icon"></a><br></a><br>
+        车辆<a class="cheliang_icon"></a><br></a><br>
+        会议<a class="huiyi_icon"></a><br></a><br>
+        签报<a class="qianbao_icon"></a><br></a><br>
+        资源<a class="ziyuan_icon"></a><br></a><br>
+        短信<a class="duanxin_icon"></a><br></a><br>
+        邮件<a class="youjian_icon"></a><br></a><br>
+        提醒<a class="tixing_icon"></a><br></a><br>
+    </div>
+</body>
+</html>

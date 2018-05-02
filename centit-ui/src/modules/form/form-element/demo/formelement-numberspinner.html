@@ -1,0 +1,15 @@
+<p class="codeIgnore"><code>numberspinner</code>数字微调控件的创建是基于微调控件和数值输入框控件的。他可以转换输入的值，比如：数值、百分比、货币等。它也允许使用上/下微调按钮调整到用户的期望值。
+
+</p>
+<!-- @reg:editable=tooltip{content:'定义用户是否可以直接输入值到字段。'} -->
+<!-- @reg:increment=tooltip{content:'在点击微调按钮的时候的增量值。'} -->
+<!-- @reg:prefix=tooltip{content:'数值格式化为货币字符串'} -->
+<b>通过input标签来创建</b><input class="easyui-numberspinner" style="width:80px" required="required" data-options="required:true,increment:10,groupSeparator:',',decimalSeparator:'.',prefix:'$',editable:false"><br/><br/>  
+<b>使用Javascript创建数字微调组件</b><input id="numberspinner" required="required" style="width:80px;">  
+<script>
+	$('#numberspinner').numberspinner({    
+    min: 10,    
+    max: 100,    
+    editable: false   
+}); 
+</script>

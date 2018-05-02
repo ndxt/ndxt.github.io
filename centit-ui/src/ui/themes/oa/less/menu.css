@@ -1,0 +1,298 @@
+div,li,h3,h4,h5,label{    font-family: "microsoft yahei",arial;color: #666666;font-size: 15px;
+    font-weight: 400!important;}
+/*菜单*/
+#side {
+    width: 216px;
+    overflow: hidden;
+    border: none;
+}
+
+/*菜单 > 主体*/
+#side {
+    background: #0178BA;
+}
+#menu {
+    padding-top:5px;
+    border:1px solid #015697;
+    background: #0162A7;
+    padding:0 10px
+}
+#menu .panel-body {
+    background:#EFEFEF!important;
+    border: none;
+}
+#menu, #menu a {
+    color: #fff;
+}
+
+/*菜单 > 缩进图标*/
+#menu .tree-indent {
+}
+/*菜单 > 节点元素图标*/
+#menu .tree-folder {
+    display: none;
+}
+/*菜单 > 叶子元素图标*/
+#menu .tree-file {
+    display: none;
+}
+/*菜单 > 标题*/
+#menu .tree-title {
+    line-height: 20px;
+    color: #fff;
+}
+
+/*菜单 > 树形节点选中 > 节点元素图标*/
+#menu .tree-node-selected .tree-folder {
+    display: none;
+}
+/*菜单 > 树形节点选中 > 叶子元素图标*/
+#menu .tree-node-selected .tree-file {
+    display: none;
+}
+/*菜单 > 树形节点选中 > 标题*/
+#menu .tree-node-selected .tree-title, #menu .tree-node-selected .tree-title a {
+    font-weight: bold;
+}
+
+/*菜单 > 树形节点被找到 > 节点元素图标*/
+#menu .tree-node-found .tree-folder {
+    display: none;
+}
+/*菜单 > 树形节点被找到 > 叶子元素图标*/
+#menu .tree-node-found .tree-file {
+    display: none;
+}
+/*菜单 > 树形节点被找到 > 标题*/
+#menu .tree-node-found .tree-title, #menu .tree-node-found .tree-title a {
+    font-weight: bold;
+    color: #222;
+}
+
+/*菜单 > 一级*/
+#menu .accordion-header {
+    padding: 15px 0;
+    height: 36px; line-height: 36px;
+    border: none;
+/*     background: url(images/icon_01.png) 15px center no-repeat white!important; */
+}
+
+
+/*我的首页菜单*/
+/*发文待办*/
+.MPFWDB>.accordion-header{ background: url(images/29.png) 15px center no-repeat!important;}
+/*收文待办*/
+.MPSWDB>.accordion-header{ background: url(images/30.png) 15px center no-repeat!important;}
+
+/*个人办公菜单*/
+/*个人待办*/
+.GRBGGRDB>.accordion-header{ background: url(images/2.png) 15px center no-repeat!important;}
+/*日程安排*/
+.GRBGRCAP>.accordion-header{ background: url(images/11.png) 15px center no-repeat!important;}
+/*分管部门办件*/
+.LEADERBM>.accordion-header{ background: url(images/12.png) 15px center no-repeat!important;}
+/*内部邮箱*/
+.GRBGWBYX>.accordion-header{ background: url(images/13.png) 15px center no-repeat!important;}
+/*提醒设置*/
+.GRBGTXSJ>.accordion-header{ background: url(images/18.png) 15px center no-repeat!important;}
+/*手机短信*/
+.SJDX_>.accordion-header{ background: url(images/23.png) 15px center no-repeat!important;}
+
+/*公文流转菜单*/
+/*发文管理*/
+.GWLZFWGL>.accordion-header{ background: url(images/6.png) 15px center no-repeat!important;}
+/*收文管理*/
+.GWLZSWGL>.accordion-header{ background: url(images/8.png) 15px center no-repeat!important;}
+/*公文收藏*/
+.GWLZGWSC>.accordion-header{ background: url(images/7.png) 15px center no-repeat!important;}
+/*归档管理*/
+.GWLZXGGN>.accordion-header{ background: url(images/9.png) 15px center no-repeat!important;}
+
+/*办公资源菜单*/
+/*会议室管理*/
+.HYSGL>.accordion-header{ background: url(images/19.png) 15px center no-repeat!important;}
+/*车辆管理*/
+.CLGL>.accordion-header{ background: url(images/20.png) 15px center no-repeat!important;}
+/*辅助办公*/
+.GRBGFZBG>.accordion-header{ background: url(images/17.png) 15px center no-repeat!important;}
+/*资讯信息*/
+.ZXXX>.accordion-header{ background: url(images/16.png) 15px center no-repeat!important;}
+/*资产管理*/
+.ZCGL>.accordion-header{ background: url(images/21.png) 15px center no-repeat!important;}
+
+/*系统管理菜单*/
+/*组织管理*/
+.ORGMAG>.accordion-header{ background: url(images/25.png) 15px center no-repeat!important;}
+/*系统配置*/
+.SYS_CONFIG>.accordion-header{ background: url(images/26.png) 15px center no-repeat!important;}
+/*部门管理*/
+.DEPTMAG>.accordion-header{ background: url(images/27.png) 15px center no-repeat!important;}
+/*工作流程业务*/
+.WORKFLOW>.accordion-header{ background: url(images/28.png) 15px center no-repeat!important;}
+/*工作流程业务*/
+.OAManage>.accordion-header{ background: url(images/1.png) 15px center no-repeat!important;}
+
+
+/*菜单 > 一级 > 图标*/
+#menu .accordion-header .panel-icon{
+    display: none;
+}
+/*菜单 > 一级 > 标题*/
+#menu .accordion-header .panel-title{
+    padding: 0 0 0 70px;
+    height: 40px; 
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align:left;
+    color: #666666;
+}
+/*菜单 > 一级 > 工具栏*/
+#menu .accordion-header .panel-tool {
+    display: none;
+}
+
+/*菜单 > 一级：鼠标悬停*/
+#menu .accordion-header:hover {
+    background-position: center -41px;
+}
+/*菜单 > 一级：鼠标悬停 > 图标*/
+#menu .accordion-header:hover .panel-icon{
+}
+/*菜单 > 一级：鼠标悬停 > 标题*/
+#menu .accordion-header:hover .panel-title{
+    color: #0178BA;font-size: 16px;
+}
+
+/*菜单 > 一级：选中*/
+#menu>div .accordion-header-selected{ 
+	padding: 15px 0;
+    height: 36px; line-height: 36px;
+    border: none;
+    background-color:#E4E4E4!important;
+    position:relative
+    }
+#menu>div .accordion-header:hover{background-color:#E4E4E4!important;}
+/* #menu .accordion-header-selected:after{position:absolute;height:100%;left:0;width:6px;background:#1583cf;top:0;content:''} */
+
+/*菜单 > 一级：选中 > 图标*/
+#menu .accordion-header-selected .panel-icon{
+}
+/*菜单 > 一级：选中 > 标题*/
+#menu .accordion-header-selected .panel-title{
+}
+
+/*菜单 > 一级：选中：鼠标悬停*/
+#menu .accordion-header-selected:hover {
+    background-position: top center;
+}
+/*菜单 > 一级：选中：鼠标悬停 > 标题*/
+#menu .accordion-header-selected:hover .panel-title {
+    color: #0178BA;
+}
+
+/*菜单 > 二级*/
+#menu .tree > li {
+    margin-top: 10px;
+}
+#menu .tree > li > .tree-node {
+    padding: 1px 10px;
+    margin-bottom: 2px;
+/*     background: url(images/menu-level-2.png) center top no-repeat; */
+    background:none!important
+}
+#menu .tree > li > .tree-node .tree-title, #menu .tree > li > .tree-node .tree-title a {
+    color: #666666;
+    text-indent: 2em;
+    font-size: 14px;
+}
+#menu .tree > li > .tree-node > .tree-indent {
+    display: none;
+}
+#menu .tree > li > .tree-node > .tree-title {
+    padding-left: 30px;
+}
+#menu .tree > li > .tree-node > .tree-hit {
+    float: right;
+    width: 11px;
+    background: url(images/menu-level-2-hit.png) no-repeat;
+}
+#menu .tree > li > .tree-node > .tree-expanded {
+    background-position: 100% 50%;
+}
+#menu .tree > li > .tree-node > .tree-collapsed {
+    background-position: 0 50%;
+}
+/*菜单 > 二级：鼠标悬停*/
+#menu .tree > li > .tree-node:hover {
+}
+#menu .tree > li > .tree-node .tree-title a:hover{color:red!important}
+/*菜单 > 二级：选中*/
+#menu .tree > li > .tree-node-selected {
+	/*background:white!important*/
+}
+#menu .tree > li > .tree-node-selected .tree-title a{
+	color:#0084C3!important;
+}
+
+/*菜单 > 二级：第一个子元素*/
+#menu .tree > li:first-child > .tree-node {
+}
+
+/*菜单 > 三级及以下*/
+#menu .tree > li ul .tree-node{
+    padding: 2px 0;
+}
+/*菜单 > 三级及以下：选中*/
+#menu .tree > li ul .tree-node-selected {
+    background: url(images/menu-level-3-active.png) no-repeat center bottom;
+}
+/*菜单 > 三级及以下：鼠标悬停*/
+#menu .tree > li ul .tree-node:hover {
+    background: url(images/menu-level-3-active.png) no-repeat center bottom;
+}
+
+/*混合菜单*/
+body.full-screen .menu-mix {
+	top:-5px!important
+}
+.menu-mix {
+    position: absolute;
+	top:0; 
+	left: 380px;
+}
+
+/*混合菜单 > 单个菜单*/
+.menu-mix .easyui-linkbutton {
+    width:76px; height:60px;
+	outline: none;
+	background:none;
+	color: #fff;
+	border:none;
+	position:relative
+/* 	border-color: #6AD8FA; */
+/* 	background: #2BA0DC; */
+/* 	background: -webkit-linear-gradient(top,#33AEE2 0,#2190D4 100%); */
+/*   	background: -moz-linear-gradient(top,#33AEE2 0,#2190D4 100%); */
+/*   	background: -o-linear-gradient(top,#33AEE2 0,#2190D4 100%); */
+/*   	background: linear-gradient(to bottom,#33AEE2 0,#2190D4 100%); */
+/*   	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33AEE2,endColorstr=#2190D4,GradientType=0);  */
+}
+.menu-mix .easyui-linkbutton {
+    color: #fff;
+    border-radius: 0 0 0 0;
+}
+/*混合菜单 > 单个菜单*/
+.menu-mix .easyui-linkbutton.l-btn-selected {
+    background: #fff;
+	border-color: #fff;
+	color: #0178BA;
+}
+.sy{background: none!important;}
+.grbg{background:none!important;}
+.bgzy{background:none!important;}
+.gwlz{background:none!important;}
+.zhgl{background:none!important;}
+.l-btn-large .l-btn-icon{top: 14px;}
+.l-btn-large .l-btn-icon-top .l-btn-text{margin-top:18px;}
+

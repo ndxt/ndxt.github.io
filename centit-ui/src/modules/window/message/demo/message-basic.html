@@ -1,0 +1,63 @@
+<p class="codeIgnore">通过调用<b>messager</b>的<code>show</code>方法，设置不同的参数(showType)，可创建不同的消息提示框，有<b>角抽出</b>、<b>边抽出</b>、<b>平滑淡出</b>和<b>进度条</b>几种类型</p>
+
+<p class="codeIgnore title">基础消息</p>
+<!-- 角抽出 -->
+<!-- @reg:show()=tooltip{content:'设置<code>onclick=\'show()\'</code>，使得消息窗口从右下方弹出'} -->
+<a href="#" class="easyui-linkbutton" onclick="show()">角抽出</a>
+
+<!-- 边抽出-->
+<!-- @reg:slide()=tooltip{content:'设置<code>onclick=\'slide()\'</code>，使得消息窗口从下方弹出'} -->
+<a href="#" class="easyui-linkbutton" onclick="slide()">边抽出</a>
+
+<!-- 平滑淡出 -->
+<!-- @reg:fade()=tooltip{content:'只要设置<code>onclick=\'fade()\'</code>，就能得到一个淡入淡出的消息框'} -->
+<a href="#" class="easyui-linkbutton" onclick="fade()">平滑淡出</a>
+
+<!-- 进度条 -->
+<!-- @reg:progress()=tooltip{content:'只要设置<code>onclick=\'progress()\'</code>，就能得到一个进度条提示框'} -->
+<a href="#" class="easyui-linkbutton" onclick="progress()">进度条</a>
+<p class="codeIgnore br"></p>
+
+   <script type="text/javascript">
+        function show(){
+        	//<!-- @reg:show=tooltip{content:'调用messager的<code>show</code>方法'} -->       	
+            $.messager.show({
+//<!-- @reg:title=tooltip{content:'在这里设置消息框标题'} -->
+                title:'我的消息',
+//<!-- @reg:msg=tooltip{content:'在这里设置消息框提示内容'} -->
+                msg:'此消息在4秒后关闭。',
+//<!-- @reg:timeout=tooltip{content:'如果定义为 0，除非用户关闭，消息窗口将不会关闭。如果定义为非 0 值，消息窗口将在超时后自动关闭。'} -->
+                timeout:5000,
+//<!-- @reg:showType=tooltip{content:'定义消息窗口如何显示。可用的值是： null、slide、fade、show。默认是 slide。'} -->               
+                showType:'show'
+            });
+        }
+        function slide(){
+            $.messager.show({
+                title:'我的消息',
+                msg:'此消息在5秒后关闭。',
+                timeout:5000,
+                showType:'slide'
+            });
+        }
+        function fade(){
+            $.messager.show({
+                title:'我的消息',
+                msg:'此消息不会被关闭',
+                timeout:0,
+                showType:'fade'
+            });
+        }
+        function progress(){
+            var win = $.messager.progress({
+                title:'请稍等',
+                msg:'正在加载数据。。。'
+            });
+
+            setTimeout(function(){
+            	//<!-- @reg:progress=tooltip{content:'调用<b>messager</b>的<code>progress</code>方法显示进程关闭窗口'} -->
+                $.messager.progress('close');
+//<!-- @reg:3333=tooltip{content:'多少毫秒后关闭'} -->
+            },3333)
+        }
+    </script>

@@ -1,0 +1,36 @@
+<p class="codeIgnore">在滚动时可以将指定的行或列冻结，使其固定在原先位置无法被拖动</p>
+<p class="codeIgnore title"></p>
+<table id="basic-table-freeze-t" style="width: 100%; height: 250px;">
+	<!-- @reg:frozen=tooltip{content:'为true时，冻结该元素下指定列，当表格左右滚动时无法拖动被冻结的列'} -->
+	<thead data-options="frozen:true">
+		<tr>
+			<th data-options="field:'itemid',width:120">Item ID</th>
+			<th data-options="field:'productid',width:120">Product</th>
+		</tr>
+	</thead>
+	<thead>
+		<tr>
+			<th data-options="field:'listprice',width:120,align:'right'">List Price</th>
+			<th data-options="field:'unitcost',width:120,align:'right'">Unit Cost</th>
+			<th data-options="field:'attr1',width:230,align:'right'">Attribute</th>
+			<th data-options="field:'status',width:80,align:'center'">Status</th>
+		</tr>
+	</thead>
+</table>
+<script type="text/javascript">
+	$(function() {
+		$("#basic-table-freeze-t").datagrid({
+			title : "表格冻结",
+			rownumbers : true,
+			singleSelect : true,
+			collapsible : true,
+			url : "modules/tables/basic-table/data/basic-table.json",
+			method : "get",
+			//<!-- @reg:onLoadSuccess=tooltip{content:'数据加载成功的时触发'} -->
+			onLoadSuccess : function() {
+				//<!-- @reg:freezeRow=tooltip{content:'冻结指定行，当表格上下滚动时无法拖动被冻结的行'} -->
+				$(this).datagrid("freezeRow", 0).datagrid("freezeRow", 1);
+			}
+		});
+	});
+</script>

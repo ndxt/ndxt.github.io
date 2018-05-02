@@ -1,0 +1,98 @@
+<p class="codeIgnore">在表格里嵌入过滤条件，默认过滤方式为输入框</p>
+<p class="codeIgnore title"></p>
+<table id="basic-table-filter-t" style="width: 100%; height: 200px;"></table>
+<!-- @reg:datagrid-filter.js=tooltip{content:'必须引入EasyUI的过滤文件'} -->
+<script type="text/javascript" src="ui/js/easyui/datagrid-filter.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var dg = $("#basic-table-filter-t").datagrid({
+			title : "表格过滤",
+			singleSelect : true,
+			collapsible : true,
+			url : "modules/tables/basic-table/data/basic-table.json",
+			method : "get",
+			columns : [[{
+				field : "itemid",
+				title : "Item ID",
+				width : 100
+			}, {
+				field : "productid",
+				title : "Product",
+				width : 100
+			}, {
+				field : "listprice",
+				title : "List Price",
+				width : 100,
+				align : "right"
+			}, {
+				field : "unitcost",
+				title : "Unit Cost",
+				width : 100,
+				align : "right"
+			}, {
+				field : "attr1",
+				title : "Attribute",
+				width : 240,
+				align : "right"
+			}, {
+				field : "status",
+				title : "Status",
+				width : 60,
+				align : "center"
+			}]]
+		});
+		//<!-- @reg:enableFilter=tooltip{content:'创建并启用过滤功能，参数是一个过滤配置的数组，每一项包含下列属性'} -->
+		dg.datagrid("enableFilter", [{
+			//<!-- @reg:field=tooltip{content:'需要过滤的列字段'} -->
+			field : "listprice",
+			//<!-- @reg:type=tooltip{content:'过滤类型，可选值有<code>label</code><code>text</code><code>textarea</code><code>checkbox</code><code>numberbox</code><code>validatebox</code><code>datebox</code><code>combobox</code><code>combotree</code>'} -->
+			type : "numberbox",
+			//<!-- @reg:options=tooltip{content:'过滤类型的选项'} -->
+			options : {
+				precision : 1
+			},
+			//<!-- @reg:op=tooltip{content:'过滤操作，可选值有<code>contains</code><code>equal</code><code>notequal</code><code>beginwith</code><code>endwith</code><code>less</code><code>lessorequal</code><code>greater</code><code>greaterorequal</code>'} -->
+			op : ["equal", "notequal", "less", "greater"]
+		}, {
+			field : "unitcost",
+			type : "numberbox",
+			options : {
+				precision : 1
+			},
+			op : ["equal", "notequal", "less", "greater"]
+		}, {
+			field : "status",
+			//<!-- @reg:combobox=tooltip{content:'过滤类型为下拉框'} -->
+			type : "combobox",
+			options : {
+				panelHeight : "auto",
+				//<!-- @reg:data=tooltip{content:'数据加载'} -->
+				data : [{
+					value : "",
+					text : "All"
+				}, {
+					value : "P",
+					text : "P"
+				}, {
+					value : "N",
+					text : "N"
+				}],
+				//<!-- @reg:onChange=tooltip{content:'当下拉框值改变时触发'} -->
+				onChange : function(value) {
+					if (value != null && value != "") {
+						//<!-- @reg:addFilterRule=tooltip{content:'添加一个过滤的列字段'} -->
+						dg.datagrid("addFilterRule", {
+							field : "status",
+							op : "equal",
+							value : value
+						});
+					} else
+						//<!-- @reg:removeFilterRule=tooltip{content:'移除一个过滤的列字段'} -->
+						dg.datagrid("removeFilterRule", "status");
+					//<!-- @reg:doFilter=tooltip{content:'基于过滤的列字段执行过滤'} -->
+					dg.datagrid("doFilter");
+				}
+			}
+		}]);
+	});
+</script>

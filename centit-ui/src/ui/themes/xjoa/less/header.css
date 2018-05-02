@@ -1,0 +1,46 @@
+/*HEADER*/
+body > .layout-panel-north {
+/*     background: url(images/header.jpg) repeat-x; */
+}
+#header {
+    height: 122px;
+    border: none;
+/*     background: url(images/header-left.jpg) bottom left no-repeat; */
+}
+#header .title{
+	position: absolute;
+	top:20px;
+	left:30px;
+    text-indent: -9999px;
+	width:346px;
+	height:50px;
+	background: url(images/header-title.png) no-repeat;
+}
+
+body.full-screen #header .title {
+    height: 33px;
+    line-height: 33px;
+    top: 0;
+    font-size: 22px;
+    font-weight: bold;
+    background: none;
+    text-indent: 0;
+}
+
+/*HEADER > 工具栏*/
+#header .toolbar {
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
+
+    height: 28px;
+}
+#header .toolbar .panel-body{
+    padding: 0;
+    background: transparent;
+}
+
+/*HEADER > 工具栏 > SKIN*/
+#toolbar_skin .skin {
+    border-radius: 2px;
+}

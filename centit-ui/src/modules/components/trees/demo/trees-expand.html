@@ -1,0 +1,62 @@
+<!-- @id:trees_expand -->
+<p class="codeIgnore"><code>expandAll</code>方法展开所有节点，<code>collapseAll</code>收缩所有节点</p>
+<p class="codeIgnore"><code>expand</code>方法展开指定节点，<code>collapse</code>收缩指定节点</p>
+<p class="codeIgnore">同时，通过节点的<code>state</code>属性可以获得节点是展开还是收缩</p>
+<div class="easyui-panel" style="margin-bottom: 10px;">
+	<p id="info_trees_expand"></p>
+	<!-- @reg:expandAll=tooltip{content:'调用<code>expandAll</code>展开所有'} -->
+	<a class="easyui-linkbutton" onclick="$('#tree_trees_expand').tree('expandAll')" data-options="iconCls: 'icon-add'">展开所有</a>
+	<!-- @reg:collapseAll=tooltip{content:'调用<code>collapseAll</code>收缩所有'} -->
+	<a class="easyui-linkbutton" onclick="$('#tree_trees_expand').tree('collapseAll')" data-options="iconCls: 'icon-remove'">收缩所有</a>
+	
+	<a class="easyui-linkbutton" id="btn_trees_expand_operate" data-options="iconCls: 'icon-tip', disabled: true">操作</a>
+	<!-- @reg:expandToLevel4()=tooltip{content:'调用<code>expandToLevel4()</code>展开到4级菜单'} -->
+	<a class="easyui-linkbutton" onclick="expandToLevel4()">展开到4级菜单</a>
+</div>
+
+<ul class="easyui-tree" id="tree_trees_expand" url="modules/components/trees/datas/menus.json"></ul>
+<script>
+	function updateTreeExpandBtn(node) {
+		var tree = $(this);
+		var btn = $('#btn_trees_expand_operate');
+		
+		// 是否为文件夹
+		if (node.children) {
+			var open = node.state === 'open';
+			var text = open ? '收缩' : '展开';
+			var method = open ? 'collapse' : 'expand';
+			
+			btn.linkbutton({
+				disabled: false,
+				text: text,
+				onClick: function() {
+					tree.tree(method, node.target);
+				}
+			});
+		}
+		else {
+			btn.linkbutton({
+				disabled: true,
+				text: '操作',
+				onClick: function() {return false;}
+			});
+		}
+	}
+	
+	function expandToLevel4() {
+		var tree = $('#tree_trees_expand');
+		var node = tree.tree('find', 'Level4');
+		tree.tree('expandTo', node.target).tree('select', node.target);
+	}
+	
+	$('#tree_trees_expand').tree({
+		onSelect: function(node) {
+			$('#info_trees_expand').html('选中了<b>'+node.text+'</b>节点');
+			updateTreeExpandBtn.call(this, node);
+		},
+		
+		onExpand: updateTreeExpandBtn,
+		
+		onCollapse: updateTreeExpandBtn
+	});
+</script>

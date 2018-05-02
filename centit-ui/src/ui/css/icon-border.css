@@ -1,0 +1,221 @@
+@charset "utf-8";
+/* CSS Document */
+
+.icon-border {
+	background:url(icons/border_24.png) no-repeat;
+	width: 24px;
+	height: 24px;
+	 display: inline-block;
+}
+
+
+
+.icon-border-earth {
+	background-position:0px 0px;
+}
+
+.icon-border-search {
+	background-position:-24px 0px;
+}
+
+.icon-border-magnifier {
+	background-position:-48px 0px;
+}
+
+.icon-border-folder {
+	background-position:-72px 0px;
+}
+
+.icon-border-boss {
+	background-position:-96px 0px;
+}
+
+.icon-border-team1 {
+	background-position:-120px 0px;
+}
+
+
+
+.icon-border-team2 {
+	background-position:0px -24px;
+}
+
+.icon-border-ballpen {
+	background-position:-24px -24px;
+}
+
+.icon-border-gold {
+	background-position:-48px -24px;
+}
+
+.icon-border-message {
+	background-position:-72px -24px;
+}
+
+.icon-border-woman {
+	background-position:-96px -24px;
+}
+
+.icon-border-prohibited {
+	background-position:-120px -24px;
+}
+
+
+
+.icon-border-pie_chart {
+	background-position:0px -48px;
+}
+
+.icon-border-notepad {
+	background-position:-24px -48px;
+}
+
+.icon-border-hook {
+	background-position:-48px -48px;
+}
+
+.icon-border-notes {
+	background-position:-72px -48px;
+}
+
+.icon-border-globosity {
+	background-position:-96px -48px;
+}
+
+.icon-border-information {
+	background-position:-120px -48px;
+}
+
+
+.icon-border-globe {
+	background-position:0px -72px;
+}
+
+.icon-border-television {
+	background-position:-24px -72px;
+}
+
+.icon-border-money {
+	background-position:-48px -72px;
+}
+
+.icon-border-help {
+	background-position:-72px -72px;
+}
+
+.icon-border-email {
+	background-position:-96px -72px;
+}
+
+.icon-border-window {
+	background-position:-120px -72px;
+}
+
+
+.icon-border-incandescentpx  {
+	background-position:0px -96px;
+}
+
+.icon-border-prompt {
+	background-position:-24px -96px;
+}
+
+.icon-border-house {
+	background-position:-48px -96px;
+}
+
+.icon-border-folder2 {
+	background-position:-72px -96px;
+}
+
+.icon-border-browser {
+	background-position:-96px -96px;
+}
+
+.icon-border-staff {
+	background-position:-120px -96px;
+}
+
+
+
+.icon-border-open {
+	background-position:0px -120px;
+}
+
+.icon-border-move {
+	background-position:-24px -120px;
+}
+
+.icon-border-love {
+	background-position:-48px -120px;
+}
+
+.icon-border-download {
+	background-position:-72px -120px;
+}
+
+.icon-border-file {
+	background-position:-96px -120px;
+}
+
+.icon-border-notepad {
+	background-position:-120px -120px;
+}
+
+
+
+
+.icon-border-notebook {
+	background-position:0px -144px;
+}
+
+.icon-border-note {
+	background-position:-24px -144px;
+}
+
+.icon-border-forbid {
+	background-position:-48px -144px;
+}
+
+.icon-border-files {
+	background-position:-72px -144px;
+}
+
+.icon-border-fortune {
+	background-position:-96px -144px;
+}
+
+.icon-border-ban {
+	background-position:-120px -144px;
+}
+
+
+
+.icon-border-dollar {
+	background-position:0px -168px;
+}
+
+.icon-border-letter {
+	background-position:-24px -168px;
+}
+
+.icon-border-delete {
+	background-position:-48px -168px;
+}
+
+.icon-border-add {
+	background-position:-72px -168px;
+}
+
+.icon-border-bar_code {
+	background-position:-96px -168px;
+}
+
+.icon-border-AI {
+	background-position:-120px -168px;
+}
+
+
+
+
+

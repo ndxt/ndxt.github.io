@@ -1,0 +1,43 @@
+<p class="codeIgnore">单击右键，菜单将会显示，鼠标移动到“Open”菜单选项，将会显示它的子菜单，该子菜单为自定义内容</p>
+<div id="m-custom" class="easyui-menu" style="width:120px;">
+        <div>New</div>
+        <div>
+            <span>Open</span>
+			<!-- @reg:menu-content=tooltip{content:'该元素中的内容，为自定义的子菜单内容'} -->
+            <div class="menu-content" style="text-align:left;padding:10px">
+                <div style="font-weight:bold;font-size:16px">Select your Language:</div>
+                <ul style="margin:0;padding:0 0 0 40px">
+                    <li><a href="javascript:void(0)">Java</a></li>
+                    <li><a href="javascript:void(0)">Basic</a></li>
+                    <li><a href="javascript:void(0)">C++</a></li>
+                    <li><a href="javascript:void(0)">Fortran</a></li>
+                    <li>
+                        <span>Other</span>
+                        <input>
+                    </li>
+                </ul>
+                <div style="padding:10px 0 0 30px">
+                    <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">Ok</a>
+                </div>
+            </div>
+        </div>
+        <div data-options="iconCls:'icon-save'">Save</div>
+        <div data-options="iconCls:'icon-print'">Print</div>
+        <div class="menu-sep"></div>
+        <div>Exit</div>
+</div>
+<script>
+$('#m-custom').menu().menu('show', {
+    left: 300,
+    top: 300
+});
+$(function(){
+            $("#menus-custom").bind('contextmenu',function(e){
+                e.preventDefault();
+                $('#m-custom').menu('show', {
+                    left: e.pageX,
+                    top: e.pageY
+                });
+            });
+        });
+</script>

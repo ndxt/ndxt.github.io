@@ -1,0 +1,11 @@
+<div class="menu-mix">
+    {{#dashboard}}
+    <a href="javascript:void(0);" id="menu_mix_{{id}}" name="{{id}}" class="easyui-linkbutton"
+       data-options="iconCls:'{{largeIcon}} large-icon sy',size:'large',iconAlign:'top', group: 'menu_mix_buttons', toggle: true, selected: true">{{text}}</a>
+    {{/dashboard}}
+
+    {{#menus}}
+    <a href="javascript:void(0);" id="menu_mix_{{id}}" name="{{id}}" class="easyui-linkbutton"
+       data-options="iconCls:'{{largeIcon}}',size:'large',iconAlign:'top', group: 'menu_mix_buttons', toggle: true, selected: true">{{text}}</a>
+    {{/menus}}
+</div>

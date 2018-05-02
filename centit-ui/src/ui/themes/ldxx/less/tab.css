@@ -1,0 +1,98 @@
+/*TAB*/
+#menu_tab > .tabs-header {
+    background: #dedede;
+    padding: 0;
+}
+
+#menu_tab > .tabs-panels > .panel > .panel-body {
+    background: #F7F7F7;
+}
+
+#menu_tab > .tabs-header .tabs-wrap {
+    height: 35px;
+    background: #dedede;
+}
+#menu_tab > .tabs-header .tabs {
+    position: absolute;
+    bottom: 0;
+	border: none;
+	padding: 0;
+}
+
+#menu_tab .tabs li {
+	margin: 0;
+}
+
+/*TAB工具栏*/
+#menu_tab > .tabs-header .tabs-tool {
+    height: 24px;
+    border: none;
+}
+/*TAB工具栏 > 按钮*/
+#menu_tab > .tabs-header .tabs-tool a{
+    margin-top: 2px;
+}
+#menu_tab  > .tabs-header.tabs-scroller-left, #menu_tab > .tabs-header .tabs-scroller-right {
+    height: 24px;
+    border-width: 1px 1px 2px 1px;
+    border-color: #247BB6;
+}
+
+#menu_tab > .tabs-header .tabs-scroller-right {
+	right: 144px;
+}
+
+#menu_tab > .tabs-header .tabs-tool {
+	margin-right: 144px;
+	background: #dedede;
+}
+
+#center .toolbar {
+	right: 10px;
+}
+
+/*TAB > 单个TAB背景*/
+#menu_tab > .tabs-header .tabs-inner {
+    color: #107dc7;
+    font-weight: normal;
+    border: 1px solid #D4D4D4;
+    border-width: 0 1px 0 0;
+    background: #dedede;
+    border-radius: 0;
+    filter: none;
+    padding: 0 20px 0 20px;
+}
+/*TAB 背景：鼠标悬停*/
+#menu_tab > .tabs-header li:hover .tabs-inner{
+    color: #0E2D5F;
+    background: #ffffff;
+}
+/*TAB 背景：选中*/
+#menu_tab > .tabs-header li.tabs-selected .tabs-inner {
+	min-width: 70px;
+    color: #107dc7;
+    font-weight: normal;
+    border: 1px solid #ffffff;
+    border-width: 0 1px 0 0;
+    background: #ffffff;
+    border-radius: 0;
+    padding: 0 20px 0 20px;
+}
+
+/*TAB 关闭按钮*/
+#menu_tab > .tabs-header .tabs-close {
+    width: 12px;
+    top: 10px;
+    right: 3px;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+   background: url(images/img/tab-close.png) no-repeat;
+}
+/*TAB 关闭按钮：鼠标悬停*/
+#menu_tab > .tabs-header .tabs-close:hover {
+    opacity: 1;
+}
+/*TAB 关闭按钮：选中*/
+#menu_tab > .tabs-header .tabs-selected .tabs-close{
+    background: url(images/img/tab-close.png) no-repeat;
+}

@@ -1,0 +1,48 @@
+<style>
+	.textbox-methods{padding:5px;margin-right:5px;color: #444;background: #fafafa;border: 1px solid #bbb;border-radius:5px}
+</style>
+<p class="codeIgnore"><code>textbox</code>的方法有<code>textbox</code>、<code>disable</code>、<code>clear</code>、<code>settext</code>、<code>destroy</code>、<code>resize</code>、<code>readonly</code>等等</p>
+	<!-- @reg:buttonText=tooltip{content:'设置<code>buttonText</code>文本内容'} -->
+	<!-- @reg:iconCls=tooltip{content:'设置图标'} -->
+	<!-- @reg:iconAlign=tooltip{content:'设置图标位置'} -->
+    <a href="javascript:void(0)" class="textbox-methods" onclick="textbox()">返回textbox对象</a><input class="easyui-textbox" id="textbox" data-options="buttonText:'搜索',iconCls:'icon-man',iconAlign:'left'" style="width:300px"><br/><br/>
+    <a href="javascript:void(0)" class="textbox-methods" onclick="textboxdisable()">禁用textbox</a><input class="easyui-textbox" id="textbox-disable" style="width:300px"><br/><br/>
+    <a href="javascript:void(0)" class="textbox-methods" onclick="textboxclear()">清除textbox文本</a><input class="easyui-textbox" id="textbox-clear" style="width:300px" value="点击清除按钮之后，文字将被清除"><br/><br/>
+    <a href="javascript:void(0)" class="textbox-methods" onclick="textboxsettext()">设置textbox文本</a><input class="easyui-textbox" id="textbox-settext" style="width:300px"><br/><br/>
+	<a href="javascript:void(0)" class="textbox-methods" onclick="textboxdestroy()">销毁textbox文本</a><input class="easyui-textbox" id="textbox-destroy" style="width:300px"><br/><br/>
+	<a href="javascript:void(0)" class="textbox-methods" onclick="textboxresize()">重置textbox大小</a><input class="easyui-textbox" id="textbox-resize" style="width:300px"><br/><br/>
+	<a href="javascript:void(0)" class="textbox-methods" onclick="textboxreadonly()">设置textbox为只读</a><input class="easyui-textbox" id="textbox-readonly" style="width:300px">
+<script>
+function textbox(){
+	//<!-- @reg:textbox=tooltip{content:'返回一个textbox对象，用户对该对象绑定任意一个事件，来对该对象进行操作'} -->
+	var _textbox=$("#textbox-disable").textbox('textbox');
+	alert(typeof _textbox);
+} 
+function textboxdisable(){
+	//<!-- @reg:disable=tooltip{content:'给textbox添加<code>disable方法</code>来禁用textbox'} -->
+	$("#textbox-disable").textbox('disable');
+}
+function textboxclear(){
+	//<!-- @reg:clear=tooltip{content:'给textbox添加<code>clear方法</code>来清除textbox'} -->
+    $("#textbox-clear").textbox('clear');	
+} 
+function textboxsettext(){
+	//<!-- @reg:setText=tooltip{content:'给textbox添加<code>setText方法</code>来设置textbox的文本'} -->
+	$("#textbox-settext").textbox('setText','设置文本内容');
+}
+function textboxdestroy(){
+	//<!-- @reg:destroy=tooltip{content:'给textbox添加<code>destroy方法</code>来销毁textbox'} -->
+	$("#textbox-destroy").textbox('destroy');
+	alert("textbox已经被销毁");
+}
+function textboxresize(){
+	//<!-- @reg:resize=tooltip{content:'给textbox添加<code>resize方法</code>来重置textbox的宽度'} -->
+	$("#textbox-resize").textbox('resize','350');
+	alert("textbox的宽度已经被重置为350");
+}
+function textboxreadonly(){
+	//<!-- @reg:readonly=tooltip{content:'给textbox添加<code>readonly方法</code>来设置textbox为只读'} -->
+	$("#textbox-readonly").textbox('readonly');
+	alert("textbox已经被设置为只读");
+}
+</script>

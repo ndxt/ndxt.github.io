@@ -1,0 +1,480 @@
+[
+    {
+        "id": "Core",
+        "pid": null,
+        "text": "核心",
+        "url": null,
+        "children": [
+            {
+                "id": "Ajax",
+                "pid": "Core",
+                "text": "与服务端交互",
+                "url": "modules/core/ajax/ajax.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": true
+                }
+            },
+            {
+                "id": "CoreJS",
+                "pid": "Core",
+                "text": "核心类",
+                "url": "modules/core/core-js/core-js.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": true
+                }
+            },
+            {
+                "id": "Utils",
+                "pid": "Core",
+                "text": "工具类",
+                "url": "modules/core/utils/utils.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": true
+                }
+            },
+            {
+                "id": "Page",
+                "pid": "Core",
+                "text": "页面类",
+                "url": "modules/core/page/page.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": true
+                }
+            },
+            {
+                "id": "Filter",
+                "pid": "Core",
+                "text": "过滤器",
+                "url": "modules/core/filter/filter.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": true
+                }
+            },
+            {
+                "id": "Widgets",
+                "pid": "Core",
+                "text": "插件类",
+                "url": "modules/core/widgets/widget.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": true
+                }
+            },
+            {
+                "id": "Events",
+                "pid": "Core",
+                "text": "事件类",
+                "url": "modules/core/events/events.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": true
+                }
+            },
+            {
+                "id": "Cache",
+                "pid": "Core",
+                "text": "缓存类",
+                "url": "modules/core/cache/cache.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": true
+                }
+            },
+            {
+                "id": "CRUD",
+                "pid": "Core",
+                "text": "增删改查",
+                "url": "modules/core/crud/crud.jsp",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            }
+        ]
+    },
+    {
+        "id": "Layout",
+        "pid": null,
+        "text": "布局",
+        "url": null,
+        "children": [
+            {
+                "id": "BasicLayout",
+                "pid": "Layout",
+                "text": "基本布局",
+                "url": "modules/layout/basic-layout/basic-layout.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "Template",
+                "pid": "Layout",
+                "text": "工程模板",
+                "url": "modules/layout/template/template.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            }
+        ]
+    },
+    {
+        "id": "Components",
+        "pid": null,
+        "text": "组件",
+        "url": null,
+        "children": [
+            {
+                "id": "Icons",
+                "pid": "Components",
+                "text": "图标",
+                "url": "modules/components/icons/icons.html",
+                "attributes": {
+                	"pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "Buttons",
+                "pid": "Components",
+                "text": "按钮",
+                "url": "modules/components/buttons/buttons.html",
+                "attributes": {
+                	"pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "Tabs",
+                "pid": "Components",
+                "text": "标签页",
+                "url": "modules/components/tabs/tabs.html",
+                "attributes": {
+                	"pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "Accordions",
+                "pid": "Components",
+                "text": "手风琴",
+                "url": "modules/components/accordions/accordions.html",
+                "attributes": {
+                	"pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "Panels",
+                "pid": "Components",
+                "text": "面板",
+                "url": "modules/components/panels/panels.html",
+                "attributes": {
+                	"pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "Trees",
+                "pid": "Components",
+                "text": "树",
+                "url": "modules/components/trees/trees.html",
+                "attributes": {
+                	"pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "Menu",
+                "pid": "Components",
+                "text": "菜单",
+                "url": "modules/components/menu/menu.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            }
+        ]
+    },
+    {
+        "id": "Tables",
+        "pid": null,
+        "text": "表格",
+        "url": null,
+        "children": [
+            {
+                "id": "BasicTables",
+                "pid": "Tables",
+                "text": "基本表格",
+                "url": "modules/tables/basic-table/basic-table.html",
+                "attributes": {
+                	"pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "TreeTables",
+                "pid": "Tables",
+                "text": "树形表格",
+                "url": "modules/tables/tree-table/tree-table.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "ListGrid",
+                "pid": "Tables",
+                "text": "数据列表",
+                "url": "modules/tables/list-grid/list-grid.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "PropertyGrid",
+                "pid": "Tables",
+                "text": "属性表格",
+                "url": "modules/tables/property-grid/property-grid.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            }
+        ]
+    },
+    {
+        "id": "Form",
+        "pid": null,
+        "text": "表单",
+        "url": null,
+        "children": [
+            {
+                "id": "FormElements",
+                "pid": "Form",
+                "text": "表单元素",
+                "url": "modules/form/form-element/form-element.html",
+                "attributes": {
+                	"pageType": "tab",
+                    "external": false
+                }
+            },
+             {
+                "id": "FormCombobox",
+                "pid": "Form",
+                "text": "下拉列表框",
+                "url": "modules/form/form-combobox/form-combobox.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            },
+             {
+                "id": "FormCombotree",
+                "pid": "Form",
+                "text": "树形下拉框",
+                "url": "modules/form/form-combotree/form-combotree.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            },
+             {
+                "id": "FormCombogrid",
+                "pid": "Form",
+                "text": "数据表格下拉框",
+                "url": "modules/form/form-combogrid/form-combogrid.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "Validation",
+                "pid": "Form",
+                "text": "表单验证",
+                "url": "modules/form/form-validation/form-validation.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            }
+        ]
+    },
+    {
+        "id": "Window",
+        "pid": null,
+        "text": "窗口",
+        "url": null,
+        "children": [
+            {
+                "id": "Dialog",
+                "pid": "Window",
+                "text": "对话框",
+                "url": "modules/window/dialog/dialog.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "Message",
+                "pid": "Window",
+                "text": "消息框",
+                "url": "modules/window/message/message.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "Tooltip",
+                "pid": "Window",
+                "text": "提示框",
+                "url": "modules/window/tooltip/tooltip.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            }
+        ]
+    },
+    {
+        "id": "Extend",
+        "pid": null,
+        "text": "扩展",
+        "url": null,
+        "children": [
+            {
+                "id": "ExtendMenu",
+                "pid": "Extend",
+                "text": "菜单",
+                "url": "modules/extend/menu/menu.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "ExtendMenuTab",
+                "pid": "Extend",
+                "text": "菜单标签页",
+                "url": "modules/extend/menu-tab/menu-tab.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "ExtendTable",
+                "pid": "Extend",
+                "text": "表格",
+                "url": "modules/extend/table/table.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "ExtendLayout",
+                "pid": "Extend",
+                "text": "布局",
+                "url": "modules/extend/layout/layout.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "ExtendDialog",
+                "pid": "Extend",
+                "text": "对话框",
+                "url": "modules/extend/dialog/dialog.html",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            }
+        ]
+    },
+    {
+        "id": "MultiLevel",
+        "pid": null,
+        "text": "多级菜单",
+        "url": null,
+        "children": [
+            {
+                "id": "Level2",
+                "pid": "MultiLevel",
+                "text": "2级菜单",
+                "url": null,
+                "children": [
+                    {
+                        "id": "Level3",
+                        "pid": "Level2",
+                        "text": "3级菜单",
+                        "url": null,
+                        "children": [
+                            {
+                                "id": "Level4",
+                                "pid": "Level3",
+                                "text": "4级菜单",
+                                "url": "modules/multi-level/multi-level.html",
+				                "attributes": {
+				                	"pageType": "tab",
+				                    "external": false
+				                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "Test",
+        "pid": null,
+        "text": "测试",
+        "url": null,
+        "children": [
+        	{
+                "id": "GC",
+                "pid": "Test",
+                "text": "耿衬",
+                "url": "",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "TR",
+                "pid": "Test",
+                "text": "陶荣",
+                "url": "modules/crud/tr/list.jsp",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            },
+            {
+                "id": "ZZW",
+                "pid": "Test",
+                "text": "郑詹伟",
+                "url": "",
+                "attributes": {
+                    "pageType": "tab",
+                    "external": false
+                }
+            }
+        ]
+    }
+]

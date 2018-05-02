@@ -1,0 +1,60 @@
+<ul class="example-list" id="buttons-example-list">
+	<li>
+		<a href="#buttons-basic" data-url="modules/components/buttons/demo/buttons-basic.html">基础按钮</a>
+	</li>
+	<li>
+		<a href="#buttons-group" data-url="modules/components/buttons/demo/buttons-group.html">按钮组</a>
+	</li>
+	<li>
+		<a>按钮操作</a>
+		<ul>
+			<li>
+				<a href="#buttons-disable" data-url="modules/components/buttons/demo/buttons-disable.html">禁用</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a>按钮样式</a>
+		<ul>
+			<li>
+				<a href="#buttons-plain" data-url="modules/components/buttons/demo/buttons-plain.html">平坦按钮</a>
+			</li>
+			<li>
+				<a href="#buttons-size" data-url="modules/components/buttons/demo/buttons-size.html">尺寸大小</a>
+			</li>
+			<li>
+				<a href="#buttons-icon-align" data-url="modules/components/buttons/demo/buttons-icon-align.html">图标位置</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a>菜单按钮</a>
+		<ul>
+			<li>
+				<a href="#buttons-menu" data-url="modules/components/buttons/demo/buttons-menu.html">基本型</a>
+			</li>
+			<li>
+				<a href="#buttons-menu-split" data-url="modules/components/buttons/demo/buttons-menu-split.html">分割型</a>
+			</li>
+		</ul>
+	</li>	
+	
+</ul>
+
+<script>
+	
+	requirejs([
+		'widgets/example/widget.example',
+		'plugins/prettify/prettify'
+		], function(create) {
+			
+		var list = $('#buttons-example-list');
+		create(list, function(container) {
+			prettyPrint();
+			
+			$.parser.parse(container);
+			
+			$("#menu_tab_Buttons").niceScroll({cursorcolor:"#BCBCBC"});
+		});
+	});
+</script>

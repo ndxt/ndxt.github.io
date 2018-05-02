@@ -1,0 +1,29 @@
+<p class="codeIgnore">图标默认显示在文字<b>左侧</b>，也可以通过<code>iconAlign</code>对图标位置进行修改，可选值有<code>left</code><code>right</code><code>top</code><code>bottom</code></p>
+
+<p class="codeIgnore title">静态设置</p>
+<!-- 静态设置 -->
+<!-- @reg:iconAlign=tooltip{content:'<code>iconAlign</code>属性设置图标相对于文字的位置'} -->
+<a href="#" class="easyui-linkbutton" data-options="iconAlign: 'left', iconCls:'icon-add'">新增</a>
+<!-- @reg:right=tooltip{content:'<code>iconAlign</code>属性可选值有：<code>left：左</code><code>right：右</code><code>top：上</code><code>bottom：下</code>'} -->
+<a href="#" class="easyui-linkbutton" data-options="iconAlign: 'right', iconCls:'icon-remove'">删除</a>
+<a href="#" class="easyui-linkbutton" data-options="iconAlign: 'top', iconCls:'icon-save'">保存</a>
+<a href="#" class="easyui-linkbutton" data-options="iconAlign: 'bottom', iconCls:'icon-cut'">剪切</a>
+
+<p class="codeIgnore title">动态设置</p>
+<!-- 动态设置 -->
+<div style="margin:10px 0 20px 0">
+    <span>选择图标位置：</span>
+<!-- @reg:iconAlign=tooltip{content:'通过重新对按钮属性赋值的方式改变图标位置'} -->
+    <select onchange="$('#button_bar_23893ff2e727ed0c a').linkbutton({iconAlign:this.value})">
+        <option value="left">左</option>
+        <option value="right">右</option>
+        <option value="top">上</option>
+        <option value="bottom">下</option>
+    </select>
+</div>
+<div id="button_bar_23893ff2e727ed0c">
+	<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'">新增</a>
+	<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove'">删除</a>
+	<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">保存</a>
+	<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cut'">剪切</a>
+</div>

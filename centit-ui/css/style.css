@@ -1,0 +1,107 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
+body {
+	font: 15px Microsoft YaHei;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+a, a:HOVER, a:FOCUS {
+	text-decoration: none;
+	outline: none;
+}
+
+.header {
+	padding: 15px 30px 15px 30px;
+	font: 15px Microsoft YaHei;
+	background: #000000;
+}
+
+.header > div {
+	max-width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.header > div h3 {
+	height: 100%;
+	line-height: 40px;
+	margin: 0 30px 0 0;
+	float: left;
+	color: #cccccc;
+	font-size: 24px;
+}
+
+.header > div ul, .header > div ul li {
+	margin: 0;
+	float: left;
+}
+
+.header > div ul li a {
+	line-height: 40px;
+	margin-left: 20px;
+	padding: 0 20px 0 20px;
+	display: block;
+	color: #fff;
+	border-radius: 3px;
+}
+
+.header > div ul li a:HOVER {
+	color: #23527c;
+	background: #eeeeee;
+	text-decoration: none;
+}
+
+.header > div ul li a:FOCUS {
+	text-decoration: none;
+	outline: none;
+}
+
+.header > div ul li.active a {
+	color: #ffffff;
+	background: #337ab7;
+}
+
+.start-content, .doc-content {
+	padding: 0 30px 50px 30px;
+}
+
+.start-content > div, .doc-content > div {
+	max-width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.footer {
+	padding: 50px 30px 50px 30px;
+	text-align: center;
+	color: #ffffff;
+	font: 15px Microsoft YaHei;
+	background: #252525;
+}
+
+.footer img {
+	margin-bottom: 15px;
+}
+
+.footer p {
+	margin: 0;
+}
+
+#backTop {
+	width: 40px;
+	height: 40px;
+	right: 20px;
+	bottom: 180px;
+	z-index: 3;
+	position: fixed;
+	display: none;
+	cursor: pointer;
+}

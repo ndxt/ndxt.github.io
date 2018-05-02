@@ -1,0 +1,11 @@
+
+<p class="codeIgnore">combogrid的属性有<code>multiple</code></p>
+<!-- @reg:checkbox=tooltip{content:'定义第一列为checkbox'} -->
+<a href="javascript:void(0)" class="easyui-linkbutton" onclick="combogridmultiple()">多选下拉框</a>&nbsp;<select id="combogrid-multiple" class="easyui-combogrid" style="width:250px" data-options="idField:'itemid',textField:'productname',url:'modules/form/form-combogrid/datas/combogrid.json',method: 'get',columns: [[{field:'ck',checkbox:true},{field:'itemid',title:'Item ID',width:80},{field:'productname',title:'Product',width:120},{field:'listprice',title:'List Price',width:80,align:'right'},{field:'unitcost',title:'Unit Cost',width:80,align:'right'},{field:'attr1',title:'Attribute',width:200},{field:'status',title:'Status',width:60,align:'center'}]]"></select><br/><br/>
+<script>
+	function combogridmultiple(){
+	//<!-- @reg:multiple=tooltip{content:'设置下拉框是否为多选框'} -->
+		$('#combogrid-multiple').combogrid({multiple:true});
+		alert("已经可以多选啦！");
+	}
+</script>

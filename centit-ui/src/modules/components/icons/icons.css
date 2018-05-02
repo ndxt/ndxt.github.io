@@ -1,0 +1,46 @@
+#page_ui_components_icons .panel-body{
+	padding: 20px;
+	overflow: auto;
+}
+
+#page_ui_components_icons .CodeMirror {
+	border: 1px solid #ddd;
+	margin-top: 10px;
+}
+
+#page_ui_components_icons .icons-table {
+	width: 100%;
+	margin-top: 10px;
+	text-align: center;
+}
+#page_ui_components_icons .icons-table caption {
+	height: 30px;
+   line-height: 30px;
+   font-size: 20px;
+   text-align: left;
+   padding-left: 20;
+   border-bottom: 1px solid #cdcdcd;
+   margin-top: 10px;
+}
+
+#page_ui_components_icons .icons-table td {
+	width: 25%;
+	padding-bottom: 10px;
+	cursor: pointer;
+}
+#page_ui_components_icons .icons-table td:hover {
+	background: #21b384;
+	color: #fff;
+}
+
+#page_ui_components_icons .easyui-mini-icon, 
+#page_ui_components_icons .easyui-icon, 
+#page_ui_components_icons .easyui-large-icon,
+#page_ui_components_icons .fa, 
+#page_ui_components_icons .icon-base, 
+#page_ui_components_icons .icon-black, 
+#page_ui_components_icons .icon-border, 
+#page_ui_components_icons .icon-white {
+	display: block;
+	margin: 5px auto 0;
+}

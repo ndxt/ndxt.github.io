@@ -1,0 +1,24 @@
+<p class="codeIgnore warn">注意：<b>菜单按钮</b>的的关键字是<code>easyui-menubutton</code>！</p>
+<p class="codeIgnore"><b>菜单按钮</b>是联系按钮与菜单的组件，当用户点击或者移动到按钮上时，会显示菜单</p>
+<p class="codeIgnore title">通过<code>menu</code>属性指定<b>菜单</b>的<b>id选择符</b></p>
+<div class="easyui-panel" style="padding:5px;">
+<!-- @reg:easyui-menubutton=tooltip{content:'关键字是<code>easyui-menubutton</code>，<b>不是</b>easyui-linkbutton'} -->
+	<a href="javascript:void(0)" class="easyui-menubutton" data-options="menu:'#mm_9389a9c9e1594730',iconCls:'icon-edit'">编辑</a>
+<!-- @reg:hasDownArrow=tooltip{content:'<code>hasDownArrow</code>属性设置是否显示下拉箭头'} -->
+	<a href="javascript:void(0)" class="easyui-menubutton" data-options="menu:'#mm_9389a9c9e1594730', hasDownArrow: false">不显示箭头</a>
+<!-- @reg:menu:=tooltip{content:'<code>menu</code>属性传入下拉菜单的选择符'} -->
+<!-- @reg:duration=tooltip{content:'<code>duration</code>属性设置显示下拉菜单的延迟时间，单位：ms'} -->
+	<a href="javascript:void(0)" class="easyui-menubutton" data-options="menu:'#mm_9389a9c9e1594730', plain: false, duration: 500">延迟0.5秒显示菜单</a>
+	<div id="mm_9389a9c9e1594730" style="width:150px;">
+	    <div data-options="iconCls:'icon-undo'">撤销</div>
+	    <div data-options="iconCls:'icon-redo'">重做</div>
+	    <div class="menu-sep"></div>
+	    <div>剪切</div>
+	    <div>复制</div>
+	    <div>粘贴</div>
+	    <div class="menu-sep"></div>
+	    <div data-options="iconCls:'icon-remove'">删除</div>
+	    <div>选择全部</div>
+	</div>
+</div>
+<p class="codeIgnore info">关于<b>菜单</b>的更多信息请参考<a href="#">菜单</a></p>

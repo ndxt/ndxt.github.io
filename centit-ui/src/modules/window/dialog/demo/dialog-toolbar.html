@@ -1,0 +1,52 @@
+<p class="codeIgnore">可以设置对话框顶部工具栏和底部按钮，可选值有：一个数组，每一个工具栏中的工具属性都和<code>linkbutton</code>相同、一个已经定义好的HTML元素，与之前定义<code>window</code>工具时相同</p>
+<p class="codeIgnore title"></p>
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="$('#dialog-toolbar-d').dialog('open');">打开</a>
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="$('#dialog-toolbar-d').dialog('close');">关闭</a>
+<div id="dialog-toolbar-d" class="easyui-dialog">带有工具和按钮的对话框</div>
+<script type="text/javascript">
+	$(function() {
+		$("#dialog-toolbar-d").dialog({
+			iconCls : "icon-save",
+			title : "对话框工具和按钮",
+			closed : true,
+			//<!-- @reg:toolbar=tooltip{content:'对话框工具栏也可以通过数组进行定义'} -->
+			toolbar : [{
+				text : "添加",
+				iconCls : "icon-add",
+				//<!-- @reg:handler=tooltip{content:'在此设置点击过后你想要的处理结果'} -->
+				handler : function() {
+					alert("添加");
+				}
+			}, "-", {
+				text : "保存",
+				iconCls : "icon-save",
+				handler : function() {
+					alert("保存");
+				}
+			}],
+			//<!-- @reg:buttons=tooltip{content:'对话框按钮也可以通过数组进行定义'} -->
+			buttons : [{
+				text : "确定",
+				iconCls : "icon-ok",
+				handler : function() {
+					alert("确定");
+				}
+			}, {
+				text : "取消",
+				iconCls : "icon-cancel",
+				handler : function() {
+					alert("取消");
+				}
+			}]
+		});
+	});
+</script>
+<style type="text/css">
+	#dialog-toolbar-d {
+		width: 500px;
+		height: 300px;
+		line-height: 300px;
+		padding: 10px;
+		text-align: center;
+	}
+</style>

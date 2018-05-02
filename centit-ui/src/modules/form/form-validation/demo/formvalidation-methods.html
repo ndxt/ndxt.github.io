@@ -1,0 +1,61 @@
+<style>
+	.validatebox{padding:5px 20px;color:blue;font-weight:bold;}
+	p{padding:1em 2em;line-height:180%}
+	td{padding:10px}
+	.easyui-linkbutton{padding:5px 15px}
+</style>
+<p class="codeIgnore">validatebox的方法有<code>destroy</code><code>isValid</code><code>enableValidation</code><code>disableValidation</code></p>
+<form id="felement-validatemethods" method="post">
+	<table cellpadding="5">
+	    		<tr>
+	    			<td><a href="javascript:void(0)" class="easyui-linkbutton" onclick="validatedestroy()">销毁</a></td>
+	    			<td><input class="easyui-validatebox" id="validate-destroy" type="text" name="name" data-options="required:true"></input></td>
+	    		</tr>
+	    		<tr>
+	    			<td><a href="javascript:void(0)" class="easyui-linkbutton" onclick="isValid()">返回验证结果</a></td>
+	    			<td><input class="easyui-validatebox" id="validate-isValid" data-options="required:true"></td>
+	    		</tr>
+				<tr>
+	    			<td><a href="javascript:void(0)" class="easyui-linkbutton" onclick="enableValidation()">启用验证</a></td>
+	    			<td><input class="easyui-validatebox" id="validate-enableValidation" data-options="required:true,novalidate:true,validType:'url'"></td>
+	    		</tr>
+				<tr>
+	    			<td><a href="javascript:void(0)" class="easyui-linkbutton" onclick="disableValidation()">禁用验证</a></td>
+	    			<td><input class="easyui-validatebox" id="validate-disableValidation" data-options="required:true,validType:'url'"></td>
+	    		</tr>
+	    </table>
+</form>
+
+
+<div style="text-align:center;padding:5px">
+	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">提交</a>
+	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">清除</a>
+</div>
+<script>
+function validatedestroy(){
+	//<!-- @reg:destroy=tooltip{content:'给validatebox添加<code>destroy方法</code>来销毁validatebox'} -->
+	$("#validate-destroy").validatebox('destroy');
+}
+function isValid(){
+	//<!-- @reg:isValid=tooltip{content:'给validatebox添加<code>isValid方法</code>来返回验证结果'} -->
+	$("#validate-isValid").validatebox('isValid');
+	alert($("#validate-isValid").validatebox('isValid'));
+}
+function enableValidation(){
+	//<!-- @reg:enableValidation=tooltip{content:'给validatebox添加<code>enableValidation方法</code>来启用验证'} -->
+	$("#validate-enableValidation").validatebox('enableValidation');
+	alert("启用验证");
+}
+function disableValidation(){
+	//<!-- @reg:disableValidation=tooltip{content:'给validatebox添加<code>disableValidation方法</code>来禁用验证'} -->
+	$("#validate-disableValidation").validatebox('disableValidation');
+	alert("禁用验证");
+}
+
+function submitForm(){
+			$('#felement-validatemethods').form('submit');
+		}
+function clearForm(){
+			$('#felement-validatemethods').form('clear');
+		}
+</script>

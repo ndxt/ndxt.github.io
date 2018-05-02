@@ -1,0 +1,45 @@
+.centit-uploader {
+	overflow: hidden;
+	display: inline-block;
+	padding: 4px;
+}
+
+.centit-uploader [type=file] {
+	display: none;
+}
+
+.centit-uploader .btn-uploader .l-btn-icon {
+	    margin-top: -5px;
+	    left: 6px;
+}
+
+.centit-uploader .stream-total-tips {
+	display: none;
+}
+
+.centit-uploader .uploaded-files li {
+    cursor: default;
+    position: relative;
+    zoom: 1;
+    padding: 10px 20px 10px 35px;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-color: #ccc;
+}
+.centit-uploader .uploaded-files .uploaded-file {
+	color: #000;
+	font-weight: 700;
+}
+.centit-uploader .uploaded-files .uploaded-file:hover {
+	    text-decoration: underline!important;
+}
+.centit-uploader .uploaded-files .uploaded-icon {
+    position: absolute;
+    left: 12px;
+    font-size: 14px;
+    color: #50A05B;
+}
+.centit-uploader .uploaded-files .uploaded-delete {
+    float: right;
+    margin-right: 60px;
+}

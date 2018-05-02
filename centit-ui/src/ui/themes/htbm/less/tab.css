@@ -1,0 +1,131 @@
+/*TAB*/
+#menu_tab > .tabs-header {
+	height: 40px;
+	padding: 0;
+	background: #16A085;
+	border-top: 1px solid #16A085;
+	border-bottom: 1px solid #16A085;
+}
+
+#menu_tab > .tabs-panels > .panel > .panel-body {
+}
+
+#menu_tab > .tabs-header .tabs-wrap {
+    height: 100%;
+}
+#menu_tab > .tabs-header .tabs {
+	border: none;
+	bottom: 0;
+	position: absolute;
+}
+#menu_tab > .tabs-header .tabs li {
+	margin: 0 0 0 5px;
+	top: -1px;
+}
+#menu_tab > .tabs-header .tabs .tabs-title {
+	font-size: 14px;
+}
+#menu_tab > .tabs-header .tabs li:FIRST-CHILD {
+	margin-left: -4px;
+    /*
+	top:1px;
+    */
+}
+
+/*TAB工具栏*/
+#menu_tab > .tabs-header .tabs-tool {
+	height: 24px;
+	border: 1px solid #16A085;
+	border-width: 0 0 0 1px;
+	background: #16A085;
+}
+
+/*TAB工具栏 > 按钮*/
+#menu_tab > .tabs-header .tabs-tool a {
+    height: 100%;
+}
+#menu_tab > .tabs-header .tabs-tool a > span {
+	margin-top: 9px;
+}
+#menu_tab  > .tabs-header.tabs-scroller-left, #menu_tab > .tabs-header .tabs-scroller-right {
+    background: #f5f5f5 url('images/tab_icons.png') no-repeat -15px center;
+	border-color: #D7D7D7;
+}
+#menu_tab > .tabs-header .tabs-scroller-left {
+	background: #f5f5f5 url('images/tab_icons.png') no-repeat 0px center;
+	border-color: #D7D7D7;
+}
+
+/*TAB > 单个TAB背景*/
+#menu_tab > .tabs-header .tabs-inner {
+	background: #16325c;
+    /*
+	border-color: #d7dce1;
+    */
+
+    /*
+	border: none;
+    */
+    filter: none;
+	color: #c5af64;
+	height: 36px!important;
+	line-height: 36px!important;
+	border:none;
+}
+/*TAB 背景：鼠标悬停*/
+
+#menu_tab > .tabs-header li:hover .tabs-inner {
+	/*color: #0AF8C9;*/
+}
+#menu_tab > .tabs-header .tabs-selected:hover .tabs-inner {
+}
+
+/*TAB 背景：选中*/
+#menu_tab > .tabs-header .tabs-selected .tabs-inner {
+	color: #fff;
+
+	border:none;
+}
+
+#menu_tab > .tabs-header .tabs-selected .tabs-title{
+
+	font-weight: bold!important;
+
+}
+
+
+.tabs-header .tabs-pill li.tabs-selected a.tabs-inner{
+
+	border-bottom: 3px solid #1abc9c;
+}
+
+/*TAB 关闭按钮*/
+#menu_tab > .tabs-header .tabs-close {
+	opacity: 0;
+}
+/*TAB 关闭按钮：鼠标悬停*/
+#menu_tab > .tabs-header li:hover .tabs-close{
+    opacity: 1;
+}
+/*
+!*TAB 关闭按钮：悬停*!
+#menu_tab > .tabs-header li:hover .tabs-close{
+    background-position: -50px;
+}
+*/
+.tabs-p-tool a:hover,
+.tabs li a:hover.tabs-close,
+.tabs-scroller-over {
+	background-color: transparent;
+}
+
+.tabs.tabs-pill li a.tabs-close {
+	background-position: -33px -3px;
+	background-size: 48px;
+}
+
+.tabs-pill.tabs li a.tabs-close {
+	background: url('images/icon_gb.png') no-repeat center;
+
+
+}

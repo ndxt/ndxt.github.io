@@ -1,0 +1,14 @@
+<p class="codeIgnore"><b>2</b>种方式设定按钮的禁用状态</p>
+
+<p class="codeIgnore title">静态方式：通过属性<code>disabled:true</code></p>
+<!-- 静态方式禁用按钮 -->
+<!-- @reg:disabled: true=tooltip{content:'设置属性<code>disabled: true</code>，禁用按钮'} -->
+<a class="easyui-linkbutton" data-options="disabled: true, iconCls:'icon-save'"></a>
+
+<p class="codeIgnore title">动态方式：调用<code>disable</code>或者<code>enable</code>方法</p>
+<!-- 动态方式禁用按钮 -->
+<!-- @reg:.linkbutton=tooltip{content:'按钮的动态方法名为<code>linkbutton</code>'} -->
+<a class="easyui-linkbutton" onclick="$('#btn_49347e9d372f016b').linkbutton('disable')">禁用</a>
+<!-- @reg:enable=tooltip{content:'<code>enable</code>启用按钮，<code>disable</code>禁用按钮'} -->
+<a class="easyui-linkbutton" onclick="$('#btn_49347e9d372f016b').linkbutton('enable')">启用</a>
+<a class="easyui-linkbutton" id="btn_49347e9d372f016b" data-options="iconCls:'icon-save'">保存</a>

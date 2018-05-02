@@ -1,0 +1,295 @@
+/*菜单 > 主体*/
+#side {
+    width: 239px;
+    overflow: hidden;
+    border: none;
+}
+#sideTop {
+	height: 40px;
+	padding-left: 15px;
+	font-size: 28px;
+	font-weight: bolder;
+	color: #004467;
+	background: #0178b2;
+	text-shadow: 1px 1px #029FCA;
+}
+#menu {
+	background: url("images/q_14.png") no-repeat;
+    border: none;
+}
+#menu .panel-body {
+	max-width: 209px;
+	margin: 0 10px 0 10px;
+	background: #d7edfb;
+    border: none;
+    border-radius: 10px;
+}
+/* #menu, #menu a { */
+/*     color: #75808c; */
+/* } */
+
+/*菜单 > 缩进图标*/
+#menu .tree-indent {
+}
+/*菜单 > 节点元素图标*/
+#menu .tree-folder {
+    display: none;
+}
+/*菜单 > 叶子元素图标*/
+#menu .tree-file {
+    display: none;
+}
+/*菜单 > 标题*/
+#menu .tree-title {
+	height: 100%;
+    line-height: 50px;
+}
+
+/*菜单 > 树形节点选中 > 节点元素图标*/
+#menu .tree-node-selected .tree-folder {
+    display: none;
+}
+/*菜单 > 树形节点选中 > 叶子元素图标*/
+#menu .tree-node-selected .tree-file {
+    display: none;
+}
+/*菜单 > 树形节点选中 > 标题*/
+#menu .tree-node-selected .tree-title, #menu .tree-node-selected .tree-title a {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/*菜单 > 树形节点被找到 > 节点元素图标*/
+#menu .tree-node-found .tree-folder {
+    display: none;
+}
+/*菜单 > 树形节点被找到 > 叶子元素图标*/
+#menu .tree-node-found .tree-file {
+    display: none;
+}
+/*菜单 > 树形节点被找到 > 标题*/
+#menu .tree-node-found .tree-title, #menu .tree-node-found .tree-title a {
+    font-weight: bold;
+    color: #222;
+}
+
+/*菜单 > 一级*/
+#menu .panel + .panel .accordion-header .panel-title {
+	background: url("images/sj-1.png") no-repeat 190px center;
+}
+
+/*菜单 > 一级：选中*/
+#menu .accordion-header-selected .panel-title {
+}
+
+#menu .accordion-header {
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+    border: none;
+	position: relative;
+	background: url("images/q_03.png") no-repeat center center;
+}
+/*菜单 > 一级 > 图标*/
+#menu .accordion-header .panel-icon{
+}
+/*菜单 > 一级 > 标题*/
+#menu .accordion-header .panel-title{
+    padding-left: 80px;
+	height: 100%;
+   	line-height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #333;
+}
+/*菜单 > 一级 > 工具栏*/
+#menu .accordion-header .panel-tool {
+    display: none;
+}
+
+/*菜单 > 一级：鼠标悬停*/
+#menu .accordion-header:hover {
+}
+/*菜单 > 一级：鼠标悬停 > 图标*/
+#menu .accordion-header:hover .panel-icon {
+}
+#menu .accordion-header:hover .xf-home {
+	background-position: -120px 0;
+}
+#menu .accordion-header:hover .xf-dep {
+	background-position: -260px 0;
+}
+#menu .accordion-header:hover .xf-org {
+	background-position: 0 0;
+}
+#menu .accordion-header:hover .xf-sys {
+	background-position: -40px 0;
+}
+#menu .accordion-header:hover .xf-fag {
+	background-position: -360px 0;
+}
+#menu .accordion-header:hover .xf-qua {
+	background-position: -80px 0
+}
+/*菜单 > 一级：鼠标悬停 > 标题*/
+#menu .accordion-header:hover .panel-title{
+}
+
+/*菜单 > 一级：选中 > 图标*/
+#menu .accordion-header-selected .panel-icon{
+}
+#menu .accordion-header-selected .xf-home {
+	background-position: -120px 0;
+}
+#menu .accordion-header-selected .xf-dep {
+	background-position: -260px 0;
+}
+#menu .accordion-header-selected .xf-org {
+	background-position: 0 0;
+}
+#menu .accordion-header-selected .xf-sys {
+	background-position: -40px 0;
+}
+#menu .accordion-header-selected .xf-fag {
+	background-position: -360px 0;
+}
+#menu .accordion-header-selected .xf-qua {
+	background-position: -80px 0
+}
+/*菜单 > 一级：选中 > 标题*/
+#menu .panel + .panel .accordion-header-selected .panel-title{
+	background: url("images/sj-2.png") no-repeat 190px center;
+}
+
+/*菜单 > 一级：选中：鼠标悬停*/
+#menu .accordion-header-selected:hover {
+}
+/*菜单 > 一级：选中：鼠标悬停 > 标题*/
+#menu .accordion-header-selected:hover .panel-title{
+    color: #fff;
+}
+
+/*菜单 > 二级*/
+#menu .tree > li {
+}
+#menu .tree > li > .tree-node {
+	height: 50px;
+}
+#menu .tree li > .tree-node .tree-title, #menu .tree li > .tree-node .tree-title a {
+	font-weight: bold;
+	color: #5c5d5f;
+}
+#menu .tree > li > .tree-node > .tree-indent {
+    display: none;
+}
+#menu .tree > li > .tree-node > .tree-title {
+    padding-left: 75px;
+}
+#menu .tree > li > .tree-node > .tree-hit {
+    float: right;
+    width: 11px;
+    margin: 12px 10px 0 0;
+    background: url(images/menu-level-2-hit.png) no-repeat;
+}
+#menu .tree > li > .tree-node > .tree-expanded {
+    background-position: 100% 50%;
+}
+#menu .tree > li .tree-node > .tree-expanded,#menu .tree > li .tree-node > .tree-collapsed {
+	margin-top: 16px;
+}
+#menu .tree > li > .tree-node > .tree-collapsed {
+    background-position: 0 50%;
+}
+/*菜单 > 二级：鼠标悬停*/
+#menu .tree > li > .tree-node:hover {
+	background: url("images/q_25.png") no-repeat;
+}
+#menu .tree > li > .tree-node-hover .tree-title a {
+}
+/*菜单 > 二级：选中*/
+#menu .tree > li > .tree-node-selected {
+	background: url("images/q_25.png") no-repeat;
+}
+
+/*菜单 > 二级：第一个子元素*/
+#menu .tree > li:first-child > .tree-node {
+}
+
+/*菜单 > 三级及以下*/
+#menu .tree > li ul .tree-node {
+	height: 50px;
+    padding: 2px 0 2px 70px;
+}
+/*菜单 > 三级及以下：选中*/
+#menu .tree > li .tree-node-selected {
+	background: url("images/q_25.png") no-repeat;
+}
+#menu .tree li > .tree-node-selected .tree-title a,#menu .tree li .tree-node-selected .tree-title {
+}
+/*菜单 > 三级及以下：鼠标悬停*/
+#menu .tree > li .tree-node:hover {
+    background: url("images/q_25.png") no-repeat;
+}
+#menu .tree > li .tree-node-hover .tree-title,#menu .tree > li .tree-node-hover .tree-title a {
+}
+
+/*混合菜单*/
+.menu-mix {
+    position: absolute;
+	top: 15px; right: 10px;
+}
+/*混合菜单 > 单个菜单*/
+.menu-mix .easyui-linkbutton {
+    width: 70px; height: 60px;
+	outline: none;
+	
+	color: #fff;
+	border-color: #6AD8FA;
+	background: #2BA0DC;
+	background: -webkit-linear-gradient(top,#33AEE2 0,#2190D4 100%);
+  	background: -moz-linear-gradient(top,#33AEE2 0,#2190D4 100%);
+  	background: -o-linear-gradient(top,#33AEE2 0,#2190D4 100%);
+  	background: linear-gradient(to bottom,#33AEE2 0,#2190D4 100%);
+  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33AEE2,endColorstr=#2190D4,GradientType=0); 
+}
+.menu-mix .easyui-linkbutton {
+    color: #fff;
+}
+/*混合菜单 > 单个菜单*/
+.menu-mix .easyui-linkbutton:hover {
+    background: #fff;
+	border-color: #fff;
+	color: #0178BA;
+}
+/*混合菜单 > 单个菜单*/
+.menu-mix .easyui-linkbutton.l-btn-selected {
+    background: #fff;
+	border-color: #fff;
+	color: #0178BA;
+}
+.xf {
+	width: 20px;
+	height: 20px;
+	margin: -10px 0 0 20px;
+	display: inline-block;
+	background: url("images/xf-menu.png") no-repeat;
+}
+.xf-home {
+	background-position: -120px -20px;
+}
+.xf-dep {
+	background-position: -260px -20px;
+}
+.xf-org {
+	background-position: 0 -20px;
+}
+.xf-sys {
+	background-position: -40px -20px;
+}
+.xf-fag {
+	background-position: -360px -20px;
+}
+.xf-qua {
+	background-position: -80px -20px
+}

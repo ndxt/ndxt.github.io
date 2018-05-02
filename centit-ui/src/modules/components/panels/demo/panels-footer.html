@@ -1,0 +1,27 @@
+<p class="codeIgnore">给面板添加一个面板页脚</p>
+<!-- @reg:footer=tooltip{content:'把id为<b>footer_992da2afdfde50ad</b>的元素添加到面板中，作为该面板页脚'} -->
+<div class="easyui-panel" data-options="footer: '#footer_992da2afdfde50ad'" title="江西办事处" style="width:500px;height:150px;padding:10px;">
+江西办事处<br>
+联系人：刘主任<br>
+联系电话：15252963308
+</div>
+<style scoped="scoped">
+    .tt-inner{
+        display:inline-block;
+        line-height:12px;
+        padding-top:5px;
+		width: 50px;
+	    margin: 0 10px;
+	    text-align: center;
+    }
+    .tt-inner img{
+        border:0;
+    }
+</style>
+<!-- @reg:footer_992da2afdfde50ad=tooltip{content:'id为<b>footer_992da2afdfde50ad</b>的元素'} -->
+<div id="footer_992da2afdfde50ad">
+	<span class='tt-inner'><img src='modules/components/tabs/images/modem.png'/><br>Modem</span>
+	<span class='tt-inner'><img src='modules/components/tabs/images/scanner.png'/><br>Scanner</span>
+	<span class='tt-inner'><img src='modules/components/tabs/images/pda.png'/><br>Pda</span>
+	<span class='tt-inner'><img src='modules/components/tabs/images/tablet.png'/><br>Tablet</span>
+</div>

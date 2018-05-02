@@ -1,0 +1,94 @@
+<p class="codeIgnore">头菜单可以指定显示或隐藏的列</p>
+<p class="codeIgnore title"></p>
+<table id="basic-table-menu-t" style="width: 100%; height: 200px;"></table>
+<script type="text/javascript">
+	$(function() {
+		$("#basic-table-menu-t").datagrid({
+			title : "头菜单",
+			rownumbers : true,
+			singleSelect : true,
+			collapsible : true,
+			url : "modules/tables/basic-table/data/basic-table.json",
+			method : "get",
+			columns : [[{
+				field : "itemid",
+				title : "Item ID",
+				width : 100
+			}, {
+				field : "productid",
+				title : "Product",
+				width : 100
+			}, {
+				field : "listprice",
+				title : "List Price",
+				width : 100,
+				align : "right"
+			}, {
+				field : "unitcost",
+				title : "Unit Cost",
+				width : 100,
+				align : "right"
+			}, {
+				field : "attr1",
+				title : "Attribute",
+				width : 210,
+				align : "right"
+			}, {
+				field : "status",
+				title : "Status",
+				width : 60,
+				align : "center"
+			}]],
+			//<!-- @reg:onHeaderContextMenu=tooltip{content:'在鼠标右击表格头的时候触发'} -->
+			onHeaderContextMenu : function(e, field) {
+				e.preventDefault();
+				if (!cmenu)
+					createColumnMenu();
+				//<!-- @reg:show=tooltip{content:'显示菜单到指定的位置'} -->
+				cmenu.menu("show", {
+					left : e.pageX,
+					top : e.pageY
+				});
+			}
+		});
+	});
+	
+	var cmenu;
+	function createColumnMenu() {
+		cmenu = $("<div/>").appendTo("body");
+		cmenu.menu({
+			onClick : function(item) {
+				if (item.iconCls == "icon-ok") {
+					//<!-- @reg:hideColumn=tooltip{content:'隐藏指定的列'} -->
+					$("#basic-table-menu-t").datagrid("hideColumn", item.name);
+					//<!-- @reg:setIcon=tooltip{content:'设置指定菜单项图标'} -->
+					cmenu.menu("setIcon", {
+						//<!-- @reg:target=tooltip{content:'DOM对象，要设置的菜单项'} -->
+						target : item.target,
+						iconCls : "icon-empty"
+					});
+				} else {
+					//<!-- @reg:showColumn=tooltip{content:'显示指定的列'} -->
+					$("#basic-table-menu-t").datagrid("showColumn", item.name);
+					cmenu.menu("setIcon", {
+						target : item.target,
+						iconCls : "icon-ok"
+					});
+				}
+			}
+		});
+		//<!-- @reg:getColumnFields=tooltip{content:'返回列字段，如果设置了<code>frozen</code>属性为true，将返回固定列的字段名'} -->
+		var fields = $("#basic-table-menu-t").datagrid("getColumnFields");
+		for (var i = 0; i < fields.length; i++) {
+			var field = fields[i];
+			//<!-- @reg:getColumnOption=tooltip{content:'返回指定列属性'} -->
+			var col = $("#basic-table-menu-t").datagrid("getColumnOption", field);
+			//<!-- @reg:appendItem=tooltip{content:'追加新的菜单项，<code>options</code>参数代表新菜单项属性，默认情况下添加的项在菜单项的顶部，追加一个子菜单项，<code>parent</code>属性应该设置指定的父项元素，并且该父项元素必须是已经定义在页面上的'} -->
+			cmenu.menu("appendItem", {
+				text : col.title,
+				name : field,
+				iconCls : "icon-ok"
+			});
+		}
+	}
+</script>

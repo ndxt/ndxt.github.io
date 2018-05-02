@@ -1,0 +1,126 @@
+<p class="codeIgnore">这个例子展示了<b>2</b>棵树，它们结构相近但是生成方法却截然不同：</p>
+<p class="codeIgnore title">通过<b>HTML</b>生成树</p>
+<p class="codeIgnore">第一棵树是通过<code>ul</code>和<code>li</code>元素标记在页面预先生成父子结构，然后给根节点<b>ul</b>添加类名<code>easyui-tree</code>自动生成<b>树</b></p>
+<!-- 通过 html 静态生成树 -->
+<!-- @reg:easyui-tree=tooltip{content:'设置<code>class=\'easyui-tree\'</code>，得到一个渲染后的树'} -->
+<ul class="easyui-tree">
+    <li>
+<!-- @reg:<span>南大先腾</span>=tooltip{content:'<code>span</code>标签里设置树节点的标题'} -->
+        <span>南大先腾</span>
+        <ul>
+            <li>
+            	<span>总经理室</span>
+				<ul>
+					<li>王锦东</li>
+					<li>王卿</li>
+					<li>孟波波</li>
+					<li>杨淮生</li>
+					<li>穆欣</li>
+				</ul>
+            </li>
+<!-- @reg:state:'closed'=tooltip{content:'设置<code>state=\'closed\'</code>，则该节点默认关闭状态'} -->
+            <li data-options="state:'closed'">
+            	<span>办公室</span>
+				<ul>
+					<li>吴斌芳</li>
+					<li>李勇宁</li>
+					<li>袁萍</li>
+					<li>吴泓</li>
+				</ul>
+            </li>
+			<li data-options="state:'closed'">
+            	<span>财务部</span>
+				<ul>
+					<li>严瑾</li>
+					<li>蒋惠宁</li>
+				</ul>
+            </li>
+			<li data-options="state:'closed'">
+            	<span>技术支持部</span>
+				<ul>
+					<li>赵明</li>
+					<li>吴慧冬</li>
+					<li>张波</li>
+					<li>杨震</li>
+					<li>吴惠阳</li>
+					<li>浮君君</li>
+					<li>王帅</li>
+					<li>袁志龙</li>
+					<li>裘俊</li>
+					<li>陈落雁</li>
+				</ul>
+            </li>
+			<li data-options="state:'closed'">
+            	<span>电子政务事业部</span>
+				<ul>
+					<li>丁璞</li>
+					<li>丁雯娟</li>
+					<li>乔宁</li>
+					<li>何计松</li>
+					<li>何锋</li>
+					<li>刘志强</li>
+					<li>刘杰</li>
+					<li>刘梦瑾</li>
+					<li>向盈</li>
+					<li>吴金峰</li>
+				</ul>
+            </li>
+			<li data-options="state:'closed'">
+            	<span>研发部</span>
+				<ul>
+					<li>丁丁</li>
+					<li>刘杰</li>
+					<li>朱宵玉</li>
+					<li>李婷茹</li>
+					<li>杨晶晶</li>
+					<li>林钟毓</li>
+					<li>汪杰</li>
+					<li>秦涛</li>
+					<li>蒋冬宁</li>
+					<li>黄何</li>
+					<li>秦涛</li>
+					<li>蒋冬宁</li>
+					<li>黄何</li>
+				</ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<p class="codeIgnore title">通过<b>JS</b>生成树</p>
+<p class="codeIgnore">第二棵树只需要一个<b>空</b>的<code>ul</code>元素，通过设置<b>url</b>从后台请求数据生成<b>树</b></p>
+<!-- 通过 url 远程获取数据生成树 -->
+<!-- @reg:url=tooltip{content:'如果设置<b>url</b>，则会通过<b>ajax</b>获取树的数据并生成'} -->
+<ul class="easyui-tree" url='modules/components/trees/datas/menus.json'></ul>
+<p class="br codeIgnore"></p>
+<table class="easyui-datagrid" width="410" title="数据格式">
+	<thead>
+		<tr>
+			<th width="100" field="property">属性</th>
+			<th width="300" field="introduce">作用</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>id</td>
+			<td>节点id</td>
+		</tr>
+		<tr>
+			<td>text</td>
+			<td>节点标题</td>
+		</tr>
+		<tr>
+			<td>iconCls</td>
+			<td>节点图标的class名</td>
+		</tr>
+		<tr>
+			<td>state</td>
+			<td>节点状态：closed-关闭 open-展开</td>
+		</tr>
+		<tr>
+			<td>children</td>
+			<td>节点的子元素(数组)</td>
+		</tr>
+	</tbody>
+</table>
+

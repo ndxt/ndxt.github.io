@@ -1,0 +1,24 @@
+<p class="codeIgnore">模式化窗口是独立于整个内容区，下面会有一层遮罩</p>
+<p class="codeIgnore title"></p>
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="$('#window-modal').window('open');">打开</a>
+<div id="window-modal" class="easyui-window">带有遮罩的模式化窗口</div>
+<script type="text/javascript">
+	$(function() {
+		$("#window-modal").window({
+			iconCls : "icon-save",
+			title : "模式化窗口",
+			closed : true,
+			//<!-- @reg:modal=tooltip{content:'通过设置<code>modal</code>实现'} -->
+			modal : true
+		});
+	});
+</script>
+<style type="text/css">
+	#window-modal {
+		width: 500px;
+		height: 300px;
+		line-height: 300px;
+		padding: 10px;
+		text-align: center;
+	}
+</style>

@@ -1,0 +1,150 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
+body {
+	font: 12px Microsoft YaHei;
+	background: url("img/light.png") no-repeat #1c77ac;
+}
+
+.header {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	position: fixed;
+	background: url("img/bg1.png");
+}
+
+.header span {
+	height: 100%;
+	line-height: 50px;
+	padding-left: 45px;
+	display: inline-block;
+	color: #afc5d2;
+	background: url("img/sj.png") no-repeat 20px center;
+}
+
+.cloud1,.cloud2 {
+	width: 100%;
+	height: 100%;
+	min-width: 692px;
+	min-height: 437px;
+	position: absolute;
+	opacity: 0.5;
+	background: url("img/cloud.png") no-repeat 450px 100px;
+}
+
+.cloud2 {
+	background-position: 0 460px;
+}
+
+.info {
+	width: 100%;
+	height: 100%;
+	min-width: 692px;
+	min-height: 437px;
+	position: absolute;
+	background: url("img/bg3.png") no-repeat center center;
+}
+
+.info > div {
+	width: 692px;
+	height: 437px;
+	margin: -218.5px -346px -218.5px -346px;
+	top: 45%;
+	left: 50%;
+	position: absolute;
+}
+
+.info > div i {
+	width: 280px;
+	height: 71px;
+	margin: 0 auto;
+	display: block;
+	background: url("img/logo.png") no-repeat;
+}
+
+.info > div div {
+	height: 336px;
+	margin-top: 30px;
+	background: url("img/info.png") no-repeat;
+	overflow: hidden;
+}
+
+.info > div div form {
+	margin: 88px 0 0 285px;
+	position: relative;
+}
+
+.info > div div form > input {
+	width: 343px;
+	height: 48px;
+	line-height: 48px;
+	margin-bottom: 25px;
+	padding-left: 45px;
+	display: block;
+	font-size: 15px;
+	font-family: Microsoft YaHei;
+	background: url("img/password.png") no-repeat;
+}
+
+.info > div div form > input:FIRST-CHILD {
+	background: url("img/username.png") no-repeat;
+}
+
+.info > div div form button {
+	width: 111px;
+	height: 35px;
+	margin-top: 10px;
+	font: bold 15px Microsoft YaHei;
+	color: #ffffff;
+	background: url("img/button.png") no-repeat;
+	cursor: pointer;
+}
+
+.info > div div form span {
+	left: 140px;
+	bottom: 10px;
+	position: absolute;
+}
+
+.info > div div form span input {
+	margin: 2px 5px 0 0;
+	float: left;
+	cursor: pointer;
+}
+
+.info > div div form span label {
+	margin-right: 25px;
+	float: left;
+	color: #687f92;
+	cursor: pointer;
+}
+
+.info > div div form span a {
+	color: #687f92;
+	text-decoration: none;
+}
+
+.info > div div form span input:HOVER + label,.info > div div form span label:HOVER,.info > div div form span a:HOVER {
+	color: #3d96c9;
+}
+
+.footer {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	left: 0;
+	bottom: 0;
+	z-index: 100;
+	position: fixed;
+	text-align: center;
+	color: #0b3a58;
+	background: url("img/bg2.png");
+}

@@ -1,0 +1,184 @@
+*{margin:0px;padding:0px;list-style-type:none;}
+#s1{background:#2c6a9b;min-width: 1024px; margin: auto;position: relative}
+.s1{width: 1024px;height:540px; position: absolute;top:50%;left:50%;margin-left: -512px;margin-top: -270px}
+.s1_text{width: 256px;float:right;padding-top: 130px}
+.s1_text h1{color: #FFFFFF;margin-bottom: 10px; font-size: 50px;text-shadow: 5px 5px 5px rgb(75, 74, 74);font-family: '微软雅黑';line-height: 100px}
+
+#s2{background:#f9c138;min-width: 1024px; margin: auto;position: relative}
+.s2{width: 1024px;height: 536px; position: absolute;top:50%;left:50%;margin-left: -512px;margin-top: -268px}
+.s2_text{margin: auto}
+.s2_text h1{color: #FFFFFF;margin-bottom: 10px; font-size: 50px;text-align: center;text-shadow: 5px 5px 5px rgb(75, 74, 74);font-family: '微软雅黑'}
+
+#s3{background:#37b0ab;min-width: 1024px; margin: auto;position: relative}
+.s3{width: 1024px;height:400px; position: absolute;top:50%;left:50%;margin-left: -512px;margin-top: -200px}
+.s3_text{margin: auto}
+.s3_text h1{color: #FFFFFF;margin-bottom: 10px; font-size: 50px;text-align: center;text-shadow: 5px 5px 5px rgb(75, 74, 74);font-family: '微软雅黑';padding-left: 10px;text-align: left;line-height: 100px}
+.s3 h2{color: #FFFFFF;font-family: '微软雅黑';}
+#s3_left{color:white;font-size:16px;border: 1px solid white;width:480px;float:left;height: 200px;padding: 25px 10px 25px 10px;font-weight: bolder;border-radius: 20px}
+#s3_right{font-size:16px;color:white;border: 1px solid white;width:480px;float:right;height: 200px;padding: 25px 10px 25px 10px;font-weight: bolder;border-radius: 20px}
+
+#s4{background:#B63726;min-width: 1024px; margin: auto;position: relative}
+.s4{width:400px;height:220px; position: absolute;top:50%;left:50%;margin-left: -200px;margin-top: -110px}
+.s4_text h1{color: #FFFFFF;margin-bottom: 10px; font-size: 40px;text-shadow: 5px 5px 5px rgb(75, 74, 74);font-family: '微软雅黑';line-height: 70px}
+.s4_text h2{color: #FFFFFF;font-size: 40px;font-family: '微软雅黑';line-height: 70px}
+#s4_left{width: 180px;height:60px;float: left;border: 1px solid white;text-align: center;border-radius: 20px}
+#s4_right{width: 180px;height:60px;float: right;border: 1px solid white;text-align: center;border-radius: 20px}
+#s4_left:hover, #s4_right:hover{
+	color: #B63726;
+	background: #fff;
+}
+#s4_left:hover a, #s4_right:hover a{
+	color: #B63726;
+}
+#s4_left a,#s4_right a{line-height: 60px; color: #FFFFFF; font-family: '微软雅黑'; font-weight: 900; text-decoration: none; display: block;}
+
+
+/** * Created by gc on 2015-4-13.图片轮播样式 */
+.v_out{width:748px;margin:auto;overflow:hidden;}
+.v_show{width:665px;overflow:hidden;position:relative;height:530px;float:left}
+.v_cont{ width:6650px;position:absolute;left:0px;top:0px;}
+.v_cont ul{float:left;text-align:center;line-height:50px;}
+.v_cont ul li{width:665px;height:500px;background:#f8f8f8;float:left;margin-top:3px;}
+
+/*---圆圈---*/
+.v_out_p{position:relative;overflow:visible;float: left}
+.circle{position:absolute;left: 360px;top: 540px;}
+.circle li{width:10px;height:10px;float:left;margin-right:10px;background:#FFFFFF; border-radius:30px;
+    -webkit-box-shadow:2px 2px 20px rgba(6, 7, 7, 0.5);
+    -moz-box-shadow:2px 2px 20px rgba(6, 7, 7, 0.5);
+    box-shadow:2px 2px 20px rgba(6, 7, 7, 0.5)}
+.circle .circle-cur{background:#ccc}
+
+/*---切换---*/
+.prev,.next{float:left;padding:230px 9px 0}
+.prev .ico_1{ background:url(input_a.gif) no-repeat 0 -3757px;}
+
+.next .ico_2{background:url(input_a.gif) no-repeat right -3757px;}
+.prev,.prev a,.next,.next a{width:21px;height:38px; display:block}
+.prev a{background-image: url(../image/arrow_left.png)}
+.next a{background-image: url(../image/arrow_right.png)}
+
+/** * Created by gc on 2015-4-13.放大镜效果 */
+.column-second{ width:565px;min-height:470px;margin:auto}
+.frontpage-content { margin-bottom:35px;}
+#display {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index:1;
+}
+.column-second {
+    position: relative;
+    margin: auto;
+}
+.show-case {
+    left: 27px;
+    position: relative;
+    top: 27px;
+    z-index: 10;
+}
+
+.showcase-link { display: inline-block; }
+.glass{z-index: 20}
+
+.menu-display .prev {
+    background-image: url(arrows.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    display: block;
+    height: 25px;
+    width: 25px;
+    text-indent: -9999px;
+    float: left;
+    margin-right:10px;
+}.menu-display .next {
+     background-image: url(arrows.png);
+     background-repeat: no-repeat;
+     background-position: right top;
+     display: block;
+     height: 25px;
+     width: 25px;
+     text-indent: -9999px;
+     float: left;
+ }
+
+
+.menu-display{
+
+    left: 0;
+    position: absolute;
+    top: 470px;}
+
+.page-work h1{
+    background-image: url(work.png);
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    height: 35px;
+}
+
+.page-work h1{
+    background-image: url(work.png);
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    height: 35px;
+}
+
+.page-node-3 h1{
+    background-image: url(services.png);
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    margin-bottom:55px;
+    height: 35px;
+}	.page-node-9 h1{
+         background-image: url(about.png);
+         background-repeat: no-repeat;
+         text-indent: -9999px;margin-bottom:55px;
+         height: 35px;
+     }
+.page-node-9 #header-group h2
+{	background-repeat:no-repeat;
+    background-image:url(about-2.png);
+    height:200px;
+    text-indent:-9999px;
+}
+
+.page-node-4 h1{
+    background-image: url(contact.png);
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    height: 35px;
+}
+.page-node-5 h1{
+    background-image: url(say-hello.png);
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    height: 35px;
+}
+
+.page-node-3 h2{
+    background-image: url(services-2.png);
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    height: 110px;
+}
+
+
+.launch{
+
+
+    border: 1px solid #D9D9D9;
+
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    margin-top:20px;
+    color: #525252 !important;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    float:left;
+    text-decoration:none;
+}
+
+.launch:hover {background-color:#f1f1f1;}

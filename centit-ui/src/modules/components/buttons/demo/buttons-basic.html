@@ -1,0 +1,25 @@
+<p class="codeIgnore">通过给<b>a</b>或者<b>button</b>标签添加通用类<code>easyui-linkbutton</code>创建按钮，有<b>文字按钮</b>、<b>图标按钮</b>和<b>混合按钮</b>几种类型</p>
+
+<p class="codeIgnore title">文字按钮</p>
+<!-- 文字按钮 -->
+<!-- @reg:easyui-linkbutton=tooltip{content:'只要设置<code>class=\'easyui-linkbutton\'</code>，就能得到一个具有完整功能的按钮'} -->
+<a class="easyui-linkbutton">a标签按钮</a>
+<button class="easyui-linkbutton">button标签按钮</button>
+<p class="codeIgnore br"></p>
+
+<p class="codeIgnore title">图标按钮</p>
+<!-- 图标按钮 -->
+<!-- @reg:iconCls=tooltip{content:'添加<code>iconCls</code>属性的按钮将显示图标'} -->
+<a class="easyui-linkbutton" data-options="iconCls:'icon-save'"></a>
+<!-- @reg:icon-cancel=tooltip{content:'改变<code>iconCls</code>属性的值，就能够显示不同的图标'} -->
+<button class="easyui-linkbutton" data-options="iconCls:'icon-cancel'"></button>
+<p class="codeIgnore info">图标选择可以参考<a href="#">图标</a></p>
+
+<p class="codeIgnore title">混合按钮</p>
+<!-- 混合按钮 -->
+<!-- @reg:新增=tooltip{content:'标签是否有内容决定按钮是否显示文字'} -->
+<a class="easyui-linkbutton" data-options="iconCls:'icon-add'">新增</a>
+<button class="easyui-linkbutton" data-options="iconCls:'icon-remove'">删除</button>
+<p class="codeIgnore br"></p>
+
+

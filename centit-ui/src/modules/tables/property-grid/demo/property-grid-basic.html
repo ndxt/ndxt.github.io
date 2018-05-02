@@ -1,0 +1,57 @@
+  <h2>基础控件</h2>
+  <p class="codeIgnore br"> 属性表格提供The propertygrid provide给用户浏览和编辑对象属性的一个接口。属性表格是一个行内可编辑数据表格。它使用起来相当简单。用户可以非常简单的创建一个分层的可编辑属性列表和表示任何数据类型的项。属性表格内建排序和分组功能。
+ </p>
+    <div style="margin:20px 0;">
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="showGroup()">打开组</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="hideGroup()">隐藏组</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="showHeader()">显示表头</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="hideHeader()">隐藏表头</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="getChanges()">改变属性</a>
+    </div>
+    
+<!-- @reg:table=tooltip{content:'使用标签创建一个属性表格。注意：列已经内置不需要再去声明它。'} --> 
+    <table id="pg" class="easyui-propertygrid" style="width:300px" data-options="
+<!-- @reg:url=tooltip{content:'数据来源'} -->    
+                url:'modules/tables/property-grid/demo/propertygrid_data1.json',
+<!-- @reg:method=tooltip{content:'定义方法'} -->  
+                method:'get',
+<!-- @reg:showGroup=tooltip{content:'定义是否显示分组'} -->                
+                showGroup:true,
+<!-- @reg:scrollbarSize=tooltip{content:'定义是否显示滚动条'} -->       
+                scrollbarSize:0
+            ">
+    </table>
+	<p class="codeIgnore br"></p>
+    <script type="text/javascript">
+        function showGroup(){
+<!-- @reg:$('#pg')=tooltip{content:'使用Javascript创建一个属性表格。'} --> 
+            $('#pg').propertygrid({
+<!-- @reg:showGroup=tooltip{content:'显示组'} -->   
+                showGroup:true
+            });
+        }
+        function hideGroup(){
+            $('#pg').propertygrid({
+                showGroup:false
+            });
+        }
+        function showHeader(){
+            $('#pg').propertygrid({
+<!-- @reg:showHeader=tooltip{content:'显示表头'} -->  
+                showHeader:true
+            });
+        }
+        function hideHeader(){
+            $('#pg').propertygrid({
+                showHeader:false
+            });
+        }
+        function getChanges(){
+            var s = '';
+            var rows = $('#pg').propertygrid('getChanges');
+            for(var i=0; i<rows.length; i++){
+                s += rows[i].name + ':' + rows[i].value + ',';
+            }
+            alert(s)
+        }
+    </script>

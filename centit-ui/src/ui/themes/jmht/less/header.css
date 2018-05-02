@@ -1,0 +1,125 @@
+/*HEADER*/
+body > .layout-panel-north {
+	background: url("images/topbg.gif");
+}
+
+#header {
+    height: 88px;
+    border: none;
+	background: url("images/topleft.jpg") no-repeat;
+}
+
+#header .logo {
+	width: 346px;
+	height: 46px;
+	float: left;
+	margin: 20px 20px 0 20px;
+	background: url("images/logo.png") no-repeat;
+}
+
+#header .logo img {
+	margin: 21px 0 0 20px;
+	border: none;
+}
+
+/*HEADER > 工具栏*/
+#header .l-btn {
+	color: #d6e8f1;
+}
+
+#header .menu-mix {
+	margin-left: 20px;
+	top: auto;
+	right: auto;
+	position: static;
+	float: left;
+}
+
+#header .menu-mix a {
+	width: 87px;
+	height: 100%;
+	float: left;
+	background: none;
+	border: none;
+	border-radius: 0;
+	transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+}
+
+#header .menu-mix a.l-btn-selected {
+	color: #ffffff;
+	background: url("images/navbg.png") no-repeat;
+}
+
+#header .menu-mix a:HOVER {
+	color: #ffffff;
+	background: #2b7fb5;
+}
+
+#header .menu-mix a > span {
+	height: 100%;
+	display: block;
+}
+
+#header .menu-mix a > span {
+	height: 100%;
+	display: block;
+}
+
+#header .menu-mix a > span .l-btn-text {
+	margin: 53px 0 0 0;
+	display: block;
+}
+
+#header .menu-mix a > span .l-btn-icon {
+	margin: auto -22.5px auto -22.5px;
+	top: 10px;
+}
+
+#header .toolbar {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+	margin: -13px 0 -13px 0;
+    height: 26px;
+}
+
+#header .toolbar .panel-body {
+    text-align: right;
+    background: none;
+}
+
+#header .toolbar a {
+	padding: 0;
+}
+
+#header .toolbar a:HOVER {
+	color: #ffffff;
+	background: none;
+	border: none;
+	border-radius: 0;
+}
+
+#header .toolbar a .l-btn-text {
+	margin: 0 8px 0 28px;
+}
+
+#header .toolbar a .l-btn-icon {
+	left: 8px;
+}
+
+#header .toolbar a:FIRST-CHILD > span {
+	background: url("images/line.gif") no-repeat right center;
+}
+
+#header .toolbar .icon-help {
+	margin-top: -7px;
+	background: url("images/help.png") no-repeat;
+}
+
+/*HEADER > 工具栏 > SKIN*/
+#toolbar_skin .skin {
+    border-radius: 2px;
+}

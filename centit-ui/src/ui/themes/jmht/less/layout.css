@@ -1,0 +1,42 @@
+/*菜单 > layout*/
+#side .layout-container {
+    position: absolute;
+}
+
+/*菜单 > collapse*/
+#side .layout-collapse {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right:0;
+    width: 10px;
+}
+
+#side .layout-collapse-center {
+}
+
+/*菜单 > expand*/
+body > .layout-expand-west {
+    width: 10px;
+    border: none;
+    background: #0178BA;
+}
+
+body > .layout-expand-west .panel-header {
+    position: static;
+    margin:0; padding: 0;
+    border: none;
+}
+
+body > .layout-expand-west .panel-tool {
+    position: static;
+    margin: 0; padding: 0;
+    overflow: visible;
+}
+
+body > .layout-expand-west .panel-body {
+    border: none;
+}
+
+body > .layout-expand-west a.layout-button-right {
+}

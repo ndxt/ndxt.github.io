@@ -1,0 +1,123 @@
+/*TAB*/
+
+/*  .tabs-header .tabs > li:after {
+	content: '|';
+}
+ .tabs-header .tabs > li:last-child:after {
+	content: '';
+}
+
+
+.tabs-header, .tabs-tool{ 
+	background-color:#eceff1;
+	border:none;
+}
+
+
+.tabs li.tabs-selected a.tabs-inner{  
+	
+	border:1px solid #e5eaee;
+	
+}
+
+.tabs li.tabs-selected a.tabs-inner {
+	background:none;
+    color: #0E2D5F;
+    border: none;}
+  
+.tabs li a.tabs-inner { 
+	background:none;
+	border: none;
+}
+.tabs li a.tabs-inner:hover{
+	
+	background:none;
+	border: none;
+	
+}
+
+.tabs-first .tabs-icon{
+       position: absolute;
+    width: 24px;
+    height: 24px;
+    left: -7px;
+    top: 50%;
+    margin-top: -12px;
+    background: url(./images/left_icon_date2.png);
+}
+
+.tabs li a.tabs-inner{filter:none;}
+.tabs{list-style-type: none;
+    height: 50px!important;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 20px;
+    width: 50000px;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color:#D3D3D3;}
+
+.tabs-title{ font-size:14px;}
+
+
+.tabs li {
+  
+    margin: 0px -17px 0px 0;
+    padding: 9px;
+
+}
+ */
+ 
+
+
+/* .tabs-panels.tabs-panels-noborder{background:red;} */
+
+
+
+
+.datagrid .panel-body {
+    background: #fff;
+}
+
+ 
+.tabs-header{
+	 border-left:0px solid white;
+	 border-right:0px solid white;
+	 border-top:0px solid white;
+	 background:none;
+	 display:none;
+ }
+ 
+ 
+#menu_tab > .tabs-panels > .panel > .panel-body {
+    /* background: #eceff1; */
+    margin: 0 auto;
+    padding: 0px 20px 20px 20px;
+    overflow-y: hidden;
+}
+
+#menu_tab > .tabs-panels > .panel > .panel-body >.tabs-container .tabs-panels{border:none;padding-top:0 0 0 0;}
+#menu_tab > .tabs-panels > .panel > .panel-body{/* background:#eceff1; */}
+.tabs-container{}
+
+
+/*框架内部样式修改*/
+.datagrid-btable {
+    color: #000000;
+    border-collapse: separate;
+    width: 100%;
+}
+
+.datagrid-header td, .datagrid-body td, .datagrid-footer td{
+	/* border-style: solid; */
+	/* height: 35px; */
+}
+
+
+.datagrid-header-row, .datagrid-row{height: 35px;}
+
+.treegrid-tr-tree{}
+.datagrid-htable{}
+.datagrid-body{}
+
+

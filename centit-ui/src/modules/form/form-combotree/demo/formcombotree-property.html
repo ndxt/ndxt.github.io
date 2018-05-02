@@ -1,0 +1,10 @@
+
+<p class="codeIgnore">combotree的属性有<code>multiple</code></p>
+<!-- @reg:122=tooltip{content:'初始化<code>combogrid</code>的值'} -->
+<b>初始化combotree</b><input class="easyui-combotree" value="122" data-options="url:'modules/form/form-combotree/datas/combotree.json',method:'get',required:true" style="width:200px;">
+<div style="margin:20px 0">
+        <span>Cascade Check（对应的各个父级节点也将被选中）: </span>
+        <input type="checkbox" checked onclick="$('#combotree-Cascade').combotree({cascadeCheck:$(this).is(':checked')})">
+</div>
+<!-- @reg:multiple=tooltip{content:'设置<code>combotree</code>的属性为多选'} -->
+<select id="combotree-Cascade" class="easyui-combotree" data-options="url:'modules/form/form-combotree/datas/combotree.json',method:'get',multiple:true" style="width:200px;"></select>

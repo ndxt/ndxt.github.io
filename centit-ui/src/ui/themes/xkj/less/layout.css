@@ -1,0 +1,59 @@
+/*菜单 > layout*/
+#side .layout-container {
+    position: absolute; 
+    left: 0;
+    min-width: 229px;
+}
+
+#side .layout-container .panel {
+	width: 229px;
+	margin-bottom: 10px;
+}
+
+/*菜单 > collapse*/
+#side .layout-collapse{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right:0;
+    width: 10px;
+    background: #044a85;
+}
+#side .layout-collapse-center{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 116px;
+    margin: -58px 0 -58px 0;
+    cursor: pointer;
+    background: url(images/sj-3.png) no-repeat 1px center;
+}
+
+/*菜单 > expand*/
+body > .layout-expand-west {
+    width: 10px;
+    border: none;
+    background: #044a85;
+}
+body > .layout-expand-west .panel-header {
+    position: static;
+    margin:0; padding: 0;
+    border: none;
+}
+body > .layout-expand-west .panel-tool {
+    position: static;
+    margin: 0; padding: 0;
+    overflow: visible;
+}
+body > .layout-expand-west .panel-body {
+    border: none;
+}
+body > .layout-expand-west a.layout-button-right {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 116px;
+    margin: -58px 0 -58px 0;
+    cursor: pointer;
+    background: url(images/sj-4.png) no-repeat -1px center;
+}

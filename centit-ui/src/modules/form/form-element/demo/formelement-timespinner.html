@@ -1,0 +1,37 @@
+<style>
+	.timespinner-methods{padding:5px;margin-right:5px;color: #444;background: #fafafa;border: 1px solid #bbb;border-radius:5px}
+</style>
+<p class="codeIgnore"><code>timespinner</code>数字微调控件的创建是基于微调控件和数值输入框控件的。他可以转换输入的值，比如：数值、百分比、货币等。它也允许使用上/下微调按钮调整到用户的期望值。
+
+</p>
+<!-- @reg:min=tooltip{content:'最小时间'} -->
+<!-- @reg:showSeconds=tooltip{content:'是否显示秒钟信息。'} -->
+<!-- @reg:separator=tooltip{content:'定义在小时、分钟和秒之间的分隔符'} -->
+<b>通过input标签来创建</b><input class="easyui-timespinner"  style="width:80px;" required="required" data-options="min:'08:30',showSeconds:true,separator:':'"/><br/><br/>  
+<b>使用Javascript创建数字微调组件</b><input id="timespinner" style="width:80px;">
+<a href="javascript:void(0)" class="timespinner-methods" onclick="timespinnergetHours()">获取‘时’</a>
+<a href="javascript:void(0)" class="timespinner-methods" onclick="timespinnergetMinutes()">获取‘分’</a>
+<a href="javascript:void(0)" class="timespinner-methods" onclick="timespinnergetSeconds()">获取‘秒’</a>	  
+<script>
+$('#timespinner').timespinner({    
+    min: '08:30',    
+    required: true,    
+    showSeconds: true,
+	value:'11:31:59'    
+}); 
+function timespinnergetHours(){
+	//<!-- @reg:getHours=tooltip{content:'给timespinner添加<code>getHours方法</code>获取‘时’'} -->
+	var h=$("#timespinner").timespinner('getHours');
+	alert(h);
+}
+function timespinnergetMinutes(){
+	//<!-- @reg:getMinutes=tooltip{content:'给timespinner添加<code>getMinutes方法</code>获取‘分’'} -->
+	var m=$("#timespinner").timespinner('getMinutes');
+	alert(m);
+}
+function timespinnergetSeconds(){
+	//<!-- @reg:getSeconds=tooltip{content:'给timespinner添加<code>getSeconds方法</code>获取‘秒’'} -->
+	var s=$("#timespinner").timespinner('getSeconds');
+	alert(s);
+}
+</script>

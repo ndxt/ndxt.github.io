@@ -1,0 +1,55 @@
+<ul class="example-list" id="accordions-example-list">
+	<li>
+		<a href="#accordions-basic" data-url="modules/components/accordions/demo/accordions-basic.html">基础Accordions</a>
+	</li>
+	<li>
+		<a href="#accordions-remote" data-url="modules/components/accordions/demo/accordions-remote.html">加载远程内容</a>
+	</li>
+	<li>
+		<a>Accordions操作</a>
+		<ul>
+			<li>
+				<a href="#accordions-select" data-url="modules/components/accordions/demo/accordions-select.html">选择</a>
+			</li>
+			<li>
+				<a href="#accordions-add" data-url="modules/components/accordions/demo/accordions-add.html">添加</a>
+			</li>
+			<li>
+				<a href="#accordions-remove" data-url="modules/components/accordions/demo/accordions-remove.html">删除</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a>Accordions样式</a>
+		<ul>
+			<li>
+				<a href="#accordions-collapsible" data-url="modules/components/accordions/demo/accordions-collapsible.html">保持展开</a>
+			</li>
+			<li>
+				<a href="#accordions-multiple" data-url="modules/components/accordions/demo/accordions-multiple.html">多重展开</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a href="#accordions-tools" data-url="modules/components/accordions/demo/accordions-tools.html">Accordions工具栏</a>
+	</li>
+</ul>
+
+<script>
+	
+	requirejs([
+		'widgets/example/widget.example',
+		'plugins/prettify/prettify'
+		], function(create) {
+			
+		var list = $('#accordions-example-list');
+		create(list, function(container) {
+			prettyPrint();
+			
+			$.parser.parse(container);
+			
+			$("#menu_tab_Accordions").niceScroll({cursorcolor:"#BCBCBC"});
+		});
+	});
+	
+</script>

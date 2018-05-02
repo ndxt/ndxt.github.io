@@ -1,0 +1,31 @@
+<p class="codeIgnore">可以在窗口中添加页脚条</p>
+<p class="codeIgnore title"></p>
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="$('#window-footer').window('open');">打开</a>
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="$('#window-footer').window('close');">关闭</a>
+<div id="window-footer" class="easyui-window">带有页脚的窗口</div>
+<!-- @reg:<div id="window-footer-item">=tooltip{content:'先定义好一个页脚元素'} -->
+<div id="window-footer-item">页脚的内容</div>
+<script type="text/javascript">
+	$(function() {
+		$("#window-footer").window({
+			iconCls : "icon-save",
+			title : "窗口页脚",
+			closed : true,
+			//<!-- @reg:footer=tooltip{content:'通过设置<code>footer</code>添加页脚'} -->
+			footer : "#window-footer-item"
+		});
+	});
+</script>
+<style type="text/css">
+	#window-footer {
+		width: 500px;
+		height: 300px;
+		line-height: 300px;
+		padding: 10px;
+		text-align: center;
+	}
+	
+	#window-footer-item {
+		padding: 5px;
+	}
+</style>

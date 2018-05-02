@@ -1,0 +1,13 @@
+<p class="codeIgnore"><b>按钮组</b>的概念和<b>单选框（radio）</b>是一样的，同一组只有一个按钮可以被选中</p>
+
+<p class="codeIgnore title">通过<code>group</code>设定组名，同时设定<code>toggle: true</code>保存按钮的状态</p>
+<div class="easyui-panel" style="padding:5px;">
+<!-- @reg:group:'g1'=tooltip{content:'<code>group</code>属性设置按钮的组名，组名一样的按钮在同一组里'} -->
+	<a href="#" class="easyui-linkbutton" data-options="toggle:true,group:'g1', selected:true"">Button 1</a>
+	<a href="#" class="easyui-linkbutton" data-options="toggle:true,group:'g1'">Button 2</a>
+	<a href="#" class="easyui-linkbutton" data-options="toggle:true,group:'g1'">Button 3</a>
+	<a href="#" class="easyui-linkbutton" data-options="toggle:true,group:'g1'">Button 4</a>
+<!-- @reg:toggle:true=tooltip{content:'<code>toggle</code>属性之前并没有单独介绍，当值为<code>true</code>时，会区分按钮是否已经被选择'} -->
+	<a href="#" class="easyui-linkbutton" data-options="toggle:true,group:'g1'">Button 5</a>
+</div>
+<p class="codeIgnore info">可以通过<code>selected: true</code>来设定默认被选中的按钮</p>

@@ -1,0 +1,18 @@
+<p class="codeIgnore">设置<code>class="easyui-tabs"</code>的节点将获得<b>Tabs</b>基础功能，节点内每一个子元素将作为一个独立的标签页</p>
+<!-- @reg:easyui-tabs=tooltip{content:'只要设置<code>class=\'easyui-tabs\'</code>，就能获得<b>Tabs</b>基础功能'} -->
+<div class="easyui-tabs" style="width: 300px; height:150px;">
+<!-- @reg:div=tooltip{content:'每一个子元素就是一个独立的标签页'} -->
+    <div title="Tab1" style="padding: 10px;">
+        tab1
+<!-- @reg:/div=tooltip{content:'每一个子元素就是一个独立的标签页'} -->
+    </div>
+<!-- @reg:closable:true=tooltip{content:'设置<code>closable:true</code>表示标签页可以被关闭，默认<b>不能关闭</b>'} -->
+    <div title="Tab2" data-options="closable:true" style="padding: 10px;">
+        tab2
+    </div>
+<!-- @reg:title=tooltip{content:'设置<code>title</code>属性值为标签页的标题'} -->
+<!-- @reg:iconCls=tooltip{content:'设置<code>iconCls</code>属性可以为标签页添加图标'} -->
+    <div title="Tab3" data-options="iconCls:'icon-reload'" style="padding: 10px;">
+        tab3
+    </div>
+</div>

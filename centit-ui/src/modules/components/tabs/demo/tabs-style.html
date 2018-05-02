@@ -1,0 +1,51 @@
+<p class="codeIgnore">外观的<b>4</b>个属性：<code>平坦：plain</code><code>紧凑：narrow</code><code>胶囊：pill</code><code>自适应：justified</code></p>
+
+<div class="easyui-panel" style="margin-bottom: 10px;">
+	<a class="easyui-linkbutton" onclick="setTabs_76cdddfc0853233e(this)" id="plain_76cdddfc0853233e" 
+		data-options="toggle: true">平坦</a>
+		
+	<a class="easyui-linkbutton" onclick="setTabs_76cdddfc0853233e(this)" id="narrow_76cdddfc0853233e" 
+		data-options="toggle: true">紧凑</a>
+		
+	<a class="easyui-linkbutton" onclick="setTabs_76cdddfc0853233e(this)" id="pill_76cdddfc0853233e" 
+		data-options="toggle: true">胶囊</a>
+		
+	<a class="easyui-linkbutton" onclick="setTabs_76cdddfc0853233e(this)" id="justified_76cdddfc0853233e" 
+		data-options="toggle: true">自适应</a>
+</div>
+
+<script>
+	function setTabs_76cdddfc0853233e(btn) {
+		var value = $(btn).data('value');
+		$(btn).data('value', !value);
+		
+		 $('#tabs_76cdddfc0853233e').tabs({
+//<!-- @reg:plain=tooltip{content:'平坦无背景'} -->		 	
+            plain: $('#plain_76cdddfc0853233e').data('value'),
+//<!-- @reg:narrow=tooltip{content:'去除Tab之间的空隙'} -->		 				
+            narrow: $('#narrow_76cdddfc0853233e').data('value'),
+//<!-- @reg:pill=tooltip{content:'看上去像胶囊的Tab'} -->		 				
+            pill: $('#pill_76cdddfc0853233e').data('value'),
+//<!-- @reg:justified=tooltip{content:'自动扩充Tab宽度'} -->		 				
+            justified: $('#justified_76cdddfc0853233e').data('value')
+        })
+	}
+</script>
+
+<div id="tabs_76cdddfc0853233e" class="easyui-tabs" style="width: 300px; height:150px;">
+    <div title="Tab1" style="padding: 10px;">
+        tab1
+    </div>
+    <div title="Tab2" style="padding: 10px;">
+        tab2
+    </div>
+    <div title="Tab3" style="padding: 10px;">
+        tab3
+    </div>
+	<div title="Tab4" style="padding: 10px;">
+        tab4
+    </div>
+    <div title="Tab5" style="padding: 10px;">
+        tab5
+    </div>
+</div>

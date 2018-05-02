@@ -1,0 +1,150 @@
+*{
+	border-radius: 0;
+    font-family: 'Microsoft YaHei'; font-size: 14px;
+}
+.textinput {
+	width: 120px;
+	height: 24px;
+	line-height: 24px;
+
+    color: #336699;
+    border: 1px solid #a2b3bd;
+    background: url(images/textinput_bg.jpg) repeat-x scroll left top #ffffff;
+}
+a {
+    outline: none!important;
+    text-decoration: none!important;
+}
+
+
+.panel-header{background:#2d8bce;}
+
+.hucome{width:111px;float:left;}
+
+
+.search .search-body {
+	border: none;
+}
+
+/*菜单 搜索*/
+#menu_search_panel {
+    padding: 10px 0;
+    background: #F1F8FF;
+}
+#menu_search {
+    margin-left: 25px;
+    font-family:simsun;
+}
+
+/*内容*/
+.menu-iframe, .dialog-iframe {
+	width: 100%; height: 100%;
+	border: none;
+	margin: 0; 
+	
+    /*解决iframe高度和父div高度不统一出现滚动条 @http://stackoverflow.com/questions/7290214/html-strange-space-between-iframe-elements*/
+    vertical-align:bottom;
+    display:block;
+}
+
+#footer {
+    height: 27px; line-height: 27px;
+    overflow: hidden;
+    text-align: center;
+    
+    border-color: #ccc;
+    color: #222;
+    background: #f2f2f2;
+}
+
+.datagrid-cell.datagrid-cell-c1-stateName {
+	color: #00B2FF;
+}
+
+.easyui-layout .layout-split-east {
+    border-left: 0px;
+}
+
+
+
+.l-btn-icon-left .l-btn-text {
+}
+
+
+.dialog-button {
+    border-color: #dddddd #95B8E7 #95B8E7 #95B8E7;
+    position: relative;
+	top: 0px!important;
+    width: 628px;
+    border: 0;
+    padding-top: 7px;
+}
+
+.dialog-button .l-btn-icon-left .l-btn-text {
+    margin: 0 4px;
+}
+
+
+.window .window-body.messager-body {
+    padding: 20px;
+}
+
+
+.datagrid-toolbar table .l-btn-plain {
+    border: 1px solid #6FBDF3;
+}
+.datagrid-toolbar table .l-btn-plain:hover {
+    border: 1px solid #fff;
+}
+
+.textbox {
+	-moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+.datagrid-body table td a.icon.l-btn:hover {
+	
+	
+	border:none;
+	
+	
+}
+
+
+.search-body .easyui-linkbutton.l-btn {
+    background: #369DE2;
+    border: 0;
+}
+.search-body .easyui-linkbutton.l-btn:hover {
+    background: #6FBDF3;
+    border: 0;
+}
+.search-body .easyui-linkbutton.l-btn .l-btn-text {
+
+    color: #fff;
+}
+
+.l-btn-plain-selected, .l-btn-plain-selected:hover {
+    background: #F5CF21;
+}
+
+.datagrid-pager.pagination .l-btn:hover {
+    border: none;
+    background: #F1B31C;
+}
+
+
+
+
+
+
+#mergeCase_panel .table_outer #caseDescFkDetDiv1 {
+	width: auto;
+}
+#mergeCase_panel .table_outer #caseDescFkDetDiv1 time {
+	width: 18%;
+}
+
+
+

@@ -1,0 +1,28 @@
+<p class="codeIgnore">通过<code>add</code>方法动态添加Item</p>
+<div class="easyui-panel" style="margin-bottom: 10px;">
+	<input class="easyui-textbox" id="input_8e4ef817220ca888" type="text" />
+</div>
+
+<script>
+	$('#input_8e4ef817220ca888').textbox({
+		prompt: '输入新增名称',
+		buttonIcon:'icon-add',	
+		onClickButton: function(){
+			var value = $('#input_8e4ef817220ca888').val() || '新Item';
+//<!-- @reg:add=tooltip{content:'通过<code>add</code>方法动态添加Item'} -->
+			$('#accordions_8e4ef817220ca888').accordion('add', {
+//<!-- @reg:title=tooltip{content:'<code>title</code>标题'} -->				
+				title: value,
+//<!-- @reg:content=tooltip{content:'<code>content</code>内容'} -->				
+				content: '<span style="padding: 10px;">'+value+'</span>'
+			});
+		}
+	});
+	
+</script>
+
+<div id="accordions_8e4ef817220ca888" class="easyui-accordion" style="width: 200px; height:200px;">
+    <div title="输入名称，创建新Item" style="padding: 10px;">
+        	输入名称，创建新Item
+    </div>
+</div>

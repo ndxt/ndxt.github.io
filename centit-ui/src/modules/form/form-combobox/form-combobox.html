@@ -1,0 +1,32 @@
+<ul class="example-list" id="formcombobox-example-list">
+	<li>
+		<a href="#formcombobox-basic" data-url="modules/form/form-combobox/demo/formcombobox-basic.html">基础combobox</a>
+	</li>
+	<li>
+		<a href="#formcombobox-methods" data-url="modules/form/form-combobox/demo/formcombobox-methods.html">操作方法</a>
+	</li>
+	<li>
+		<a href="#formcombobox-methods" data-url="modules/form/form-combobox/demo/formcombobox-property.html">属性</a>
+	</li>
+
+</ul>
+
+<script>
+	
+	requirejs([
+		'widgets/example/widget.example',
+		'plugins/prettify/prettify'
+		], function(create, datas) {
+			
+		var list = $('#formcombobox-example-list');
+		
+		create(list, function(container) {
+			prettyPrint();
+			
+			$.parser.parse(container);
+			
+			$("#menu_tab_Form").niceScroll({cursorcolor:"#BCBCBC"});
+		});
+	});
+	
+</script>

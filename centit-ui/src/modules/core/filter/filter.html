@@ -1,0 +1,76 @@
+<!DOCTYPE html><html><head><title>Filter</title><meta charset='utf-8'><link href='../marxico/themes/marxico.css' rel='stylesheet'></head><body><div id='preview-contents' class='note-content'>
+                        <div id="wmd-preview" class="preview-content"></div>
+                    <div id="wmd-preview-section-1177" class="wmd-preview-section preview-content"></div><div id="wmd-preview-section-1195" class="wmd-preview-section preview-content">
+
+<h1 id="filter">Filter</h1>
+
+<hr></div><div id="wmd-preview-section-1285" class="wmd-preview-section preview-content">
+
+<h2 id="1引用">1、引用</h2>
+
+<p>如果要新增过滤器，需要引用并继承 <strong>Filter</strong> 类</p></div><div id="wmd-preview-section-1820" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><span class="hljs-keyword">var</span> Filter = <span class="hljs-built_in">require</span>(<span class="hljs-string">'core/filter/filter'</span>);</div><br><div><span class="hljs-keyword">var</span> MyFilter = Filter.extend(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{</div><br><div>    <span class="hljs-comment">// 重写 convert 方法</span></div><div>    <span class="hljs-keyword">this</span>.convert = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(value)</span> </span>{</div><div>        ...</div><div>    }</div><div>});</div><br><div><span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> MyFilter();</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></code></pre>
+
+<hr></div><div id="wmd-preview-section-1836" class="wmd-preview-section preview-content">
+
+<h2 id="2dictionaryfilter">2、DictionaryFilter</h2>
+
+<p>系统已经写好了若干过滤器实例，数据字典过滤器就是其一。数据字典过滤器的作用是将字典编码转换成值，使用时先引入：</p>
+
+</div><div id="wmd-preview-section-3281" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><span class="hljs-keyword">var</span> filter = <span class="hljs-built_in">require</span>(<span class="hljs-string">'core/filter/filter.dictionary'</span>); </div><br><div><span class="hljs-comment">// 从后台加载 SYSPARAM 数据字典</span></div><div>filter.add(<span class="hljs-string">"SYSPARAM"</span>).then(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{</div><br><div>    <span class="hljs-comment">// 得到数据字典 SYSPARAM 明细中 SysTitle 的值</span></div><div>    alert(filter.convert(<span class="hljs-string">"SYSPARAM"</span>, <span class="hljs-string">"SysTitle"</span>)); </div><br><div>});</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></code></pre>
+
+<p>使用数据字典过滤器前，需要先通过 <strong>add</strong> 从后台加载数据，也可以在 <strong>config.js</strong> 文件中配置在首页初始化时就从后台加载。加载后的数据会存入缓存对象中，下次再使用不会再发请求。</p>
+
+<table>
+<thead>
+<tr>
+  <th align="center">方法</th>
+  <th>参数</th>
+  <th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">add</td>
+  <td></td>
+  <td>从后台请求数据字典数据</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td>name [String] 数据字典目录名称</td>
+  <td></td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td>name [Array] 数据字典目录名称</td>
+  <td></td>
+</tr>
+<tr>
+  <td align="center">convert</td>
+  <td></td>
+  <td>转换数据字典编码为值</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td>name [String] 数据字典目录名称</td>
+  <td></td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td>code [String] 数据字典明细编码</td>
+  <td></td>
+</tr>
+</tbody></table>
+
+
+<hr></div><div id="wmd-preview-section-3506" class="wmd-preview-section preview-content">
+
+<h2 id="3columnfilter">3、ColumnFilter</h2>
+
+<p>列过滤器是用来转换表格列表中的编码和值，不能单独使用，我们将在 <strong>表格扩展</strong> 中详细介绍用法</p>
+
+</div><div id="wmd-preview-section-3571" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><div><div><span class="hljs-built_in">require</span>(<span class="hljs-string">'core/filter/filter.column'</span>);</div></div></div></div></code></pre></div><div id="wmd-preview-section-footnotes" class="preview-content"></div></div></body></html>

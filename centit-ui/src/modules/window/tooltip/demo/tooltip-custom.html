@@ -1,0 +1,36 @@
+<p class="codeIgnore">可以绑定相关事件进行自定义设置，可选值有<code>onShow</code><code>onHide</code><code>onUpdate</code><code>onPosition</code><code>onDestroy</code></p>
+<p class="codeIgnore title"></p>
+<div id="custom-style">自定义</div>
+<script type="text/javascript">
+	$(function() {
+		$("#custom-style").tooltip({
+			position: "bottom",
+			//<!-- @reg:content=tooltip{content:'可以通过添加HTML标签来设置复杂的提示框'} -->
+			content : "<div style='padding: 5px; color: #000000; background: #eeeeee;'>这是一个自定义的提示消息</div>",
+			//<!-- @reg:onShow=tooltip{content:'当提示框显示时触发此事件'} -->
+			onShow : function(){
+				//<!-- @reg:"tip"=tooltip{content:'这里返回的是tip元素对象，并可以设置样式'} -->
+				$(this).tooltip("tip").css({
+					backgroundColor: "#fff000",
+					borderColor: "#ff0000",
+					boxShadow: "1px 1px 3px #292929"
+				});
+			},
+			//<!-- @reg:onPosition=tooltip{content:'当提示框位置发生改变时触发此事件'} -->
+			onPosition : function(){
+				//<!-- @reg:css=tooltip{content:'可以设置提示框具体位置，这里设置的是相对与文字对象左对齐'} -->
+				$(this).tooltip("tip").css("left", $(this).offset().left);
+				//<!-- @reg:arrow=tooltip{content:'这里返回的是提示框箭头对象，也可以设置样式'} -->
+				$(this).tooltip("arrow").css("left", 20);
+			}
+		});
+	});
+</script>
+<style type="text/css">
+	#custom-style {
+		width: 50px;
+		padding: 5px;
+		text-align: center;
+		border: 1px solid #c3d9e0;
+	}
+</style>

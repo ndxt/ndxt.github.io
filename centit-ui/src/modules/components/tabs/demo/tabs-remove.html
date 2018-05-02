@@ -1,0 +1,57 @@
+<p class="codeIgnore">通过<code>close</code>方法关闭标签页，参数可以是标签的<b>index</b>或者<b>title</b></p>
+<div class="easyui-panel" style="margin-bottom: 10px;">
+	<select class="easyui-combobox" id="combobox_cb04a1f5edd211f4" style="width: 100px;">
+		<option value="0">Tab1</option>
+		<option value="1">Tab2</option>
+		<option value="2">Tab3</option>
+		<option value="3">Tab4</option>
+		<option value="4">Tab5</option>
+	</select>
+	<a class="easyui-linkbutton" data-options="iconCls: 'icon-remove'" onclick="removeTab_cb04a1f5edd211f4()">删除</a>
+</div>
+
+<script>
+	function removeTab_cb04a1f5edd211f4(record) {
+		var select = $('#combobox_cb04a1f5edd211f4');
+		var tabs = $('#tabs_cb04a1f5edd211f4');
+		
+		var index = select.combobox('getValue') * 1;
+		
+		// 关闭tab
+//<!-- @reg:close=tooltip{content:'<code>close</code>方法关闭标签页'} -->			
+		tabs.tabs('close', index);
+		var selectedTab = tabs.tabs('getSelected');
+		var selectedIndex = tabs.tabs('getTabIndex', selectedTab);
+		
+		var data = [];
+		// 得到所剩的tabs
+		$.each(tabs.tabs('tabs'), function(index, tab) {
+			data.push({
+				value: index,
+				text: tab.panel('options').title,
+				selected: index == selectedIndex
+			});
+		});
+		
+		// 重置select选项
+		select.combobox('loadData', data);
+	}
+</script>
+
+<div id="tabs_cb04a1f5edd211f4" class="easyui-tabs" style="width: 300px; height:150px;">
+    <div title="Tab1" style="padding: 10px;">
+        tab1
+    </div>
+    <div title="Tab2" style="padding: 10px;">
+        tab2
+    </div>
+    <div title="Tab3" style="padding: 10px;">
+        tab3
+    </div>
+	<div title="Tab4" style="padding: 10px;">
+        tab4
+    </div>
+    <div title="Tab5" style="padding: 10px;">
+        tab5
+    </div>
+</div>

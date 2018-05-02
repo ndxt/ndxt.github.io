@@ -1,0 +1,95 @@
+<!DOCTYPE html><html><head><title>Event</title><meta charset='utf-8'><link href='../marxico/themes/marxico.css' rel='stylesheet'></head><body><div id='preview-contents' class='note-content'>
+                        <div id="wmd-preview" class="preview-content"></div>
+                    <div id="wmd-preview-section-7424" class="wmd-preview-section preview-content">
+
+</div><div id="wmd-preview-section-7439" class="wmd-preview-section preview-content">
+
+<h1 id="event">Event</h1>
+
+<hr></div><div id="wmd-preview-section-7472" class="wmd-preview-section preview-content">
+
+<h2 id="1引入">1、引入</h2>
+
+</div><div id="wmd-preview-section-7517" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><span class="hljs-keyword">var</span> Event = reuqire(<span class="hljs-string">'core/events'</span>);</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></code></pre>
+
+<hr></div><div id="wmd-preview-section-7899" class="wmd-preview-section preview-content">
+
+<h2 id="2使用">2、使用</h2>
+
+<p>在前面的使用说明中，我们已经介绍了如何在插件中使用事件。我们也可以直接使用事件类。</p>
+
+<blockquote>
+  <p>添加事件 Event.on(eventName, eventHandle) </p>
+</blockquote></div><div id="wmd-preview-section-8655" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div>Event.on(<span class="hljs-string">'select'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(event, id, name)</span> </span>{</div><div>    alert(id + <span class="hljs-string">': '</span> + name);</div><div>});</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></code></pre>
+
+<table>
+<thead>
+<tr>
+  <th align="center">方法</th>
+  <th>参数</th>
+  <th>类型</th>
+  <th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">on</td>
+  <td></td>
+  <td></td>
+  <td>添加事件。事件将会通过jQuery附加到document上</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td>eventName</td>
+  <td>String</td>
+  <td>事件名。不用担心会与系统现有的事件关键字冲突，因为前面会自动加上前缀。</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td>eventHandle</td>
+  <td>Function</td>
+  <td>事件。需要注意第一个参数一定是event对象</td>
+</tr>
+</tbody></table>
+
+
+<blockquote>
+  <p>调用事件 Event.trigger(eventName, param1, param2, …)</p>
+</blockquote>
+
+</div><div id="wmd-preview-section-9034" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><div><div>Event.trigger(<span class="hljs-string">'select'</span>, <span class="hljs-number">6527</span>, <span class="hljs-string">'唐伯虎'</span>);  <span class="hljs-comment">// 6527: 唐伯虎</span></div></div></div></div></code></pre>
+
+<table>
+<thead>
+<tr>
+  <th align="center">方法</th>
+  <th>参数</th>
+  <th>类型</th>
+  <th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">trigger</td>
+  <td></td>
+  <td></td>
+  <td>触发事件。</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td>eventName</td>
+  <td>String</td>
+  <td>事件名。</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td>参数</td>
+  <td></td>
+  <td>传递给事件回调函数的参数</td>
+</tr>
+</tbody></table>
+</div><div id="wmd-preview-section-footnotes" class="preview-content"></div></div></body></html>

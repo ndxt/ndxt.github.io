@@ -1,0 +1,75 @@
+*{padding:0;margin:0;border:0}
+body { 
+background-color:#dbeefd;
+font-size:14px
+}
+.outer {
+	margin:auto;
+	padding:20px;
+	background:#ececec
+	}
+.read{color:#1a98c8}
+.unread{color:#f28800}
+.red{color:red}
+.yellow{color:#FFAE00;}
+.green{color:green}
+.weather{height:150px;background:white;padding:10px}
+.tab_ul{background:white;margin-bottom: 20px;}
+.tab_ul>li{display:inline-block;padding:20px 0;margin-left:20px;text-align:center}
+.tab_ul>li>img{display:block;margin-bottom:18px;}
+.left_tab_ul{position:relative;background:white;margin-bottom: 20px;border: 10px solid white;}
+.left_tab_ul>li{list-style:none}
+.left_tab_ul .left_list_ul{
+	display:none;
+    position:absolute;
+    top:0;
+    width: 100%;
+    left:0;
+    background:#F5F5F5;
+    height: 100%;
+    }
+.left_list_ul>li{list-style:none;margin-left:160px;position:relative;margin-top: 15px;}
+.left_list_ul>li>label{    
+	position: absolute;
+    left: -55px;
+    top: 0px;}
+.left_list_ul>li>span{position: absolute;right: 10px;top:0;}
+.left_list_ul>li>p{overflow: hidden; white-space: nowrap;text-overflow: ellipsis;padding-right: 100px;}
+.left_tab_ul>li>a{    padding: 7px 15px 7px 30px;
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+    left: -10px;
+    cursor: pointer
+    }
+.dbsx{background:url(./images/1.png) 10px center no-repeat white}
+.rcap{background:url(./images/2.png) 10px center no-repeat white}
+.tzgg{background:url(./images/3.png) 10px center no-repeat white}
+.swtx{background:url(./images/4.png) 10px center no-repeat white}
+.fwtx{background:url(./images/5.png) 10px center no-repeat white}
+.left_tab_ul>li>a.select{background-color:#F5F5F5}
+table{width:100%;table-layout: fixed}
+table td.right{width:300px;padding-left:20px;}
+.left>h3,.right>h3{
+	padding-left;50px;
+	height:40px;
+	background:url(./images/icon_biaoti.png) 10px center no-repeat #1583cf;
+	color:white;
+	line-height:40px;
+	text-indent: 2em;
+	}
+.left>h3>a,.right>h3>a{float:right;line-height:40px;margin-right:10px}
+
+.left>ul.left_ul,.right>ul.left_ul{padding:10px;background:white;margin-bottom: 20px;}
+ul.left_ul>li,ul.right_ul>li{list-style: none;border-bottom: 1px dashed #666666;}
+ul.left_ul>li>p,ul.right_ul>li>p{
+    margin-left: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin:5px 0;
+    color: #666666;
+}
+ul.left_ul>li>label,ul.right_ul>li>label{float: left;margin-right: 5px;}
+ul.left_ul>li>span,ul.right_ul>li>span{color:#999999;margin-left: 70px;}
+.right_chart{padding: 10px;background: white;margin-bottom: 20px;height:129px}

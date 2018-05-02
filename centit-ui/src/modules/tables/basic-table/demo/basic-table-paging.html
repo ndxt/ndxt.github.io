@@ -1,0 +1,126 @@
+<p class="codeIgnore">在表格里添加一些按钮实现分页处理，也可以调整按钮位置</p>
+<p class="codeIgnore title"></p>
+<div style="margin-bottom: 10px;">
+	位置：<select id="p-location" onchange="changeLocation();">
+		<option>bottom</option>
+		<option>top</option>
+		<option>both</option>
+	</select>
+</div>
+<table id="basic-table-paging-t" style="width: 100%; height: 200px;"></table>
+<script type="text/javascript">
+	$(function() {
+		var dg = $("#basic-table-paging-t").datagrid({
+			title : "表格分页",
+			rownumbers : true,
+			singleSelect : true,
+			collapsible : true,
+			//<!-- @reg:pagination=tooltip{content:'是否显示分页工具栏'} -->
+			pagination : true,
+			url : "modules/tables/basic-table/data/basic-table.json",
+			method : "get",
+			columns : [[{
+				field : "itemid",
+				title : "Item ID",
+				width : 100
+			}, {
+				field : "productid",
+				title : "Product",
+				width : 100
+			}, {
+				field : "listprice",
+				title : "List Price",
+				width : 100,
+				align : "right"
+			}, {
+				field : "unitcost",
+				title : "Unit Cost",
+				width : 100,
+				align : "right"
+			}, {
+				field : "attr1",
+				title : "Attribute",
+				width : 210,
+				align : "right"
+			}, {
+				field : "status",
+				title : "Status",
+				width : 60,
+				align : "center"
+			}]]
+		});
+		//<!-- @reg:getPager=tooltip{content:'返回页面对象'} -->
+		//<!-- @reg:pagination=tooltip{content:'调用<code>pagination</code>方法实现分页处理'} -->
+		dg.datagrid("getPager").pagination({
+			//<!-- @reg:layout=tooltip{content:'分页控件布局定义，布局选项可以包含一个或多个值'} -->
+			layout : [
+				//<!-- @reg:list=tooltip{content:'页面显示条数列表'} -->
+				"list",
+				//<!-- @reg:sep=tooltip{content:'页面按钮分割线'} -->
+				"sep",
+				//<!-- @reg:first=tooltip{content:'首页按钮'} -->
+				"first",
+				//<!-- @reg:prev=tooltip{content:'上一页按钮'} -->
+				"prev",
+				"sep",
+				//<!-- @reg:manual=tooltip{content:'手动输入当前页的输入框'} -->
+				"manual",
+				//<!-- @reg:links=tooltip{content:'页面数链接'} -->
+				"links",
+				"sep",
+				//<!-- @reg:next=tooltip{content:'下一页按钮'} -->
+				"next",
+				//<!-- @reg:last=tooltip{content:'尾页按钮'} -->
+				"last",
+				"sep",
+				//<!-- @reg:refresh=tooltip{content:'刷新按钮'} -->
+				"refresh"
+			],
+			buttons : [{
+				iconCls : "icon-search",
+				handler : function() {
+					alert("搜索");
+				}
+			}, {
+				iconCls : "icon-add",
+				handler : function() {
+					alert("添加");
+				}
+			}, {
+				iconCls : "icon-edit",
+				handler : function() {
+					alert("修改");
+				}
+			}]
+		});
+	});
+	
+	function changeLocation() {
+		var dg = $("#basic-table-paging-t");
+		//<!-- @reg:loadData=tooltip{content:'加载本地数据，旧的行将被移除'} -->
+		dg.datagrid("loadData", []);
+		dg.datagrid({
+			//<!-- @reg:pagePosition=tooltip{content:'定义分页工具栏的位置，可选值有<code>top</code><code>bottom</code><code>both</code>'} -->
+			pagePosition : $("#p-location").val()
+		});
+		dg.datagrid("getPager").pagination({
+			layout : ["list", "sep", "first", "prev", "sep", "manual", "links", "sep", "next", "last", "sep", "refresh"],
+			buttons : [{
+				iconCls : "icon-search",
+				handler : function() {
+					alert("搜索");
+				}
+			}, {
+				iconCls : "icon-add",
+				handler : function() {
+					alert("添加");
+				}
+			}, {
+				iconCls : "icon-edit",
+				handler : function() {
+					alert("修改");
+				}
+			}]
+		});
+	}
+</script>

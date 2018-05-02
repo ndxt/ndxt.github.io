@@ -1,0 +1,26 @@
+<p class="codeIgnore">窗口布局可以将窗口内容区分成几个区域块，再通过<code>region</code>进行位置调整</p>
+<p class="codeIgnore title"></p>
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="$('#window-layout').window('open');">打开</a>
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="$('#window-layout').window('close');">关闭</a>
+<div id="window-layout" class="easyui-window" title="窗口布局" data-options="iconCls:'icon-save',closed:true">
+	<!-- @reg:fit=tooltip{content:'当设置为true时面板大小将自适应父容器'} -->
+	<div class="easyui-layout" data-options="fit:true">
+		<!-- @reg:region=tooltip{content:'通过设置<code>region</code>来调整各个区域块的位置'} -->
+		<div data-options="region:'center'" style="padding: 5px;">窗口内容区被分割成了几个区域块</div>
+		<!-- @reg:split=tooltip{content:'当设置为true时可调整分割区的大小'} -->
+		<div data-options="region:'east',split:true" style="width: 150px;"></div>
+		<div data-options="region:'south',border:false" style="padding-top: 5px; text-align: right;">
+			<a href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-ok'" onclick="javascript:alert('确定');" style="width: 80px;">确定</a>
+			<a href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" onclick="javascript:alert('取消');" style="width: 80px;">取消</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+</script>
+<style type="text/css">
+	#window-layout {
+		width: 500px;
+		height: 300px;
+		padding: 5px;
+	}
+</style>

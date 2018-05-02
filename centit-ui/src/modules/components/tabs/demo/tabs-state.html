@@ -1,0 +1,16 @@
+<p class="codeIgnore">通过<code>disableTab</code>和<code>enableTab</code>方法禁用或者启用，参数可以是标签的<b>index</b>或者<b>title</b></p>
+<div class="easyui-panel" style="margin-bottom: 10px;">
+<!-- @reg:disableTab=tooltip{content:'<code>disableTab</code>方法禁用标签页'} -->			
+	<a class="easyui-linkbutton" onclick="$('#tabs_97df526e2839fea3').tabs('disableTab', 1)">禁用</a>
+<!-- @reg:enableTab=tooltip{content:'<code>enableTab</code>方法启用标签页'} -->	
+	<a class="easyui-linkbutton" onclick="$('#tabs_97df526e2839fea3').tabs('enableTab', 1)">启用</a>
+</div>
+
+<div id="tabs_97df526e2839fea3" class="easyui-tabs" style="width: 300px; height:150px;">
+    <div title="Tab1">
+        tab1
+    </div>
+	<div title="Tab2">
+        tab2
+    </div>
+</div>

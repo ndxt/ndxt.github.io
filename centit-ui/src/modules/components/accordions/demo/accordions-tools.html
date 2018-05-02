@@ -1,0 +1,20 @@
+<p class="codeIgnore">这里演示了另一种添加工具栏的方法，<code>tools</code>还可以传入一个<b>数组</b>，数组里每一个对象就是一个按钮</p>
+<div class="easyui-accordion" style="width:200px;height:200px;">
+    <div title="Page1" data-options="iconCls:'icon-ok'" style="padding: 10px;">
+        Content1
+    </div>
+    <div title="有一个按钮" data-options="selected: true,
+//<!-- @reg:tools=tooltip{content:'<code>tools</code>按钮对象的数组</b>'} -->
+		tools:[{
+                iconCls:'icon-reload',
+//<!-- @reg:handler=tooltip{content:'<code>handler</code>点击按钮调用的事件</b>'} -->				
+                handler:function(){
+                    alert('reload');
+                }
+        }]" style="padding: 10px;">
+		Content2
+    </div>
+    <div title="Page3" style="padding: 10px;">
+		Content3
+    </div>
+</div>

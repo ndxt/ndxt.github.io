@@ -1,0 +1,198 @@
+<p class="codeIgnore">点击行进行修改</p>
+<p class="codeIgnore title"></p>
+<table id="basic-table-edit-row-t" class="easyui-datagrid" style="width: 100%; height: 250px;"></table>
+<script type="text/javascript">
+	$(function() {
+		$("#basic-table-edit-row-t").datagrid({
+			iconCls: "icon-edit",
+			title : "修改行",
+			rownumbers : true,
+			singleSelect : true,
+			collapsible : true,
+			url : "modules/tables/basic-table/data/basic-table.json",
+			method : "get",
+			columns : [[{
+				field : "itemid",
+				title : "Item ID",
+				width : 100
+			}, {
+				field : "productid",
+				title : "Product",
+				width : 100,
+				formatter : function(value, data) {
+					return data.productname;
+				},
+				editor : {
+					type : "combobox",
+					options : {
+						valueField : "productid",
+						textField : "productname",
+						method : "get",
+						//<!-- @reg:url=tooltip{content:'规定可选值'} -->
+						url : "modules/tables/basic-table/data/products.json",
+						//<!-- @reg:url=tooltip{content:'是否为必填'} -->
+						required : true
+					}
+				}
+			}, {
+				field : "listprice",
+				title : "List Price",
+				width : 100,
+				align : "right",
+				editor : {
+					type : "numberbox",
+					options : {
+						precision : 1
+					}
+				}
+			}, {
+				field : "unitcost",
+				title : "Attribute",
+				width : 100,
+				align : "right",
+				editor : "numberbox"
+			}, {
+				field : "attr1",
+				title : "Attribute",
+				width : 210,
+				align : "right",
+				editor : "textbox"
+			}, {
+				field : "status",
+				title : "Status",
+				width : 60,
+				align : "center",
+				editor : {
+					type : "checkbox",
+					options : {
+						on : "P",
+						off : ""
+					}
+				}
+			}]],
+			toolbar : [{
+				text : "添加",
+				iconCls : "icon-add",
+				plain : true,
+				handler : function() {
+					append();
+				}
+			}, {
+				text : "删除",
+				iconCls : "icon-remove",
+				plain : true,
+				handler : function() {
+					removeit();
+				}
+			}, {
+				text : "保存",
+				iconCls : "icon-save",
+				plain : true,
+				handler : function() {
+					accept();
+				}
+			}, {
+				text : "撤销",
+				iconCls : "icon-undo",
+				plain : true,
+				handler : function() {
+					reject();
+				}
+			}, {
+				text : "查看",
+				iconCls : "icon-search",
+				plain : true,
+				handler : function() {
+					getChanges();
+				}
+			}],
+			//<!-- @reg:onClickCell=tooltip{content:'点击一个单元格时触发'} -->
+			onClickCell : function(index, field, value) {
+				onClickCell(index, field);
+			}
+		});
+	});
+
+	var editIndex = undefined;
+	function endEditing() {
+		if (editIndex == undefined)
+			return true
+		//<!-- @reg:validateRow=tooltip{content:'验证指定的行，当验证有效时返回true'} -->
+		if ($("#basic-table-edit-row-t").datagrid("validateRow", editIndex)) {
+			//<!-- @reg:getEditor=tooltip{content:'获取指定编辑器，包含两个属性，行索引：<code>index</code>字段名：<code>field</code>'} -->
+			var ed = $("#basic-table-edit-row-t").datagrid("getEditor", {
+				index : editIndex,
+				field : "productid"
+			});
+			var productname = $(ed.target).combobox("getText");
+			//<!-- @reg:getRows=tooltip{content:'返回当前页的所有行'} -->
+			$("#basic-table-edit-row-t").datagrid("getRows")[editIndex]["productname"] = productname;
+			//<!-- @reg:endEdit=tooltip{content:'结束编辑行'} -->
+			$("#basic-table-edit-row-t").datagrid("endEdit", editIndex);
+			editIndex = undefined;
+			return true;
+		} else
+			return false;
+	}
+	
+	/* 点击事件 */
+	function onClickCell(index, field) {
+		if (editIndex != index) {
+			if (endEditing()) {
+				//<!-- @reg:selectRow=tooltip{content:'选择一行，行索引从0开始'} -->
+				//<!-- @reg:beginEdit=tooltip{content:'开始编辑行'} -->
+				$("#basic-table-edit-row-t").datagrid("selectRow", index).datagrid("beginEdit", index);
+				var ed = $("#basic-table-edit-row-t").datagrid("getEditor", {
+					index : index,
+					field : field
+				});
+				($(ed.target).data("textbox") ? $(ed.target).textbox("textbox") : $(ed.target)).focus();
+				editIndex = index;
+			} else
+				$("#basic-table-edit-row-t").datagrid("selectRow", editIndex);
+		}
+	}
+	
+	/* 添加一行 */
+	function append() {
+		if (endEditing()) {
+			//<!-- @reg:appendRow=tooltip{content:'追加一个新行，新行将被添加到最后的位置'} -->
+			$("#basic-table-edit-row-t").datagrid("appendRow", {
+				status : "P"
+			});
+			editIndex = $("#basic-table-edit-row-t").datagrid("getRows").length - 1;
+			$("#basic-table-edit-row-t").datagrid("selectRow", editIndex).datagrid("beginEdit", editIndex);
+		}
+	}
+	
+	/* 删除一行 */
+	function removeit() {
+		if (editIndex == undefined)
+			return
+		//<!-- @reg:cancelEdit=tooltip{content:'取消编辑行'} -->
+		//<!-- @reg:deleteRow=tooltip{content:'删除行'} -->
+		$("#basic-table-edit-row-t").datagrid("cancelEdit", editIndex).datagrid("deleteRow", editIndex);
+		editIndex = undefined;
+	}
+	
+	/* 保存 */
+	function accept() {
+		if (endEditing())
+			//<!-- @reg:acceptChanges=tooltip{content:'提交所有从加载或者上一次调用acceptChanges函数后更改的数据'} -->
+			$("#basic-table-edit-row-t").datagrid("acceptChanges");
+	}
+	
+	/* 撤销 */
+	function reject() {
+		//<!-- @reg:rejectChanges=tooltip{content:'回滚所有从创建或者上一次调用acceptChanges函数后更改的数据'} -->
+		$("#basic-table-edit-row-t").datagrid("rejectChanges");
+		editIndex = undefined;
+	}
+	
+	/* 查看 */
+	function getChanges() {
+		//<!-- @reg:getChanges=tooltip{content:'从上一次的提交获取改变的所有行，类型参数指明用哪些类型改变的行，可选值有：<code>inserted</code><code>deleted</code><code>updated</code>等，当类型参数未配置的时候返回所有改变的行'} -->
+		var rows = $("#basic-table-edit-row-t").datagrid("getChanges");
+		alert(rows.length + " rows are changed!");
+	}
+</script>

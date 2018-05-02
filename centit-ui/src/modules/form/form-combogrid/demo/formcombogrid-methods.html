@@ -1,0 +1,36 @@
+<p class="codeIgnore">combogrid的操作方法有<code>getValue、disable、enable</code></p>
+<div style="margin:20px 0">
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="getValue()">获取值</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="setValue1()">设置值1</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="setValue2()">设置值2</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="disable()">禁用</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="enable()">启用</a>
+		
+</div>
+<select id="combogrid-methods" class="easyui-combogrid" style="width:250px" data-options="panelWidth: 500,idField: 'itemid',textField: 'productname',url:'modules/form/form-combogrid/datas/combogrid.json',method: 'get',columns: [[{field:'itemid',title:'第一列',width:80},{field:'productname',title:'第二列',width:120},{field:'listprice',title:'第三列',width:80,align:'right'},{field:'unitcost',title:'第四列',width:80,align:'right'},{field:'attr1',title:'第五列',width:200},{field:'status',title:'第六列',width:60,align:'center'}]],fitColumns: true">
+    </select>
+ <script type="text/javascript">
+        function getValue(){
+			//<!-- @reg:getValue=tooltip{content:'添加<code>getValue方法</code>'} -->
+            var val = $('#combogrid-methods').combogrid('getValue');
+            alert(val);
+        }
+        function setValue1(){
+			//<!-- @reg:setValue=tooltip{content:'添加<code>setValue方法</code>'} -->
+            $('#combogrid-methods').combogrid('setValue', 'EST-13');
+        }
+        function setValue2(){
+            $('#combogrid-methods').combogrid('setValue', {
+                itemid: 'customid',
+                productname: 'CustomName'
+            });
+        }
+		function disable(){
+			//<!-- @reg:disable=tooltip{content:'添加<code>disable方法</code>'} -->
+            $('#combogrid-methods').combogrid('disable');
+        }
+        function enable(){
+			//<!-- @reg:enable=tooltip{content:'添加<code>enable方法</code>'} -->
+            $('#combogrid-methods').combogrid('enable');
+        }
+</script>

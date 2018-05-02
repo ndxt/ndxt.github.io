@@ -1,0 +1,13 @@
+<p class="codeIgnore"><code>filebox </code>用来上传文件，可以用input标签和javascript两种方法来创建</p>
+<!-- @reg:buttonText=tooltip{content:'设置<code>filebox</code>按钮的文本内容'} -->
+<!-- @reg:buttonIcon=tooltip{content:'设置<code>filebox</code>按钮的图标'} -->
+<!-- @reg:buttonAlign=tooltip{content:'设置<code>filebox</code>按钮的位置'} -->
+<input class="easyui-filebox" style="width:300px" data-options="buttonText:'选择文件',buttonIcon:'icon-man',buttonAlign:'right'">
+<input id="fb" type="text" style="width:300px">
+
+<script>
+	    $('#fb').filebox({
+        buttonText: 'Choose File',
+        buttonAlign: 'left'
+    })
+</script>

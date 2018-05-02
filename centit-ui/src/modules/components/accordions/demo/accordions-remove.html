@@ -1,0 +1,33 @@
+<p class="codeIgnore">通过<code>remove</code>方法移除Item，参数可以是标签的<b>index</b>或者<b>title</b></p>
+<div class="easyui-panel" style="margin-bottom: 10px;">
+	<a class="easyui-linkbutton" onclick="removeAccordions_08662bda2e076c42();" data-options="iconCls: 'icon-remove'" title="删除当前选中Item">删除</a>
+</div>
+
+<script>
+	function removeAccordions_08662bda2e076c42() {
+		var accordions = $('#accordions_08662bda2e076c42');
+//<!-- @reg:getSelected=tooltip{content:'<code>getSelected</code>方法获取当前选中的panel'} -->			
+		var panel = accordions.accordion('getSelected');
+		if (panel) {
+//<!-- @reg:getPanelIndex=tooltip{content:'<code>getPanelIndex</code>方法获取panel的index，从<b>0</b>开始计算'} -->			
+			var index = accordions.accordion('getPanelIndex', panel);
+			
+			// 删除
+//<!-- @reg:remove=tooltip{content:'<code>remove</code>方法移除Item'} -->	
+//<!-- @reg:index=tooltip{content:'<code>index</code>从0开始计算'} -->			
+			accordions.accordion('remove', index);
+		}
+	}
+</script>
+
+<div id="accordions_08662bda2e076c42" class="easyui-accordion" style="width:200px;height:200px;">
+    <div title="Page1" style="padding: 10px;">
+        Content1
+    </div>
+    <div title="Page2" style="padding: 10px;">
+		Content2
+    </div>
+    <div title="Page3" style="padding: 10px;">
+		Content3
+    </div>
+</div>
