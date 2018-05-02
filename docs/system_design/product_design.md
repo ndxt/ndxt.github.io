@@ -26,6 +26,20 @@
 
 ### 登录流程和安全体系
 
+框架采用spring security安全体系。spring security集成了多种身份验证方式，框架实现了最基本的两种验证方式：
+1. 用户名密码验证方式。系统提供两种密码加密方式，一种是标准的随机盐的加密方法（StandardPasswordEncoderImpl），这也是框架默认的加密方式；还有一种是用用户代码作为盐的加密方法（CentitPasswordEncoderImpl）。
+2. 和[Apereo cas](https://www.apereo.org/projects/cas)集成的单点登录认证方式。[centit-cas](https://github.com/ndxt/centit-cas/)在Apereo cas基础上开发了更多的密码验证方式（比如：ldap验证方式）和一套登录页面。
+
+Spring security使用一组过滤器来对资源进行保护，其过滤器的执行流程如下：
+
+1. DaoFilterSecurityInterceptor 负责过滤器的执行，在执行获取用户的session。
+2. DaoInvocationSecurityMetadataSource 复制将url映射到业务操作，并查找对应的角色集合。
+3. DaoAccessDecisionManager 判断用户是否有权限访问资源。
+4. 如果没有权限访问，会抛出401错误。
+5. 前段接到401错误跳转到登录页面。
+
+所以spring security并不要求用户一定到先登录才可以操作，不登录也可以做不受保护的操作，开发是一定要注意。详情参见[framework-security](https://github.com/ndxt/centit-framework/tree/master/framework-security)。
+
 ### 启动与配置空间
 
 框架采用spring 4.* 来开发，使用了spring 配置类的新特性，将web服务中所有的配置信息用java类来实现，可能需要实施修改（配置）的内容全部集中放在system.properties这一个属性文件中。配置参数的设计原则：
@@ -36,9 +50,9 @@
 java的配置类一般位于项目的config包中。配置类一般有一下几类：
 
 1. web环境配置类，代替传统的web.xml。一般类名为 WebInitializer。
-2. ServiceConfig。
-3. NormalSpringMvcConfig。
-4. InstantiationServiceBeanPostProcessor。
+2. ServiceConfig 是spring 容器管理bean的配置入口。系统的[framework-config](https://github.com/ndxt/centit-framework/tree/master/framework-config)
+3. NormalSpringMvcConfig，业务接口配置，和SystemSpringMvcConfig系统接口配置类似。
+4. InstantiationServiceBeanPostProcessor，web启动钱初始化工作可以放在这个bean中配置。主要用于及加载框架的消息服务类、日志写入服务类等等。
 
 配置项说明参见[framework-web-demo](https://github.com/ndxt/centit-framework/tree/master/framework-web-demo)。
 

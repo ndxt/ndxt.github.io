@@ -43,9 +43,9 @@ sidebar: auto
 
 ## 快速入门
 
-### 新建项目
+### 框架整体介绍
 
-架实现了系统管理、权限体系、数据服务等等业务系统通用的部分，开发人员进行系统开发时可以不考虑这些业务无关的内容。基于公司框架可以开发多种类型的应用系统。
+框架实现了系统管理、权限体系、数据服务等等业务系统通用的部分，开发人员进行系统开发时可以不考虑这些业务无关的内容。基于公司框架可以开发多种类型的应用系统。
 
 1. 开发一个传统的但应用系统，但应用系统就是只有一个工程结果只打一个war包，单独部署的系统；这样的系统有包括后台系统管理和前段业务应用。github的[centit-framework-system](https://github.com/ndxt/centit-framework-system)中有一个[framework-system-demo](https://github.com/ndxt/centit-framework-system/tree/master/framework-system-demo)模块就是一个最简明的示例。这个示例可以直接运行，其中包括了系统管理的所有实现。但依然有一下几个方面需要开发人员根据项目的情况进行修改：
    
@@ -64,7 +64,13 @@ sidebar: auto
 
 框架通过接口[PlatformEnvironment](https://github.com/ndxt/centit-framework/blob/master/framework-core/src/main/java/com/centit/framework/model/adapter/PlatformEnvironment.java)来屏蔽了系统组织机构、权限体系和数据服务的具体实现。**所以对开发具体的业务模块来时，无论上面的那种方式，具体的开发都是一样的。框架可以通过修改依赖的包和配置信息来切换发布方式，所以强力建议业务开发人员都基于**[**framework-web-demo**](https://github.com/ndxt/centit-framework/tree/master/framework-web-demo)**来开发业务模块，这样做无论集成和调试都最为便捷。这个也先腾框架最核心的价值。**每个Demo项目我们应该关注pom.xml文件中的依赖和config中的配置类。他们的差别就是不同的jar包的组装，体现在对PlatformEnvironment接口的不同实现。
 
+### 新建项目
+
+### 给项目添加持久化模块
+
 ### 新建模块
+
+### 其他说明
 
 在信息管理系统或则OA类等先腾的典型业务中的功能模块都会应对到数据库中的一个业务主表；在项目中就会对应一套从数据库存储、业务逻辑实现到和前段界面的交换的代码；参见 MVC分层设计和脚手架 一节。系统需要对业务模块进行权限管理，所以每一个业务木块都要有一个标识、每一个方法可以用一个url和http请求方法来标识，请参见 权限体系 一节。数据范围权限的控制需要通过 sql来控制数据的访问，请参见 参数驱动SQL 一节。 框架提倡前后端分离的方案，前段通过ajax请求后端，后端通过类restful风格方式提供数据服务，请参见 前后端数据通讯格式 一节。
 
