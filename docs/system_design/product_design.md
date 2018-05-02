@@ -58,18 +58,43 @@ java的配置类一般位于项目的config包中。配置类一般有一下几�
 
 ## 最简实现
 
+### json实现
+[framework-system-static](https://github.com/ndxt/centit-framework/tree/master/framework-system-static)是框架基于JSON的最简静态实现。主要工作有：
+
+1. 定义一组基本模型（用户、组织、业务、数据字典等等）的po。
+2. 用一个json文件维护所有的基本模型的内容。
+3. JsonPlatformEnvironment 实现了框架接口的所有方法。
+
+这样框架运行的条件就全部具备了。
+
+### jdbc 实现
+[framework-system-static-jdbc](https://github.com/ndxt/centit-framework/tree/master/framework-system-static-jdbc)在framework-system-static基础上实现了从数据库中通过自定义sql（通过ExtendedSqlMap.xml来配置）来获取系统基本模型的对象。
+
+### 系统配置
+[framework-system-static-config](https://github.com/ndxt/centit-framework/tree/master/framework-system-static-configc)配置了系统运行所需要的bean。
+
+### 运行示例
+[framework-web-demo](https://github.com/ndxt/centit-framework/tree/master/framework-web-demo)是一个最简单的基于框架的运行示例，开发人员可以复制这个项目作为自己的业务开发的起点。
+
 ## 带系统维护平台
+
+
 
 ## 业务集成平台
 
+
+
 ## 基于Spring cloud微服务平台
+
+
 
 ## 前段框架
 
 
+
 ## 工具与服务等通用模块
 
-南大先腾框架后期的建设重点就是逐步完善并开发更多的通用模块。框架的开发策略就是核心模块（framework）越来越稳定，通用功能服务、工具模块越来越丰富。
+南大先腾框架后期的建设重点就是逐步完善并开发更多的通用模块。框架的开发策略就是核心模块（framework）越来越稳定，通用功能服务、工具模块越来越丰富。南大先腾的目标是借此打造一个政企应用系统的强大的“中台”。
 
 目前框架已经有一些通用模块，参见[相关项目](https://ndxt.github.io/projects/)。
 
