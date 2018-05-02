@@ -58,38 +58,57 @@ java的配置类一般位于项目的config包中。配置类一般有一下几�
 
 ## 最简实现
 
-### json实现
-[framework-system-static](https://github.com/ndxt/centit-framework/tree/master/framework-system-static)是框架基于JSON的最简静态实现。主要工作有：
+[centit-framework](https://github.com/ndxt/centit-framework)是基于框架的最简单的实现，没有持久化操作，没有维护工作，所以叫静态实现；但是可以实现用户的登录、权限的控制等等。
 
-1. 定义一组基本模型（用户、组织、业务、数据字典等等）的po。
-2. 用一个json文件维护所有的基本模型的内容。
-3. JsonPlatformEnvironment 实现了框架接口的所有方法。
-
+1. [framework-system-static](https://github.com/ndxt/centit-framework/tree/master/framework-system-static)是框架基于JSON的最简静态实现。主要工作有：
+  * 定义一组基本要素（用户、组织、业务、数据字典等等）的po。
+  * 用一个json文件维护所有的基本要素的内容。
+  * JsonPlatformEnvironment 实现了框架接口的所有方法。
 这样框架运行的条件就全部具备了。
-
-### jdbc 实现
-[framework-system-static-jdbc](https://github.com/ndxt/centit-framework/tree/master/framework-system-static-jdbc)在framework-system-static基础上实现了从数据库中通过自定义sql（通过ExtendedSqlMap.xml来配置）来获取系统基本模型的对象。
-
-### 系统配置
-[framework-system-static-config](https://github.com/ndxt/centit-framework/tree/master/framework-system-static-configc)配置了系统运行所需要的bean。
-
-### 运行示例
-[framework-web-demo](https://github.com/ndxt/centit-framework/tree/master/framework-web-demo)是一个最简单的基于框架的运行示例，开发人员可以复制这个项目作为自己的业务开发的起点。
+2. [framework-system-static-jdbc](https://github.com/ndxt/centit-framework/tree/master/framework-system-static-jdbc)在framework-system-static基础上实现了从数据库中通过自定义sql（通过ExtendedSqlMap.xml来配置）来获取系统基本模型的对象。
+3. [framework-system-static-config](https://github.com/ndxt/centit-framework/tree/master/framework-system-static-configc)配置了系统运行所需要的bean。
+4. [framework-web-demo](https://github.com/ndxt/centit-framework/tree/master/framework-web-demo)是一个最简单的基于框架的运行示例，开发人员可以复制这个项目作为自己的业务开发的起点。
 
 ## 带系统维护平台
+传统政企业务系统都有个后台的系统维护，维护的内容就是我们框架的基本要素。所以框架开发了一个基于数据库的包括这些维护功能项目[centit-framework-system](https://github.com/ndxt/centit-framework-system)。工程中的模块有：
 
+1. framework-persistence-core 模块，定义了持久化对象和持久化接口。框架的开发规范中并没有要求持久化类（Dao）的接口和实现分离，由于框架部分希望能够灵活的绑定不同的持久化模块所以抽象出一个接口。
+2. framework-persistence-\* 三个相同功能模块，分别用jdbc、hibernate、mybatis实现了基本元素的持久化工作。因为单应用系统的业务部分和系统管理部分一般在一个工程中，这样做多个实现是为了给开发人员不同的选择。
+3. framework-system-module 模块，实现了系统维护逻辑操作。
+4. framework-system-web 模块，实现了系统维护的http接口，供前段调用。
+5. framework-system-view-easyui 模块，为系统维护的前端页面。
+6. framework-system-config 为系统模块相关的bean配置。
+7. framework-system-demo 是一个可以运行的示例。
 
+如果我们需要开发一个单应用系统[framework-system-demo](https://github.com/ndxt/centit-framework-system/tree/master/framework-system-demo)是一个最好不过的开发起点。开发人员可以复制这个项目的源代码作为自己项目的基础工程，记得修改java的包名。
 
 ## 业务集成平台
+如果一个机构（政府或者企业）开发很多单应用系统，每个系统中都有用户、组织的维护功能，必然会导致不一致的问题，特别是用户的密码不一致，用户登录到多个系统需要重复认证，系统越多问题越大。[centit-integration-platform](https://github.com/ndxt/centit-integration-platform)就是为这个目的设计的，主要包括：
+1. centit-ip-module是一个基于framework-system-demo开发的系统集成管理平台，包括以下内容：
+  * 将对基本元素的访问用http+json接口的方式暴露出来，供其他应用访问。
+  * 添加业务系统和数据库资源的维护工作，并通过http+json的接口提供服务。
+2. centit-ip 是一个包含centit-ip-module的最简单的实现，具体业务系统可以在这个项目的基础上添加业务相关的基础数据维护和服务工作。
+3. centit-ip-app 通过调用centit-ip接口的方式实现了PlatformEnvironment接口，这样基于centit-ip-app开发的应用系统就可以使用同一套用户、权限体系，各个系统相关的后台维护工作都可以集中在一起维护。
+4. centit-ip-app-demo是一个基于centit-ip-app的最简单的实现，具体的业务开发可以复制这个项目作为开发的代码基础。
+5. 各个业务系统可以通过[centit-cas](https://github.com/ndxt/centit-cas)单点登录平台集成在一起，这样不同的业务系统就可以在一次登录同时使用了。
 
-
+有了这个集成平台作为一个企业的系统业务管理中心使用，各个业务模块可以作为微服务的方式运行，不同的业务模块可以使用不同的技术栈这样有效提高开发效率。
 
 ## 基于Spring cloud微服务平台
+业务集成平台适用于对性能要求不高，业务系统相对比较少的集成工作，因为所有的业务系统都是要认为的维护和管理的。如果性能要求比较高，或者业务系统服务模块也比较多就需要使用微服务的架构了。框架中所有的项目都是前后端分离的、业务逻辑和配置也是分离的、项目很容易迁移到spring boot平台，所以采用spring cloud作为微服务平台就是理所当然的了。[centit-framework-cloud](https://github.com/ndxt/centit-framework-cloud)是框架的微服务实现。其组成如下：
 
+1. eureka-server 是微服务注册中心。
+2. authorize-server 是用户认证中心，它的作用类似于单点登录。
+3. server-gateway 是一个网关，用于请求的权限认证和分发，只有通过认证才会分发。
+4. framework-system-cloud 就是centit-ip的基于spring cloud的实现，负责系统维护工作，和提供基础元素的访问接口。
+5. framework-cloud-client 是 centit-ip-app的spring cloud的实现。
+6. framework-cloud-demo 类似于 centit-ip-app-demo 是基于spring cloud进行业务开发的示例代码，开发人员可以将这个项目复制，并作为业务开发基础。
 
+基于spring cloud的项目和集成平台后端的接口规范是一样的，所以可以用相同的前段代码。eureka可以自动做多个微服务实例的负载均衡，server-gateway的负载均衡可以用nginx来做。所以这个微服务架构是可以处理高并发的业务的。
 
 ## 前段框架
 
+目前前端框架是基于EasyUI做的，项目参见[centit-ui](https://github.com/ndxt/centit-ui)，文档参见[centit-ui文档](../centit-ui)。我们正在开发基于Vue的前段框架，敬请期待。
 
 
 ## 工具与服务等通用模块
