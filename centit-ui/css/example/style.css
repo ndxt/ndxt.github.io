@@ -1,0 +1,480 @@
+body {
+	font-size: 14px;
+	color: #000000;
+}
+
+.header {
+	min-width: 980px;
+}
+
+.example-content .title {
+	min-width: 980px;
+	padding: 30px 0 30px 0;
+	background: url("../../img/example/title-bg.jpg") repeat-x center center;
+	overflow: hidden;
+}
+
+.example-content .title .col-lg-4 {
+	width: 500px;
+	margin: 0 auto 20px auto;
+	padding: 0;
+	float: none;
+}
+
+.example-content .title .col-lg-4 input {
+	height: 40px;
+}
+
+.example-content .title .col-lg-4 button {
+	padding-top: 9px;
+	padding-bottom: 9px;
+}
+
+.example-content .title h4 {
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.example-content .cont {
+	width: 980px;
+	margin: 0 auto;
+	padding: 20px 0 30px 0;
+}
+
+.example-content .cont .left {
+	float: left;
+}
+
+.example-content .cont .left .item-1 {
+	width: 200px;
+	height: 80px;
+	margin-bottom: 20px;
+	padding: 10px;
+	background: url("../../img/example/item-1-bg.png") no-repeat center center;
+}
+
+.example-content .cont .left .item-1 div:FIRST-CHILD {
+	margin-bottom: 15px;
+}
+
+.example-content .cont .left .item-1 div:FIRST-CHILD a {
+	display: block;
+	float: right;
+}
+
+.example-content .cont .left .item-1 div:FIRST-CHILD + div {
+	padding-left: 25px;
+	background: url("../../img/example/item-doc.png") no-repeat left center;
+}
+
+.example-content .cont .left .item-1 div:FIRST-CHILD + div a {
+	width: 11px;
+	height: 11px;
+	margin-top: 5px;
+	float: right;
+	background: url("../../img/example/item-1-cancel.png") no-repeat center center;
+}
+
+.example-content .cont .left .item-2 {
+	position: relative;
+}
+
+.example-content .cont .left .item-2 > div:FIRST-CHILD {
+	width: 200px;
+	height: 80px;
+	margin-bottom: 20px;
+	padding: 10px;
+	background: url("../../img/example/item-2-bg.png") no-repeat center center;
+	cursor: pointer;
+}
+
+.example-content .cont .left .item-2 > div:FIRST-CHILD div {
+	margin-bottom: 15px;
+	padding-left: 25px;
+	background: url("../../img/example/item-doc.png") no-repeat left center;
+}
+
+.example-content .cont .left .item-2 > div:FIRST-CHILD div i {
+	width: 9px;
+	height: 14px;
+	margin-top: 3px;
+	float: right;
+	background: url("../../img/example/item-2-forward.png") no-repeat center center;
+}
+
+/*
+.example-content .cont .left .item-2 .option {
+	width: 400px;
+	height: 300px;
+	padding: 30px;
+	top: -40px;
+	left: 150px;
+	z-index: -1;
+	position: absolute;
+	background: #ffffff;
+	border: 1px solid #999999;
+	border-radius: 5px;
+	box-shadow: 0 0 7px #999999;
+	opacity: 0;
+	filter: alpha(opacity = 0);
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	transition: all 0.5s;
+	-o-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+
+.example-content .cont .left .item-2.on .option {
+	left: 180px;
+	z-index: auto;
+	opacity: 1;
+	filter: alpha(opacity = 100);  
+	-moz-opacity: 1;  
+	-khtml-opacity: 1;  
+}
+*/
+
+.example-content .cont .left .item-3, .example-content .cont .left .item-4, .example-content .cont .left .item-5 {
+	width: 200px;
+	height: 88px;
+	margin-bottom: 20px;
+	padding: 10px 30px 10px 30px;
+	background: url("../../img/example/item-3-4-5-bg.png") no-repeat center center;
+}
+
+.example-content .cont .left .item-3 div {
+	margin-bottom: 10px;
+}
+
+.example-content .cont .left .item-3 a {
+	width: 35px;
+	height: 37px;
+	position: relative;
+	display: block;
+	background: url("../../img/example/item-3-style.png") no-repeat center center;
+}
+
+.example-content .cont .left .item-3 .nw {
+	float: left;
+	background-position: -35px center;
+}
+
+.example-content .cont .left .item-3 .nw:HOVER, .example-content .cont .left .item-3 .nw.on {
+	background-position: left 5px;
+}
+
+.example-content .cont .left .item-3 .bp {
+	float: right;
+	background-position: -70px center;
+}
+
+.example-content .cont .left .item-3 .bp:HOVER, .example-content .cont .left .item-3 .bp.on {
+	background-position: -105px center;
+}
+
+.example-content .cont .left .item-3 .on i {
+	width: 10px;
+	height: 10px;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	display: block;
+	background: url("../../img/example/item-3-tick.png") no-repeat center center;
+}
+
+.example-content .cont .left .item-3 .bp.on i {
+	bottom: 5px;
+}
+
+.example-content .cont .left .item-4 div {
+	margin-bottom: 15px;
+}
+
+.example-content .cont .left .item-4 a {
+	width: 29px;
+	height: 29px;
+	display: block;
+	float: left;
+	background: url("../../img/example/item-4-layout.png") no-repeat center center;
+}
+
+.example-content .cont .left .item-4 .l {
+	background-position: left bottom;
+}
+
+.example-content .cont .left .item-4 .t {
+	margin-left: 26px;
+	background-position: -29px bottom;
+}
+
+.example-content .cont .left .item-4 .lt {
+	margin-left: 26px;
+	background-position: -58px bottom;
+}
+
+.example-content .cont .left .item-4 .l.on {
+	background-position: left top;
+}
+
+.example-content .cont .left .item-4 .t.on {
+	background-position: -29px top;
+}
+
+.example-content .cont .left .item-4 .lt.on {
+	background-position: -58px top;
+}
+
+.example-content .cont .left .item-5 {
+	margin: 0;
+}
+
+.example-content .cont .left .item-5 div {
+	margin-bottom: 10px;
+}
+
+.example-content .cont .left .item-5 span {
+	width: 147px;
+	height: 37px;
+	display: block;
+	background: url("../../img/example/item-5-amount.png") no-repeat center center;
+}
+
+.example-content .cont .right {
+	margin-left: 220px;
+}
+
+.example-content .cont .right .condition {
+	height: 30px;
+	margin-bottom: 10px;
+}
+
+.example-content .cont .right .condition div {
+	width: 275px;
+	margin-right: 10px;
+	padding-left: 30px;
+	position: relative;
+	float: left;
+	cursor: default;
+}
+
+.example-content .cont .right .condition div:FIRST-CHILD {
+	background: url("../../img/example/condition-sort.png") no-repeat left center;
+}
+
+.example-content .cont .right .condition div:FIRST-CHILD + div {
+	background: url("../../img/example/condition-add.png") no-repeat left center;
+}
+
+.example-content .cont .right .condition div label {
+	width: 200px;
+	height: 100%;
+	line-height: 30px;
+	margin: 0;
+	padding-right: 40px;
+	font-weight: normal;
+	background: url("../../img/example/condition-updown.png") no-repeat 175px center;
+	border-right: 1px solid #e0e0e0;
+}
+
+.example-content .cont .right .condition div ul {
+	margin: 0 10px 0 10px;
+	right: 0;
+	left: 0;
+	z-index: 3;
+	position: absolute;
+	display: none;
+	background: #ffffff;
+	border: 1px solid #e0e0e0;
+	box-shadow: 0 1px 5px #999999;
+}
+
+.example-content .cont .right .condition div ul li a {
+	padding: 0 5px 0 5px;
+	display: block;
+	color: #333333;
+}
+
+.example-content .cont .right .condition div ul li:HOVER a {
+	color: #ffffff;
+	background: #3399ff;
+}
+
+.example-content .cont .right .data {
+	background: #f5f5f5;
+	border: 1px solid #e0e0e0;
+	border-radius: 3px;
+}
+
+.example-content .cont .right .data > div {
+	height: 170px;
+	padding: 15px 25px 15px 25px;
+	position: relative;
+	border-top: 1px solid #e0e0e0;
+}
+
+.example-content .cont .right .data > div:FIRST-CHILD {
+	border-top: none;
+}
+
+.example-content .cont .right .data > div .theme {
+	width: 184px;
+	height: 139px;
+	float: left;
+}
+
+.example-content .cont .right .data > div .theme > img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.example-content .cont .right .data > div .theme > div {
+	padding: 15px;
+	top: 15px;
+	left: 209px;
+	z-index: 3;
+	position: absolute;
+	display: none;
+	background: #333333;
+}
+
+.example-content .cont .right .data > div .theme > div div {
+	height: 29px;
+	margin-top: 15px;
+}
+
+.example-content .cont .right .data > div .theme > div div a {
+	width: 29px;
+	height: 29px;
+	margin-right: 5px;
+	position: relative;
+	display: block;
+	float: left;
+	background: url("../../img/example/data-theme.png") no-repeat left center;
+}
+
+.example-content .cont .right .data > div .theme > div div a + a {
+	background-position: -29px center;
+}
+
+.example-content .cont .right .data > div .theme > div div a + a + a {
+	background-position: -58px center;
+}
+
+.example-content .cont .right .data > div .theme > div div a + a + a + a {
+	background-position: -87px center;
+}
+
+.example-content .cont .right .data > div .theme > div div a + a + a + a + a {
+	background-position: -116px center;
+}
+
+.example-content .cont .right .data > div .theme > div div a.on i {
+	width: 10px;
+	height: 10px;
+	right: -3px;
+	bottom: -3px;
+	position: absolute;
+	display: block;
+	background: url("../../img/example/item-3-tick.png") no-repeat center center;
+}
+
+.example-content .cont .right .data > div .item {
+	margin-left: 30px;
+	float: left;
+}
+
+.example-content .cont .right .data > div .item div h4 {
+	margin: 0 0 0 10px;
+	float: left;
+	font-weight: bold;
+	color: #ff7b10;
+}
+
+.example-content .cont .right .data > div .item div {
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+
+.example-content .cont .right .data > div .item div h4:FIRST-CHILD {
+	margin: 0 10px 0 0;
+	color: #000000;
+}
+
+.example-content .cont .right .data > div .item div a {
+	width: 18px;
+	height: 20px;
+	display: block;
+	float: left;
+	background: url("../../img/example/data-star.png") no-repeat left center;
+}
+
+.example-content .cont .right .data > div .item div a.on {
+	background-position: -19px center;
+}
+
+.example-content .cont .right .data > div .item ul {
+	width: 493px;
+	margin: 0;
+	overflow: hidden;
+}
+
+.example-content .cont .right .data > div .item ul li {
+	width: 50%;
+	margin-bottom: 15px;
+	float: left;
+}
+
+.example-content .cont .right .data > div .item ul li label {
+	margin: 0;
+	float: left;
+	font-weight: normal;
+}
+
+.example-content .cont .right .data > div .item ul li span {
+	margin-left: 5px;
+	float: left;
+	color: #666666;
+}
+
+.example-content .cont .right .data > div .item ul li span.time {
+	color: #64a3d9;
+}
+
+.example-content .cont .right .data > div .item ul li a {
+	width: 104px;
+	height: 33px;
+	line-height: 33px;
+	display: block;
+	font-size: 12px;
+	color: #666666;
+	background: url("../../img/example/data-praise-bg.png") no-repeat center center;
+}
+
+.example-content .cont .right .data > div .item ul li a i {
+	width: 22px;
+	height: 100%;
+	margin: 0 15px 0 15px;
+	display: block;
+	float: left;
+	background: url("../../img/example/data-heart.png") no-repeat left center;
+}
+
+.example-content .cont .right .data > div .item ul li a.on i {
+	background-position: -22px center;
+}
+
+.example-content .cont .right .paging {
+	text-align: right;
+}
+
+.example-content .cont .right .paging .pagination {
+	margin: 30px 0 0 0;
+}
+
+.footer {
+	min-width: 980px;
+}

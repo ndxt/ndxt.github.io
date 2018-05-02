@@ -1,0 +1,25 @@
+<p class="codeIgnore"><code>beginEdit</code>方法开始编辑节点</p>
+<div class="easyui-panel" style="margin-bottom: 10px;" id="info_tree_edit"></div>
+<ul class="easyui-tree" id="tree_edit" url="modules/components/trees/datas/menus.json"></ul>
+
+<script>
+	function logTreeEditInfo(msg) {
+		$('#info_tree_edit').panel({
+			content: msg
+		});
+	}
+	$('#tree_edit').tree({
+		onClick: function(node) {
+			//<!-- @reg:beginEdit=tooltip{content:'调用<code>beginEdit</code>方法'} -->
+			$(this).tree('beginEdit', node.target);
+		},
+		
+		onAfterEdit: function(node) {
+			logTreeEditInfo('修改成<b>'+node.text+'</b>');
+		},
+		
+		onBeforeEdit: function(node) {
+			logTreeEditInfo('修改<b>'+node.text+'</b>');
+		}
+	});
+</script>

@@ -1,0 +1,96 @@
+/*HEADER*/
+body > .layout-panel-north {
+    background: url(images/img/header-bg1.png) repeat-x;
+}
+#header {
+    height: 65px;
+
+    border: none;
+    background: url(images/img/header-bg.png) no-repeat;
+}
+
+#header .title {
+ 	height: 42px; 
+	line-height: 42px;
+	width: 346px;
+	padding-left: 40px;
+	position:absolute;
+	top: 12px;
+	left: 30px;
+  	color: #fff;
+  	font-size: 26px;
+  	font-weight: bold;
+}
+
+#header .sub-title {
+  left: 345px;
+  font-size: 15px;
+  top: 16px;
+}
+
+#header .header-menu {
+	margin-top: 9px;
+	float: right;
+}
+
+#header .header-menu a {
+	width: 45px;
+	height: 45px;
+	margin-right: 20px;
+	display: block;
+	float: left;
+	background: url(images/img/header-yw.png) no-repeat;
+}
+
+#header .header-menu a + a {
+	background: url(images/img/header-jk.png) no-repeat;
+}
+
+#header .header-menu a + a + a {
+	background: url(images/img/header-zc.png) no-repeat;
+}
+
+#header .header-menu a + a + a + a {
+	background: url(images/img/header-erp.png) no-repeat;
+}
+
+#header .header-menu a + a + a + a + a {
+	background: url(images/img/header-bi.png) no-repeat;
+}
+
+#header .header-menu a + a + a + a + a + a {
+	background: url(images/img/header-pt.png) no-repeat;
+}
+
+#header .header-menu span {
+	float: right;
+	color: #ffffff;
+}
+
+body.full-screen #header .title {
+    height: 33px;
+    line-height: 33px;
+    top: 0;
+    font-size: 22px;
+    font-weight: bold;
+    background: none;
+    text-indent: 0;
+}
+
+/*HEADER > 工具栏*/
+#header .toolbar {
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
+
+    height: 28px;
+}
+#header .toolbar .panel-body{
+    padding: 0;
+    background: transparent;
+}
+
+/*HEADER > 工具栏 > SKIN*/
+#toolbar_skin .skin {
+    border-radius: 2px;
+}

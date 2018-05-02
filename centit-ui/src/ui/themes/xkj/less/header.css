@@ -1,0 +1,73 @@
+/*HEADER*/
+body > .layout-panel-north {
+}
+
+#header {
+    height: 139px;
+    position: relative;
+    border: none;
+    overflow: hidden;
+}
+
+#header i {
+	width: 178px;
+	height: 100%;
+	top: 0;
+	position: absolute;
+	display: block;
+}
+
+#header .i-l {
+	left: 0;
+	background: url("images/q_07.png") no-repeat;
+}
+
+#header .i-r {
+	right: 0;
+	background: url("images/q_12.png") no-repeat;
+}
+
+#header .d-c {
+	height: 100%;
+	margin: 0 178px 0 178px;
+	background: url("images/q_10.png") repeat-x;
+}
+
+#header .logo {
+	width: 339px;
+	height: 34px;
+	margin: -17px 0 -17px 0;
+	top: 50%;
+	left: 40px;
+	font-size: 30px;
+	color: #000;
+	position: absolute;
+	background: url("images/logo.png") no-repeat;
+}
+
+/*HEADER > 工具栏*/
+#header .toolbar {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+	margin: -13px 0 -13px 0;
+    height: 26px;
+}
+#header .toolbar .panel-body{
+    padding: 0;
+    background: transparent;
+    text-align: right;
+}
+
+#header .l-btn {
+	color: #666666;
+}
+
+#header .l-btn:HOVER {
+	color: #000000;
+}
+
+/*HEADER > 工具栏 > SKIN*/
+#toolbar_skin .skin {
+    border-radius: 2px;
+}

@@ -1,0 +1,59 @@
+<p class="codeIgnore">点击复选框或行以选择或取消选择</p>
+<p class="codeIgnore title"></p>
+<div style="margin-bottom: 10px;">
+	选择模式：<select onchange="$('#basic-table-checkbox-t').datagrid({singleSelect:(this.value==0)});" style="margin-bottom: 10px;">
+		<option value="0">一行</option>
+		<option value="1">多行</option>
+	</select>
+	<br />
+	<!-- @reg:selectOnCheck=tooltip{content:'为true时，单击复选框时就会选中行，否则将不选中行。'} -->
+	选择复选框：<input type="checkbox" onchange="$('#basic-table-checkbox-t').datagrid({selectOnCheck:$(this).is(':checked')});" checked="checked" style="margin-bottom: 10px;" />
+	<br />
+	<!-- @reg:checkOnSelect=tooltip{content:'为true时，单击行时复选框就会被选中或取消，否则点击复选框时才会被选中或取消。'} -->
+	选择行：<input type="checkbox" onchange="$('#basic-table-checkbox-t').datagrid({checkOnSelect:$(this).is(':checked')});" checked="checked" />
+</div>
+<table id="basic-table-checkbox-t" style="width: 100%; height: 200px;"></table>
+<script type="text/javascript">
+	$(function() {
+		$("#basic-table-checkbox-t").datagrid({
+			title : "表格复选框",
+			singleSelect : true,
+			collapsible : true,
+			url : "modules/tables/basic-table/data/basic-table.json",
+			method : "get",
+			columns : [[{
+				field : "ck",
+				//<!-- @reg:checkbox=tooltip{content:'为true时，则显示复选框'} -->
+				checkbox : true,
+			}, {
+				field : "itemid",
+				title : "Item ID",
+				width : 100
+			}, {
+				field : "productid",
+				title : "Product",
+				width : 100
+			}, {
+				field : "listprice",
+				title : "List Price",
+				width : 100,
+				align : "right"
+			}, {
+				field : "unitcost",
+				title : "Unit Cost",
+				width : 100,
+				align : "right"
+			}, {
+				field : "attr1",
+				title : "Attribute",
+				width : 210,
+				align : "right"
+			}, {
+				field : "status",
+				title : "Status",
+				width : 60,
+				align : "center"
+			}]]
+		});
+	});
+</script>

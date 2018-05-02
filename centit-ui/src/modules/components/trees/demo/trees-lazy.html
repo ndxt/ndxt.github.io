@@ -1,0 +1,77 @@
+<!--id:trees_lazy -->
+<p class="codeIgnore">和异步加载有所不同，懒加载是一次性读完<b>所有数据</b>，但是并不渲染全部节点。点击后才会去渲染<b>下一级</b>节点</p>
+<div class="easyui-panel" id="panel_9a0347c1ba7dc347" style="margin-bottom: 10px;"></div>
+<!-- @reg:loadFilter=tooltip{content:'<code>loadFilter</code>会在获取数据后、生成树前调用，可以在此方法里设置、过滤数据'} -->
+<ul class="easyui-tree" data-options="url:'modules/components/trees/datas/menus.lazy.json',method:'get',loadFilter:myLoadFilter_9a0347c1ba7dc347"></ul>
+<script>
+	function myLoadFilter_9a0347c1ba7dc347(data, parent){
+		var state = $.data(this, 'tree');
+		
+	    function setData(){
+	    	var serno = 1;
+	        var todo = [];
+	        for(var i=0; i<data.length; i++){
+	            todo.push(data[i]);
+	        }
+//<!-- @reg:while=tooltip{content:'遍历树形结构数据除了使用递归法，也可以使用这种方法'} -->
+	        while(todo.length){
+	            var node = todo.shift();
+	            if (node.id == undefined){
+	            	node.id = '_node_' + (serno++);
+	            }
+	            if (node.children){
+	                node.state = 'closed';
+	                node.children1 = node.children;
+	                node.children = undefined;
+//<!-- @reg:concat=tooltip{content:'递归法会优先遍历完一个节点，而这种方法会优先遍历同级节点'} -->
+	                todo = todo.concat(node.children1);
+	            }
+	        }
+	        state.tdata = data;
+	    }
+//<!-- @reg:find=tooltip{content:'根据id查找节点，这里的写法并不是最优写法，可以用map替代'} -->
+	    function find(id){
+	    	var data = state.tdata;
+	    	var cc = [data];
+	    	while(cc.length){
+	    		var c = cc.shift();
+	    		for(var i=0; i<c.length; i++){
+	    			var node = c[i];
+	    			if (node.id == id){
+	    				return node;
+	    			} else if (node.children1){
+	    				cc.push(node.children1);
+	    			}
+	    		}
+	    	}
+	    	return null;
+	    }
+	    
+	    setData();
+	    
+	    var t = $(this);
+	    var opts = t.tree('options');
+//<!-- @reg:onBeforeExpand=tooltip{content:'在展开节点前调用此方法'} -->
+	    opts.onBeforeExpand = function(node){
+    		var n = find(node.id);
+    		if (n.children && n.children.length){return}
+	    	if (n.children1){
+	    		var filter = opts.loadFilter;
+//<!-- @reg:loadFilter=tooltip{content:'注意此处将options里的loadFilter还原'} -->
+	    		opts.loadFilter = function(data){return data;};
+				
+				$('#panel_9a0347c1ba7dc347').panel({
+					content: '生成<b>'+node.text+'</b>的子节点'
+				});
+//<!-- @reg:append=tooltip{content:'动态添加子节点'} -->
+	    		t.tree('append',{
+	    			parent:node.target,
+	    			data:n.children1
+	    		});
+	    		opts.loadFilter = filter;
+	    		n.children = n.children1;
+	    	}
+	    };
+		return data;
+	}
+</script>

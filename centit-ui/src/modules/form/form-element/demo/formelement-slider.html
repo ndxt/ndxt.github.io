@@ -1,0 +1,41 @@
+<style>
+	.slider-methods{padding:5px;margin-right:5px;color: #444;background: #fafafa;border: 1px solid #bbb;border-radius:5px}
+</style>
+<p class="codeIgnore"><code>slider</code>滑动条允许用户从一个有限的范围内选择一个数值。当滑块控件沿着轨道移动的时候，将会显示一个提示来表示当前值。用户可以通过设置其属性自定义滑块</p>
+<b>通过input标签来创建，也允许使用<code>div</code>创建滚动条，但是'value'属性是无效的。</b><br/><br/>
+<!-- @reg:showTip=tooltip{content:'定义是否显示值信息提示'} -->
+<!-- @reg:rule=tooltip{content:'显示标签旁边的滑块,'|' — 只显示一行'} -->
+<input class="easyui-slider" value="12" id="slider"  style="width:300px" data-options="showTip:true,rule:[0,'|','|',25,'|',50,'|',75,'|',100]" /><br/><br/>  
+<a href="javascript:void(0)" class="slider-methods" onclick="sliderresize()">设置slider的大小</a>
+<a href="javascript:void(0)" class="slider-methods" onclick="slidergetValue()">获取value值</a>
+<a href="javascript:void(0)" class="slider-methods" onclick="sliderreset()">重置slider</a>
+<a href="javascript:void(0)" class="slider-methods" onclick="sliderenable()">启用slider</a>
+<a href="javascript:void(0)" class="slider-methods" onclick="sliderdisable()">禁用slider</a>
+<script>
+function sliderresize(){
+	//<!-- @reg:resize=tooltip{content:'给slider添加<code>resize方法</code>来设置slider的大小'} -->
+		$("#slider").slider('resize',{width:100,height:100});
+	}
+	
+function slidergetValue(){
+	//<!-- @reg:getValue=tooltip{content:'给slider添加<code>getValue方法</code>来获取slider的值'} -->
+		var val=$("#slider").slider('getValue');
+		alert(val);
+		
+	}
+
+function sliderreset(){
+	//<!-- @reg:reset=tooltip{content:'给slider添加<code>reset方法</code>来重置slider'} -->
+		$("#slider").slider('reset');
+	}
+	
+function sliderenable(){
+	//<!-- @reg:enable=tooltip{content:'给slider添加<code>enable方法</code>来启用slider'} -->
+		$("#slider").slider('enable');
+	}
+	
+function sliderdisable(){
+	//<!-- @reg:disable=tooltip{content:'给slider添加<code>disable方法</code>来禁用slider'} -->
+		$("#slider").slider('disable');
+	}
+</script>

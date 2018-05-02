@@ -1,0 +1,46 @@
+<style>
+	.validatebox{padding:5px 20px;color:blue;font-weight:bold;}
+	p{padding:1em 2em;line-height:180%}
+	td{padding:10px}
+	.easyui-linkbutton{padding:5px 15px}
+</style>
+<p class="codeIgnore">validatebox(验证框)的设计目的是为了验证输入的表单字段是否有效。如果用户输入了无效的值，它将会更改输入框的背景颜色，并且显示警告图标和提示信息。该验证框可以结合form(表单)插件并防止表单重复提交。 
+
+</p>
+<form id="felement-validatebox" method="post">
+	<table cellpadding="5">
+	    		<tr>
+	    			<td class="validatebox">必填验证:</td>
+					<!-- @reg:required=tooltip{content:'设置输入框为必填内容'} -->
+	    			<td><input class="easyui-textbox" type="text" name="name" data-options="required:true"></input></td>
+	    		</tr>
+	    		<tr>
+	    			<td class="validatebox">邮箱验证:</td>
+					<!-- @reg:email=tooltip{content:'验证输入内容是否为Email'} -->
+	    			<td><input class="easyui-textbox" type="text" name="email" data-options="required:true,validType:['email','length[0,20]']"></input></td>
+	    		</tr>
+	    		<tr>
+	    			<td class="validatebox">url验证</td>
+					<!-- @reg:url=tooltip{content:'验证输入内容是否为url'} -->
+	    			<td><input class="easyui-textbox" data-options="required:true,validType:'url'"></td>
+	    		</tr>
+	    		<tr>
+	    			<td class="validatebox">密码一致性验证</td>
+	    			<td>
+	    				<label>密码&nbsp;</label><input id="pwd" name="pwd" type="password" class="easyui-textbox">
+						<!-- @reg:equals['#pwd']=tooltip{content:'验证输入内容是否与#pwd元素的的输入内容一直'} -->
+						<label>重复密码&nbsp;</label><input id="rpwd" name="rpwd" type="password" class="easyui-textbox" validType="equals['#pwd']">
+					</td>
+	    		</tr>
+	    </table>
+</form>
+<script>
+$.extend($.fn.validatebox.defaults.rules, {
+    equals: {
+        validator: function(value,param){
+            return value == $(param[0]).val();
+        },
+        message: '两次密码不一致！'
+    }
+});
+</script>

@@ -1,0 +1,34 @@
+<p class="codeIgnore">通过调用<b>messager</b>的<code>confirm</code>和<code>prompt</code>方法，创建不同的消息提示框，有<b>确认消息</b>和<b>输入确认</b>两种类型</p>
+
+<p class="codeIgnore title">互动消息</p>
+<!-- 确认消息 -->
+<!-- @reg:onclick=tooltip{content:'设置<code>onclick=\'alert()\'</code>，得到不同类型的确认方式'} -->
+<a href="#" class="easyui-linkbutton" onclick="confirm1();">确认消息</a>
+
+<!-- 输入确认-->
+<a href="#" class="easyui-linkbutton" onclick="prompt1()">输入确认</a>
+<p class="codeIgnore br"></p>
+
+
+    <script>
+        function confirm1(){
+//<!-- @reg:我的消息=tooltip{content:'在这里设置消息框标题'} -->
+//<!-- @reg:确认消息吗?=tooltip{content:'在这里设置提示内容'} -->
+//<!-- @reg:function(r)=tooltip{content:'<code>fn(r)</code>：当用户点击按钮后触发的回调函数，如果点击OK则给回调函数传<code>true</code>,如果点击cancel则传<code>false</code>。'} -->
+            $.messager.confirm('我的消息', '确认消息吗?', function(r){
+                if (r){
+//<!-- @reg:已经确定:=tooltip{content:'在这里显示确定的内容'} -->            	
+                    alert('已经确定: '+r);
+                }
+            });
+        }
+        function prompt1(){
+//<!-- @reg:function(r)=tooltip{content:'<code>fn(val)</code>：用户点击按钮后的回调函，参数是用户输入的内容。'} -->  
+            $.messager.prompt('我的消息', '请输入:', function(r){
+                if (r){
+//<!-- @reg:'您输入了: '=tooltip{content:'在这里显示输入的内容'} -->       
+                    alert('您输入了: '+r);
+                }
+            });
+        }
+    </script>

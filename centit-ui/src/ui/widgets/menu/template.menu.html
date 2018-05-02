@@ -1,0 +1,14 @@
+<div id="menu" class="easyui-accordion" name="{{id}}">
+    {{#dashboard}}
+    <div title="{{text}}" data-options="iconCls:'{{icon}}', collapsible: false, cls: 'dashboard'">
+    </div>
+    {{/dashboard}}
+
+    {{#menus}}
+    <div title="{{text}}" data-options="iconCls:'{{icon}}',cls:'{{id}}',selected: {{selected}}">
+        <ul class="easyui-tree">
+        </ul>
+    </div>
+    {{/menus}}
+</div>
+

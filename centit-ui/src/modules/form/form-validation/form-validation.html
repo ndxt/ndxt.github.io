@@ -1,0 +1,27 @@
+<ul class="example-list" id="formvalidation-example-list">
+	<li>
+		<a href="#formvalidation-basic" data-url="modules/form/form-validation/demo/formvalidation-basic.html">基础验证</a>
+	</li>
+	<li>
+		<a href="#formvalidation-methods" data-url="modules/form/form-validation/demo/formvalidation-methods.html">方法</a>
+	</li>
+</ul>
+
+<script>
+	requirejs([
+		'widgets/example/widget.example',
+		'plugins/prettify/prettify'
+		], function(create, datas) {
+			
+		var list = $('#formvalidation-example-list');
+		
+		create(list, function(container) {
+			prettyPrint();
+			
+			$.parser.parse(container);
+			
+			$("#menu_tab_Form").niceScroll({cursorcolor:"#BCBCBC"});
+		});
+	});
+	
+</script>

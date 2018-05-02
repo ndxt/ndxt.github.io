@@ -1,0 +1,84 @@
+<!DOCTYPE html><html><head><title>Ajax</title><meta charset='utf-8'><link href='../marxico/themes/marxico.css' rel='stylesheet'></head><body><div id='preview-contents' class='note-content'>
+                        <div id="wmd-preview" class="preview-content"></div>
+                    <div id="wmd-preview-section-24" class="wmd-preview-section preview-content">
+
+</div><div id="wmd-preview-section-25" class="wmd-preview-section preview-content">
+
+<h1 id="ajax">Ajax</h1>
+
+<hr>
+
+</div><div id="wmd-preview-section-26" class="wmd-preview-section preview-content">
+
+<h2 id="1promise">1、Promise</h2>
+
+<p><em>promise</em> 规范非常非常适合异步调用，让我们可以不用一层一层地嵌套回调函数。</p>
+
+<p>以前ajax写法：</p>
+
+</div><div id="wmd-preview-section-27" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint hljs-dark"><code class="hljs haskell"><div><div><span class="hljs-title">ajax</span>(url, {</div><div>    success: successCallback(<span class="hljs-typedef"><span class="hljs-keyword">data</span>) <span class="hljs-container">{</span></span></div><div>        // 数据处理</div><div>    },</div><br><div>    error: errorCallback(<span class="hljs-typedef"><span class="hljs-keyword">data</span>) <span class="hljs-container">{</span></span></div><div>        // 错误处理</div><div>    }</div><div>});</div></div></code></pre>
+
+<p>用 <em>promise</em> 改造后的写法：</p>
+
+</div><div id="wmd-preview-section-28" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint hljs-dark"><code class="hljs actionscript"><div><div>ajax(url)</div><div>    .then(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> </span>{</div><div>        <span class="hljs-comment">// 数据处理</span></div><div>    })</div><div>    .<span class="hljs-keyword">catch</span>(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data {</span></span></div><div>        <span class="hljs-comment">// 错误处理</span></div><div>    });</div><br></div></code></pre>
+
+<p>更加详细的介绍 <a href="http://www.html5rocks.com/zh/tutorials/es6/promises/" target="_blank">戳这里</a></p>
+
+<hr>
+
+</div><div id="wmd-preview-section-29" class="wmd-preview-section preview-content">
+
+<h2 id="2ajaxajaxurl-options">2、Ajax.ajax(url, options)</h2>
+
+<p>获取 <strong>Ajax</strong> 模块非常简单</p>
+
+</div><div id="wmd-preview-section-30" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint hljs-dark"><code class="hljs coffeescript"><div><div><span class="hljs-reserved">var</span> Ajax = <span class="hljs-built_in">require</span>(<span class="hljs-string">'core/ajax'</span>);</div></div></code></pre>
+
+<p>接下来就可以使用 <strong>Ajax</strong> 模块了，第一个要介绍的方法就是最基本的 <em>ajax(url, options)</em> 方法：</p>
+
+<table>
+<thead>
+<tr>
+  <th align="center">参数</th>
+  <th align="center">类型</th>
+  <th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">url</td>
+  <td align="center">String</td>
+  <td align="center">请求url地址</td>
+</tr>
+<tr>
+  <td align="center">options</td>
+  <td align="center">Object</td>
+  <td align="center">请求参数配置，完全和$.ajax(url, options)中的配置一致</td>
+</tr>
+</tbody></table>
+
+
+</div><div id="wmd-preview-section-31" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint hljs-dark"><code class="hljs php"><div><div>Ajax.ajax(url)</div><div>    .then(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> </span>{</div><div>        alert(<span class="hljs-string">'成功'</span>);</div><div>    })</div><div>    .<span class="hljs-keyword">catch</span>(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data) {</span></span></div><div>        alert<span class="hljs-params">(<span class="hljs-string">'错误'</span>)</span>;</div><div>    });</div><br></div></code></pre>
+
+<hr>
+
+</div><div id="wmd-preview-section-32" class="wmd-preview-section preview-content">
+
+<h2 id="3ajaxgetjsonurl-options">3、Ajax.getJSON(url, options)</h2>
+
+<p>和 <em>Ajax.ajax()</em> 参数用法一样，只是 <em>getJSON()</em> 方法指定返回的是 <strong>JSON</strong> 数据</p>
+
+<hr>
+
+</div><div id="wmd-preview-section-33" class="wmd-preview-section preview-content">
+
+<h2 id="4ajaxgethtmlurl-options">4、Ajax.getHTML(url, options)</h2>
+
+<p>同样，该方法指定返回 <strong>HTML</strong> 文本</p></div><div id="wmd-preview-section-footnotes" class="preview-content"></div></div></body></html>

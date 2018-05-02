@@ -1,0 +1,60 @@
+<ul class="example-list" id="formelement-example-list">
+	<li>
+		<a href="#formelement-basic" data-url="modules/form/form-element/demo/formelement-basic.html">基础表单</a>
+	</li>
+	<li>
+		<a href="#formelement-textbox" data-url="modules/form/form-element/demo/formelement-textbox.html">textbox元素</a>
+	</li>
+	<li>
+		<a href="#formelement-combo" data-url="modules/form/form-element/demo/formelement-combo.html">combo元素</a>
+	</li>
+	<li>
+		<a href="#formelement-numberbox" data-url="modules/form/form-element/demo/formelement-numberbox.html">numberbox元素</a>
+	</li>
+	<li>
+		<a href="#formelement-datebox" data-url="modules/form/form-element/demo/formelement-datebox.html">datebox元素</a>
+	</li>
+	<li>
+		<a href="#formelement-datetimebox" data-url="modules/form/form-element/demo/formelement-datetimebox.html">datetimebox元素</a>
+	</li>
+	<li>
+		<a href="#formelement-datetimespinner" data-url="modules/form/form-element/demo/formelement-datetimespinner.html">datetimespinner元素</a>
+	</li>
+	<li>
+		<a href="#formelement-calender" data-url="modules/form/form-element/demo/formelement-calendar.html">calender元素</a>
+	</li>
+	<li>
+		<a href="#formelement-spinner" data-url="modules/form/form-element/demo/formelement-spinner.html">spinner元素</a>
+	</li>
+	<li>
+		<a href="#formelement-numberspinner" data-url="modules/form/form-element/demo/formelement-numberspinner.html">numberspinner元素</a>
+	</li>
+	<li>
+		<a href="#formelement-timespinner" data-url="modules/form/form-element/demo/formelement-timespinner.html">timespinner元素</a>
+	</li>
+	<li>
+		<a href="#formelement-slider" data-url="modules/form/form-element/demo/formelement-slider.html">slider元素</a>
+	</li>
+	<li>
+		<a href="#formelement-fliebox" data-url="modules/form/form-element/demo/formelement-filebox.html">fliebox元素</a>
+	</li>
+</ul>
+
+<script>
+	requirejs([
+		'widgets/example/widget.example',
+		'plugins/prettify/prettify'
+		], function(create, datas) {
+			
+		var list = $('#formelement-example-list');
+		
+		create(list, function(container) {
+			prettyPrint();
+			
+			$.parser.parse(container);
+			
+			$("#menu_tab_Form").niceScroll({cursorcolor:"#BCBCBC"});
+		});
+	});
+	
+</script>

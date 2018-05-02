@@ -1,0 +1,20 @@
+{"total":7,"rows":[
+	{"name":"姓名","value":"比尔史密斯","group":"基本信息","editor":"text"},
+	{"name":"地址","value":"","group":"基本信息","editor":"text"},
+	{"name":"年龄","value":"40","group":"基本信息","editor":"numberbox"},
+	{"name":"生日","value":"01/02/2012","group":"基本信息","editor":"datebox"},
+	{"name":"电话","value":"123-456-7890","group":"基本信息","editor":"text"},
+	{"name":"Email","value":"bill@gmail.com","group":"商业信息","editor":{
+		"type":"validatebox",
+		"options":{
+			"validType":"email"
+		}
+	}},
+	{"name":"是否经常光顾","value":"false","group":"商业信息","editor":{
+		"type":"checkbox",
+		"options":{
+			"on":true,
+			"off":false
+		}
+	}}
+]}

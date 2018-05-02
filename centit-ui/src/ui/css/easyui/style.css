@@ -1,0 +1,294 @@
+@charset "utf-8";
+.tooltip {
+    filter: none;
+}
+
+a {
+    outline: none!important;
+    text-decoration: none!important;
+}
+
+.panel-body {
+  position: relative;
+}
+
+/*内容*/
+#menu_tab > .tabs-panels > .panel > .panel-body {
+	background: #fff;
+}
+
+/*表格*/
+.datagrid {
+	margin: 0 auto;
+}
+.datagrid .datagrid-pager {
+	overflow: hidden;
+}
+/*
+.datagrid-sort-desc .datagrid-sort-icon {
+  padding: 0;
+}
+.datagrid-sort-asc .datagrid-sort-icon {
+  padding: 0;
+}
+*/
+
+.datagrid-btable tr.ban {
+	color: #dbdbdb;
+}
+.datagrid-btable tr.mask {
+	font-weight: bold;
+}
+
+.datagrid-btable tr.datagrid-row-over, .datagrid-btable tr.datagrid-row-selected {
+	color: #000;
+}
+
+.temp-toolbar {
+	display: none;
+}
+
+/*搜索栏*/
+.search .search-body {
+	padding: 5px 10px; margin-bottom: 10px;
+}
+
+.search .search-item {
+	float: left;
+	margin: 5px 10px 5px 0;
+	height: 30px;
+  	line-height: 30px;
+}
+
+.search-item label {
+	float:left;
+	display: inline-block;
+    text-align: right;
+	min-width: 60px;
+}
+.search-item p {
+	float:left;
+}
+.search-item label:after {
+	content: "："
+}
+
+.search-item input[type=text], .search-item select {
+	width: 153px;
+}
+
+.search-item input[type=radio], .search-item input[type=checkbox] {
+	float:left;
+	height:30px;
+	vertical-align: text-top;
+}
+
+.search .btn-search,.search .btn-reset{
+	margin-top: 8px;
+}
+
+/*表单*/
+.centit.form,  .centit.form * {
+	  box-sizing: border-box;
+}
+.centit.form,  .centit.form .textbox.textbox-readonly {
+	width: 100%!important;
+}
+.centit.form {
+	padding: 10px;
+}
+
+.centit.form .required.field > label:after {
+	content: " *";
+	color: rgb(255,114,114);
+}
+.centit.form .required.field > span.error {
+	color: rgb(255,114,114);
+	position: absolute; top: 0; right: 20px;
+}
+
+.centit.form .header {
+	font-size: 14px;
+	margin: 10px 0;
+	line-height: 24px;
+	color: #666;
+	clear: both;
+}
+.centit.form .header:first-child {
+	margin-top: 0;
+}
+
+.centit.form .dividing {
+	border-bottom: 1px solid #95B8E7;
+}
+
+.centit.form .field, .centit.form .fields {
+	clear: both;
+}
+.centit.form .field {
+	padding-right: 5px;
+	margin: 0 0 20px;
+	position: relative;
+}
+.centit.form .field .radio, .centit.form .field .checkbox{
+	margin-top: 23px;
+  	padding: 0 5px;
+}
+.centit.form .fields .field {
+	clear: none;
+	float: left;
+	margin: 0 0 20px;
+	padding: 0 5px;
+}
+.centit.form .fields .field:first-child {
+	padding-left: 0;
+
+}
+
+.centit.form .two.fields>.field, .centit.form .two.fields>.fields {
+	width: 50%;
+}
+.centit.form .three.fields>.field, .centit.form .three.fields>.fields {
+	width: 33%;
+}
+.centit.form .four.fields>.field, .centit.form .four.fields>.fields {
+	width: 25%;
+}
+
+.centit.form .field > label{
+	display: block;
+	margin: 0 0 5px;
+	color: #666;
+	font-weight: 700;
+	text-transform: none;
+}
+
+.centit.form .fields > label{
+  display: block;
+  margin: 15px 0 5px;
+  color: #666;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.centit.form input[type=text], select {
+	width: 100%; height: 30px; line-height: 26px;
+	vertical-align: top;
+
+	outline: none;
+	margin: 0;
+	color: #333;
+}
+.centit.form input[readonly], .centit.form textarea[readonly] {
+	color: #383838;
+}
+.textbox.textbox-readonly {
+	border-color: #d5d5d5;
+}
+
+.centit.form .easyui-textbox, .centit.form .easyui-combobox {
+	width: 100%; height: 30px; line-height: 30px;
+}
+
+.centit.form textarea {
+	overflow: hidden;
+}
+
+.centit.form input[type=radio], .centit.form input[type=checkbox] {
+	vertical-align: text-top;
+}
+
+/*打印样式*/
+form.centit.print .fields,
+form.centit.print .field,
+form.centit.print .fields .field,
+form.centit.print label {
+	margin: 0; padding: 0;
+	overflow: hidden;
+	border: 1px solid #666;
+}
+
+/* Field */
+form.centit.print .fields, form.centit.print > .field {
+	border-width: 1px 1px 0 1px;
+}
+form.centit.print .fields:last-child,
+form.centit.print > .field:last-child {
+	border-width: 1px;
+}
+form.centit.print .fields.last,
+form.centit.print > .field.last {
+	border-width: 1px;
+}
+
+form.centit.print .fields .field {
+	border-width: 0 1px 0 0;
+}
+form.centit.print .fields .field:last-child{
+	border-width: 0;
+}
+form.centit.print .fields .field.last  {
+	border-width: 0;
+}
+
+/* Label */
+form.centit.print .field label {
+	float: left;
+	margin: 0 1% 0 0;
+	padding: 5px;
+	text-align: right;
+
+	width: 30%;
+	line-height: 31px;
+
+	border-width: 0 1px 0 0;
+
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+form.centit.print.p46 .field label {
+	width: 40%;
+}
+form.centit.print.p55 .field label {
+	width: 50%;
+}
+
+form.centit.print .field label:after {
+	content: '：';
+}
+
+/* INPUT */
+form.centit.print input[type=text],
+form.centit.print input[class^=easyui],
+form.centit.print select
+form.centit.print textarea {
+	display: block;
+	width: 68%;
+	margin-left: 31%;
+}
+form.centit.print.p46 input[type=text],
+form.centit.print.p46 input[class^=easyui],
+form.centit.print.p46 select
+form.centit.print.p46 textarea {
+	width: 58%;
+	margin-left: 41%;
+}
+form.centit.print.p55 input[type=text],
+form.centit.print.p55 input[class^=easyui],
+form.centit.print.p55 select
+form.centit.print.p55 textarea {
+	width: 48%;
+	margin-left: 51%;
+}
+form.centit.print span.textbox {
+	margin-top: 5px;
+}
+form.centit.print span.textbox.textbox-readonly {
+	border-color: transparent;
+}
+form.centit.print span.textbox-readonly span.textbox-addon {
+	display: none;
+}
+form.centit.print input[type=radio], form.centit.print input[type=checkbox] {
+	vertical-align: middle;
+}

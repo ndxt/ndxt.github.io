@@ -1,0 +1,31 @@
+<ul class="example-list" id="formcombotree-example-list">
+	<li>
+		<a href="#formcombotree-basic" data-url="modules/form/form-combotree/demo/formcombotree-basic.html">基础树形下拉框</a>
+	</li>
+	<li>
+		<a href="#formcombotree-validatebox" data-url="modules/form/form-combotree/demo/formcombotree-methods.html">操作方法</a>
+	</li>
+	<li>
+		<a href="#formcombotree-textbox" data-url="modules/form/form-combotree/demo/formcombotree-property.html">属性</a>
+	</li>
+</ul>
+
+<script>
+	
+	requirejs([
+		'widgets/example/widget.example',
+		'plugins/prettify/prettify'
+		], function(create, datas) {
+			
+		var list = $('#formcombotree-example-list');
+		
+		create(list, function(container) {
+			prettyPrint();
+			
+			$.parser.parse(container);
+			
+			$("#menu_tab_Form").niceScroll({cursorcolor:"#BCBCBC"});
+		});
+	});
+	
+</script>

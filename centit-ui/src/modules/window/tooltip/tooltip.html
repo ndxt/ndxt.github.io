@@ -1,0 +1,33 @@
+<ul id="tooltip-example-list" class="example-list">
+	<li>
+		<a href="#tooltip-basic" data-url="modules/window/tooltip/demo/tooltip-basic.html">基础提示框</a>
+	</li>
+	<li>
+		<a href="#tooltip-position" data-url="modules/window/tooltip/demo/tooltip-position.html">提示框位置</a>
+	</li>
+	<li>
+		<a href="#tooltip-custom" data-url="modules/window/tooltip/demo/tooltip-custom.html">自定义</a>
+	</li>
+	<li>
+		<a href="#tooltip-ajax" data-url="modules/window/tooltip/demo/tooltip-ajax.html">AJAX</a>
+	</li>
+	<li>
+		<a href="#tooltip-touch" data-url="modules/window/tooltip/demo/tooltip-touch.html">触发方式</a>
+	</li>
+	<li>
+		<a href="#tooltip-group" data-url="modules/window/tooltip/demo/tooltip-group.html">组合提示框</a>
+	</li>
+</ul>
+
+<script>
+	requirejs(["widgets/example/widget.example", "plugins/prettify/prettify"], function(create, datas) {
+			var list = $("#tooltip-example-list");
+			create(list, function(container) {
+				prettyPrint();
+				$.parser.parse(container);
+				$("#menu_tab_Tooltip").niceScroll({
+					cursorcolor : "#BCBCBC"
+				});
+			});
+		});
+</script>

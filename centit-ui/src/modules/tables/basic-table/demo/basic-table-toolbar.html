@@ -1,0 +1,65 @@
+<p class="codeIgnore">可以在表格里嵌入工具栏</p>
+<p class="codeIgnore title"></p>
+<table id="basic-table-toolbar-t" style="width: 100%; height: 200px;"></table>
+<script type="text/javascript">
+	$(function() {
+		$("#basic-table-toolbar-t").datagrid({
+			title : "表格工具",
+			//<!-- @reg:rownumbers=tooltip{content:'是否显示序号'} -->
+			rownumbers : true,
+			singleSelect : true,
+			collapsible : true,
+			url : "modules/tables/basic-table/data/basic-table.json",
+			method : "get",
+			columns : [[{
+				field : "itemid",
+				title : "Item ID",
+				width : 100
+			}, {
+				field : "productid",
+				title : "Product",
+				width : 100
+			}, {
+				field : "listprice",
+				title : "List Price",
+				width : 100,
+				align : "right"
+			}, {
+				field : "unitcost",
+				title : "Unit Cost",
+				width : 100,
+				align : "right"
+			}, {
+				field : "attr1",
+				title : "Attribute",
+				width : 210,
+				align : "right"
+			}, {
+				field : "status",
+				title : "Status",
+				width : 60,
+				align : "center"
+			}]],
+			//<!-- @reg:toolbar=tooltip{content:'可以传数组，也可直接设为之前定义好的元素对象'} -->
+			toolbar : [{
+				text : "添加",
+				iconCls : "icon-add",
+				handler : function() {
+					alert("添加");
+				}
+			}, {
+				text : "剪切",
+				iconCls : "icon-cut",
+				handler : function() {
+					alert("剪切");
+				}
+			}, "-", {
+				text : "保存",
+				iconCls : "icon-save",
+				handler : function() {
+					alert("保存");
+				}
+			}]
+		});
+	});
+</script>

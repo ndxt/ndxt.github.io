@@ -1,0 +1,236 @@
+@charset "utf-8";
+body, ul, dl, dd, dt, ol, li, p, h1, h2, h3, h4, h5, h6, textarea, form, select, fieldset, table, td, div, input {margin:0;padding:0;-webkit-text-size-adjust: none}
+h1, h2, h3, h4, h5, h6{font-size:12px;font-weight:normal}
+div {text-align:left}
+a img {border:0}
+body { color: #333; text-align: center; font: 12px "宋体"; }
+ul, ol, li {list-style-type:none;vertical-align:0}
+/*
+.clear{height:0; overflow:hidden; clear:both}
+*/
+
+/*@font-face {
+  font-family: 'FontAwesome';
+  src: url('../font/fontawesome-webfont.eot?v=3.1.0');
+  src: url('../font/fontawesome-webfont.eot?#iefix&v=3.1.0') format('embedded-opentype'),
+  url('../font/fontawesome-webfont.woff?v=3.1.0') format('woff'),
+  url('../font/fontawesome-webfont.ttf?v=3.1.0') format('truetype'),
+  url('../font/fontawesome-webfont.svg#fontawesomeregular?v=3.1.0') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}*/
+/* FONT AWESOME CORE
+ * -------------------------- */
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+/* makes the font 33% larger relative to the icon container */
+.icon-large:before {
+  vertical-align: -10%;
+  font-size: 1.3333333333333333em;
+}
+/* makes sure icons active on rollover in links */
+a [class^="icon-"],
+a [class*=" icon-"],
+a [class^="icon-"]:before,
+a [class*=" icon-"]:before {
+  display: inline;
+}
+/* increased font size for icon-large */
+[class^="icon-"].icon-fixed-width,
+[class*=" icon-"].icon-fixed-width {
+  display: inline-block;
+  width: 1.2857142857142858em;
+  text-align: center;
+}
+
+ul.icons-ul > li .icon-li {
+  width: 0.7142857142857143em;
+  display: inline-block;
+  text-align: center;
+}
+[class^="icon-"].hide,
+[class*=" icon-"].hide {
+  display: none;
+}
+.icon-muted {
+  color: #eeeeee;
+}
+.icon-light {
+  color: #ffffff;
+}
+.icon-dark {
+  color: #333333;
+}
+.icon-border {
+  border: solid 1px #eeeeee;
+  padding: .2em .25em .15em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* EXTRAS
+ * -------------------------- */
+/* Stacked and layered icon */
+.icon-cogs:before {
+    content: "\f085";
+}
+.icon-home:before {
+    content: "\f015";
+}
+.icon-briefcase:before {
+    content: "\f0b1";
+}
+.icon-user:before {
+    content: "\f007";
+}
+.icon-comments-alt:before {
+    content: "\f0e6";
+}
+.icon-picture:before {
+    content: "\f03e";
+}
+.icon-info:before {
+    content: "\f129";
+}
+.icon-group:before {
+    content: "\f0c0";
+}
+.icon-question:before {
+    content: "\f128";
+}
+.icon-bar-chart:before {
+    content: "\f080";
+}
+.icon-envelope:before {
+    content: "\f003";
+}
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+
+
+.vertical-nav li{
+    height: 52px!important;
+    display: block;
+    width: 100%;
+    padding: 0;
+    float: left;
+    font-size: 14px;
+    position: relative;
+ /*   box-sizing: border-box;
+    -moz-box-sizing: border-box;*/
+/*     border: 1px solid #ddd;
+ */    border-top: none;
+    border-right: none;
+/*    -webkit-box-sizing: border-box;*/
+    border-left: none;
+
+}
+
+.kePublic{/*width: 160px;*/
+    margin: 0 auto;}
+
+.vertical-nav li:nth-child(3){/* border-top: 1px solid #ddd; */}
+
+
+
+.vertical-nav li a{
+    width: 100%;
+    display: block;
+    padding: 14px 26px 12px 16px;
+    color: #fff;
+    text-decoration: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.vertical-nav li:hover > a > i,.vertical-nav > li.active a > i{background: #95a5a6;color: #fff;}
+.vertical-nav ul, .vertical-nav ul li ul{margin-top: -1px!important;list-style: none;margin: 0;padding: 0;display: none;position: absolute;z-index: 999;width:100%;background: #fff;box-shadow: 0 2px 11px 1px rgba(0,0,0,0.3);}
+.vertical-nav ul{top: 8px;left: 100%;}
+
+
+
+
+/*
+.vertical-nav li:last-child ul{bottom: 0px; top:auto;}
+*/
+/*
+.vertical-nav li:nth-last-child(3) ul{bottom:-67px; top:auto;}
+*/
+
+.vertical-nav ul li ul{top: 1px; margin-left:0px!important; }
+
+/*
+.vertical-nav ul li ul:last-child{bottom: 1px;}
+*/
+
+
+.vertical-nav ul li{clear: both;width: 100%;background:#16325c;}
+.vertical-nav ul li a{background:#16325c;text-decoration:none;display:inline-block;border:0 none;float:left;clear:both;padding-top: 19px;}
+.vertical-nav .submenu-icon{font-family: 'FontAwesome';font-size: 10px;float: right;margin-right: -10px;line-height: 18px;margin-top: -17px;}
+.vertical-nav .ser{
+    font-family: 'FontAwesome';
+    font-size: 10px;
+    position: absolute;
+    right: 30px;
+    bottom: 8px;
+}
+
+.vertical-nav > li > a > .submenu-icon:before{content: "\f0c9";}
+.vertical-nav > li ul a .submenu-icon:before{content: "\f0c9";float: right;line-height: 23px;}
+
+.vertical-nav > li i{
+    line-height: 43px !important;
+    color: #fff;
+    margin: -2px 6px 0 -18px;
+    font-size: 26px;
+    float: left;
+    padding: 0px 5px 0px 5px;
+    width: 31px;
+    text-align: center;
+    -o-transition: background .3s ease-in-out;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+
+.red li:hover > a > i, .red li.active > a > i{background: #16A085;color: #fff!important;}
+.red li:hover > a{color: #1ABC9C;}
+
+#portfolio-group{margin: 40px 0px;}
+
+@media (max-width: 768px){.vertical-nav,.vertical-nav li{width: 100%;}
+  .vertical-nav > li > a{padding-top:15px;padding-bottom:15px;padding-left: 25px;}
+  .vertical-nav a{width: 100%;}
+  .vertical-nav ul, .vertical-nav ul li ul{width: 100%;left: 0;border-left: none;position: static;}
+  .vertical-nav ul li{background: #e9e9e9;}
+  .vertical-nav.dark ul li{background: #333;}
+  .vertical-nav ul li a{padding-top:10px;padding-bottom:10px;}
+  .vertical-nav > li i{margin: -16px 14px 0 -25px;}
+  .vertical-nav > li > ul > li > a{padding-left: 40px !important;}
+  .vertical-nav > li > ul > li > ul > li > a{padding-left: 60px !important;}
+  .vertical-nav > li > ul > li > ul > li > ul > li > a{padding-left: 80px !important;}
+  .vertical-nav .submenu-icon{margin-right: 5px;}
+  .vertical-nav ul .submenu-icon{display: none;}
+}
+
+
+

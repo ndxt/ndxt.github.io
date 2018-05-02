@@ -1,0 +1,97 @@
+body > .layout-panel-north {
+/* background: url(images/header.jpg) repeat-x; */
+background:#ECECEC
+}
+#header {
+/* background: url(images/header-left.jpg) bottom left no-repeat; */
+background:#ffffff!important!important;
+height:80px
+}
+
+
+#menu .accordion-header {
+background: url(images/menu-level-1.png) center top no-repeat;
+}
+#menu .accordion-header-selected {
+background: url(images/menu-level-1-active.png) no-repeat top center;
+}
+#menu .tree > li > .tree-node {
+background: url(images/menu-level-2.png) center top no-repeat;
+}
+#side,#side .layout-collapse,body > .layout-expand-west{
+	background:#ececec;
+}
+#side .layout-collapse-center {
+background: url(images/menu-collapse-center.jpg) no-repeat;
+}
+
+body > .layout-expand-west a.layout-button-right {
+background: url(images/menu-expand-center.jpg) no-repeat;
+}
+#menu .panel-body,#menu,#side .layout-container {
+background:white;
+border:none
+}
+/*混合菜单 > 单个菜单*/
+.menu-mix .easyui-linkbutton:hover,
+#header .l-btn-plain:hover{
+    background:#f7f7f7;
+    border-radius:0
+}
+.menu-mix>a.selected:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 5px;
+    background:#1583cf;
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    border-radius:0
+}
+#toolbar .selected{background:#1583cf;border-radius:0}
+#footer {
+background:#ececec;
+color:#666666
+}
+.search_custom>a{background:url(images/search.png) no-repeat center center;}
+.outer .left>h3:after, .outer .right>h3:after{background:#74878e;}
+#toolbar .icon-addresslist{
+    background: url(images/tongxunlu.png) -13px center no-repeat;
+}
+#toolbar .icon-tip {
+    background: url(images/huanfu.png) -14px center no-repeat;
+}
+#toolbar .icon-edit{
+    background: url(images/shezhi.png) -13px center no-repeat;
+}
+#toolbar .icon-back{
+    background: url(images/zhuxiao.png) -13px center no-repeat;
+}
+#toolbar .icon-messagetips{
+    background: url(images/tixing.png) -13px center no-repeat;
+}
+#toolbar .icon-lockscreen{
+    background: url(images/suoping.png) -11px center no-repeat;
+}
+#toolbar .icon-addresslist{
+    background: url(images/tongxunlu.png) -13px center no-repeat;
+}
+#toolbar .selected .icon-tip {
+    background: url(images/huanfu_hover.png) -14px center no-repeat;
+}
+#toolbar .selected .icon-edit{
+    background: url(images/shezhi_hover.png) -13px center no-repeat;
+}
+#toolbar .selected .icon-back{
+    background: url(images/zhuxiao_hover.png) -13px center no-repeat;
+}
+#toolbar .selected .icon-messagetips{
+    background: url(images/tixing_hover.png) -13px center no-repeat;
+}
+#toolbar .selected .icon-lockscreen{
+    background: url(images/suoping_hover.png) -11px center no-repeat;
+}
+#header .l-btn-text{color:#666666}
+#header .title{background: url(images/header-title.png) no-repeat;}
+

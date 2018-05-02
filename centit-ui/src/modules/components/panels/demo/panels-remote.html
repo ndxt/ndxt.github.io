@@ -1,0 +1,8 @@
+<p class="codeIgnore"><code>refresh方法</code>刷新面板（panel）加载远程数据。如果分配了 <b>href</b>参数，将重写旧的 <b>href</b></p>
+<div class="easyui-panel" style="margin-bottom: 10px;">
+<!-- @reg:panel('refresh')=tooltip{content:'给对应的面板绑定<b>refresh方法</b>'} -->
+	<a class="easyui-linkbutton" onclick="$('#panel_0ed89a79ca17945f').panel('refresh');" data-options="iconCls: 'icon-reload'">刷新</a>
+</div>
+<!-- @reg:data-options=tooltip{content:'只要设置<code>href:\'modules/components/panels/demo/panels-remote-page.html\'</code>，点击 <b>刷新</b>按钮时，该面板的内容将会被刷新'} -->
+<div id="panel_0ed89a79ca17945f" class="easyui-panel" title="联系方式" data-options="href: 'modules/components/panels/demo/panels-remote-page.html'" 
+	style="width:500px;height:150px;padding:10px;"></div>

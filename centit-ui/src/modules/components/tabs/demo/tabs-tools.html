@@ -1,0 +1,30 @@
+<p class="codeIgnore">可以在<b>Tabs Header</b>上添加额外的工具栏按钮，通过<code>tools</code>属性联系工具栏<b>id</b></p>
+
+<!-- 工具栏 -->
+<div id="tools_b2bb3b9afd6c8379">
+	<a href="javascript:void(0)" class="easyui-linkbutton" title="添加标签"
+		data-options="plain:true,iconCls:'icon-add'" onclick="addPanel_b2bb3b9afd6c8379()"></a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" title="删除当前标签"
+		data-options="plain:true,iconCls:'icon-remove'" onclick="removePanel_b2bb3b9afd6c8379()"></a>
+</div>
+<!-- @reg:tools=tooltip{content:'<code>tools</code>属性联系工具栏<b>id</b>'} -->
+<div id="tabs_b2bb3b9afd6c8379" class="easyui-tabs" data-options="tools:'#tools_b2bb3b9afd6c8379'" style="width:500px;height:150px">
+
+<script type="text/javascript">
+    var index_b2bb3b9afd6c8379 = 0;
+    function addPanel_b2bb3b9afd6c8379(){
+        index_b2bb3b9afd6c8379++;
+        $('#tabs_b2bb3b9afd6c8379').tabs('add',{
+            title: 'Tab'+index_b2bb3b9afd6c8379,
+            content: '<div style="padding:10px">Content'+index_b2bb3b9afd6c8379+'</div>',
+            closable: true
+        });
+    }
+    function removePanel_b2bb3b9afd6c8379(){
+        var tab = $('#tabs_b2bb3b9afd6c8379').tabs('getSelected');
+        if (tab){
+            var index = $('#tabs_b2bb3b9afd6c8379').tabs('getTabIndex', tab);
+            $('#tabs_b2bb3b9afd6c8379').tabs('close', index);
+        }
+    }
+</script>

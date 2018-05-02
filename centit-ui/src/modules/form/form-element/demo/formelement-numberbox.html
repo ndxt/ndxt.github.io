@@ -1,0 +1,53 @@
+<style>
+	.numberbox-methods{padding:5px;margin-right:5px;color: #444;background: #fafafa;border: 1px solid #bbb;border-radius:5px}
+</style>
+<p class="codeIgnore"><code>numberbox</code>数值输入框是用来限制用户只能输入数值型数据的.它可以通过两种方式来创建</p>
+<b>通过input标签来创建</b><input type="text" class="easyui-numberbox" value="100" data-options="min:0,precision:2"><br/><br/>
+<b>通过javascript来创建</b><input type="text" id="felement-numberbox"><br/><br/>
+<p class="codeIgnore"><code>numberbox</code>的方法有<code>destroy</code>、<code>disable</code>、<code>setValue</code>、<code>reset</code>、<code>clear</code>、<code>getValue</code>等等</p><br/>
+<a href="javascript:void(0)" class="numberbox-methods" onclick="numberboxdestroy()">销毁numberbox</a><input type="text" class="easyui-numberbox" id="numberbox-destroy" value="10" data-options="min:0,precision:2"><br/><br/>
+<a href="javascript:void(0)" class="numberbox-methods" onclick="numberboxdisable()">禁用numberbox</a><input type="text" class="easyui-numberbox" id="numberbox-disable" value="9" data-options="min:0,precision:2"><br/><br/>
+<a href="javascript:void(0)" class="numberbox-methods" onclick="numberboxsetValue()">设置numberbox的值</a><input type="text" class="easyui-numberbox" id="numberbox-setValue" value="8" data-options="min:0,precision:2"><br/><br/>
+<a href="javascript:void(0)" class="numberbox-methods" onclick="numberboxreset()">重置numberbox的值</a><input type="text" class="easyui-numberbox" id="numberbox-reset" value="7" data-options="min:0,precision:2"><br/><br/>
+<a href="javascript:void(0)" class="numberbox-methods" onclick="numberboxclear()">清除numberbox的值</a><input type="text" class="easyui-numberbox" id="numberbox-clear" value="6" data-options="min:0,precision:2"><br/><br/>
+<a href="javascript:void(0)" class="numberbox-methods" onclick="numberboxgetValue()">获取numberbox的值</a><input type="text" class="easyui-numberbox" id="numberbox-getValue" value="5" data-options="min:0,precision:2"><br/><br/>
+<script>
+	//<!-- @reg:numberbox=tooltip{content:'通过javascript创建<code>numberbox</code>组件'} -->
+	$('#felement-numberbox').numberbox({
+    min:0,
+    precision:2,
+	min:2,
+	max:100,
+	prefix:'$'
+});
+
+function numberboxdestroy(){
+	//<!-- @reg:destroy=tooltip{content:'给numberbox添加<code>destroy方法</code>来销毁numberbox'} -->
+	$("#numberbox-destroy").numberbox('destroy');
+}
+function numberboxdisable(){
+	//<!-- @reg:disable=tooltip{content:'给numberbox添加<code>disable方法</code>来禁用numberbox'} -->
+	$("#numberbox-disable").numberbox('disable');
+}
+function numberboxsetValue(){
+	//<!-- @reg:setValue=tooltip{content:'给numberbox添加<code>setValue方法</code>来设置numberbox的值'} -->
+	$("#numberbox-setValue").numberbox('setValue',20.00);
+}
+function numberboxreset(){
+	var val=$("#numberbox-reset").numberbox('getValue');
+	if(val==7){alert("请先在numberbox中输入一个数字（7除外）")}
+	else{//<!-- @reg:reset=tooltip{content:'给numberbox添加<code>reset方法</code>来重置numberbox的值'} -->
+			$("#numberbox-reset").numberbox('reset');
+	}
+}
+function numberboxclear(){
+	//<!-- @reg:clear=tooltip{content:'给numberbox添加<code>clear方法</code>来清除numberbox的值'} -->
+	$("#numberbox-clear").numberbox('clear');
+}
+function numberboxgetValue(){
+	//<!-- @reg:getValue=tooltip{content:'给numberbox添加<code>getValue方法</code>来获取numberbox的值'} -->
+	var val=$("#numberbox-getValue").numberbox('getValue');
+	if(val==''||val==undefined){alert("请先在numberbox中输入值")}
+	else{alert(val);}
+}
+</script>

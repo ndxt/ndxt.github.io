@@ -1,0 +1,69 @@
+<p class="codeIgnore">可以选择一行或多行，并返回行对象</p>
+<p class="codeIgnore title"></p>
+<div style="margin-bottom: 10px;">
+	<span>选择模式：</span>
+	<!-- @reg:onchange=tooltip{content:'改变行选择模式'} -->
+	<select onchange="$('#basic-table-selection-t').datagrid({singleSelect:(this.value==0)});">
+		<option value="0">一行</option>
+		<option value="1">多行</option>
+	</select>
+</div>
+<table id="basic-table-selection-t" style="width: 100%; height: 200px;"></table>
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="getSelected();" style="margin-top: 10px;">返回一行</a>
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="getSelections();" style="margin-top: 10px;">返回多行</a>
+<script type="text/javascript">
+	$(function() {
+		$("#basic-table-selection-t").datagrid({
+			title : "表格选择",
+			singleSelect : true,
+			collapsible : true,
+			url : "modules/tables/basic-table/data/basic-table.json",
+			method : "get",
+			columns : [[{
+				field : "itemid",
+				title : "Item ID",
+				width : 100
+			}, {
+				field : "productid",
+				title : "Product",
+				width : 100
+			}, {
+				field : "listprice",
+				title : "List Price",
+				width : 100,
+				align : "right"
+			}, {
+				field : "unitcost",
+				title : "Unit Cost",
+				width : 100,
+				align : "right"
+			}, {
+				field : "attr1",
+				title : "Attribute",
+				width : 240,
+				align : "right"
+			}, {
+				field : "status",
+				title : "Status",
+				width : 60,
+				align : "center"
+			}]]
+		});
+	});
+
+	//<!-- @reg:getSelected=tooltip{content:'返回第一个被选中的行或如果没有选中的行则返回null。'} -->
+	function getSelected() {
+		var row = $("#basic-table-selection-t").datagrid("getSelected");
+		if (row)
+			$.messager.alert("Info", row.itemid + ":" + row.productid + ":" + row.attr1);
+	}
+	
+	//<!-- @reg:getSelections=tooltip{content:'返回所有被选中的行，当没有记录被选中的时候将返回一个空数组。'} -->
+	function getSelections() {
+		var ss = [];
+		var rows = $("#basic-table-selection-t").datagrid("getSelections");
+		for (var i = 0; i < rows.length; i++)
+			ss.push("<span>" + rows[i].itemid + ":" + rows[i].productid + ":" + rows[i].attr1 + "</span><br />");
+		$.messager.alert("Info", ss);
+	}
+</script>

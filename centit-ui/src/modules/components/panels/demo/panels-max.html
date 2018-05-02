@@ -1,0 +1,15 @@
+<p class="codeIgnore"><code>maximize、minimize、restore方法</code>用来对面板进行<b>最大化、最小化、还原</b>操作</p>
+<div class="easyui-panel" style="margin-bottom: 10px;">
+    <!-- @reg:panel('maximize')=tooltip{content:'给对应的面板绑定<b>maximize方法</b>面板（panel）适应它的容器的尺寸'} -->
+	<a class="easyui-linkbutton" onclick="$('#panel_d442341f6890d355').panel('maximize');" data-options="iconCls: 'icon-ok'">最大化</a>
+	<!-- @reg:panel('minimize')=tooltip{content:'给对应的面板绑定<b>clear方法</b>最小化面板（panel）'} -->
+	<a class="easyui-linkbutton" onclick="$('#panel_d442341f6890d355').panel('minimize');" data-options="iconCls: 'icon-cancel'">最小化</a>
+	<!-- @reg:panel('restore')=tooltip{content:'给对应的面板绑定<b>restore方法</b>把最大化的面板（panel）还原为它原来的尺寸和位置'} -->
+	<a class="easyui-linkbutton" onclick="$('#panel_d442341f6890d355').panel('restore');" data-options="iconCls: 'icon-undo'">恢复</a>
+</div>
+
+<div id="panel_d442341f6890d355" class="easyui-panel" title="环水事业部" style="width:300px;height:100px;padding:10px;">
+环水事业部<br>
+联系人：张总经理<br>
+联系电话：13905145732,52665801
+</div>

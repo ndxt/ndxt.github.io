@@ -1,0 +1,31 @@
+<ul class="example-list" id="formcombogrid-example-list">
+	<li>
+		<a href="#formcombogrid-basic" data-url="modules/form/form-combogrid/demo/formcombogrid-basic.html">基础数据表格下拉框</a>
+	</li>
+	<li>
+		<a href="#formcombogrid-validatebox" data-url="modules/form/form-combogrid/demo/formcombogrid-methods.html">操作方法</a>
+	</li>
+	<li>
+		<a href="#formcombogrid-textbox" data-url="modules/form/form-combogrid/demo/formcombogrid-property.html">属性</a>
+	</li>
+</ul>
+
+<script>
+	
+	requirejs([
+		'widgets/example/widget.example',
+		'plugins/prettify/prettify'
+		], function(create, datas) {
+			
+		var list = $('#formcombogrid-example-list');
+		
+		create(list, function(container) {
+			prettyPrint();
+			
+			$.parser.parse(container);
+			
+			$("#menu_tab_Form").niceScroll({cursorcolor:"#BCBCBC"});
+		});
+	});
+	
+</script>

@@ -1,0 +1,77 @@
+/*HEADER*/
+body > .layout-panel-north {
+}
+
+#header {
+    height: 60px!important;
+    border: none;
+	background: url(images/banner.jpg) no-repeat;
+	
+}
+
+#header .title {
+	position: absolute;
+	top: 50%;
+	/* left: 30px; */
+	margin: -23px 0 -23px 0;
+	width: 346px;
+	height: 50px;
+	line-height: 45px;
+	color: #fff;
+	font-size: 24px;
+	/* background: url(images/header-centit-logo.png) no-repeat 0px 8px; */
+	background-size: 150px;
+	padding-left: 20px;
+	font-weight: bold;
+	font-family: Microsoft YaHei;
+}
+#header .logo {
+	width: 72px;
+	height: 36px;
+    /*
+	background: url("images/header-user.png") no-repeat;
+    */
+	right: 20px;
+	position: absolute;
+	top: 14px;
+	background-size: 36px;
+}
+
+#header .logo span {
+	position: absolute;
+	right: 25px;
+	top: 14px;
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 8px solid #FFFFFF;
+	z-index: 1000;
+}
+
+/*HEADER > 宸ュ叿鏍�/
+#header .toolbar {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+	margin: -13px 0 -13px 0;
+    height: 26px;
+}
+#header .toolbar .panel-body{
+    padding: 0;
+    background: transparent;
+    text-align: right;
+}
+
+#header .l-btn {
+	color: #666666;
+}
+
+#header .l-btn:HOVER {
+	color: #000000;
+}
+
+/*HEADER > 宸ュ叿鏍�> SKIN*/
+#toolbar_skin .skin {
+    border-radius: 2px;
+}

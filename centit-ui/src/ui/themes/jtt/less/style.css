@@ -1,0 +1,125 @@
+.menu-search {
+    padding: 5px 0;
+    text-align: center;
+    display:none;
+}
+
+
+
+*{
+	border-radius: 0;
+    font-family: 'Microsoft YaHei'; font-size: 14px;
+}
+
+
+
+.panel.window .window-header .panel-tool{width: 43px;
+    height: 43px;
+    margin-top: -20px;
+    margin-right: 7px;
+    
+}
+
+.panel.window .window-header .panel-tool .panel-tool-close{background:url(images/claoseed.png) no-repeat;width:43px;height: 43px;display: block;}
+
+.panel.window .dialog-button>a{background:url(images/btn_save01.png) no-repeat; width:100px; height:36px;}
+.panel.window .dialog-button>a:first-child{background:url(images/btn_cancel01.png) no-repeat; width:100px; height:36px;}
+
+
+.tooltip{
+	border-color:#eeeeee;
+	-moz-box-shadow: 3px 3px 5px #e0e3e5;
+    -webkit-box-shadow: 3px 3px 5px #e0e3e5;
+    box-shadow: 3px 3px 5px #e0e3e5;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#e0e3e5')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#e0e3e5');}
+
+
+#tixing ul{margin-top:5px;}
+#tixing ul .pawxb{list-style:none; height:30px; line-height:30px;text-align:center; background:url(images/user_icon_psd.png) no-repeat left center;}
+#tixing ul .tcxbc{list-style:none; height:30px; line-height:30px;text-align:center; background:url(images/user_icon_exit.png) no-repeat left center;}
+
+#tixing ul .pawxb:hover{background:url(images/user_icon_psd.png) no-repeat left center;background-color:#f2f5f7;}
+#tixing ul .tcxbc:hover{background:url(images/user_icon_exit.png) no-repeat left center;background-color:#f2f5f7;}
+#tixing ul li a{color:#2e4e73;}
+
+#tixing ul li a:hover{color:#207edf;}
+
+.datagrid-cell.datagrid-cell-c1-stateName {
+	color: #00B2FF;
+}
+
+.easyui-layout .layout-split-east {
+    border-left: 0px;
+}
+
+
+
+.l-btn-icon-left .l-btn-text {
+}
+
+
+.dialog-button {
+    border-color: #dddddd #95B8E7 #95B8E7 #95B8E7;
+    top: 0px!important;
+    border: 0;
+    padding-top: 7px;
+    background: #fff;
+    border-top: 1px solid #dddddd;
+}
+
+.dialog-button .l-btn-icon-left .l-btn-text {
+    margin: 0 4px;
+}
+
+
+.window .window-body.messager-body {
+    padding: 20px;
+}
+
+/*�˵�ͷ��������ʽ*/
+p#menu_gps{
+	height: 45px;
+	line-height: 45px;
+	border-bottom:1px solid #cccccc;
+	margin-top:10px;
+	margin-left:20px;
+	margin-right:20px;
+}
+p#menu_gps div{
+	display:inline-block;
+	position: relative; 
+	/* margin-bottom:0px;  */
+	margin-right: 10px;
+	/* background-color: #276ab0; */
+	width:14px;
+	height:14px;
+	background-position-y:0px;
+	background-image: url(./images/menulocation1.png);
+}
+
+.panel-header{background:none; background-color:#336699; height:30px;}
+.datagrid .panel-header .panel-title{height:30px;line-height:30px; font-size: 15px;text-align: center;letter-spacing: 3px;}
+ 
+
+
+.messager-button a{background:#276ab0;}
+.messager-button .l-btn:hover{background:#276ab0;}
+.messager-button .l-btn-left .l-btn-text{display: inline-block;
+    vertical-align: top;
+    width: auto;
+    line-height: 0px;
+    padding: 15px 12px;
+    font-size: 14px;
+    margin: 0;
+    text-indent: 0; 
+    color: #fff;}
+    
+    
+    
+    
+.datagrid-toolbar .l-btn-left.l-btn-icon-left .l-btn-text{color:#000;}
+
+

@@ -1,0 +1,65 @@
+.textinput {
+	width: 120px;
+	height: 24px;
+	line-height: 24px;
+
+    color: #336699;
+    border: 1px solid #a2b3bd;
+    background: url(images/textinput_bg.jpg) repeat-x scroll left top #ffffff;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+/*菜单 搜索*/
+#menu_search_panel {
+    padding: 10px 0;
+    background: #F1F8FF;
+}
+#menu_search {
+    margin-left: 25px;
+    font-family:simsun;
+}
+
+/*内容*/
+.menu-iframe, .dialog-iframe {
+	width: 100%; height: 100%;
+	border: none;
+	margin: 0;
+
+    /*解决iframe高度和父div高度不统一出现滚动条 @http://stackoverflow.com/questions/7290214/html-strange-space-between-iframe-elements*/
+    vertical-align:bottom;
+    display:block;
+}
+
+#footer {
+	height: 27px; line-height: 27px;
+	text-align: center;
+
+    border: none;
+    color: #fff;
+    background: url(images/footer.jpg) repeat-x;
+}
+
+.ajax-loader {
+  display: none;	
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999999999999;
+}
+
+.ajax-loader .ajax-loader-icon{
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  background: url(images/loading.gif) no-repeat;
+  top: 50%;
+  left: 50%;
+  margin-top: -21px;
+  margin-left: -21px;
+}

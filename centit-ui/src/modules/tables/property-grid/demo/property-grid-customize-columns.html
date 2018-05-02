@@ -1,0 +1,21 @@
+    <h2>属性表格的自定义列</h2>
+    <p>改变属性表格的列</p>
+    <div style="margin:20px 0;"></div>
+    <table class="easyui-propertygrid" style="width:300px" data-options="
+                url: 'modules/tables/property-grid/demo/propertygrid_data1.json',
+                method: 'get',
+                showGroup: true,
+                scrollbarSize: 0,
+<!-- @reg:columns: mycolumns=tooltip{content:'添加列：我的列'} -->   
+                columns: mycolumns
+            ">
+    </table>
+    <p class="codeIgnore br"></p>
+    <script>
+        var mycolumns = [[
+<!-- @reg:sortable=tooltip{content:'可排序'} -->     
+            {field:'name',title:'MyName',width:100,sortable:true},
+<!-- @reg:resizable=tooltip{content:'窗口大小不可变'} -->           
+               {field:'value',title:'MyValue',width:100,resizable:false}
+        ]];
+    </script>

@@ -1,0 +1,216 @@
+/*菜单*/
+#side {
+    width: 216px;
+    overflow: hidden;
+    border: none;
+}
+
+/*菜单 > 主体*/
+#side {
+    background: #0178BA;
+}
+#menu {
+    padding-top:5px;
+    border:1px solid #015697;
+    background: #0162A7;
+}
+#menu .panel-body {
+/*     background: #0162A7; */
+    border: none;
+}
+#menu, #menu a {
+    color: #fff;
+}
+
+/*菜单 > 缩进图标*/
+#menu .tree-indent {
+}
+/*菜单 > 节点元素图标*/
+#menu .tree-folder {
+    display: none;
+}
+/*菜单 > 叶子元素图标*/
+#menu .tree-file {
+    display: none;
+}
+/*菜单 > 标题*/
+#menu .tree-title {
+    line-height: 20px;
+    color: #fff;
+}
+
+/*菜单 > 树形节点选中 > 节点元素图标*/
+#menu .tree-node-selected .tree-folder {
+    display: none;
+}
+/*菜单 > 树形节点选中 > 叶子元素图标*/
+#menu .tree-node-selected .tree-file {
+    display: none;
+}
+/*菜单 > 树形节点选中 > 标题*/
+#menu .tree-node-selected .tree-title, #menu .tree-node-selected .tree-title a {
+    font-weight: bold;
+}
+
+/*菜单 > 树形节点被找到 > 节点元素图标*/
+#menu .tree-node-found .tree-folder {
+    display: none;
+}
+/*菜单 > 树形节点被找到 > 叶子元素图标*/
+#menu .tree-node-found .tree-file {
+    display: none;
+}
+/*菜单 > 树形节点被找到 > 标题*/
+#menu .tree-node-found .tree-title, #menu .tree-node-found .tree-title a {
+    font-weight: bold;
+    color: #222;
+}
+
+/*菜单 > 一级*/
+#menu .accordion-header {
+    padding: 0;
+    height: 36px; line-height: 36px;
+    border: none;
+
+/*     background: url(images/menu-level-1.png) center top no-repeat; */
+}
+/*菜单 > 一级 > 图标*/
+#menu .accordion-header .panel-icon{
+    display: none;
+}
+/*菜单 > 一级 > 标题*/
+#menu .accordion-header .panel-title{
+    padding: 0;
+    height: 40px; line-height: 30px;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+}
+/*菜单 > 一级 > 工具栏*/
+#menu .accordion-header .panel-tool {
+    display: none;
+}
+
+/*菜单 > 一级：鼠标悬停*/
+#menu .accordion-header:hover {
+    background-position: center -41px;
+}
+/*菜单 > 一级：鼠标悬停 > 图标*/
+#menu .accordion-header:hover .panel-icon{
+}
+/*菜单 > 一级：鼠标悬停 > 标题*/
+#menu .accordion-header:hover .panel-title{
+    color: #0178BA;
+}
+
+/*菜单 > 一级：选中*/
+#menu .accordion-header-selected {
+/*     background: url(images/menu-level-1-active.png) no-repeat top center; */
+}
+/*菜单 > 一级：选中 > 图标*/
+#menu .accordion-header-selected .panel-icon{
+}
+/*菜单 > 一级：选中 > 标题*/
+#menu .accordion-header-selected .panel-title{
+}
+
+/*菜单 > 一级：选中：鼠标悬停*/
+#menu .accordion-header-selected:hover {
+    background-position: top center;
+}
+/*菜单 > 一级：选中：鼠标悬停 > 标题*/
+#menu .accordion-header-selected:hover .panel-title{
+    color: #fff;
+}
+
+/*菜单 > 二级*/
+#menu .tree > li {
+    margin-bottom: 5px;
+}
+#menu .tree > li > .tree-node {
+    padding: 1px 10px 2px 0;
+    margin-bottom: 2px;
+    background: url(images/menu-level-2.png) center top no-repeat;
+}
+#menu .tree > li > .tree-node .tree-title, #menu .tree > li > .tree-node .tree-title a {
+    color: #0084C3;
+}
+#menu .tree > li > .tree-node > .tree-indent {
+    display: none;
+}
+#menu .tree > li > .tree-node > .tree-title {
+    padding-left: 30px;
+}
+#menu .tree > li > .tree-node > .tree-hit {
+    float: right;
+    width: 11px;
+    background: url(images/menu-level-2-hit.png) no-repeat;
+}
+#menu .tree > li > .tree-node > .tree-expanded {
+    background-position: 100% 50%;
+}
+#menu .tree > li > .tree-node > .tree-collapsed {
+    background-position: 0 50%;
+}
+/*菜单 > 二级：鼠标悬停*/
+#menu .tree > li > .tree-node:hover {
+}
+/*菜单 > 二级：选中*/
+#menu .tree > li > .tree-node-selected {
+}
+#menu .tree > li > .tree-node-selected .tree-title a{
+	color: #222;
+}
+
+/*菜单 > 二级：第一个子元素*/
+#menu .tree > li:first-child > .tree-node {
+}
+
+/*菜单 > 三级及以下*/
+#menu .tree > li ul .tree-node{
+    padding: 2px 0;
+}
+/*菜单 > 三级及以下：选中*/
+#menu .tree > li ul .tree-node-selected {
+    background: url(images/menu-level-3-active.png) no-repeat center bottom;
+}
+/*菜单 > 三级及以下：鼠标悬停*/
+#menu .tree > li ul .tree-node:hover {
+    background: url(images/menu-level-3-active.png) no-repeat center bottom;
+}
+
+/*混合菜单*/
+.menu-mix {
+    position: absolute;
+	top: 15px; right: 10px;
+}
+/*混合菜单 > 单个菜单*/
+.menu-mix .easyui-linkbutton {
+    width: 70px; height: 60px;
+	outline: none;
+	
+	color: #fff;
+	border-color: #6AD8FA;
+	background: #2BA0DC;
+	background: -webkit-linear-gradient(top,#33AEE2 0,#2190D4 100%);
+  	background: -moz-linear-gradient(top,#33AEE2 0,#2190D4 100%);
+  	background: -o-linear-gradient(top,#33AEE2 0,#2190D4 100%);
+  	background: linear-gradient(to bottom,#33AEE2 0,#2190D4 100%);
+  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33AEE2,endColorstr=#2190D4,GradientType=0); 
+}
+.menu-mix .easyui-linkbutton {
+    color: #fff;
+}
+/*混合菜单 > 单个菜单*/
+.menu-mix .easyui-linkbutton:hover {
+    background: #fff;
+	border-color: #fff;
+	color: #0178BA;
+}
+/*混合菜单 > 单个菜单*/
+.menu-mix .easyui-linkbutton.l-btn-selected {
+    background: #fff;
+	border-color: #fff;
+	color: #0178BA;
+}

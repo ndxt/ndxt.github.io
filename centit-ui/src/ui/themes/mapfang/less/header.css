@@ -1,0 +1,51 @@
+/*HEADER*/
+body > .layout-panel-north {
+}
+
+#header {
+    height: 83px;
+    border: none;
+}
+
+#header .title {
+	position: absolute;
+	top:50%;
+	left:30px;
+	margin: -23px 0 -23px 0;
+	width:346px;
+	height:50px;
+	background: url(images/header-title.png) no-repeat;
+}
+
+#header .logo {
+	width: 270px;
+	height: 100%;
+	background: url("images/header-logo.png") no-repeat;
+}
+
+/*HEADER > 工具栏*/
+#header .toolbar {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+	margin: -13px 0 -13px 0;
+    height: 26px;
+}
+#header .toolbar .panel-body{
+    padding: 0;
+    background: transparent;
+    text-align: right;
+}
+
+#header .l-btn {
+	color: #666666;
+}
+
+#header .l-btn:HOVER {
+	color: #000000;
+}
+
+/*HEADER > 工具栏 > SKIN*/
+#toolbar_skin .skin {
+    border-radius: 2px;
+}

@@ -1,0 +1,211 @@
+
+.easyui-mini-icon  {
+	width: 8px;
+	height: 8px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+}
+
+.easyui-icon {
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+}
+
+.easyui-large-icon {
+	background:url(icons/easyui.png);
+    width: 32px;
+    height: 32px;
+}
+
+.icon-mini-add{
+	width: 8px;
+	height: 8px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-12px -13px;
+}
+.icon-mini-edit{
+	width: 8px;
+	height: 8px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-45px -13px;
+}
+.icon-mini-refresh{
+	width: 8px;
+	height: 8px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-77px -13px;
+}
+
+
+.icon-add{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-104px -7px;
+}
+.icon-sub-add {
+  width: 16px;
+  height: 16px;
+  background: url(icons/easyui.png) no-repeat;
+  display: inline-block;
+  background-position: -168px -7px;
+}
+.icon-edit{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-135px -8px;
+}
+
+.icon-clear{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-9px -34px;
+}
+.icon-remove{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-40px -40px;
+}
+.icon-save{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-72px -40px;
+}
+.icon-cut{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-104px -40px;
+}
+.icon-ok{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-135px -40px;
+}
+.icon-no{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-7px -72px;
+}
+.icon-cancel{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-40px -72px;
+}
+.icon-reload{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-72px -72px;
+}
+.icon-search{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-104px -72px;
+}
+.icon-print{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-135px -72px;
+}
+.icon-help{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-7px -104px;
+}
+.icon-undo{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-40px -104px;
+}
+.icon-redo{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-72px -104px;
+}
+.icon-back{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-104px -104px;
+}
+.icon-sum{
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url(icons/easyui.png) no-repeat -135px -104px;
+}
+.icon-tip{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-7px -136px;
+}
+.icon-filter{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-72px -136px;
+}
+.icon-man{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-40px -136px;
+}
+.icon-lock{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-104px -136px;
+}
+.icon-more{
+	width: 16px;
+	height: 16px;
+	background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-135px -136px;
+}
+
+
+.icon-large-picture{
+	width: 32px;
+    height: 32px;
+    background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:0px -160px;
+}
+.icon-large-clipart{
+	width: 32px;
+    height: 32px;
+    background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-32px -160px;
+}
+.icon-large-shapes{
+	width: 32px;
+    height: 32px;
+    background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-63px -160px;
+}
+.icon-large-smartart{
+	width: 32px;
+    height: 32px;
+    background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-97px -160px;
+}
+.icon-large-chart{
+	width: 32px;
+    height: 32px;
+    background:url(icons/easyui.png) no-repeat; display: inline-block;
+	background-position:-129px -160px;
+}

@@ -1,0 +1,32 @@
+body > .layout-panel-north {
+background: url(images/header.jpg) repeat-x;
+}
+#header {
+background: url(images/header-left.jpg) bottom left no-repeat;
+}
+#menu .accordion-header {
+background: url(images/menu-level-1.png) center top no-repeat;
+}
+#menu .accordion-header-selected {
+background: url(images/menu-level-1-active.png) no-repeat top center;
+}
+#menu .tree > li > .tree-node {
+background: url(images/menu-level-2.png) center top no-repeat;
+}
+#side,#side .layout-collapse,body > .layout-expand-west{
+	background: #9b0000;
+}
+#side .layout-collapse-center {
+background: url(images/menu-collapse-center.jpg) no-repeat;
+}
+
+body > .layout-expand-west a.layout-button-right {
+background: url(images/menu-expand-center.jpg) no-repeat;
+}
+#menu .panel-body,#menu,#side .layout-container {
+background: #740000;
+border:1px solid #9b0000
+}
+#footer {
+background: #9b0000;
+}

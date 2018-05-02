@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="./style.css">
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".left_tab_ul>li>a").click(function(){
+			if($(this).hasClass('selelct')){return}
+			else{
+				var _parent=$(this).parent('li');
+				_parent.siblings('li').find('a').removeClass('select');
+				_parent.siblings('li').find('ul').hide();
+				$(this).addClass('select');
+				$(this).next().show();
+			}
+		});
+	})
+</script>
+<title>无标题文档</title>
+</head>
+
+<body>
+    <div class="outer">
+    	<ul class="tab_ul">
+    		<li><img src='./images/icon_001.png'/><span>发文登记</span></li>
+    		<li><img src='./images/icon_002.png'/><span>收文登记</span></li>
+    		<li><img src='./images/icon_003.png'/><span>未读邮件</span></li>
+    		<li><img src='./images/icon_004.png'/><span>签报登记</span></li>
+    		<li><img src='./images/icon_005.png'/><span>自定义</span></li>
+    	</ul>
+    	<table>
+    		<tr>
+    			<td class="left" valign="top">
+    				<ul class="left_tab_ul">
+    					<li>
+    						<a class="dbsx select">待办事项</a>
+    						<ul class="left_list_ul" style="display:block">
+    							<li><label class="yellow">【加急】</label><p>1测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p><span>2016.07.19</span></li>
+    							<li><label class="green">【平急】</label><p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p><span>2016.07.19</span></li>
+    							<li><label class="red">【特急】</label><p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p><span>2016.07.19</span></li>
+    						</ul>
+    					</li>
+    					<li>
+    						<a class="rcap">日程安排</a>
+    						<ul class="left_list_ul">
+    							<li><label class="yellow">【加急】</label><p>2测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p><span>2016.07.19</span></li>
+    							<li><label class="green">【平急】</label><p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p><span>2016.07.19</span></li>
+    							<li><label class="red">【特急】</label><p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p><span>2016.07.19</span></li>
+    						</ul>
+    					</li>
+    					<li>
+    						<a class="tzgg">通知公告</a>
+    						<ul class="left_list_ul">
+    							<li><label class="yellow">【加急】</label><p>3测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p><span>2016.07.19</span></li>
+    							<li><label class="green">【平急】</label><p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p><span>2016.07.19</span></li>
+    							<li><label class="red">【特急】</label><p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p><span>2016.07.19</span></li>
+    						</ul>
+    					</li>
+    					<li>
+    						<a class="swtx">收文提醒</a>
+    						<ul class="left_list_ul">
+    							<li><label class="yellow">【加急】</label><p>4测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p><span>2016.07.19</span></li>
+    							<li><label class="green">【平急】</label><p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p><span>2016.07.19</span></li>
+    							<li><label class="red">【特急】</label><p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p><span>2016.07.19</span></li>
+    						</ul>
+    					</li>
+    					<li>
+    						<a class="fwtx">发文提醒</a>
+    						<ul class="left_list_ul">
+    							<li><label class="yellow">【加急】</label><p>5测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p><span>2016.07.19</span></li>
+    							<li><label class="green">【平急】</label><p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p><span>2016.07.19</span></li>
+    							<li><label class="red">【特急】</label><p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p><span>2016.07.19</span></li>
+    						</ul>
+    					</li>
+    				</ul>
+    			</td>
+    			<td class="right" valign="top" style="padding-left:20px">
+    				<div class="weather"></div>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td class="left" valign="top">
+    				<h3>日程安排<a>more</a></h3>
+	    			<ul class="left_ul">
+	    				<li>
+	    					<label class="read">【已读】</label>
+	    					<p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p>
+	    					<span>2016.07.19</span>
+	    				</li>
+	    				<li>
+	    					<label class="read">【已读】</label>
+	    					<p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p>
+	    					<span>2016.07.19</span>
+	    				</li>
+	    				<li>
+	    					<label class="read">【已读】</label>
+	    					<p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p>
+	    					<span>2016.07.19</span>
+	    				</li>
+	    			</ul>
+    			</td>
+    			<td class="right" valign="top">
+    				<h3>数据统计<a>more</a></h3>
+    				<div class="right_chart"></div>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td class="left" valign="top">
+    				<h3>收发文<a>more</a></h3>
+	    			<ul class="left_ul">
+	    				<li>
+	    					<label class="read">【已读】</label>
+	    					<p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p>
+	    					<span>2016.07.19</span>
+	    				</li>
+	    				<li>
+	    					<label class="unread">【未读】</label>
+	    					<p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p>
+	    					<span>2016.07.19</span>
+	    				</li>
+	    				<li>
+	    					<label class="read">【已读】</label>
+	    					<p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p>
+	    					<span>2016.07.19</span>
+	    				</li>
+	    			</ul>
+    			</td>
+    			<td class="right" valign="top">
+    				<h3>系统公告<a>more</a></h3>
+    				<ul class="left_ul">
+	    				<li>
+	    					<label class="read">【已读】</label>
+	    					<p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p>
+	    					<span>2016.07.19</span>
+	    				</li>
+	    				<li>
+	    					<label class="unread">【未读】</label>
+	    					<p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p>
+	    					<span>2016.07.19</span>
+	    				</li>
+	    				<li>
+	    					<label class="read">【已读】</label>
+	    					<p>测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容</p>
+	    					<span>2016.07.19</span>
+	    				</li>
+	    			</ul>
+    			</td>
+    		</tr>
+    	</table>
+    </div>
+</body>
+</html>

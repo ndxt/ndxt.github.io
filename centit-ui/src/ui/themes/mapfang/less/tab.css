@@ -1,0 +1,80 @@
+/*TAB*/
+#menu_tab > .tabs-header {
+	height: 50px;
+	padding: 0;
+    background: #f2f4fa;
+    border-top: 1px solid #e2e4ee;
+    border-bottom: 1px solid #e2e4ee;
+}
+
+#menu_tab > .tabs-panels > .panel > .panel-body {
+}
+
+#menu_tab > .tabs-header .tabs-wrap {
+    height: 100%;
+}
+#menu_tab > .tabs-header .tabs {
+	border: none;
+	bottom: 0;
+	position: absolute;
+}
+#menu_tab > .tabs-header .tabs li {
+	margin: 0 0 0 5px;
+}
+#menu_tab > .tabs-header .tabs li:FIRST-CHILD {
+	margin-left: 10px;
+}
+
+/*TAB工具栏*/
+#menu_tab > .tabs-header .tabs-tool {
+	height: 24px;
+	border: 1px solid #D7D7D7;
+	border-width: 0 0 0 1px;
+	background: #f5f5f5;
+}
+/*TAB工具栏 > 按钮*/
+#menu_tab > .tabs-header .tabs-tool a {
+    height: 100%;
+}
+#menu_tab > .tabs-header .tabs-tool a > span {
+	margin-top: 13px;
+}
+#menu_tab  > .tabs-header.tabs-scroller-left, #menu_tab > .tabs-header .tabs-scroller-right {
+    background: #f5f5f5 url('images/tab_icons.png') no-repeat -15px center;
+	border-color: #D7D7D7;
+}
+#menu_tab > .tabs-header .tabs-scroller-left {
+    background-position: 1px center
+}
+
+/*TAB > 单个TAB背景*/
+#menu_tab > .tabs-header .tabs-inner {
+	background: #f7f9ff;
+	border-color: #e2e4ee;
+    filter: none;
+}
+/*TAB 背景：鼠标悬停*/
+
+#menu_tab > .tabs-header li:hover .tabs-inner {
+}
+#menu_tab > .tabs-header .tabs-selected:hover .tabs-inner {
+}
+
+/*TAB 背景：选中*/
+#menu_tab > .tabs-header .tabs-selected .tabs-inner {
+	background: #fff;
+	border-bottom-color: #fff;
+}
+
+/*TAB 关闭按钮*/
+#menu_tab > .tabs-header .tabs-close {
+}
+/*TAB 关闭按钮：鼠标悬停*/
+#menu_tab > .tabs-header .tabs-close:hover {
+	background-color: transparent;
+    opacity: 1;
+}
+/*TAB 关闭按钮：悬停*/
+#menu_tab > .tabs-header li:hover .tabs-close{
+    background-position: -50px;
+}

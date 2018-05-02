@@ -1,0 +1,43 @@
+<div id="header" data-options="region:'north'">
+	<div class="title" id="title">
+	    <font class='title-system' id="title-system" ></font>
+	</div>
+	<div id="nav">
+	 	<h3></h3>
+	    <div>
+    		<p class="circle_name" name="u_userName"></p>
+	     	<a href="#"><p>性别</p><span name="u_sex"></span></a>
+	        <a href="#"><p>警号</p><span name="u_policeNo"></span></a>
+	        <a href="#"><p>所属单位</p><span name="u_unitName"></span></a>
+	    </div>   
+	</div>
+</div>
+
+<div id="side" data-options="region:'west', collapsedSize: 10" >
+</div>
+
+<div id="center" data-options="region:'center', border:false">
+</div>
+
+<script>
+$(function(){
+	var Core = require('core/core');
+	$('#nav>h3').click(function(e){
+		var src = e?e.target:event.srcElement;
+		if(src.tagName == "H3"){
+			Core.ajax(Config.ContextPath+'system/userinfo/current', {
+				data: {
+				},
+				method: 'get'
+			}).then(function(data) {
+				$(".circle_name").text(data.userName);
+				$("span[name=u_sex]").text(data.sexText);
+				$("span[name=u_policeNo]").text(data.policeNo);
+				$("span[name=u_unitName]").text(data.unitName);
+			});
+			var next = src.nextElementSibling || src.nextSibling;
+			next.style.display = (next.style.display =="block")?"none":"block";
+		}
+	})
+})
+</script>

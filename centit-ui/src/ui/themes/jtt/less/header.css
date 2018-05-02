@@ -1,0 +1,55 @@
+/*HEADER*/
+body > .layout-panel-north {
+   /*  background: url(images/header.jpg) repeat-x; */
+   background:#fff!important;
+}
+
+.full-screen #header {
+	background: none;
+}
+#header {
+    height: 80px;
+    border: none;
+    background: url(images/top_logo01.png) bottom left no-repeat;
+}
+
+#header.header_cm{background:none;}
+
+#header .title {
+	height: 80px;
+	width: 400px;
+	position:absolute;
+	top: 2px;
+	left: 220px;
+    text-indent: -9999px;
+	background: url(images/titlexb.png) no-repeat left center;
+}
+
+body.full-screen #header .title {
+    height: 33px;
+    line-height: 33px;
+    top: 0;
+    font-size: 22px;
+    font-weight: bold;
+    background: none;
+    text-indent: 0;
+    left:10px;
+    top:6px;
+}
+
+/*HEADER > 工具栏*/
+#header .toolbar {
+     position: absolute;
+    right: 70px;
+    bottom: 18px;
+    height: 28px;
+}
+#header .toolbar .panel-body{
+    padding: 0;
+    background: transparent;
+}
+
+/*HEADER > 工具栏 > SKIN*/
+#toolbar_skin .skin {
+    border-radius: 2px;
+}

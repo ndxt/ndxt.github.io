@@ -1,0 +1,26 @@
+/*菜单 > layout*/
+#side .layout-container {
+/*     margin: 0 12px;
+ */}
+
+/*菜单 > collapse*/
+#side .layout-collapse{
+}
+#side .layout-collapse-center{
+}
+
+/*菜单 > expand*/
+body > .layout-expand-west {
+	background: #f5f5f5;
+}
+body > .layout-expand-west .panel-header {
+	background: url(images/menu-expand.png) -1px -1px no-repeat;
+}
+body > .layout-expand-west .panel-tool {
+}
+body > .layout-expand-west .panel-body {
+	border-color: #ccc;
+}
+body > .layout-expand-west a.layout-button-right {
+	background: none;
+}

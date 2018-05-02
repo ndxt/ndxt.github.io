@@ -1,0 +1,147 @@
+<!DOCTYPE html><html><head><title>Utils</title><meta charset='utf-8'><link href='../marxico/themes/marxico.css' rel='stylesheet'></head><body><div id='preview-contents' class='note-content'>
+                        <div id="wmd-preview" class="preview-content"></div>
+                    <div id="wmd-preview-section-13" class="wmd-preview-section preview-content">
+
+</div><div id="wmd-preview-section-26" class="wmd-preview-section preview-content">
+
+<h1 id="utils">Utils</h1>
+
+<hr></div><div id="wmd-preview-section-92" class="wmd-preview-section preview-content">
+
+<h2 id="1引用">1、引用</h2>
+
+</div><div id="wmd-preview-section-4947" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><div><span class="hljs-keyword">var</span> Utils = <span class="hljs-built_in">require</span>(<span class="hljs-string">'core/utils'</span>);</div></div></div></code></pre>
+
+<hr></div><div id="wmd-preview-section-632" class="wmd-preview-section preview-content">
+
+<h2 id="2utilsmaketreedata-isparentfn-childfield">2、Utils.makeTree(data, isParentFn, childField)</h2>
+
+<p>作用：将list数组转换成父子关系的tree数据</p>
+
+<table>
+<thead>
+<tr>
+  <th align="center">参数</th>
+  <th>类型</th>
+  <th>作用</th>
+  <th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">data</td>
+  <td>Array</td>
+  <td>待转换的list数组</td>
+  <td></td>
+</tr>
+<tr>
+  <td align="center">isParentFn</td>
+  <td>Function</td>
+  <td>判断是否是父子关系的方法</td>
+  <td>function(parent) { return this.pid == parent.id; }</td>
+</tr>
+<tr>
+  <td align="center">childField</td>
+  <td>String</td>
+  <td>子元素字段名称</td>
+  <td>children</td>
+</tr>
+</tbody></table>
+
+
+</div><div id="wmd-preview-section-1239" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><span class="hljs-comment">// 待转换数组</span></div><div><span class="hljs-keyword">var</span> list = {</div><div>    {id: <span class="hljs-number">0</span>, pid: <span class="hljs-literal">null</span>, name: <span class="hljs-string">"A"</span>},</div><div>    {id: <span class="hljs-number">1</span>, pid: <span class="hljs-number">0</span>, name: <span class="hljs-string">"A1"</span>},</div><div>    {id: <span class="hljs-number">2</span>, pid: <span class="hljs-literal">null</span>, name: <span class="hljs-string">"B"</span>},</div><div>};</div><br><div><span class="hljs-keyword">var</span> tree = Utils.makeTree(list);</div><br><div><span class="hljs-comment">// return tree as</span></div><div>[</div><div>    {</div><div>        id: <span class="hljs-number">0</span>, pid: <span class="hljs-literal">null</span>, name: <span class="hljs-string">"A"</span>, </div><div>        children: [{id: <span class="hljs-number">1</span>, pid: <span class="hljs-number">0</span>, name: <span class="hljs-string">"A1"</span>}]</div><div>    },</div><div>    {id: <span class="hljs-number">2</span>, pid: <span class="hljs-literal">null</span>, name: <span class="hljs-string">"B"</span>},</div><div>]</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></code></pre>
+
+<hr></div><div id="wmd-preview-section-1757" class="wmd-preview-section preview-content">
+
+<h2 id="3utilswalktreedatas-callback-childfield-level">3、Utils.walkTree(datas, callback, childField, level)</h2>
+
+<p>作用：遍历树形数据</p>
+
+<table>
+<thead>
+<tr>
+  <th align="center">参数</th>
+  <th>类型</th>
+  <th>作用</th>
+  <th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">datas</td>
+  <td>TreeArray or TreeObject</td>
+  <td>待遍历的树形数据</td>
+  <td></td>
+</tr>
+<tr>
+  <td align="center">callback</td>
+  <td>Function</td>
+  <td>遍历回调函数，参数(当前对象, 父级对象, 层级, 当前位置)</td>
+  <td>callback(obj, parent, level, index)</td>
+</tr>
+<tr>
+  <td align="center">childField</td>
+  <td>String</td>
+  <td>子元素字段名称</td>
+  <td>children</td>
+</tr>
+<tr>
+  <td align="center">level</td>
+  <td>Number</td>
+  <td>当前层级</td>
+  <td>0</td>
+</tr>
+</tbody></table>
+
+
+</div><div id="wmd-preview-section-2230" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><span class="hljs-comment">// 树形数据</span></div><div><span class="hljs-keyword">var</span> data = [</div><div>        {</div><div>            id: <span class="hljs-number">0</span>, pid: <span class="hljs-literal">null</span>, name: <span class="hljs-string">"A"</span>, </div><div>            children: [{id: <span class="hljs-number">1</span>, pid: <span class="hljs-number">0</span>, name: <span class="hljs-string">"A1"</span>}]</div><div>        },</div><div>        {id: <span class="hljs-number">2</span>, pid: <span class="hljs-literal">null</span>, name: <span class="hljs-string">"B"</span>},</div><div>    ];</div><br><div><span class="hljs-comment">// 遍历</span></div><div>Utils.walkTree(data, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(obj)</span> </span>{</div><div>    obj.name = obj.name + <span class="hljs-string">"111"</span>;</div><div>});</div><br><div><span class="hljs-comment">// return data as</span></div><div>[</div><div>    {</div><div>        id: <span class="hljs-number">0</span>, pid: <span class="hljs-literal">null</span>, name: <span class="hljs-string">"A111"</span>, </div><div>        children: [{id: <span class="hljs-number">1</span>, pid: <span class="hljs-number">0</span>, name: <span class="hljs-string">"A1111"</span>}]</div><div>    },</div><div>    {id: <span class="hljs-number">2</span>, pid: <span class="hljs-literal">null</span>, name: <span class="hljs-string">"B111"</span>},</div><div>]</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></code></pre>
+
+<hr>
+
+</div><div id="wmd-preview-section-2645" class="wmd-preview-section preview-content">
+
+<h2 id="4utilswalktreebeforedatas-callback-childfield-level">4、Utils.walkTreeBefore(datas, callback, childField, level)</h2>
+
+<p>作用：和 <em>Utils.walkTree()</em> 方法类似，只是回调函数 <strong>callback</strong> 会在遍历前执行</p>
+
+<hr>
+
+</div><div id="wmd-preview-section-3776" class="wmd-preview-section preview-content">
+
+<h2 id="5utilsthrottlefunc-wait-options">5、Utils.throttle(func, wait, options)</h2>
+
+<p>作用：返回原函数的一个包裹函数，在指定时间内不会再次执行</p>
+
+<p>出于性能上的考虑，有时候我们并不希望一段程序连续地执行。比如 <strong>$(window).resize(fn)</strong> 中的事件，并不需要在拖拽窗口时每一次都响应，只要在结束或者每隔100ms响应一次。这个时候我们可以方便地用 <strong>throttle</strong> 方法包裹原函数，指定响应间隔时间。</p>
+
+<table>
+<thead>
+<tr>
+  <th align="center">参数</th>
+  <th>类型</th>
+  <th>作用</th>
+  <th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">func</td>
+  <td>Function</td>
+  <td>待包裹的函数</td>
+  <td></td>
+</tr>
+<tr>
+  <td align="center">wait</td>
+  <td>Number</td>
+  <td>等待时间，单位：毫秒</td>
+  <td>callback(obj, parent, level, index)</td>
+</tr>
+</tbody></table>
+
+
+</div><div id="wmd-preview-section-4932" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><div><div><div><div><div><br><div><span class="hljs-keyword">var</span> index = <span class="hljs-number">0</span>;</div><br><div><span class="hljs-keyword">var</span> fn = Utils.throttle(setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{</div><div>    <span class="hljs-built_in">console</span>.log(index++);</div><div>}, <span class="hljs-number">10</span>), <span class="hljs-number">500</span>);</div><br><div>fn();</div><br><div><span class="hljs-comment">// 本来会每隔10ms就打印，被包裹后每隔大约500ms才执行一次</span></div><div><span class="hljs-number">0</span></div><div><span class="hljs-comment">// after 500ms</span></div><div><span class="hljs-number">1</span></div><div>.</div><div>.</div><div>.</div></div></div></div></div></div></div></div></code></pre></div><div id="wmd-preview-section-footnotes" class="preview-content"></div></div></body></html>

@@ -1,0 +1,9 @@
+<p class="codeIgnore"><code>ComboGrid</code>数据表格下拉框结合了可编辑文本框控件和下拉数据表格面板控件，该控件允许用户快速查找和选择，并且该控件提供了键盘导航支持，对行进行筛选。</p>
+<!-- @reg:columns=tooltip{content:'定义每一列的字段、标题、列宽'} -->
+<!-- @reg:field:'itemid'=tooltip{content:'对应json中的‘itemid’字段'} -->
+<!-- @reg:title:'itemid'=tooltip{content:'列标题'} -->
+<!-- @reg:width:'itemid'=tooltip{content:'列宽
+
+'} -->
+<select class="easyui-combogrid" style="width:250px" data-options="panelWidth: 500,idField: 'itemid',textField: 'productname',url:'modules/form/form-combogrid/datas/combogrid.json',method: 'get',columns: [[{field:'itemid',title:'第一列',width:80},{field:'productname',title:'第二列',width:120},{field:'listprice',title:'第三列',width:80,align:'right'},{field:'unitcost',title:'第四列',width:80,align:'right'},{field:'attr1',title:'第五列',width:200},{field:'status',title:'第六列',width:60,align:'center'}]],fitColumns: true">
+    </select>

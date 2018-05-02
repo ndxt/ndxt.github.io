@@ -1,0 +1,73 @@
+<ul class="example-list" id="trees-example-list">
+	<li>
+		<a href="#trees-basic" data-url="modules/components/trees/demo/trees-basic.html">基础树</a>
+	</li>
+	<li>
+		<a>数据加载</a>
+		<ul>
+			<li>
+				<a href="#trees-async" data-url="modules/components/trees/demo/trees-async.html">异步数据加载</a>
+			</li>
+			<li>
+				<a href="#trees-lazy" data-url="modules/components/trees/demo/trees-lazy.html">树节点懒加载</a>
+			</li>
+			<li>
+				<a href="#trees-filter" data-url="modules/components/trees/demo/trees-filter.html">数据过滤</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a>树操作</a>
+		<ul>
+			<li>
+				<a href="#trees-expand" data-url="modules/components/trees/demo/trees-expand.html">展开/收缩</a>
+			</li>
+			<li>
+				<a href="#trees-add" data-url="modules/components/trees/demo/trees-add.html">增加/删除/更新</a>
+			</li>
+			<li>
+				<a href="#trees-drag" data-url="modules/components/trees/demo/trees-drag.html">拖拽</a>
+			</li>
+			<li>
+				<a href="#trees-edit" data-url="modules/components/trees/demo/trees-edit.html">编辑</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a>树外观</a>
+		<ul>
+			<li>
+				<a href="#trees-checkbox" data-url="modules/components/trees/demo/trees-checkbox.html">选择框</a>
+			</li>
+			<li>
+				<a href="#trees-line" data-url="modules/components/trees/demo/trees-line.html">连线</a>
+			</li>
+			<li>
+				<a href="#trees-icon" data-url="modules/components/trees/demo/trees-icon.html">图标</a>
+			</li>
+			<li>
+				<a href="#trees-format" data-url="modules/components/trees/demo/trees-format.html">格式化</a>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<script>
+	
+	requirejs([
+		'widgets/example/widget.example',
+		'plugins/prettify/prettify'
+		], function(create, datas) {
+			
+		var list = $('#trees-example-list');
+		
+		create(list, function(container) {
+			prettyPrint();
+			
+			$.parser.parse(container);
+			
+			$("#menu_tab_Trees").niceScroll({cursorcolor:"#BCBCBC"});
+		});
+	});
+	
+</script>

@@ -1,0 +1,41 @@
+<p class="codeIgnore">按钮有<b>2</b>种固定尺寸：<b>small</b>和<b>large</b>，默认尺寸为<b>small</b>，也可以通过<code>width</code>和<code>height</code>属性自定义尺寸，或者通过<code>resize</code>方法动态控制按钮大小</p>
+
+<p class="codeIgnore title">默认尺寸按钮</p>
+<!-- 默认尺寸按钮 -->
+<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'">默认尺寸</a>
+
+<p class="codeIgnore title">大按钮</p>
+<!-- 大按钮 -->
+<!-- @reg:size:'large'=tooltip{content:'<code>size</code>属性设置按钮大小，值为<code>large</code>时为大按钮'} -->
+<a href="#" class="easyui-linkbutton" data-options="size:'large', iconCls:'icon-large-chart'">大按钮</a>
+
+<p class="codeIgnore title">自定义按钮高度和宽度</p>
+<!-- 自定义按钮高度和宽度 -->
+<!-- @reg:width: 200, height: 50=tooltip{content:'<code>width</code>和<code>height</code>分别设置按钮的宽度和高度，单位：px'} -->
+<a href="#" class="easyui-linkbutton" data-options="width: 200, height: 50, iconCls:'icon-cut'">宽200，高50</a>
+
+<p class="codeIgnore title">动态控制按钮高度和宽度</p>
+<!-- 动态控制按钮高度和宽度 -->
+<a onclick="resize_btn_3d7882a59ee8b575(true)" class="easyui-linkbutton" data-options="iconCls:'icon-add'">大一点</a>
+<a onclick="resize_btn_3d7882a59ee8b575(false)" class="easyui-linkbutton" data-options="iconCls:'icon-remove'">小一点</a>
+<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-help'" id="btn_3d7882a59ee8b575">帮助</a>
+<script>
+	function resize_btn_3d7882a59ee8b575(biger) {
+		var btn = $('#btn_3d7882a59ee8b575');
+		var width = btn.outerWidth(), height = btn.outerHeight();
+		
+		if (biger) {
+//<!-- @reg:resize=tooltip{content:'通过<code>resize</code>动态改变按钮宽度与高度'} -->
+			btn.linkbutton('resize', {
+				width: width*1.1,
+				height: height*1.1
+			})
+		}
+		else {
+			btn.linkbutton('resize', {
+				width: width*0.9,
+				height: height*0.9
+			})
+		}
+	}
+</script>

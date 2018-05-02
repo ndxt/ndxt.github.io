@@ -1,0 +1,32 @@
+<p class="codeIgnore"><code>move方法</code>用来移动面板（panel）的位置</p>
+
+<div class="easyui-panel" data-options="cls: 'panel-moved'" style="height: 100px; margin-bottom: 10px;">
+<!-- @reg:easyui-slider=tooltip{content:'设置移动<b>value</b>的不同值'} -->
+	<input class="easyui-slider" style="width:300px; margin: 20px;"
+        data-options="showTip:true, rule:[0,'|',25,'|',50,'|',75,'|',100], onChange: movePanel_b20f91e2c5f6843c">
+</div>		
+<!-- @reg:value=tooltip{content:'easyui-slider中传递的<b>value</b>值'} -->
+<script>
+	function movePanel_b20f91e2c5f6843c(value) {
+		// 移动
+		$('#panel_b20f91e2c5f6843c').panel('move', {
+			left: value * 2
+		});
+	}
+</script>
+
+<style>
+	.panel-moved {
+		position: relative;
+	}
+	
+	.panel-moved .slider {
+		margin: 20px;
+	}
+</style>
+<div id="panel_b20f91e2c5f6843c" class="easyui-panel" title="新疆自治区办事处" data-options="cls: 'panel-moved'" 
+	style="width:200px;height:100px;padding:10px;">
+新疆自治区办事处<br>
+联系人：陈主任<br>
+联系电话：15195848313
+</div>

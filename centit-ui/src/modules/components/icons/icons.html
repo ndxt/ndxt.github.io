@@ -1,0 +1,117 @@
+
+<div class="easyui-tabs" id="page_ui_components_icons" data-options="fit: true, tabPosition: 'left'">
+    <div id="ui_components_icons_easyui" title="EasyUI" style="padding: 20px;">
+		<h1>包含3个超小图标、22个中等图标、5个大图标</h1>
+		<textarea id="easyui_icons_code">
+<!-- 超小图标 -->
+<i class="easyui-mini-icon icon-mini-add"></i>
+
+<!-- 中等图标 -->
+<i class="easyui-icon icon-add"></i>
+
+<!-- 大图标 -->
+<i class="easyui-large-icon icon-large-picture"></i></textarea>
+    </div>
+	
+    <div id="ui_components_icons_fa" title="FontAwesome" style="padding: 20px;">
+		<h1>包含519个图标，通过css控制大小、颜色</h1>
+		<textarea id="fa_icons_code"><i class="fa fa-bed"></i></textarea>
+    </div>
+    
+     <div id="ui_components_icons_base" title="BaseUI" style="padding: 20px;">
+		<h1>包含80个图标</h1>
+		<textarea id="base_icons_code"><i class="icon-base icon-base-info"></i></textarea>
+    </div>
+    
+      <div id="ui_components_icons_black" title="BlackUI" style="padding: 20px;">
+		<h1>包含350个图标</h1>
+		<textarea id="black_icons_code"><i class="icon-base icon-black-one"></i></textarea>
+    </div>
+    
+      <div id="ui_components_icons_border" title="BorderUI" style="padding: 20px;">
+		<h1>包含48个图标</h1>
+		<textarea id="border_icons_code"><i class="icon-base icon-border-earth"></i></textarea>
+    </div>
+    
+      <div id="ui_components_icons_white" title="WhiteUI" style="padding: 20px;">
+		<h1>包含108个图标</h1>
+		<textarea id="white_icons_code"><i class="icon-base icon-white-search"></i></textarea>
+    </div>
+</div>
+
+<script>
+	requirejs([
+		'modules/components/icons/icons',
+		'codeMirror',
+		'css!modules/components/icons/icons.css'
+	], function(Page, CodeMirror) {
+		
+		// EasyUI图标
+		CodeMirror.fromTextArea(document.getElementById("easyui_icons_code"), {
+			lineNumbers : true,
+			mode: 'xml'
+		});
+		var easy = '#ui_components_icons_easyui';
+		Page.create($(easy), '超小图标(easyui-mini-icon)', 'easyui-mini-icon', Page.Icons.EasyUI.Mini);
+		Page.create($(easy), '中等图标(easyui-icon)', 'easyui-icon', Page.Icons.EasyUI.Normal);
+		Page.create($(easy), '大图标(easyui-large-icon)', 'easyui-large-icon', Page.Icons.EasyUI.Large);
+		
+		
+		
+		// EasyUI图标
+		CodeMirror.fromTextArea(document.getElementById("fa_icons_code"), {
+			lineNumbers : true,
+			mode: 'xml'
+		});
+		var fa = '#ui_components_icons_fa';
+		Page.create($(fa), '40 New Icons', 'fa', Page.Icons.FontAwesome.New);
+		Page.create($(fa), 'Web Application Icons', 'fa', Page.Icons.FontAwesome.WebApplicationIcons);
+		Page.create($(fa), 'Transportation Icons', 'fa', Page.Icons.FontAwesome.TransportationIcons);
+		Page.create($(fa), 'Gender Icons', 'fa', Page.Icons.FontAwesome.GenderIcons);
+		Page.create($(fa), 'File Type Icons', 'fa', Page.Icons.FontAwesome.FileTypeIcons);
+		Page.create($(fa), 'Spinner Icons', 'fa', Page.Icons.FontAwesome.SpinnerIcons);
+		Page.create($(fa), 'Form Control Icons', 'fa', Page.Icons.FontAwesome.FormControlIcons);
+		Page.create($(fa), 'Payment Icons', 'fa', Page.Icons.FontAwesome.PaymentIcons);
+		Page.create($(fa), 'Chart Icons', 'fa', Page.Icons.FontAwesome.ChartIcons);
+		Page.create($(fa), 'Currency Icons', 'fa', Page.Icons.FontAwesome.CurrencyIcons);
+		Page.create($(fa), 'Text Editor Icons', 'fa', Page.Icons.FontAwesome.TextEditorIcons);
+		Page.create($(fa), 'Directional Icons', 'fa', Page.Icons.FontAwesome.DirectionalIcons);
+		Page.create($(fa), 'Video Player Icons', 'fa', Page.Icons.FontAwesome.VideoPlayerIcons);
+		Page.create($(fa), 'Brand Icons', 'fa', Page.Icons.FontAwesome.BrandIcons);
+		Page.create($(fa), 'Medical Icons', 'fa', Page.Icons.FontAwesome.MedicalIcons);
+
+		
+		//BaseUI
+		CodeMirror.fromTextArea(document.getElementById("base_icons_code"), {
+			lineNumbers : true,
+			mode: 'xml'
+		});
+		Page.create($('#ui_components_icons_base'), 'Base', 'icon-base', Page.Icons.BaseUI.BaseIcon);
+		
+		
+		//BlackUI
+		CodeMirror.fromTextArea(document.getElementById("black_icons_code"), {
+			lineNumbers : true,
+			mode: 'xml'
+		});
+		Page.create($('#ui_components_icons_black'), 'Black', 'icon-black', Page.Icons.BlackUI.BlackIcon);
+		
+		//BorderUI
+		CodeMirror.fromTextArea(document.getElementById("border_icons_code"), {
+			lineNumbers : true,
+			mode: 'xml'
+		});
+		Page.create($('#ui_components_icons_border'), 'Border', 'icon-border', Page.Icons.BorderUI.BorderIcon);
+
+	
+		//WhiteUI
+		CodeMirror.fromTextArea(document.getElementById("white_icons_code"), {
+			lineNumbers : true,
+			mode: 'xml'
+		});
+		Page.create($('#ui_components_icons_white'), 'White', 'icon-white', Page.Icons.WhiteUI.WhiteIcon);
+
+});
+</script>
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html><html><head><title>Core</title><meta charset='utf-8'><link href='../marxico/themes/marxico.css' rel='stylesheet'></head><body><div id='preview-contents' class='note-content'>
+                        <div id="wmd-preview" class="preview-content"></div>
+                    <div id="wmd-preview-section-1" class="wmd-preview-section preview-content">
+
+</div><div id="wmd-preview-section-2" class="wmd-preview-section preview-content">
+
+<h1 id="core">Core</h1>
+
+<hr>
+
+</div><div id="wmd-preview-section-3" class="wmd-preview-section preview-content">
+
+<h2 id="1引用">1、引用</h2>
+
+<p>引用 <strong>Core</strong> 模块的方法是</p>
+
+</div><div id="wmd-preview-section-4" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><span class="hljs-keyword">var</span> Core = <span class="hljs-built_in">require</span>(<span class="hljs-string">'core/core'</span>);</div></div></code></pre>
+
+<hr>
+
+</div><div id="wmd-preview-section-5" class="wmd-preview-section preview-content">
+
+<h2 id="2coreajaxurl-options">2、Core.ajax(url, options)</h2>
+
+<p>和 <strong>Ajax</strong> 模块的 <em>ajax(url, options)</em> 方法类似，唯一的区别是可以通过 <strong>Config</strong> 统一配置对数据成功和错误时的处理方法。一般情况下，我们只需要使用 <strong>Core.ajax()</strong> ，只有在需要特殊配置时才使用 <strong>Ajax.ajax()</strong></p>
+
+</div><div id="wmd-preview-section-6" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div>Core.ajax(url)</div><div>    .then(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> </span>{</div><div>        alert(<span class="hljs-string">'成功'</span>);</div><div>    })</div><div>    .catch(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data {</span></span></div><div>        alert('错误');</div><div>    });</div></div></code></pre>
+
+<hr>
+
+</div><div id="wmd-preview-section-7" class="wmd-preview-section preview-content">
+
+<h2 id="3coregetjsonurl-options">3、Core.getJSON(url, options)</h2>
+
+<p>指定返回 <strong>JSON</strong> 格式数据</p>
+
+<hr>
+
+</div><div id="wmd-preview-section-8" class="wmd-preview-section preview-content">
+
+<h2 id="4corereloadurl">4、Core.reload(url)</h2>
+
+<p>重新加载当前页面，若 <em>url</em> 存在，加载指定 url</p>
+
+<hr>
+
+</div><div id="wmd-preview-section-9" class="wmd-preview-section preview-content">
+
+<h2 id="5coreheightobj">5、Core.height(obj)</h2>
+
+<p>相当有用的一个方法，可以获取当前 <strong>Tab</strong> 页面的高度，根据参数不同，返回不同含义</p>
+
+<table>
+<thead>
+<tr>
+  <th align="center">参数类型</th>
+  <th align="center">返回含义</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">undefined</td>
+  <td align="center">直接返回当前 Tab 页的高度</td>
+</tr>
+<tr>
+  <td align="center">Number</td>
+  <td align="center">返回 Tab 页高度减去参数值。</td>
+</tr>
+<tr>
+  <td align="center">String、Object</td>
+  <td align="center">返回 Tab 页高度减去根据参数查找的 jQuery 对象的高度</td>
+</tr>
+</tbody></table>
+
+
+</div><div id="wmd-preview-section-10" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><span class="hljs-comment">// Tab 页高度</span></div><div><span class="hljs-keyword">var</span> height = Core.height();</div><br><div><span class="hljs-comment">// Tab 页高度减去 50</span></div><div><span class="hljs-keyword">var</span> height2 = Core.height(<span class="hljs-number">50</span>);</div><br><div><span class="hljs-comment">// Tab 页高度减去该页面上 class="search" 的搜索框高度</span></div><div><span class="hljs-keyword">var</span> height3 = Core.height(<span class="hljs-string">'.search'</span>);</div></div></code></pre></div><div id="wmd-preview-section-footnotes" class="preview-content"></div></div></body></html>

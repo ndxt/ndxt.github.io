@@ -1,0 +1,23 @@
+<p class="codeIgnore">combotree的操作方法有<code>getValue、setValue、disable、enable</code></p>
+ <div style="margin:20px 0">
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="getValue()">GetValue</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="setValue()">SetValue</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="disable()">Disable</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="enable()">Enable</a>
+    </div>
+    <input id="formelementcombotree" class="easyui-combotree" data-options="url:'modules/form/form-combotree/datas/combotree.json',method:'get',required:true" style="width:200px;">
+    <script type="text/javascript">
+        function getValue(){
+            var val = $('#formelementcombotree').combotree('getValue');
+            alert(val);
+        }
+        function setValue(){
+            $('#formelementcombotree').combotree('setValue', '122');
+        }
+        function disable(){
+            $('#formelementcombotree').combotree('disable');
+        }
+        function enable(){
+            $('#formelementcombotree').combotree('enable');
+        }
+    </script>

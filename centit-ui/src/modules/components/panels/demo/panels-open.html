@@ -1,0 +1,28 @@
+<p class="codeIgnore"><code>open方法和close方法</code>用来打开面板（panel）和关闭面板（panel），并设置打开面板和关闭面板的动画效果</p>
+<div class="easyui-panel" style="margin-bottom: 10px;">
+    <!-- @reg:panel('open')=tooltip{content:'给对应的面板绑定<b>open方法</b>'} -->
+	<a class="easyui-linkbutton" onclick="$('#panel_a7c6a07d275c3da0').panel('open');" data-options="iconCls: 'icon-ok'">打开</a>
+	<!-- @reg:panel('close')=tooltip{content:'给对应的面板绑定<b>close方法</b>'} -->
+	<a class="easyui-linkbutton" onclick="$('#panel_a7c6a07d275c3da0').panel('close');" data-options="iconCls: 'icon-cancel'">关闭</a>
+	<br><br>
+	<span>动画效果：</span>
+	<!-- @reg:show=tooltip{content:'面板关闭或者打开时的动画效果为<b>show</b>'} -->
+	<a class="easyui-linkbutton" onclick="setAnimation_a7c6a07d275c3da0('show')" data-options="group: 'panels-open', toggle: true, selected: true">默认</a>
+	<!-- @reg:slide=tooltip{content:'面板关闭或者打开时的动画效果为<b>slide</b>'} -->
+	<a class="easyui-linkbutton" onclick="setAnimation_a7c6a07d275c3da0('slide')" data-options="group: 'panels-open', toggle: true">滑动</a>
+	<!-- @reg:fade=tooltip{content:'面板关闭或者打开时的动画效果为<b>fade</b>'} -->
+	<a class="easyui-linkbutton" onclick="setAnimation_a7c6a07d275c3da0('fade')" data-options="group: 'panels-open', toggle: true">渐变</a>
+</div>
+<script>
+	function setAnimation_a7c6a07d275c3da0(type) {
+		$('#panel_a7c6a07d275c3da0').panel({
+			openAnimation: type,
+			closeAnimation: type == 'show' ? 'hide' : type
+		});
+	}
+</script>
+<div id="panel_a7c6a07d275c3da0" class="easyui-panel" title="宁波市办事处" style="width:500px;height:150px;padding:10px;">
+宁波市办事处<br>
+联系人：邵主任<br>
+联系电话：18921448332
+</div>

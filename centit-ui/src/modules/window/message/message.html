@@ -1,0 +1,33 @@
+<ul class="example-list" id="message-example-list">
+	<li>
+		<a href="#message-basic" data-url="modules/window/message/demo/message-basic.html">基础消息</a>
+	</li>
+	<li>
+		<a href="#message-alert" data-url="modules/window/message/demo/message-alert.html">警告消息</a>
+	</li>
+	<li>
+		<a href="#message-interactive" data-url="modules/window/message/demo/message-interactive.html">互动消息</a>
+	</li>
+	<li>
+		<a href="#message-box-position" data-url="modules/window/message/demo/message-box-position.html">消息框位置</a>
+	</li>
+	
+</ul>
+
+<script>
+	
+	requirejs([
+		'widgets/example/widget.example',
+		'plugins/prettify/prettify'
+		], function(create) {
+			
+		var list = $('#message-example-list');
+		create(list, function(container) {
+			prettyPrint();
+			
+			$.parser.parse(container);
+			
+			$("#menu_tab_message").niceScroll({cursorcolor:"#BCBCBC"});
+		});
+	});
+</script>

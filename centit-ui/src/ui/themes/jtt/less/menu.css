@@ -1,0 +1,478 @@
+/*菜单*/
+*{margin:0; padding:0;}
+body > .layout-panel-west{
+	
+	-moz-box-shadow: 3px 3px 5px #e0e3e5;
+    -webkit-box-shadow: 3px 3px 5px #e0e3e5;
+    box-shadow: 3px 3px 5px #e0e3e5;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#e0e3e5')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#e0e3e5');
+}
+
+.layout-panel{overflow: visible;}
+
+.textbox {
+    padding: 0;
+   display: block;
+       border-color: #D2D2D2;
+}
+
+
+/*收缩*/
+#side .layout-collapse{display:block;}
+
+
+#side {
+    width: 201px;
+    overflow: hidden;
+    border: none;
+}
+
+
+ .tree .anleaf ul{ 
+	 list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+ 	 top: 0px;
+    left: 201px;
+    z-index: 999;
+	/* border: 1px solid rgb(201,201,201); */
+  	 display: none;
+    
+    width:203px;
+    /* height:140px; */
+		-moz-box-shadow: 3px 3px 5px #e0e3e5;
+    -webkit-box-shadow: 3px 3px 5px #e0e3e5;
+    box-shadow: 3px 3px 5px #e0e3e5;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#e0e3e5')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#e0e3e5');
+	padding: 5px;
+	
+    background-color: #e5eaee;
+    color:#000;
+} 
+
+
+#side .layout-container{ 
+	 width: 201px;
+}
+
+/*菜单 > 主体*/
+#side {
+    background-color: #276ab0;
+}
+#menu {
+	background:#276ab0;
+	width: 201px;
+    
+}
+#menu .panel-body {
+	background: #1e60a4;
+    border: none;
+    overflow-x: hidden;
+}
+#menu, #menu a {
+    color: #000;
+    font-size: 14px;
+}
+
+
+/* .panel-icon.icon-base.icon-base-home{background:red;} */
+
+
+.accordion-collapse.accordion-expand{background:url("./images/left_arrow01.png") no-repeat center #276ab0;}
+.panel-tool a{margin: 3px 0 0 3px;opacity:1;}
+.panel-icon, .panel-tool{height: 20px;}
+.accordion-collapse{background:url("./images/left_arrow02.png") no-repeat center #276ab0;}
+
+#menu .tree {
+	/* overflow: hidden; */
+	position: absolute;
+    width: 100%;
+}
+
+#menu > .panel{
+	margin-top: -1px;
+}
+
+/*菜单 > 缩进图标*/
+#menu .tree-indent {
+	display:none;
+}
+/*菜单 > 节点元素图标*/
+#menu .tree-folder {
+    display: none;
+}
+/*菜单 > 叶子元素图标*/
+#menu .tree-file {
+    display: none;
+}
+/*菜单 > 标题*/
+#menu .tree-title {
+	height: 100%;
+    line-height: 40px;
+    color: #75808c;
+    width: 100%;
+    text-align: left;
+    padding:0px 0px 0px 0px;
+
+}
+#menu li ul .tree-node .tree-title {
+	height: 100%;
+    line-height: 40px;
+    color: #75808c;
+    width: 80%;
+    text-align: left;
+    padding-left:0px;
+    text-indent:1em;
+}
+
+
+/*菜单 > 树形节点选中 > 节点元素图标*/
+#menu .tree-node-selected .tree-folder {
+    display: none;
+}
+/*菜单 > 树形节点选中 > 叶子元素图标*/
+#menu .tree-node-selected .tree-file {
+    display: none;
+}
+/*菜单 > 树形节点选中 > 标题*/
+#menu .tree-node-selected .tree-title, #menu .tree-node-selected .tree-title a {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/*菜单 > 树形节点被找到 > 节点元素图标*/
+#menu .tree-node-found .tree-folder {
+    display: none;
+}
+/*菜单 > 树形节点被找到 > 叶子元素图标*/
+#menu .tree-node-found .tree-file {
+    display: none;
+}
+/*菜单 > 树形节点被找到 > 标题*/
+#menu .tree-node-found .tree-title, #menu .tree-node-found .tree-title a {
+    font-weight: bold;
+    color: #222;
+}
+
+/*菜单 > 一级*/
+#menu .accordion-header {
+    padding: 0;
+    height: 50px;
+    line-height: 50px;
+    background: #276ab0;
+	position: relative;
+}
+/*菜单 > 一级 > 图标*/
+#menu .accordion-header .panel-icon{
+
+		margin: -12px 7px 0px 30px;
+}
+/*菜单 > 一级 > 标题*/
+#menu .accordion-header .panel-title{
+    padding-left: 70px;
+	height: 100%;
+	width: 100%;
+   	line-height: 54px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #fff;
+    text-align: left;
+}
+/*菜单 > 一级 > 工具栏*/
+#menu .accordion-header .panel-tool {
+    /* display: none; */
+    margin-right: 25px;
+}
+
+.panel-header, .panel-body{border:none;}
+
+
+
+/*菜单 > 一级：鼠标悬停*/
+#menu .accordion-header:hover {
+/*     background: #4E7F9E;
+ */
+ 
+ color:#fff;
+ 
+ }
+/*菜单 > 一级：鼠标悬停 > 图标*/
+#menu .accordion-header:hover .panel-icon {
+}
+#menu .accordion-header:hover .mf-home {
+	background-position: -120px 0;
+}
+#menu .accordion-header:hover .mf-dep {
+	background-position: -260px 0;
+}
+#menu .accordion-header:hover .mf-org {
+	background-position: 0 0;
+}
+#menu .accordion-header:hover .mf-sys {
+	background-position: -40px 0;
+}
+#menu .accordion-header:hover .mf-fag {
+	background-position: -360px 0;
+}
+#menu .accordion-header:hover .mf-qua {
+	background-position: -80px 0
+}
+/*菜单 > 一级：鼠标悬停 > 标题*/
+#menu .accordion-header:hover .panel-title{
+    color: #fff;
+}
+
+/*菜单 > 一级：选中*/
+#menu .accordion-header-selected {
+    background-color:#276ab0;
+}
+/*菜单 > 一级：选中 > 图标*/
+#menu .accordion-header-selected .panel-icon{
+	color:#fff;
+}
+#menu .accordion-header-selected .mf-home {
+	background-position: -120px 0;
+}
+#menu .accordion-header-selected .mf-dep {
+	background-position: -260px 0;
+}
+#menu .accordion-header-selected .mf-org {
+	background-position: 0 0;
+}
+#menu .accordion-header-selected .mf-sys {
+	background-position: -40px 0;
+}
+#menu .accordion-header-selected .mf-fag {
+	background-position: -360px 0;
+}
+#menu .accordion-header-selected .mf-qua {
+	background-position: -80px 0
+}
+/*菜单 > 一级：选中 > 标题*/
+#menu .accordion-header-selected .panel-title{
+	color: #fff;
+}
+
+
+#menu .accordion-header-selected > .panel-title {
+    color: #fff;
+}
+
+
+/*菜单 > 一级：选中：鼠标悬停*/
+#menu .accordion-header-selected:hover {
+	color:#fff;
+}
+/*菜单 > 一级：选中：鼠标悬停 > 标题*/
+#menu .accordion-header-selected:hover .panel-title{
+    color: #fff;
+}
+
+/*菜单 > 二级*/
+#menu .tree > li {
+	position: relative;
+	
+}
+#menu .tree > li > .tree-node {
+	height: 40px;
+}
+#menu .tree > li > .tree-node .tree-title, #menu .tree > li > .tree-node .tree-title a {
+    color: #fff;
+    font-size: 14px;
+    text-indent: 5em;
+}
+#menu .tree > li > .tree-node > .tree-indent {
+    display: none;
+}
+/* #menu .tree > li > .tree-node > .tree-title {
+	background:url("./images/zuosan.png") no-repeat right center;} */
+
+#menu .tree > li > .tree-node > .tree-hit {
+    float: right;
+    width: 11px;
+    margin: 12px 10px 0 0;
+    background: url(images/menu-level-2-hit.png) no-repeat;
+}
+#menu .tree > li > .tree-node > .tree-expanded {
+    background-position: 100% 50%;
+}
+#menu .tree > li .tree-node > .tree-expanded,#menu .tree > li .tree-node > .tree-collapsed {
+	margin-top: 11px;
+}
+#menu .tree > li > .tree-node > .tree-collapsed {
+    background-position: 0 50%;
+}
+/*菜单 > 二级：鼠标悬停*/
+#menu .tree > li > .tree-node:hover {
+	background: #8ED1FC;
+	width:100%;
+}
+#menu .tree > li > .tree-node-hover .tree-title a {
+	color: #ffffff;
+}
+/*菜单 > 二级：选中*/
+#menu .tree > li > .tree-node-selected {
+	background: url("images/mf-menu-select.png") repeat-y #28343f;
+}
+#menu .tree > li > .tree-node-selected .tree-title a {
+	color: #fff;
+}
+
+/*菜单 > 二级：第一个子元素*/
+#menu .tree > li:first-child > .tree-node {
+}
+
+/*菜单 > 三级及以下*/
+#menu .tree > .anleaf ul .tree-node {
+	height: 35px;
+    width:100%;
+    margin:0 auto;
+}
+
+
+#menu .tree > .anleaf ul li:first-child{ 
+	
+	/* margin-top:15px; */
+	
+}
+
+/*菜单 > 三级及以下：选中*/
+#menu .tree > li .tree-node-selected {
+    /* background: #fff; */
+}
+#menu .tree > li .tree-node-selected .tree-title {
+	color: #369de2;
+	background-color:#336699;
+	width:100%;	
+}
+/*菜单 > 三级及以下：鼠标悬停*/
+#menu .tree > li .tree-node:hover {
+    /*  background: #1b5189; */
+    /*  height:35px;  */
+}
+
+.tree-node-selected{background:#1b5189!important;}
+
+#menu .tree > li .tree-node-hover .tree-title,#menu .tree > li .tree-node-hover{
+	/* background:url("./images/zuosan.png") no-repeat right center; */
+	background-color:#1b5189;
+}
+
+
+
+
+ #menu .tree .anleaf ul{
+	display:none!important;
+} 
+
+#menu .tree .anleaf:hover > ul{
+	display:block!important;
+}
+#menu .tree .anleaf:hover >.tree-node{
+	background:url("./images/zuosan.png") no-repeat right center;
+	background-color: #1b5189;
+}
+
+
+
+
+
+
+
+/* .datagrid-body .datagrid-btable .tree-expanded{width:16px;height:16px;}
+ */
+/* .tree-expanded, .tree-collapsed, .tree-folder, .tree-file, .tree-checkbox, .tree-indent{width:0;height:0;}
+ */
+
+#menu .tree > .anleaf .tree-node-hover .tree-title,#menu .tree > .anleaf .tree-node-hover{
+	
+	width:100%;
+	    background:url("./images/zuosan.png") no-repeat right center;
+	    background-color:#1b5189;
+	}
+
+
+
+#menu .tree > .anleaf .leaf .tree-node-hover .tree-title,#menu .tree > .anleaf .leaf .tree-node-hover{
+	width:100%;
+	 background:#1b5189!important;
+	   
+	}
+
+
+#menu .tree > li .tree-node-hover .tree-title,#menu .tree > li .tree-node-hover .tree-title a {
+	color: #fff;
+
+	}
+
+
+/*混合菜单*/
+.menu-mix {
+    position: absolute;
+	top: 15px; right: 10px;
+}
+/*混合菜单 > 单个菜单*/
+.menu-mix .easyui-linkbutton {
+    width: 70px; height: 60px;
+	outline: none;
+	
+	color: #fff;
+	/* border-color: #6AD8FA; */
+	background: #2BA0DC;
+	background: -webkit-linear-gradient(top,#33AEE2 0,#2190D4 100%);
+  	background: -moz-linear-gradient(top,#33AEE2 0,#2190D4 100%);
+  	background: -o-linear-gradient(top,#33AEE2 0,#2190D4 100%);
+  	background: linear-gradient(to bottom,#33AEE2 0,#2190D4 100%);
+  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33AEE2,endColorstr=#2190D4,GradientType=0); 
+}
+.menu-mix .easyui-linkbutton {
+    color: #fff;
+}
+/*混合菜单 > 单个菜单*/
+.menu-mix .easyui-linkbutton:hover {
+   /*  background: #fff; */
+	/* border-color: #fff; */
+	color: #0178BA;
+}
+/*混合菜单 > 单个菜单*/
+.menu-mix .easyui-linkbutton.l-btn-selected {
+    /* background: #fff; */
+	/* border-color: #fff; */
+	color: #0178BA;
+}
+
+
+ .layout-panel-west{z-index:auto!important;}
+ 
+.mf {
+	width: 20px;
+	height: 20px;
+	margin: -10px 0 0 20px;
+	display: inline-block;
+	background: url("images/mf-menu.png") no-repeat;
+}
+.mf-home {
+	background-position: -120px -20px;
+}
+.mf-dep {
+	background-position: -260px -20px;
+}
+.mf-org {
+	background-position: 0 -20px;
+}
+.mf-sys {
+	background-position: -40px -20px;
+}
+.mf-fag {
+	background-position: -360px -20px;
+}
+.mf-qua {
+	background-position: -80px -20px
+}

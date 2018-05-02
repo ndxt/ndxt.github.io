@@ -1,0 +1,27 @@
+<p class="codeIgnore">combobox的操作方法有<code>getValue、disable、enable</code></p>
+
+<div style="margin:20px 0;">
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="comboboxreload()">加载数据</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="setvalue()">设置值</a>
+		<!-- @reg:getValue=tooltip{content:'添加<code>getValue方法</code>'} -->
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="alert($('#combobox-methods').combobox('getValue'))">获取value值</a>
+        <!-- @reg:disable=tooltip{content:'添加<code>disable方法</code>'} -->
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="$('#combobox-methods').combobox('disable')">禁用</a>
+        <!-- @reg:enable=tooltip{content:'添加<code>enable方法</code>'} -->
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="$('#combobox-methods').combobox('enable')">启用</a>
+    </div>
+<input class="easyui-combobox" id="combobox-methods" name="language" data-options="valueField:'id',textField:'text'"><br/><br/>
+<script type="text/javascript">
+function comboboxreload(){
+	//<!-- @reg:reload=tooltip{content:'添加<code>reload方法</code>'} -->
+		$('#combobox-methods').combobox('reload','modules/form/form-combobox/datas/combobox.json')
+	}
+function setvalue(){
+            $.messager.prompt('SetValue','请输入新值:',function(v){
+                if (v){
+					//<!-- @reg:setValue=tooltip{content:'添加<code>setValue方法</code>'} -->
+                    $('#combobox-methods').combobox('setValue',v);
+                }
+            });
+        }
+</script>  

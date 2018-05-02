@@ -1,0 +1,70 @@
+<p class="codeIgnore">点击单元格进行修改</p>
+<p class="codeIgnore title"></p>
+<table id="basic-table-edit-cell-t" class="easyui-datagrid" style="width: 100%; height: 200px;"></table>
+<!-- @reg:datagrid-cellediting.js=tooltip{content:'必须引入EasyUI的单元格修改文件'} -->
+<script type="text/javascript" src="ui/js/easyui/datagrid-cellediting.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var dg = $("#basic-table-edit-cell-t").datagrid({
+			iconCls: "icon-edit",
+			title : "修改单元格",
+			rownumbers : true,
+			singleSelect : true,
+			collapsible : true,
+			url : "modules/tables/basic-table/data/basic-table.json",
+			method : "get",
+			columns : [[{
+				field : "itemid",
+				title : "Item ID",
+				width : 100
+			}, {
+				field : "productid",
+				title : "Product",
+				width : 100,
+				//<!-- @reg:editor=tooltip{content:'指明编辑类型，包含两个属性<code>type</code><code>options</code>'} -->
+				editor : "text"
+			}, {
+				field : "listprice",
+				title : "List Price",
+				width : 100,
+				align : "right",
+				editor : {
+					//<!-- @reg:type=tooltip{content:'编辑类型，可选值有：<code>text</code><code>textarea</code><code>checkbox</code><code>numberbox</code><code>validatebox</code><code>datebox</code><code>combobox</code><code>combotree</code>'} -->
+					type : "numberbox",
+					//<!-- @reg:options=tooltip{content:'该编辑器属性对应于编辑类型'} -->
+					options : {
+						precision : 1
+					}
+				}
+			}, {
+				field : "unitcost",
+				title : "Attribute",
+				width : 100,
+				align : "right",
+				editor : "numberbox"
+			}, {
+				field : "attr1",
+				title : "Attribute",
+				width : 210,
+				align : "right",
+				editor : "textbox"
+			}, {
+				field : "status",
+				title : "Status",
+				width : 60,
+				align : "center",
+				editor : {
+					type : "checkbox",
+					options : {
+						on : "P",
+						off : ""
+					}
+				}
+			}]]
+		});
+		dg.datagrid("enableCellEditing").datagrid("gotoCell", {
+			index : 0,
+			field : "productid"
+		});
+	});
+</script>

@@ -1,0 +1,69 @@
+@image-path: images;
+
+@font-size: 14px;
+@font-family: 'Microsoft YaHei';
+
+@header-height: 120px;
+@header-background: @image-path/header-left.jpg;
+@header-background-repeat: @image-path/header.jpg;
+
+@header-title-width: 346px;
+@header-title-height: 50px;
+@header-title-top: 20px;
+@header-title-left: 30px;
+@header-title-background: @image-path/header-title.png;
+
+
+
+body.centit-ui {
+
+  font-size: @font-size;
+
+  font-family: @font-family;
+
+  a {
+    outline: none;
+    text-decoration: none;
+  }
+
+  & > .layout-panel-north {
+    background: url(@header-background-repeat) repeat-x;
+  }
+
+  #header {
+    height: @header-height;
+
+    border: none;
+
+    background: url(@header-background) left bottom no-repeat;
+
+    .title {
+      width: @header-title-width;
+      height: @header-title-height;
+
+      position: absolute;
+      top: @header-title-top;
+      left: @header-title-left;
+
+      text-indent: -9999px;
+
+      background: url(@header-title-background) no-repeat;
+    }
+  }
+}
+
+body.centit-ui.full-screen {
+  #header {
+    .title {
+      height: 100%;
+      line-height: 1;
+
+      position: static;
+      display: inline-block;
+
+      text-indent: 0;
+
+      background: none;
+    }
+  }
+}

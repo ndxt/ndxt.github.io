@@ -1,0 +1,74 @@
+<p class="codeIgnore">合并单元格</p>
+<p class="codeIgnore title"></p>
+<table id="basic-table-merge-t" style="width: 100%; height: 200px;"></table>
+<script type="text/javascript">
+	$(function() {
+		$("#basic-table-merge-t").datagrid({
+			title : "合并单元格",
+			rownumbers : true,
+			singleSelect : true,
+			collapsible : true,
+			url : "modules/tables/basic-table/data/basic-table.json",
+			method : "get",
+			columns : [[{
+				field : "itemid",
+				title : "Item ID",
+				width : 100
+			}, {
+				field : "productid",
+				title : "Product",
+				width : 100
+			}, {
+				field : "listprice",
+				title : "List Price",
+				width : 100,
+				align : "right"
+			}, {
+				field : "unitcost",
+				title : "Unit Cost",
+				width : 100,
+				align : "right"
+			}, {
+				field : "attr1",
+				title : "Attribute",
+				width : 210,
+				align : "right"
+			}, {
+				field : "status",
+				title : "Status",
+				width : 60,
+				align : "center"
+			}]],
+			//<!-- @reg:onLoadSuccess=tooltip{content:'在数据加载成功的时候触发'} -->
+			onLoadSuccess : function(data) {
+				customMergeCell(data);
+			}
+		});
+	});
+	
+	function customMergeCell(data) {
+		var merges = [{
+			index : 2,
+			rowspan : 2
+		}, {
+			index : 5,
+			rowspan : 2
+		}, {
+			index : 7,
+			rowspan : 2
+		}];
+		for (var i = 0; i < merges.length; i++) {
+			//<!-- @reg:mergeCells=tooltip{content:'合并单元格'} -->
+			$("#basic-table-merge-t").datagrid("mergeCells", {
+				//<!-- @reg:index=tooltip{content:'行索引'} -->
+				index : merges[i].index,
+				//<!-- @reg:field=tooltip{content:'字段名'} -->
+				field : "productid",
+				//<!-- @reg:rowspan=tooltip{content:'合并的行数'} -->
+				rowspan : merges[i].rowspan,
+				//<!-- @reg:colspan=tooltip{content:'合并的列数'} -->
+				colspan : 1
+			});
+		}
+	}
+</script>

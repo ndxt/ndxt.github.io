@@ -1,0 +1,78 @@
+<ul class="example-list" id="panels-example-list">
+	<li>
+		<a href="#panels-basic" data-url="modules/components/panels/demo/panels-basic.html">基础面板</a>
+	</li>
+	<li>
+		<a href="#panels-remote" data-url="modules/components/panels/demo/panels-remote.html">加载远程内容</a>
+	</li>
+	<li>
+		<a>面板操作</a>
+		<ul>
+			<li>
+				<a href="#panels-clear" data-url="modules/components/panels/demo/panels-clear.html">清除内容</a>
+			</li>
+			<li>
+				<a href="#panels-title" data-url="modules/components/panels/demo/panels-title.html">设置标题</a>
+			</li>
+			<li>
+				<a href="#panels-open" data-url="modules/components/panels/demo/panels-open.html">打开/关闭</a>
+			</li>
+			<li>
+				<a href="#panels-expand" data-url="modules/components/panels/demo/panels-expand.html">展开/收缩</a>
+			</li>
+			<li>
+				<a href="#panels-max" data-url="modules/components/panels/demo/panels-max.html">最大化/最小化</a>
+			</li>
+			<li>
+				<a href="#panels-move" data-url="modules/components/panels/demo/panels-move.html">移动位置</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a>面板外观</a>
+		<ul>
+			<li>
+				<a href="#panels-header" data-url="modules/components/panels/demo/panels-header.html">面板页头</a>
+			</li>
+			<li>
+				<a href="#panels-footer" data-url="modules/components/panels/demo/panels-footer.html">面板页脚</a>
+			</li>
+			<li>
+				<a href="#panels-class" data-url="modules/components/panels/demo/panels-class.html">自定义样式</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a>面板工具栏</a>
+		<ul>
+			<li>
+				<a href="#panels-tools" data-url="modules/components/panels/demo/panels-tools.html">默认工具</a>
+			</li>
+			<li>
+				<a href="#panels-tools-custom" data-url="modules/components/panels/demo/panels-tools-custom.html">自定义工具</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a href="#panels-event" data-url="modules/components/panels/demo/panels-event.html">面板事件</a>
+	</li>
+</ul>
+
+<script>
+	
+	requirejs([
+		'widgets/example/widget.example',
+		'plugins/prettify/prettify'
+		], function(create) {
+			
+		var list = $('#panels-example-list');
+		create(list, function(container) {
+			prettyPrint();
+			
+			$.parser.parse(container);
+			
+			$("#menu_tab_Panels").niceScroll({cursorcolor:"#BCBCBC"});
+		});
+	});
+	
+</script>

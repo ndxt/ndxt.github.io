@@ -1,0 +1,28 @@
+<p class="codeIgnore">右键将显示菜单，单击菜单项，该菜单项的name值将被获取</p>
+<div id="m-event" class="easyui-menu" data-options="onClick:menuHandler" style="width:120px;">
+		<!-- @reg:name=tooltip{content:'设置<code>name</code>属性的值'} -->
+		<div data-options="name:'new'">New</div>
+		<!-- @reg:name=tooltip{content:'设置<code>name</code>属性的值'} -->
+		<div data-options="name:'save',iconCls:'icon-save'">Save</div>
+		<!-- @reg:name=tooltip{content:'设置<code>name</code>属性的值'} -->
+		<div data-options="name:'print',iconCls:'icon-print'">Print</div>
+		<div class="menu-sep"></div>
+		<!-- @reg:name=tooltip{content:'设置<code>name</code>属性的值'} -->
+		<div data-options="name:'exit'">Exit</div>
+</div>
+<div class="m-event"></div>
+<script>
+		function menuHandler(item){
+			//<!-- @reg:item.name=tooltip{content:'获取<code>name</code>属性的值'} -->
+			$('.m-event').prepend('<p>Click Item: '+item.name+'</p>');
+		}
+		$(function(){
+			$("#menus-event").bind('contextmenu',function(e){
+				e.preventDefault();
+				$('#m-event').menu('show', {
+					left: e.pageX,
+					top: e.pageY
+				});
+			});
+		});
+</script>

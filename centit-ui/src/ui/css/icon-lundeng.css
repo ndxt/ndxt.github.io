@@ -1,0 +1,43 @@
+@charset "utf-8" ;
+/* CSS Document */
+
+.ludeng {
+	background:url(icons/ludeng_45.png) no-repeat ;
+	width: 45px ;
+	height: 45px ;
+	display: inline-block;
+}
+
+.ludeng_yw {
+	background-position:0px 0px;
+}
+
+.ludeng_jk {
+	background-position:-45px 0px;
+}
+
+.ludeng_zc {
+	background-position:-90px 0px;
+}
+
+.ludeng_erp {
+	background-position:-135px 0px;
+}
+
+.ludeng_bi {
+	background-position:-180px 0px;
+}
+
+.ludeng_pt {
+	background-position:-225px 0px;
+}
+
+.ludeng_sy {
+	background-position:-270px 0px;
+}
+
+.ludeng_logo {
+	background-position:-315px 0px;
+}
+
+

@@ -1,0 +1,113 @@
+<p class="codeIgnore">表格样式</p>
+<p class="codeIgnore title"></p>
+<div style="margin-bottom: 10px;">
+	边框：<select onchange="changeBorder(this.value);">
+		<option value="lines-both">Both</option>
+		<option value="lines-no">No Border</option>
+		<option value="lines-right">Right Border</option>
+		<option value="lines-bottom">Bottom Border</option>
+	</select>
+	<!-- @reg:striped=tooltip{content:'是否显示斑马线效果'} -->
+	斑马线：<input type="checkbox" onclick="$('#basic-table-style-t').datagrid({striped:$(this).is(':checked')})" />
+</div>
+<table id="basic-table-style-t" style="width: 100%; height: 250px;"></table>
+<script type="text/javascript">
+	$(function() {
+		$("#basic-table-style-t").datagrid({
+			title : "表格样式",
+			rownumbers : true,
+			singleSelect : true,
+			collapsible : true,
+			url : "modules/tables/basic-table/data/basic-table.json",
+			method : "get",
+			columns : [[{
+				field : "itemid",
+				title : "Item ID",
+				width : 100,
+				//<!-- @reg:rowspan=tooltip{content:'指明将占用多少行单元格（合并行）'} -->
+				rowspan : 2,
+				//<!-- @reg:halign=tooltip{content:'指明如何对齐列标题，可选值有<code>left</code><code>right</code><code>center</code>，如果没有指定，则按照align属性进行对齐'} -->
+				halign : "center",
+				//<!-- @reg:resizable=tooltip{content:'是否允许改变列宽度'} -->
+				resizable : false
+			}, {
+				field : "productid",
+				title : "Product",
+				width : 100,
+				rowspan : 2,
+				halign : "center",
+				resizable : false
+			}, {
+				title : "Item Details",
+				//<!-- @reg:colspan=tooltip{content:'指明将占用多少列单元格（合并列）'} -->
+				colspan : 4,
+				halign : "center",
+				resizable : false
+			}], [{
+				field : "listprice",
+				title : "List Price",
+				width : 100,
+				halign : "center",
+				align : "right",
+				resizable : false,
+				//<!-- @reg:formatter=tooltip{content:'单元格formatter（格式化器）函数，字段值：<code>value</code>、行记录数据：<code>data</code>、行索引：<code>index</code>'} -->
+				formatter : function(value, data, index) {
+					return value < 30 ? "<span style='color: red;'>(" + value + ")</span>" : value;
+				},
+				//<!-- @reg:styler=tooltip{content:'单元格styler（样式）函数，返回如<code>background: red;</code>这样的自定义单元格样式字符串，字段值：<code>value</code>、行记录数据：<code>data</code>、行索引：<code>index</code>'} -->
+				styler : function(value, data, index) {
+					if (value > 30 && value < 40)
+						return "background-color: #ffee00; color: blue;";
+				}
+			}, {
+				field : "unitcost",
+				title : "Attribute",
+				width : 100,
+				halign : "center",
+				align : "right",
+				resizable : false
+			}, {
+				field : "attr1",
+				title : "Attribute",
+				width : 210,
+				halign : "center",
+				align : "right",
+				resizable : false
+			}, {
+				field : "status",
+				title : "Status",
+				width : 60,
+				halign : "center",
+				align : "center",
+				resizable : false
+			}]],
+			//<!-- @reg:rowStyler=tooltip{content:'返回样式如<code>background: red;</code>，行索引：<code>index</code>、行记录数据：<code>data</code>'} -->
+			rowStyler : function(index, data){
+				if (data.status == "N")
+					return "background-color: #6293bb; color: #ffffff; font-weight: bold;";
+			}
+		});
+	});
+	
+	function changeBorder(cls) {
+		$("#basic-table-style-t").datagrid("getPanel").removeClass("lines-both lines-no lines-right lines-bottom").addClass(cls);
+	}
+</script>
+<style type="text/css">
+	.lines-both .datagrid-body td {
+		
+	}
+	
+	.lines-no .datagrid-body td {
+		border-right: 1px dotted transparent;
+		border-bottom: 1px dotted transparent;
+	}
+	
+	.lines-right .datagrid-body td {
+		border-bottom: 1px dotted transparent;
+	}
+	
+	.lines-bottom .datagrid-body td {
+		border-right: 1px dotted transparent;
+	}
+</style>

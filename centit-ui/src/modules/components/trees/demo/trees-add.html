@@ -1,0 +1,88 @@
+<p class="codeIgnore"><code>append</code>方法追加一些子节点到一个父节点，<code>insert</code>在指定节点的前边或后边插入一个节点</p>
+<p class="codeIgnore"><code>update</code>方法更新指定的节点target（DOM 对象，要被更新的节点）、id、text、iconCls、checked，等等，<code>remove</code>移除一个节点和它的子节点</p>
+<div class="easyui-panel" style="margin-bottom: 10px;">
+	<input type="text" class="easyui-textbox" id="input_tree_add" data-options="prompt: '输入标题'" />
+
+	<a class="easyui-linkbutton" onclick="appendTreeNode()">添加（append）</a>
+	<a class="easyui-linkbutton" onclick="insertTreeNode()">插入（insert）</a>
+	<a class="easyui-linkbutton" onclick="updateTreeNode()">更新</a>
+	<a class="easyui-linkbutton" onclick="removeTreeNode()">删除</a>
+</div>
+
+<ul class="easyui-tree" id="tree_add" url="modules/components/trees/datas/menus.json"></ul>
+
+<script>
+	function getAddTreeSelectNode() {
+		return $('#tree_add').tree('getSelected');
+	}
+	
+	function appendTreeNode() {
+		var node = getAddTreeSelectNode();
+		var input = $('#input_tree_add');
+		
+		if (!input.val()) {
+			alert('请先输入标题!');
+			return;
+		}
+		//<!-- @reg:append=tooltip{content:'调用<code>append</code>方法'} -->
+		$('#tree_add').tree('append', {
+			parent: node ? node.target : null,
+			data: [{
+				text: input.val()
+			}]
+		});
+		
+		if (node) {
+			$('#tree_add').tree('expand', node.target);
+		}
+	}
+	
+	function insertTreeNode() {
+		var node = getAddTreeSelectNode();
+		var input = $('#input_tree_add');
+		
+		if (!input.val()) {
+			alert('请先输入标题!');
+			return;
+		}
+		//<!-- @reg:insert=tooltip{content:'调用<code>insert</code>方法'} -->
+		$('#tree_add').tree('insert', {
+			before: node ? node.target : null,
+			data: [{
+				text: input.val()
+			}]
+		});
+	}
+	
+	function updateTreeNode() {
+		var node = getAddTreeSelectNode();
+		var input = $('#input_tree_add');
+		
+		if (!input.val()) {
+			alert('请先输入标题!');
+			return;
+		}
+		
+		if (!node) {
+			alert('请先选中一个树节点!');
+			return;
+		}
+		//<!-- @reg:update=tooltip{content:'调用<code>update</code>方法'} -->
+		$('#tree_add').tree('update', {
+			target: node.target,
+			text: input.val()
+		});
+
+	}
+	
+	function removeTreeNode() {
+		var node = getAddTreeSelectNode();
+		
+		if (!node) {
+			alert('请先选中一个树节点!');
+			return;
+		}
+		//<!-- @reg:remove=tooltip{content:'调用<code>remove</code>方法'} -->
+		$('#tree_add').tree('remove', node.target);
+	}
+</script>

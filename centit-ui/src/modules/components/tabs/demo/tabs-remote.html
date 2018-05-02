@@ -1,0 +1,8 @@
+<p class="codeIgnore"><code>href</code>属性设置<b>链接</b>，通过<b>Ajax</b>获取标签页内容</p>
+<div class="easyui-tabs" style="width: 300px; height:150px;">
+<!-- @reg:href=tooltip{content:'<code>href</code>属性设置链接'} -->
+	<div data-options="href: 'modules/components/tabs/demo/tabs-remote-page.html'"title="远程1" style="padding: 10px;"></div>
+<!-- @reg:cache=tooltip{content:'<code>cache</code>设置是否缓存页面，不缓存的话每次切换时都会重新发送请求加载页面'} -->
+	<div data-options="href: 'modules/components/tabs/demo/tabs-remote-page2.html', cache: false" title="远程2" style="padding: 10px;"></div>
+</div>
+<p class="codeIgnore info">默认切换标签页时<b>不会</b>重新发送请求加载页面，如果需要重新加载，设置<code>cache: false</code></p>

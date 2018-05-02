@@ -1,0 +1,112 @@
+<p class="codeIgnore">拖动滚动条动态加载数据，并可以设置加载方式</p>
+<p class="codeIgnore title"></p>
+<!-- @reg:datagrid-scrollview.js=tooltip{content:'必须引入EasyUI的滚动条文件'} -->
+<script type="text/javascript" src="ui/js/easyui/datagrid-scrollview.js"></script>
+<div style="margin-bottom: 10px;">
+	加载类型：<select onchange="load(this.value);">
+		<option value="remote">加载远程数据</option>
+		<option value="local">加载本地数据</option>
+	</select>
+</div>
+<table id="basic-table-load-t" style="width: 100%; height: 250px;"></table>
+<script type="text/javascript">
+	$(function() {
+		$("#basic-table-load-t").datagrid({
+			title : "下拉加载",
+			rownumbers : true,
+			singleSelect : true,
+			collapsible : true,
+			//<!-- @reg:autoRowHeight=tooltip{content:'定义设置行的高度，根据该行的内容，设置为false可以提高负载性能'} -->
+			autoRowHeight : false,
+			//<!-- @reg:pageSize=tooltip{content:'在设置分页属性的时候初始化页面大小'} -->
+			pageSize : 50,
+			url : "modules/tables/basic-table/data/basic-table1.json",
+			method : "get",
+			columns : [[{
+				field : "inv",
+				title : "Inv No",
+				width : 80
+			}, {
+				field : "date",
+				title : "Date",
+				width : 90
+			}, {
+				field : "name",
+				title : "Name",
+				width : 80
+			}, {
+				field : "amount",
+				title : "Amount",
+				width : 80,
+				align : "right"
+			}, {
+				field : "price",
+				title : "Price",
+				width : 80,
+				align : "right"
+			}, {
+				field : "cost",
+				title : "Cost",
+				width : 90,
+				align : "right"
+			}, {
+				field : "note",
+				title : "Note",
+				width : 100
+			}]],
+			//<!-- @reg:view=tooltip{content:'定义数据表格的视图'} -->
+			view : scrollview,
+			//<!-- @reg:detailFormatter=tooltip{content:'<code>detailFormatter</code>函数返回行详细内容'} -->
+			detailFormatter : function(index, data) {
+				return "<table><tr>"
+						+ "<td style='border: 0; padding-right: 10px;'>"
+						+ "<p>Name: " + data.name + "</p>"
+						+ "<p>Amount: " + data.amount + "</p>"
+						+ "</td>" + "<td style='border: 0;'>"
+						+ "<p>Price: " + data.price + "</p>"
+						+ "<p>Cost: " + data.cost + "</p>" + "</td>"
+						+ "</tr></table>";
+			}
+		});
+	});
+	
+	/* 加载本地数据 */
+	function loadLocal() {
+		var rows = [];
+		for (var i = 1; i <= 8000; i++) {
+			var amount = Math.floor(Math.random() * 1000);
+			var price = Math.floor(Math.random() * 1000);
+			rows.push({
+				inv : "Inv No " + i,
+				date : $.fn.datebox.defaults.formatter(new Date()),
+				name : "Name " + i,
+				amount : amount,
+				price : price,
+				cost : amount * price,
+				note : "Note " + i
+			});
+		}
+		//<!-- @reg:loadData=tooltip{content:'加载本地数据，旧的行将被移除'} -->
+		$("#basic-table-load-t").datagrid("loadData", rows);
+	}
+	
+	/* 加载远程数据 */
+	function load(value) {
+		if (value == "local")
+			loadLocal();
+		else {
+			$("#basic-table-load-t").datagrid({
+				url : "modules/tables/basic-table/data/basic-table1.json"
+			});
+		}
+	}
+</script>
+<style type="text/css">
+	.datagrid-row-expander {
+		margin: 0;
+	}
+	
+	.datagrid-header-rownumber, .datagrid-cell-rownumber {
+		width: 40px;
+	}
+</style>

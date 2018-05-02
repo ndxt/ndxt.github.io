@@ -1,0 +1,442 @@
+@charset "utf-8";
+/* CSS Document */
+
+.icon-white {
+	background:url(icons/white_24.png) no-repeat;
+	width: 24px;
+	height: 24px;
+	 display: inline-block;
+}
+
+.icon-white-search {
+	background-position:0px 0px;
+}
+
+.icon-white-magnifier {
+	background-position:0px -24px;
+}
+
+.icon-white-magnify {
+	background-position:0px -48px;
+}
+
+.icon-white-narrow {
+	background-position:-72px 0px;
+}
+
+.icon-white-fork {
+	background-position:-96px 0px;
+}
+
+.icon-white-cross {
+	background-position:-120px 0px;
+}
+
+.icon-white-positive {
+	background-position:-144px 0px;
+}
+
+.icon-white-negative {
+	background-position:-168px 0px;
+}
+
+.icon-white-forbid {
+	background-position:-192px 0px;
+}
+
+.icon-white-right_folder {
+	background-position:0px -24px;
+}
+
+.icon-white-wrong_folder {
+	background-position:-24px -24px;
+}
+
+.icon-white-folder {
+	background-position:-48px -24px;
+}
+
+.icon-white-copy {
+	background-position:-72px -24px;
+}
+
+.icon-white-log {
+	background-position:-96px -24px;
+}
+
+.icon-white-file {
+	background-position:-120px -24px;
+}
+
+.icon-white-copy_file {
+	background-position:-144px -24px;
+}
+
+.icon-white-book {
+	background-position:-168px -24px;
+}
+
+.icon-white-wrong_file {
+	background-position:-192px -24px;
+}
+
+.icon-white-right_file {
+	background-position:0px -48px;
+}
+
+.icon-white-add_file {
+	background-position:-24px -48px;
+}
+
+.icon-white-delete_file {
+	background-position:-48px -48px;
+}
+
+.icon-white-column_chart {
+	background-position:-72px -48px;
+}
+
+.icon-white-column {
+	background-position:-96px -48px;
+}
+
+.icon-white-download {
+	background-position:-120px -48px;
+}
+
+.icon-white-upload {
+	background-position:-144px -48px;
+}
+
+.icon-white-link {
+	background-position:-168px -48px;
+}
+
+.icon-white-message {
+	background-position:-192px -48px;
+}
+
+.icon-white-decrease_volume {
+	background-position:0px -72px;
+}
+
+.icon-white-mute_volume {
+	background-position:-24px -72px;
+}
+
+.icon-white-increase_volume {
+	background-position:-48px -72px;
+}
+
+.icon-white-mute {
+	background-position:-72px -72px;
+}
+
+.icon-white-volume {
+	background-position:-96px -72px;
+}
+
+.icon-white-garbage {
+	background-position:-120px -72px;
+}
+
+.icon-white-camera {
+	background-position:-144px -72px;
+}
+
+.icon-white-microphone {
+	background-position:-168px -72px;
+}
+
+.icon-white-mute_microphone {
+	background-position:-192px -72px;
+}
+
+.icon-white-dialog_box {
+	background-position:0px -96px;
+}
+
+.icon-white-new_message {
+	background-position:-24px -96px;
+}
+
+.icon-white-conversation {
+	background-position:-48px -96px;
+}
+
+.icon-white-reply_message {
+	background-position:-72px -96px;
+}
+
+.icon-white-picture {
+	background-position:-96px -96px;
+}
+
+.icon-white-frameset {
+	background-position:-120px -96px;
+}
+
+.icon-white-frameset_right {
+	background-position:-144px -96px;
+}
+
+.icon-white-frameset_middle {
+	background-position:-168px -96px;
+}
+
+.icon-white-frameset_left {
+	background-position:-192px -96px;
+}
+
+.icon-white-dialogue {
+	background-position:0px -120px;
+}
+
+.icon-white-li {
+	background-position:-24px -120px;
+}
+
+.icon-white-ending_tag {
+	background-position:-48px -120px;
+}
+
+.icon-white-nine {
+	background-position:-72px -120px;
+}
+
+.icon-white-cross {
+	background-position:-96px -120px;
+}
+
+.icon-white-paragraph_left {
+	background-position:-120px -120px;
+}
+
+.icon-white-paragraph_right {
+	background-position:-144px -120px;
+}
+
+.icon-white-paragraph_middle {
+	background-position:-168px -120px;
+}
+
+.icon-white-paragraph {
+	background-position:-192px -120px;
+}
+
+.icon-white-locking {
+	background-position:0px -144px;
+}
+
+.icon-white-brightness {
+	background-position:-24px -144px;
+}
+
+.icon-white-lock_up {
+	background-position:-48px -144px;
+}
+
+.icon-white-map {
+	background-position:-72px -144px;
+}
+
+.icon-white-focus {
+	background-position:-96px -144px;
+}
+
+.icon-white-diffuse {
+	background-position:-120px -144px;
+}
+
+.icon-white-caution {
+	background-position:-144px -144px;
+}
+
+.icon-white-alert {
+	background-position:-168px -144px;
+}
+
+.icon-white-close {
+	background-position:-192px -144px;
+}
+
+.icon-white-user {
+	background-position:0px -168px;
+}
+
+.icon-white-add_user {
+	background-position:-24px -168px;
+}
+
+.icon-white-delete_user {
+	background-position:-48px -168px;
+}
+
+.icon-white-users {
+	background-position:-72px -168px;
+}
+
+.icon-white-clock_night {
+	background-position:-96px -168px;
+}
+
+.icon-white-clock_day {
+	background-position:-120px -168px;
+}
+
+.icon-white-recycle {
+	background-position:-144px -168px;
+}
+
+.icon-white-full_battery {
+	background-position:-168px -168px;
+}
+
+.icon-white-low_battery {
+	background-position:-192px -168px;
+}
+
+.icon-white-battery{
+	background-position:0px -192px;
+}
+
+.icon-white-previous {
+	background-position:-24px -192px;
+}
+
+.icon-white-next {
+	background-position:-48px -192px;
+}
+
+.icon-white-cease {
+	background-position:-72px -192px;
+}
+
+.icon-white-stop {
+	background-position:-96px -192px;
+}
+
+.icon-white-backward {
+	background-position:-120px -192px;
+}
+
+.icon-white-go {
+	background-position:-144px -192px;
+}
+
+.icon-white-forward {
+	background-position:-168px -192px;
+}
+
+.icon-white-pause {
+	background-position:-192px -192px;
+}
+
+
+.icon-white-lock {
+	background-position:-216px 0px;
+}
+
+.icon-white-leave {
+	background-position:-24px -216px;
+}
+
+.icon-white-minus {
+	background-position:-48px -216px;
+}
+
+.icon-white-wrong {
+	background-position:-72px -216px;
+}
+
+.icon-white-right {
+	background-position:-96px -216px;
+}
+
+.icon-white-words {
+	background-position:-120px -216px;
+}
+
+.icon-white-arrow {
+	background-position:-144px -216px;
+}
+
+.icon-white-stuff {
+	background-position:-168px -216px;
+}
+
+.icon-white-launch {
+	background-position:-192px -216px;
+}
+
+.icon-white-menu {
+	background-position:0px -240px;
+}
+
+.icon-white-print {
+	background-position:-24px -240px;
+}
+
+.icon-white-basket {
+	background-position:-48px -240px;
+}
+
+.icon-white-star {
+	background-position:-72px -240px;
+}
+
+.icon-white-write {
+	background-position:-96px -240px;
+}
+
+.icon-white-pen {
+	background-position:-120px -240px;
+}
+
+.icon-white-entry {
+	background-position:-144px -240px;
+}
+
+.icon-white-share {
+	background-position:-168px -240px;
+}
+
+.icon-white-share2 {
+	background-position:-192px -240px;
+}
+
+.icon-white-right {
+	background-position:0px -264px;
+}
+
+.icon-white-left {
+	background-position:-24px -264px;
+}
+
+.icon-white-enter {
+	background-position:-48px -264px;
+}
+
+.icon-white-refresh {
+	background-position:-72px -264px;
+}
+
+.icon-white-open {
+	background-position:-96px -264px;
+}
+
+.icon-white-set {
+	background-position:-120px -264px;
+}
+
+.icon-white-empty {
+	background-position:-144px -264px;
+}
+
+.icon-white-full {
+	background-position:-168px -264px;
+}
+
+.icon-white-northeast {
+	background-position:-192px -264px;
+}

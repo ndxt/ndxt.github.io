@@ -1,0 +1,20 @@
+<p class="codeIgnore">面板<b>展开、收缩</b>动画</p>
+<div class="easyui-panel" style="margin-bottom: 10px;">
+	<a class="easyui-linkbutton" onclick="expandPanel_17fd04142b7f853e(true);" data-options="iconCls: 'icon-ok'">展开</a>
+	<a class="easyui-linkbutton" onclick="expandPanel_17fd04142b7f853e(false);" data-options="iconCls: 'icon-cancel'">收缩</a>
+	<a class="easyui-linkbutton" id="btn_17fd04142b7f853e" data-options="toggle: true">动画效果</a>
+</div>
+<script>
+	function expandPanel_17fd04142b7f853e(isExpand) {
+		var method = isExpand ? 'expand' : 'collapse';
+		var animation = $('#btn_17fd04142b7f853e').linkbutton('options').selected;
+		$('#panel_17fd04142b7f853e').panel(method, animation);
+	}
+</script>
+<div id="panel_17fd04142b7f853e" class="easyui-panel" title="南通市办事处" style="width:500px;height:150px;padding:10px;">
+南通市办事处<br>
+联系人：韩主任<br>
+联系电话：15906289357
+</div>
+
+

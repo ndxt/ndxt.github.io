@@ -1,0 +1,55 @@
+<ul id="dialog-example-list" class="example-list">
+	<li>
+		<a>窗口</a>
+		<ul>
+			<li>
+				<a href="#dialog-window-basic" data-url="modules/window/dialog/demo/dialog-window-basic.html">基础窗口</a>
+			</li>
+			<li>
+				<a href="#dialog-window-tools" data-url="modules/window/dialog/demo/dialog-window-tools.html">窗口工具</a>
+			</li>
+			<li>
+				<a href="#dialog-window-inline" data-url="modules/window/dialog/demo/dialog-window-inline.html">内联窗口</a>
+			</li>
+			<li>
+				<a href="#dialog-window-modal" data-url="modules/window/dialog/demo/dialog-window-modal.html">模式化窗口</a>
+			</li>
+			<li>
+				<a href="#dialog-window-layout" data-url="modules/window/dialog/demo/dialog-window-layout.html">窗口布局</a>
+			</li>
+			<li>
+				<a href="#dialog-window-footer" data-url="modules/window/dialog/demo/dialog-window-footer.html">窗口页脚</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a>对话框</a>
+		<ul>
+			<li>
+				<a href="#dialog-basic" data-url="modules/window/dialog/demo/dialog-basic.html">基础对话框</a>
+			</li>
+			<li>
+				<a href="#dialog-toolbar" data-url="modules/window/dialog/demo/dialog-toolbar.html">对话框工具</a>
+			</li>
+			<li>
+				<a href="#dialog-group-toolbar" data-url="modules/window/dialog/demo/dialog-group-toolbar.html">对话框复杂工具</a>
+			</li>
+			<li>
+				<a href="#dialog-remote" data-url="modules/window/dialog/demo/dialog-remote.html">远程加载</a>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<script>
+	requirejs(["widgets/example/widget.example", "plugins/prettify/prettify"], function(create, datas) {
+			var list = $("#dialog-example-list");
+			create(list, function(container) {
+				prettyPrint();
+				$.parser.parse(container);
+				$("#menu_tab_Dialog").niceScroll({
+					cursorcolor : "#BCBCBC"
+				});
+			});
+		});
+</script>

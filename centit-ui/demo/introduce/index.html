@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Ban YanNing" />
+    <title>demo</title>
+    <link rel="stylesheet" href="css/layout.css"/>
+</head>
+<body>
+<div>
+    <div id="s1" class="pager">
+        <div class="s1">
+                 <div class="v_out v_out_p">
+                        <div class="prev"><a href="javascript:void(0)"></a></div>
+                        <div class="v_show">
+
+                            <div class="v_cont">
+                                <ul>
+                                    <li index="0" style="background:#f00"><img src="image/qui.png" alt=""/></li>
+                                    <li index="1" style="background:#ff0"><img src="image/zjhs.png" alt=""/></li>
+                                    <li index="2" style="background:#f0f"><img src="image/xjoa.png" alt=""/></li>
+                                    <li index="3" style="background:#999"><img src="image/sdda.png" alt=""/></li>
+									<li index="4" style="background:#f0f"><img src="image/mapfang.png" alt=""/></li>
+                                    <li index="5" style="background:#999"><img src="image/jmht.png" alt=""/></li>
+									<li index="5" style="background:#999"><img src="image/zgoa.png" alt=""/></li>
+									<li index="5" style="background:#999"><img src="image/login.png" alt=""/></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="next"><a href="javascript:void(0)"></a> </div>
+
+
+                        <ul class="circle">
+
+                            <li class="circle-cur"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+							<li></li>
+                            <li></li>
+							<li></li>
+                            <li></li>
+                        </ul>
+
+                </div>
+                <div class="s1_text">
+                    <h1>7套皮肤<br/>30种颜色</h1>
+                </div>
+        </div>
+
+    </div>
+    <div id="s2" class="pager">
+        <div class="s2">
+                    <div class="column-second">
+                        <div class="show-case">
+                            <div class="showcase-item clearfix active">
+                                <div class="show-content"></div>
+                                <a class="showcase-link" rel="image/screen-big.png" href="work#work-9">
+                                    <img src="image/screen.png" width="510" height="312" alt="MadeMail"></a>
+                            </div>
+
+                        </div>
+                        <p><img id="display" src="image/display.png" width="565" height="462"></p>
+
+                    </div>
+                    <div class="s2_text">
+                        <h1>提供完整组件: 表格、表单、树等</h1>
+                    </div>
+        </div>
+    </div>
+    <div id="s3" class="pager">
+        <div class="s3">
+                    <div class="s3_text">
+                        <h1>引用简单</h1>
+                    </div>
+                    <div id="s3_left">
+                    	<h4 style="
+                    	background: #fff;
+color:#37b0ab;
+position: absolute;
+width: 480px;
+height: 35px;
+top: 110px;
+left: 0px;
+border-radius: 20px 20px 0 0;
+line-height: 35px;
+padding-left: 21px;">pom.xml</h4>
+<br/>
+                        <h2>第一步</h2><br/>
+                     	
+                     	 
+                        &ltdependency&gt<br/>
+                        &nbsp;&nbsp;&ltgroupId&gtcom.centit.framework&lt/groupId&gt<br/>
+                        &nbsp;&nbsp;&ltartifactId&gtframework-ui&lt/artifactId&gt<br/>
+                        &nbsp;&nbsp;&ltversion&gt0.0.1-SNAPSHOT&lt/version&gt<br/>
+                        &lt/dependency&gt
+                    </div>
+                    <div id="s3_right">
+                    <h4 style="
+                    	background: #fff;
+						color:#37b0ab;
+						position: absolute;
+						width: 480px;
+						height: 35px;
+						top: 110px;
+						left: 522px;
+						border-radius: 20px 20px 0 0;
+						line-height: 35px;
+						padding-left: 21px;">struts-action.xml</h4>
+						<br/>
+                        <h2>第二步</h2>               
+                       	 </br>
+                        &ltresult name="MainPage"&gt /index.html&lt/result&gt
+                    </div>
+        </div>
+
+    </div>
+    <div id="s4" class="pager">
+        <div class="s4">
+                    <div class="s4_text">
+                        <h1>Centit UI</h1>
+                        <h2>只为更好的展示自己</h2>
+                    </div>
+                    <div id="s4_left">
+                        <a href="http://productsvr:8090/demo/">Demo</a>
+                    </div>
+
+                    <div id="s4_right">
+                        <a href="http://develop.centit.com:8088/jenkins/job/framework-ui/com.centit.framework$framework-ui/lastSuccessfulBuild/artifact/com.centit.framework/framework-ui/0.0.1-SNAPSHOT/framework-ui-0.0.1-SNAPSHOT.jar">下载</a>
+                    </div>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/nicescroll.js"></script>
+<script type="text/javascript" src="js/carousel.js"></script>
+<script type="text/javascript" src="js/retina.js"></script>
+<script type="text/javascript" src="js/alpha.js"></script>
+<script type="text/javascript" src="js/html5.js"></script>
+<script>
+    jQuery(function($) {
+        var iPagerCount=$(".pager").length;
+        var iPageNumber=0;
+        var _height=$(window).height();
+        $("#s1").height(_height);
+        $("#s2").height(_height);
+        $("#s3").height(_height);
+        $("#s4").height(_height);
+        var aTop=[0,_height,_height*2,_height*3];
+        var sTop=$(window).scrollTop();
+        if(sTop>=aTop[0]&&sTop<aTop[1]){iPageNumber=0;}
+        if(sTop>=aTop[1]&&sTop<aTop[2]){iPageNumber=1;}
+        if(sTop>=aTop[2]&&sTop<aTop[3]){iPageNumber=2;}
+        if(sTop>=aTop[3]){iPageNumber=3;}
+        //美化浏览器的滚动条
+        $("html").niceScroll({
+            touchbehavior:false,cursorcolor:"#0966ce",cursoropacitymax:1,cursorwidth:8,horizrailenabled:true,cursorborderradius:5,autohidemode:true,background:'none',cursorborder:'solid 1px #0966ce'
+        });
+
+        //滑动滚动条翻屏效果
+        $("html,body").bind("mousewheel",function(event,intDelta){
+            var $this=$(this),
+                    timeoutId=$(this).data('timeoutId');
+            if(timeoutId){
+                clearTimeout(timeoutId);
+            }
+            $this.data('timeoutId',setTimeout(function(){
+                intDelta>0?pageUp():pageDown();$this.removeData('timeoutId');$this=null;
+            },150));
+            return false;
+        });
+
+        function pageUp(){
+            iPageNumber=iPageNumber<=0?0:iPageNumber-1;slide(aTop[iPageNumber]);
+        }
+        function pageDown(){
+            iPageNumber=iPageNumber>=iPagerCount-1?iPageNumber:iPageNumber+1;slide(aTop[iPageNumber]);
+        }
+        function slide(length){
+            $("body,html").stop().animate({scrollTop:length},800,'easeOutExpo');
+        }
+
+        //扩展动画
+        $.extend($.easing,{
+            easeOutExpo:function(e,f,a,h,g){
+                return(f==g)?a+h:h*(-Math.pow(2,-10*f/g)+1)+a
+            },easeOutBounce:function(x,t,b,c,d){
+                if((t/=d)<(1/2.75)){
+                    return c*(7.5625*t*t)+b;
+                }else if(t<(2/2.75)){
+                    return c*(7.5625*(t-=(1.5/2.75))*t+.75)+b;
+                }else if(t<(2.5/2.75)){
+                    return c*(7.5625*(t-=(2.25/2.75))*t+.9375)+b;
+                }else{
+                    return c*(7.5625*(t-=(2.625/2.75))*t+.984375)+b;
+                }
+            }
+        });
+    });
+
+</script>
+</body>
+</html>

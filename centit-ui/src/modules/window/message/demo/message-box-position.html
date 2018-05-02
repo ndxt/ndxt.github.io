@@ -1,0 +1,134 @@
+<p class="codeIgnore">通过设置<code>$.messager.show</code>方法的style参数，调整消息提示框的位置。有九种常用位置</p>
+
+<p class="codeIgnore title">消息框位置</p>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="topLeft();">顶部居左</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="topCenter()">顶部居中</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="topRight()">顶部居右</a>
+
+<p class="codeIgnore br"></p>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="centerLeft()">中部居左</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="center()">居中</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="centerRight()">中部居右</a>
+
+<p class="codeIgnore br"></p>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="bottomLeft()">底部居左</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="bottomCenter()">底部居中</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="bottomRight()">底部居右</a>
+
+        
+<p class="codeIgnore br"></p>
+
+<script>
+        function topLeft(){
+            $.messager.show({
+                title:'我的消息',
+                msg:'提示内容',
+//<!-- @reg:'show'=tooltip{content:'为这个提示框设置<b>角抽出</b>类型'} -->                
+                showType:'show',
+                style:{
+                    right:'',
+//<!-- @reg:left:0=tooltip{content:'为这个提示框的左边的位置为<b>0</b>'} -->     
+                    left:0,
+//<!-- @reg:document.body.scrollTop=tooltip{content:'读取<code>document.body.scrollTop</code>来设置层的位置'} -->  
+//<!-- @reg:+=tooltip{content:'这两个值有个特点，<b>就是同时只会有一个值生效</b>,所以两个值总会有一个为0，所以不用担心会对真正的Top造成影响'} -->  
+//<!-- @reg:document.documentElement.scrollTop=tooltip{content:'读取<code>document.documentElement.scrollTop</code>来设置层的位置'} -->  
+                    top:document.body.scrollTop+document.documentElement.scrollTop,
+                    bottom:''
+                }
+            });
+        }
+        function topCenter(){
+            $.messager.show({
+                title:'我的消息',
+                msg:'提示内容',
+                showType:'slide',
+                style:{
+                    right:'',
+                    top:document.body.scrollTop+document.documentElement.scrollTop,
+                    bottom:''
+                }
+            });
+        }
+        function topRight(){
+            $.messager.show({
+                title:'我的消息',
+                msg:'提示内容',
+                //<!-- @reg:'show'=tooltip{content:'为这个提示框设置<b>边抽出</b>类型'} -->       
+                showType:'show',
+                style:{
+                    left:'',
+                    right:0,
+                    top:document.body.scrollTop+document.documentElement.scrollTop,
+                    bottom:''
+                }
+            });
+        }
+        function centerLeft(){
+            $.messager.show({
+                title:'我的消息',
+                msg:'提示内容',
+              //<!-- @reg:'fade'=tooltip{content:'为这个提示框设置<b>淡入淡出</b>类型'} -->       
+                showType:'fade',
+                style:{
+                    left:0,
+                    right:'',
+                    bottom:''
+                }
+            });
+        }
+        function center(){
+            $.messager.show({
+                title:'我的消息',
+                msg:'提示内容',
+                showType:'fade',
+                style:{
+                    right:'',
+                    bottom:''
+                }
+            });
+        }
+        function centerRight(){
+            $.messager.show({
+                title:'我的消息',
+                msg:'提示内容',
+                showType:'fade',
+                style:{
+                    left:'',
+                    right:0,
+                    bottom:''
+                }
+            });
+        }
+        function bottomLeft(){
+            $.messager.show({
+                title:'我的消息',
+                msg:'提示内容',
+                showType:'show',
+                style:{
+                    left:0,
+                    right:'',
+                    top:'',
+                    bottom:-document.body.scrollTop-document.documentElement.scrollTop
+                }
+            });
+        }
+        function bottomCenter(){
+            $.messager.show({
+                title:'我的消息',
+                msg:'提示内容',
+                showType:'slide',
+                style:{
+                    right:'',
+                    top:'',
+                    bottom:-document.body.scrollTop-document.documentElement.scrollTop
+                }
+            });
+        }
+        function bottomRight(){
+            $.messager.show({
+                title:'我的消息',
+                msg:'提示内容',
+                showType:'show'
+            });
+        }
+    </script>

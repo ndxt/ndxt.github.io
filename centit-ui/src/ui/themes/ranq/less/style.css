@@ -1,0 +1,198 @@
+*{
+	border-radius: 0;
+    font-family: 'Microsoft YaHei'; font-size: 14px;
+}
+
+
+
+.panel-body{background-color: transparent;}
+
+.panel-fit, .panel-fit body {background-color:#031346; background:url(images/bg.jpg) no-repeat center center;}
+
+
+.textinput {
+	width: 120px;
+	height: 24px;
+	line-height: 24px;
+    color: #336699;
+    border: 1px solid #a2b3bd;
+    background: url(images/textinput_bg.jpg) repeat-x scroll left top #ffffff;
+}
+a {
+    outline: none!important;
+    text-decoration: none!important;
+}
+
+
+.panel.window .dialog-button>a:first-child {
+    background:#1e60a4;
+    width: 70px;
+    height: 30px;
+    color: #fff;
+}
+
+.panel.window .dialog-button>a {
+    background:#1e60a4;
+    width: 70px;
+    height: 30px;
+}
+
+
+
+#datagrid_toolbar_unitinfo_add_top,#datagrid_toolbar_unitinfo_add{background:#7ba0bb;}
+
+#datagrid_toolbar_unitinfo_edit{background: #52c3a7}
+
+
+.panel-tool-max{display:none!important;}
+
+.panel-header{/* background:#2d8bce; */ background:#fff;}
+	
+.hucome{width:111px;float:left;}
+
+
+.search .search-body {
+	border: none;
+	background:#fff;
+}
+
+/*菜单 搜索*/
+#menu_search_panel {
+    padding: 10px 0;
+    background: #F1F8FF;
+}
+#menu_search {
+    margin-left: 25px;
+    font-family:simsun;
+}
+
+/*内容*/
+.menu-iframe, .dialog-iframe {
+	width: 100%; height: 100%;
+	border: none;
+	margin: 0; 
+	
+    /*解决iframe高度和父div高度不统一出现滚动条 @http://stackoverflow.com/questions/7290214/html-strange-space-between-iframe-elements*/
+    vertical-align:bottom;
+    display:block;
+}
+
+#footer {
+    height: 27px; line-height: 27px;
+    overflow: hidden;
+    text-align: center;
+    
+    border-color: #ccc;
+    color: #222;
+    background: #f2f2f2;
+}
+
+.datagrid-cell.datagrid-cell-c1-stateName {
+	color: #00B2FF;
+}
+
+.easyui-layout .layout-split-east {
+    border-left: 0px;
+}
+
+
+.datagrid-cell.datagrid-cell-c1-merge a {
+	 color: #00B2FF; 
+}
+
+.l-btn-icon-left .l-btn-text {
+	color:#fff;
+}
+
+.textbox{border:1px solid #d2d2d2; border-radius:0;}
+.combo-panel.panel-body.panel-body-noheader{background:#fff;}
+.datagrid-toolbar{padding:0;}
+
+.dialog-button {
+    border-color: #dddddd #95B8E7 #95B8E7 #95B8E7;
+    position: relative;
+    top: 0px;
+    width: 628px;
+    border: 0;
+    padding-top: 7px;
+}
+
+.dialog-button .l-btn-icon-left .l-btn-text {
+    margin: 0 4px;
+}
+
+
+
+.window, .window .window-body{background: #fff;}
+
+.window .window-body.messager-body {
+    padding: 20px;
+   	background: #fff;
+}
+
+
+p#menu_gps {
+    height: 45px;
+    line-height: 45px;
+    /* border-bottom: 1px solid #cccccc; */
+    margin-left: 20px;
+    margin-right: 20px;
+    background:#fff;
+}
+
+p#menu_gps div {
+    display: inline-block;
+    position: relative;
+    /* margin-bottom: 0px; */
+    margin-right: 3px;
+    /* background-color: #276ab0; */
+    width: 14px;
+    height: 14px;
+    background-position-y: 0px;
+    background-image: url(./images/menulocation1.png);
+}
+
+p#menu_gps .gpsfont{margin-left:11px;font-weight: bold;}
+
+
+
+
+.panel.window .messager-button>a:first-child{ 
+	
+	background: #1e60a4;
+    width: 70px;
+    height: 30px;
+    color: #fff;
+	
+}
+
+
+.panel.window .messager-button>a {
+   background: #1e60a4;
+    width: 70px;
+    height: 30px;
+    color: #fff;
+}
+
+
+
+
+/*按钮背景色*/
+.l-btn-icon{margin-top: -6px;}
+
+#deletcl{background:#ff7317;}
+#searchx{background:#1e60a4;}
+#editors{background:#52c3a7;}
+#adder{background:#7ba0bb;}
+#faju{ background: #ffb101;}
+#biaoju{background: #ffb101;}
+#ckclvbaiben{background:#ffb101;}
+#gengxi{background:#ffb101;}
+.l-btn-plain:hover {
+    padding: 0 6px;
+}
+
+.panel-tool-collapse{display:none!important;}
+
+
+.datagrid-toolbar, .datagrid-pager{background: #F4F4F4;}

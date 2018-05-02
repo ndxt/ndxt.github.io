@@ -1,0 +1,32 @@
+<p class="codeIgnore warn">注意：窗口工具和对话框工具有一定区别，窗口工具是显示在标题栏里而对话框工具是显示在内容区里</p>
+<p class="codeIgnore title"></p>
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="$('#window-tools').window('open');">打开</a>
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="$('#window-tools').window('close');">关闭</a>
+<div id="window-tools" class="easyui-window">带有工具的窗口</div>
+<!-- @reg:<div id="window-tools-obj">=tooltip{content:'先定义好一个工具元素'} -->
+<div id="window-tools-obj">
+	<a href="javascript:void(0)" class="icon-add" onclick="javascript:alert('添加');"></a>
+	<a href="javascript:void(0)" class="icon-edit" onclick="javascript:alert('修改');"></a>
+	<a href="javascript:void(0)" class="icon-cut" onclick="javascript:alert('剪切');"></a>
+	<a href="javascript:void(0)" class="icon-help" onclick="javascript:alert('帮助');"></a>
+</div>
+<script type="text/javascript">
+	$(function() {
+		$("#window-tools").window({
+			iconCls : "icon-save",
+			title : "窗口工具",
+			closed : true,
+			//<!-- @reg:tools=tooltip{content:'可以传数组，也可直接设为之前定义好的元素对象'} -->
+			tools : "#window-tools-obj"
+		});
+	});
+</script>
+<style type="text/css">
+	#window-tools {
+		width: 500px;
+		height: 300px;
+		line-height: 300px;
+		padding: 10px;
+		text-align: center;
+	}
+</style>

@@ -1,0 +1,52 @@
+<p class="codeIgnore">提示框默认显示在文字<b>下侧</b>，也可以通过<code>position</code>对提示框位置进行修改，可选值有<code>top</code><code>right</code><code>bottom</code><code>left</code></p>
+<p class="codeIgnore title">静态设置</p>
+<!-- 静态设置 -->
+<div id="static-position">
+	<!-- @reg:position=tooltip{content:'<code>position</code>属性设置提示框相对于文字的位置'} -->
+	<!-- @reg:top=tooltip{content:'<code>position</code>属性可选值有：<code>top：上</code><code>right：右</code><code>bottom：下</code><code>bottom：下</code>'} -->
+	<div class="easyui-tooltip" position="top" title="这是一个显示在上侧的提示消息">上</div>
+	<div class="easyui-tooltip" position="right" title="这是一个显示在右侧的提示消息">右</div>
+	<div class="easyui-tooltip" position="bottom" title="这是一个显示在下侧的提示消息">下</div>
+	<div class="easyui-tooltip" position="left" title="这是一个显示在左侧的提示消息">左</div>
+</div>
+<p class="codeIgnore title">动态设置</p>
+<!-- 动态设置 -->
+<div style="margin: 10px 0 15px 0;">
+	<span>选择提示框位置：</span>
+	<!-- @reg:position=tooltip{content:'通过重新对提示框属性赋值的方式改变提示框位置'} -->
+	<select onchange="changePosition({position : this.value});">
+		<option value="bottom">下</option>
+		<option value="top">上</option>
+		<option value="right">右</option>
+		<option value="left">左</option>
+	</select>
+</div>
+<div id="dynamic-position" class="easyui-tooltip" title="这是一个提示消息">动态显示</div>
+<script type="text/javascript">
+	function changePosition(value) {
+		$("#dynamic-position").tooltip({
+			position : value.position
+		});
+	}
+</script>
+<style type="text/css">
+	#static-position {
+		text-align: center;
+		overflow: hidden;
+	}
+	
+	#static-position div {
+		width: 40px;
+		margin-right: 10px;
+		padding: 5px;
+		float: left;
+		border: 1px solid #c3d9e0;
+	}
+	
+	#dynamic-position {
+		width: 60px;
+		padding: 5px;
+		text-align: center;
+		border: 1px solid #c3d9e0;
+	}
+</style>

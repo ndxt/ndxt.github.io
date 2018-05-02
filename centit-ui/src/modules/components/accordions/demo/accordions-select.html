@@ -1,0 +1,25 @@
+<p class="codeIgnore"><code>selected: index</code>设置默认选中的Item，<b>index默认为0</b>即展开第一个Item。也可以通过<code>select</code>方法动态选择，选择的参数可以是标签的<b>index</b>或者<b>title</b></p>
+<div class="easyui-panel" style="margin-bottom: 10px;">
+	<a class="easyui-linkbutton" data-options="toggle: true, group: 'accordions-select-btns'" onclick="selectAccordions_d02268aef121a3ef(this, 0)">Page1</a>
+	<a class="easyui-linkbutton" data-options="toggle: true, group: 'accordions-select-btns'" onclick="selectAccordions_d02268aef121a3ef(this, 1)">Page2</a>
+	<a class="easyui-linkbutton" data-options="toggle: true, group: 'accordions-select-btns'" onclick="selectAccordions_d02268aef121a3ef(this, 2)">Page3</a>
+</div>
+
+<script>
+	function selectAccordions_d02268aef121a3ef(btn, index) {
+//<!-- @reg:select=tooltip{content:'<code>select</code>方法选择标签页'} -->			
+		$('#accordions_d02268aef121a3ef').accordion('select', index);
+	}
+</script>
+
+<div id="accordions_d02268aef121a3ef" data-options="selected: false" class="easyui-accordion" style="width:200px;height:200px;">
+    <div title="Page1" style="padding: 10px;">
+        Content1
+    </div>
+    <div title="Page2" style="padding: 10px;">
+		Content2
+    </div>
+    <div title="Page3" style="padding: 10px;">
+		Content3
+    </div>
+</div>

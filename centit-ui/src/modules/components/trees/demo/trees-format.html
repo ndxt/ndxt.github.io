@@ -1,0 +1,14 @@
+<p class="codeIgnore"><code>formatter属性</code>定义如何呈现节点文本</p>
+<!-- @reg:formatter=tooltip{content:'<code>treesformat方法</code>为自定义的方法'} -->
+ <ul class="easyui-tree" data-options="url:'modules/components/trees/datas/menus.formatting.json',method:'get',animate:true,formatter:treesformat">
+ </ul>
+
+<script>
+	function treesformat(n){
+		var s=n.text;
+		if(n.children){
+			 s += '&nbsp;<span style=\'color:blue\'>(' + n.children.length + ')</span>'
+		}
+		return s;
+	}
+</script>

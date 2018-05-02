@@ -1,0 +1,31 @@
+<p class="codeIgnore">通过绑定<code>onUpdate</code>事件请求远程数据，可以设置提示框</p>
+<p class="codeIgnore title"></p>
+<div id="custom-ajax">AJAX</div>
+<script type="text/javascript">
+	$(function() {
+		$("#custom-ajax").tooltip({
+			content : $("<div></div>"),
+			onShow : function() {
+				$(this).tooltip("tip").css("left", $(this).offset().left);
+				$(this).tooltip("arrow").css("left", 20);
+			},
+			onUpdate : function(content) {
+				content.panel({
+					width : 500,
+					height : "auto",
+					border : false,
+					//<!-- @reg:href=tooltip{content:'可以传URL地址或文件路径'} -->
+					href : "modules/window/tooltip/data/tooltip-ajax.txt"
+				});
+			}
+		});
+	});
+</script>
+<style type="text/css">
+	#custom-ajax {
+		width: 50px;
+		padding: 5px;
+		text-align: center;
+		border: 1px solid #c3d9e0;
+	}
+</style>

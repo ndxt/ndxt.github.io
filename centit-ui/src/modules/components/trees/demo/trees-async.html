@@ -1,0 +1,24 @@
+<!--id:trees_async -->
+<p class="codeIgnore">如果数据量很大，不能够一次加载完所有树形数据，希望在每次点击的时候才加载所需数据。EasyUI可以完全满足这种需求</p>
+<p class="codeIgnore info">对于未点击的节点，点击时将发送请求<code>url?id=节点id</code>获取数据</p>
+<div class="easyui-panel" id="panel_fd76c63dd2184889" style="margin-bottom: 10px;"></div>
+
+<ul class="easyui-tree" id="tree_fd76c63dd2184889" 
+	url="modules/components/trees/datas/menus.async.json"></ul>
+<p class="codeIgnore info"><b>注意</b>返回数据节点必须设置<code>state: closed</code>否则不能点开</p>
+<script>
+	$('#tree_fd76c63dd2184889').tree({
+//<!-- @reg:onBeforeLoad=tooltip{content:'只是用来显示请求url，并没有什么X用'} -->
+		onBeforeLoad: function(node, param) {
+			var text = '发送请求: modules/components/trees/datas/menus.async.json';
+			
+			if (node) {
+				text = text + '?<b>id=' + node.id + '</b>';
+			}
+			
+			$('#panel_fd76c63dd2184889').panel({
+				content: text
+			});
+		}
+	});
+</script>

@@ -1,0 +1,22 @@
+<p class="codeIgnore"><code>setTitle方法</code>用来改变面板（panel）中的标题名称</p>
+<div class="easyui-panel" style="margin-bottom: 10px;">
+	<input class="easyui-textbox" id="input_09289722c968a89b" type="text" />
+</div>
+<script>
+	$('#input_09289722c968a89b').textbox({
+		prompt: '输入新标题名称',
+		buttonIcon:'icon-edit',	
+		onClickButton: function(){
+			var value = $('#input_09289722c968a89b').val() || '新标题';
+			
+			// 设置title
+			<!-- @reg:setTitle=tooltip{content:'用来重新设置面板标题名称'} -->
+			$('#panel_09289722c968a89b').panel('setTitle', value);
+		}
+	});
+</script>
+<div id="panel_09289722c968a89b" class="easyui-panel" title="山东省办事处" style="width:500px;height:150px;padding:10px;">
+山东省办事处<br>
+联系人：刘主任<br>
+联系电话：18651825580
+</div>

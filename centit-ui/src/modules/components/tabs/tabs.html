@@ -1,0 +1,61 @@
+<ul class="example-list" id="tabs-example-list">
+	<li>
+		<a href="#tabs-basic" data-url="modules/components/tabs/demo/tabs-basic.html">基础Tabs</a>
+	</li>
+	<li>
+		<a href="#tabs-remote" data-url="modules/components/tabs/demo/tabs-remote.html">加载远程内容</a>
+	</li>
+	<li>
+		<a>Tabs操作</a>
+		<ul>
+			<li>
+				<a href="#tabs-select" data-url="modules/components/tabs/demo/tabs-select.html">选择</a>
+			</li>
+			<li>
+				<a href="#tabs-add" data-url="modules/components/tabs/demo/tabs-add.html">添加</a>
+			</li>
+			<li>
+				<a href="#tabs-remove" data-url="modules/components/tabs/demo/tabs-remove.html">删除</a>
+			</li>
+			<li>
+				<a href="#tabs-state" data-url="modules/components/tabs/demo/tabs-state.html">禁用</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a>Tabs样式</a>
+		<ul>
+			<li>
+				<a href="#tabs-position" data-url="modules/components/tabs/demo/tabs-position.html">位置</a>
+			</li>
+			<li>
+				<a href="#tabs-style" data-url="modules/components/tabs/demo/tabs-style.html">外观</a>
+			</li>
+			<li>
+				<a href="#tabs-large-image" data-url="modules/components/tabs/demo/tabs-large-image.html">大图标</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a href="#tabs-tools" data-url="modules/components/tabs/demo/tabs-tools.html">Tabs工具栏</a>
+	</li>
+</ul>
+
+<script>
+	
+	requirejs([
+		'widgets/example/widget.example',
+		'plugins/prettify/prettify'
+		], function(create) {
+			
+		var list = $('#tabs-example-list');
+		create(list, function(container) {
+			prettyPrint();
+			
+			$.parser.parse(container);
+			
+			$("#menu_tab_Tabs").niceScroll({cursorcolor:"#BCBCBC"});
+		});
+	});
+	
+</script>

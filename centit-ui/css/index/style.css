@@ -1,0 +1,121 @@
+.section {
+	padding: 100px 30px 100px 30px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.section > div {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.section-1 {
+	background: #2ba3d4 url("../../img/index/bg.png") no-repeat center center;
+}
+
+.section-1 > div img {
+	max-width: 100%;
+	margin-bottom: 40px;
+}
+
+.section-1 > div div {
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+
+.section-2 {
+	background: #3dc0f1;
+}
+
+.section-2 > div h1 {
+	margin: 0 0 20px 0;
+	font-size: 50px;
+}
+
+.section-2 > div .hint {
+	margin-bottom: 60px;
+	font-size: 20px;
+}
+
+.section-2 > div .trait {
+	overflow: hidden;
+}
+
+.section-2 > div .trait > div {
+	width: 33.33%;
+	float: left;
+}
+
+.section-2 > div .trait > div img  {
+	max-width: 100%;
+}
+
+.section-2 > div .trait > div h2 {
+	margin: 0 0 15px 0;
+	font-size: 24px;
+}
+
+.section-3 {
+	color: #000000;
+}
+
+.section-3 > div h1 {
+	margin: 0 0 60px 0;
+	font-size: 40px;
+}
+
+.section-3 > div .resource {
+	overflow: hidden;
+}
+
+.section-3 > div .resource > div {
+	width: 33.33%;
+	position: relative;
+	float: left;
+}
+
+.section-3 > div .resource > div a {
+	height: 345px;
+	margin: 30px 20px 0 20px;
+	padding: 80px 30px 60px 30px;
+	display: block;
+	color: #222222;
+	border: 1px solid #e5e5e5; 
+	border-radius: 3px;
+	transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+}
+
+.section-3 > div .resource > div a:HOVER {
+	color: #0ba1d8;
+	border-bottom: 5px solid #0ba1d8; 
+	text-decoration: none;
+}
+
+.section-3 > div .resource > div a img  {
+	margin: 0 -40px 0 -40px;
+	top: 0;
+	left: 50%;
+	position: absolute;
+	transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+}
+
+.section-3 > div .resource > div a:HOVER img {
+	top: 6px;
+}
+
+.section-3 > div .resource > div a h2 {
+	margin: 0 0 15px 0;
+	font-size: 24px;
+	word-break: break-all;
+}
+
+.section-3 > div .resource > div a div {
+	color: #444444;
+	word-break: break-all;
+}

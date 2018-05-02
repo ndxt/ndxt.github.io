@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>欢迎使用 Centit-UI</title>
+</head>
+<body>
+<div class="md-section-divider"></div><div class="md-section-divider"></div><h1 data-anchor-id="umrj" id="欢迎使用-centit-ui">欢迎使用 Centit-UI</h1><hr><p data-anchor-id="3wvh">曾经我们饱受没有统一前端框架之苦：样式单一过时、缺少插件、缺少文档…… 痛定思痛，新框架正是按照解决这一系列问题的思路而开发。花大心血和人力编写使用文档、引用成熟商业框架丰富插件、快速无缝切换的主题颜色配置，这一切，只为让您能够专心快速地开发项目。</p><hr><div class="md-section-divider"></div><h2 data-anchor-id="qj1b" id="1引入-centit-ui">1、引入 Centit-UI</h2><p data-anchor-id="5sr6">引用Centit-UI的项目<strong>必须是Maven</strong>工程，如果您的项目还不是Maven工程，请先改造成Maven工程。</p><p data-anchor-id="btk4">我们推荐直接引用Framework2.0的pom，因为Framework2.0不但包含完整的UI文件，还包含了<strong>工作流</strong>、<strong>统计报表</strong>、<strong>文件服务</strong>、<strong>全文检索</strong>等一系列功能。</p><div class="md-section-divider"></div><h3 data-anchor-id="tbnq" id="修改pomxml添加依赖">修改pom.xml，添加依赖</h3><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="31lp"><ol class="linenums"><li class="L0"><code><span class="tag">&lt;dependency&gt;</span></code></li><li class="L1"><code><span class="pln">    </span><span class="tag">&lt;groupId&gt;</span><span class="pln">com.centit.framework</span><span class="tag">&lt;/groupId&gt;</span></code></li><li class="L2"><code><span class="pln">    </span><span class="tag">&lt;artifactId&gt;</span><span class="pln">framework-sys-module</span><span class="tag">&lt;/artifactId&gt;</span></code></li><li class="L3"><code><span class="pln">    </span><span class="tag">&lt;version&gt;</span><span class="pln">2.0.1-SNAPSHOT</span><span class="tag">&lt;/version&gt;</span></code></li><li class="L4"><code><span class="tag">&lt;/dependency&gt;</span></code></li></ol></pre><p data-anchor-id="s8wz">是的，就是这么简单。现在启动工程，就能看到框架界面了。</p><hr><p data-anchor-id="rqf3">如果项目因为种种原因不能引用Framework2.0，也可以单独引用Centit-UI：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="32uq"><ol class="linenums"><li class="L0"><code><span class="tag">&lt;dependency&gt;</span></code></li><li class="L1"><code><span class="pln">    </span><span class="tag">&lt;groupId&gt;</span><span class="pln">com.centit.framework</span><span class="tag">&lt;/groupId&gt;</span></code></li><li class="L2"><code><span class="pln">    </span><span class="tag">&lt;artifactId&gt;</span><span class="pln">framework-ui</span><span class="tag">&lt;/artifactId&gt;</span></code></li><li class="L3"><code><span class="pln">    </span><span class="tag">&lt;version&gt;</span><span class="pln">2.1.0-SNAPSHOT</span><span class="tag">&lt;/version&gt;</span></code></li><li class="L4"><code><span class="tag">&lt;/dependency&gt;</span></code></li></ol></pre><p data-anchor-id="esp5">之后需要<strong>手动修改工程的登录页面和首页</strong>为指定的文件</p><hr><div class="md-section-divider"></div><h2 data-anchor-id="03j8" id="2centit-ui-结构">2、Centit-UI 结构</h2><pre data-anchor-id="6er4"><code>/webapp
+|---index.jsp           首页
+|---login.html          登录页面
+|---/custom             *项目自定义配置文件夹
+|   |---config.js
+|   |---style.css
+|---/modules            *项目页面文件夹
+|---/ui                 ui主文件夹
+    |---app.js          
+    |---main.js
+    |---config.js
+    |---/core
+    |---/css
+    |---/js
+    |---/themes
+    |---/widgets
+</code></pre><hr><div class="md-section-divider"></div><h2 data-anchor-id="9it4" id="3配置-centit-ui">3、配置 Centit-UI</h2><p data-anchor-id="ie4x">由于是通过jar包引入，所以在工程文件夹中我们是看不到上面这些文件的。如果需要特别定制，一般我们<strong>不建议</strong>在工程目录相同路径下建同名文件直接覆盖。</p><p data-anchor-id="vorj">我们提供了一个可配置文件夹：<strong>custom</strong>，这个文件夹下面的所有文件是可以被任意覆盖的。通过覆盖这些文件可以改变框架的默认行为和样式：</p><div class="md-section-divider"></div><h3 data-anchor-id="vbug" id="①-customstylecss">① custom/style.css</h3><p data-anchor-id="hunz">在这个文件里所写样式，将会覆盖框架的默认样式。</p><div class="md-section-divider"></div><h3 data-anchor-id="937m" id="②-customconfigjs">② custom/config.js</h3><p data-anchor-id="2jcx">一般情况下我们只需要配置主题和颜色：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="7sx7"><ol class="linenums"><li class="L0"><code><span class="pln">define</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="kwd">require</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L1"><code><span class="pln">    </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L2"><code><span class="pln">        </span><span class="typ">Theme</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L3"><code><span class="pln">            </span><span class="typ">DefaultTheme</span><span class="pun">:</span><span class="pln"> </span><span class="str">'qui'</span><span class="pun">,</span><span class="pln">            </span><span class="com">/* 默认主题 */</span></code></li><li class="L4"><code><span class="pln">            </span><span class="typ">DefaultColor</span><span class="pun">:</span><span class="pln"> </span><span class="str">'sky_blue'</span><span class="pln">        </span><span class="com">/* 默认颜色 */</span><span class="pln">   </span></code></li><li class="L5"><code><span class="pln">        </span><span class="pun">}</span></code></li><li class="L6"><code><span class="pln">    </span><span class="pun">};</span></code></li><li class="L7"><code><span class="pun">});</span></code></li></ol></pre><p data-anchor-id="hxvp">完整配置系统参数见下面表格：</p><table data-anchor-id="bf2u" class="table table-striped-white table-bordered">
+<thead>
+<tr>
+ <th style="text-align:left;">参数名</th>
+ <th style="text-align:left;">子参数</th>
+ <th style="text-align:center;">类型</th>
+ <th style="text-align:left;">注释</th>
+ <th style="text-align:left;">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+ <td style="text-align:left;">Theme</td>
+ <td style="text-align:left;"></td>
+ <td style="text-align:center;">Object</td>
+ <td style="text-align:left;">主题相关配置</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">DefaultTheme</td>
+ <td style="text-align:center;">String</td>
+ <td style="text-align:left;">默认主题ID</td>
+ <td style="text-align:left;">qui</td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">DefaultColor</td>
+ <td style="text-align:center;">String</td>
+ <td style="text-align:left;">默认颜色</td>
+ <td style="text-align:left;">blue</td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">LoadAnimation</td>
+ <td style="text-align:center;">String</td>
+ <td style="text-align:left;">首页加载动画效果主题</td>
+ <td style="text-align:left;">qui</td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">Title</td>
+ <td style="text-align:center;">String</td>
+ <td style="text-align:left;">项目标题（显示在浏览器标签页上）</td>
+ <td style="text-align:left;">CentitUI</td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">HeaderTitle</td>
+ <td style="text-align:center;">String</td>
+ <td style="text-align:left;">项目头部标题</td>
+ <td style="text-align:left;">南大先腾富客户端系统 V2.0</td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">FooterTitle</td>
+ <td style="text-align:center;">String</td>
+ <td style="text-align:left;">项目尾部标题</td>
+ <td style="text-align:left;">技术支持电话：025-84207500 @南大先腾有限公司</td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">CustomCss</td>
+ <td style="text-align:center;">Array</td>
+ <td style="text-align:left;">定义用户需要加载的css文件</td>
+ <td style="text-align:left;">['custom/style.css']</td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">ColorCSS</td>
+ <td style="text-align:center;">Array</td>
+ <td style="text-align:left;">定义用户需要加载的与色彩相关的css文件</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">IconCSS</td>
+ <td style="text-align:center;">Array</td>
+ <td style="text-align:left;">定义用户需要加载的与图标相关的css文件</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">Colors</td>
+ <td style="text-align:center;">Array</td>
+ <td style="text-align:left;">定义用户主题可配置的颜色（具体格式可以参照各主题theme.js里的颜色配置）</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">Template</td>
+ <td style="text-align:center;">String</td>
+ <td style="text-align:left;">定义用户首页加载的html模板（默认为主题文件夹下的template.html文件）</td>
+ <td style="text-align:left;">ui/themes/qui/template.html</td>
+</tr>
+<tr>
+ <td style="text-align:left;">System</td>
+ <td style="text-align:left;"></td>
+ <td style="text-align:center;">Object</td>
+ <td style="text-align:left;">系统相关配置</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">LoadingAnimation</td>
+ <td style="text-align:center;">Boolean</td>
+ <td style="text-align:left;">是否显示首页加载动画缓冲效果</td>
+ <td style="text-align:left;">true</td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">AjaxLoader</td>
+ <td style="text-align:center;">Function</td>
+ <td style="text-align:left;">系统ajax调用数据处理器（不建议修改）</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">AjaxErrorLoader</td>
+ <td style="text-align:center;">Function</td>
+ <td style="text-align:left;">系统ajax错误数据处理器（不建议修改）</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">Debug</td>
+ <td style="text-align:center;">Boolean</td>
+ <td style="text-align:left;">调试模式，打印系统日志</td>
+ <td style="text-align:left;">true</td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">EasyUI</td>
+ <td style="text-align:center;">Boolean</td>
+ <td style="text-align:left;">是否使用easy-ui布局</td>
+ <td style="text-align:left;">true</td>
+</tr>
+<tr>
+ <td style="text-align:left;">URL</td>
+ <td style="text-align:left;"></td>
+ <td style="text-align:center;">Object</td>
+ <td style="text-align:left;">系统URL相关配置</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">Dictionary</td>
+ <td style="text-align:center;">String</td>
+ <td style="text-align:left;">获取数据字典明细： {{code}} 用来替换数据字典编码</td>
+ <td style="text-align:left;">data/dictionary/{{code}}.json</td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">UserInfo</td>
+ <td style="text-align:center;">String</td>
+ <td style="text-align:left;">获取用户信息</td>
+ <td style="text-align:left;">data/user-info.json</td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">UserSetting</td>
+ <td style="text-align:center;">String</td>
+ <td style="text-align:left;">获取用户个性化配置</td>
+ <td style="text-align:left;">data/user-setting.json</td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">Menu</td>
+ <td style="text-align:center;">String</td>
+ <td style="text-align:left;">获取首页菜单数据</td>
+ <td style="text-align:left;">data/menu.json</td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">Logout</td>
+ <td style="text-align:center;">String</td>
+ <td style="text-align:left;">登出链接</td>
+ <td style="text-align:left;">login.html</td>
+</tr>
+<tr>
+ <td style="text-align:left;">Menu</td>
+ <td style="text-align:left;"></td>
+ <td style="text-align:center;">Object</td>
+ <td style="text-align:left;">菜单相关配置</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">Loader</td>
+ <td style="text-align:center;">Function</td>
+ <td style="text-align:left;">菜单数据加载过滤器</td>
+ <td style="text-align:left;">function(data) { return data[0].children; }</td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">Icons</td>
+ <td style="text-align:center;">Map</td>
+ <td style="text-align:left;">传入菜单ID和图标所对应的class</td>
+ <td style="text-align:left;">{DASHBOARD: 'icon-base icon-base-home'}</td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">LargeIcons</td>
+ <td style="text-align:center;">MAP</td>
+ <td style="text-align:left;">传入菜单ID和大图标所对应的class（大图标用在混合菜单顶部）</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">Dashboard</td>
+ <td style="text-align:center;">Object</td>
+ <td style="text-align:left;">首页信息相关配置</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">——(id)</td>
+ <td style="text-align:center;">String</td>
+ <td style="text-align:left;">首页菜单ID</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">——(text)</td>
+ <td style="text-align:center;">String</td>
+ <td style="text-align:left;">首页菜单名称</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">——(icon)</td>
+ <td style="text-align:center;">String</td>
+ <td style="text-align:left;">首页菜单图标</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">——(url)</td>
+ <td style="text-align:center;">String</td>
+ <td style="text-align:left;">首页菜单链接</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">——(external)</td>
+ <td style="text-align:center;">Boolean</td>
+ <td style="text-align:left;">是否以iframe方式打开</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">——(closable)</td>
+ <td style="text-align:center;">Boolean</td>
+ <td style="text-align:left;">是否可以关闭</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;">Cache</td>
+ <td style="text-align:left;"></td>
+ <td style="text-align:center;">Object</td>
+ <td style="text-align:left;">系统缓存相关配置</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">Init</td>
+ <td style="text-align:center;">Array</td>
+ <td style="text-align:left;">初始化加载的缓存</td>
+ <td style="text-align:left;">[{id: 'UnitInfo', url: 'data/user-info.json'}]</td>
+</tr>
+<tr>
+ <td style="text-align:left;">Dictionary</td>
+ <td style="text-align:left;"></td>
+ <td style="text-align:center;">Object</td>
+ <td style="text-align:left;">系统缓存数据字典相关配置</td>
+ <td style="text-align:left;"></td>
+</tr>
+<tr>
+ <td style="text-align:left;"></td>
+ <td style="text-align:left;">Init</td>
+ <td style="text-align:center;">Array</td>
+ <td style="text-align:left;">初始化加载的数据字典</td>
+ <td style="text-align:left;">['OptType', 'OptLevel']</td>
+</tr>
+</tbody></table>
+</body>
+</html>

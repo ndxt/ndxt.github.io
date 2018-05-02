@@ -1,0 +1,30 @@
+<style>
+	.datetimebox-methods{padding:5px;margin-right:5px;color: #444;background: #fafafa;border: 1px solid #bbb;border-radius:5px}
+</style>
+<p class="codeIgnore"><code>datetimebox</code>日期输入框结合了一个可编辑的文本框控件和允许用户选择日期的下拉日历面板控件。选择的日期会自动转变为一个有效的日期然后填充到文本框中。选定的日期也可以被格式化为预定格式。</p>
+<!-- @reg:panelWidth=tooltip{content:'给datetimebox设置下拉日历面板宽度'} -->
+<!-- @reg:panelHeight=tooltip{content:'给datetimebox设置下拉日历面板高度'} -->
+<!-- @reg:currentText=tooltip{content:'设置显示<code>当天按钮</code>的文本内容'} -->
+<!-- @reg:closeText=tooltip{content:'设置显示<code>关闭按钮</code>的文本内容'} -->
+<!-- @reg:disabled=tooltip{content:'设置datetimebox是否可用'} -->
+<!-- @reg:showSeconds=tooltip{content:'设置datetimebox是否可显示秒钟信息'} -->
+<b>通过input标签来创建</b><input type="text" class="easyui-datetimebox" required="required" data-options="panelWidth:200,panelHeight:200,currentText:'今天',closeText:'关闭日历',disabled:false,showSeconds:false"><br/><br/>
+<b>通过javascript来创建</b><input type="text" id="felement-datetimebox"><br/><br/>
+<p class="codeIgnore"><code>datetimebox</code>的方法有<code>spinner</code>、<code>setValue</code>等等</p><br/>
+<a href="javascript:void(0)" class="datetimebox-methods" onclick="datetimeboxspinner()">获取spinner对象</a><input type="text" class="easyui-datetimebox" id="datetimebox-spinner" required="required"><br/><br/>
+<a href="javascript:void(0)" class="datetimebox-methods" onclick="datetimeboxsetValue()">设置datetimebox的值</a><input type="text" class="easyui-datetimebox" id="datetimebox-setValue" required="required"><br/><br/>
+<script>
+$('#felement-datetimebox').datetimebox({required:true,showSeconds:true});
+function datetimeboxspinner(){
+	// get the spinner object
+	//<!-- @reg:spinner=tooltip{content:'添加<code>spinner</code>方法'} -->
+	var c = $('#datetimebox-spinner').datetimebox('spinner');
+	alert(c);
+}
+function datetimeboxsetValue(){
+	alert("datetimebox中的日期将被设置成‘2015-07-13’")
+	//<!-- @reg:setValue=tooltip{content:'添加<code>setValue</code>方法'} -->
+	$('#datetimebox-setValue').datetimebox('setValue','2015-07-13');	// set datetimebox value
+	
+}
+</script>

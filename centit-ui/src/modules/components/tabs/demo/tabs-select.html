@@ -1,0 +1,53 @@
+<p class="codeIgnore"><code>selected: true</code>设置默认选中的标签页，也可以通过<code>select</code>方法动态选择，选择的参数可以是标签的<b>index</b>或者<b>title</b></p>
+<div class="easyui-panel" style="margin-bottom: 10px;">
+	<select class="easyui-combobox" data-options="onSelect: selectTab_576ea5a2e8a39771" style="width: 100px;">
+		<option value="0">tab1</option>
+		<option value="1">tab2</option>
+		<option value="2">tab3</option>
+		<option value="3">tab4</option>
+		<option value="4" selected=selected>tab5</option>
+	</select>
+	<a class="easyui-linkbutton" data-options="iconCls: 'icon-help'" onclick="getInfo_576ea5a2e8a39771()">信息</a>
+</div>
+
+<script>
+	// 选择tab
+	function selectTab_576ea5a2e8a39771(record) {
+//<!-- @reg:record.value * 1=tooltip{content:'字符串转数字快速方法'} -->
+		var index = record.value * 1;
+//<!-- @reg:select=tooltip{content:'<code>select</code>方法选择标签页'} -->		
+		$('#tabs_576ea5a2e8a39771').tabs('select', index);
+	}
+	
+	// 获取选中tab的信息
+	function getInfo_576ea5a2e8a39771() {
+		var tabs = $('#tabs_576ea5a2e8a39771');
+//<!-- @reg:getSelected=tooltip{content:'<code>getSelected</code>方法获取当前选中的标签页'} -->			
+		var tab = tabs.tabs('getSelected');
+//<!-- @reg:getTabIndex=tooltip{content:'<code>getTabIndex</code>获取指定标签页的<b>index</b>'} -->	
+		var index = tabs.tabs('getTabIndex', tab)+1;
+		var title = tab.panel('options').title;
+		
+		alert('当前选中的是第'+index+'个Tab，标题是：'+title);
+	}
+</script>
+
+<div id="tabs_576ea5a2e8a39771" class="easyui-tabs" style="width: 300px; height:150px;">
+    <div title="Tab1" style="padding: 10px;">
+        tab1
+    </div>
+    <div title="Tab2" style="padding: 10px;">
+        tab2
+    </div>
+    <div title="Tab3" style="padding: 10px;">
+        tab3
+    </div>
+	<div title="Tab4" style="padding: 10px;">
+        tab4
+    </div>
+<!-- @reg:selected: true=tooltip{content:'设置<code>selected: true</code>的标签在展示时会被默认选中'} -->
+    <div title="Tab5" data-options="selected: true" style="padding: 10px;">
+        tab5
+    </div>
+</div>
+<p class="codeIgnore info"><code>index</code>值从<b>0</b>开始算起</p>

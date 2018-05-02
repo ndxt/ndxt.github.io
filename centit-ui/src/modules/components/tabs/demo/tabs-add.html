@@ -1,0 +1,28 @@
+<p class="codeIgnore">通过<code>add</code>方法动态添加标签页</p>
+<div class="easyui-panel" style="margin-bottom: 10px;">
+	<input class="easyui-textbox" id="input_9fbeec7c543d3dc7" type="text" />
+</div>
+
+<script>
+	$('#input_9fbeec7c543d3dc7').textbox({
+		prompt: '输入新增tab名称',
+		buttonIcon:'icon-add',	
+		onClickButton: function(){
+			var value = $('#input_9fbeec7c543d3dc7').val() || '新TAB';
+//<!-- @reg:add=tooltip{content:'通过<code>add</code>方法动态添加标签页'} -->
+			$('#tabs_9fbeec7c543d3dc7').tabs('add', {
+//<!-- @reg:title=tooltip{content:'<code>title</code>标签页标题'} -->				
+				title: value,
+//<!-- @reg:content=tooltip{content:'<code>content</code>标签页内容'} -->				
+				content: value
+			});
+		}
+	});
+	
+</script>
+
+<div id="tabs_9fbeec7c543d3dc7" class="easyui-tabs" style="width: 500px; height:150px;">
+    <div title="Tab1">
+        tab1
+    </div>
+</div>

@@ -1,0 +1,53 @@
+<p class="codeIgnore">数据表格以表格形式展示数据，并提供了丰富的选择、排序、分组和编辑数据的功能支持。数据表格的设计用于缩短开发时间，并且使开发人员不需要具备特定的知识。它是轻量级的且功能丰富</p>
+<p class="codeIgnore title"></p>
+<!-- @reg:<table=tooltip{content:'先定义好一个<code>table</code>容器'} -->
+<table id="basic-table-basic-t" style="width: 100%; height: 200px;"></table>
+<script type="text/javascript">
+	$(function() {
+		//<!-- @reg:datagrid=tooltip{content:'调用<code>datagrid</code>方法可以创建一个数据表格，并可以设置表格属性'} -->
+		$("#basic-table-basic-t").datagrid({
+			//<!-- @reg:title=tooltip{content:'表格的标题内容'} -->
+			title : "基础表格",
+			//<!-- @reg:singleSelect=tooltip{content:'是否只能选中一行'} -->
+			singleSelect : true,
+			//<!-- @reg:collapsible=tooltip{content:'是否可折叠表格'} -->
+			collapsible : true,
+			//<!-- @reg:url=tooltip{content:'远程数据，可传JSON数组'} -->
+			url : "modules/tables/basic-table/data/basic-table.json",
+			//<!-- @reg:method=tooltip{content:'加载方式'} -->
+			method : "get",
+			//<!-- @reg:columns=tooltip{content:'一个二维JSON数组'} -->
+			columns : [[{
+				//<!-- @reg:field=tooltip{content:'对应加载JSON后里面的Key'} -->
+				field : "itemid",
+				//<!-- @reg:title =tooltip{content:'列表名称'} -->
+				title : "Item ID",
+				width : 100
+			}, {
+				field : "productid",
+				title : "Product",
+				width : 100
+			}, {
+				field : "listprice",
+				title : "List Price",
+				width : 100,
+				align : "right"
+			}, {
+				field : "unitcost",
+				title : "Unit Cost",
+				width : 100,
+				align : "right"
+			}, {
+				field : "attr1",
+				title : "Attribute",
+				width : 240,
+				align : "right"
+			}, {
+				field : "status",
+				title : "Status",
+				width : 60,
+				align : "center"
+			}]]
+		});
+	});
+</script>

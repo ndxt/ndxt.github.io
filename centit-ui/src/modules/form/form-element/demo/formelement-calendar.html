@@ -1,0 +1,17 @@
+<p class="codeIgnore"><code>calendar</code>日历控件显示一个月的日历，允许用户选择日期和移动到下一个或上一个月</p>
+<!-- @reg:fit=tooltip{content:'当设置为<code>true<code>的时候，将设置日历控件大小自适应父容器'} -->
+<b>通过div标签来创建</b><div id="cc" class="easyui-calendar" style="width:180px;height:180px;" data-options="fit:false,weeks:['日','一','二','三','四','五','六']"></div><br/><br/>
+<b>通过javascript来创建,然后给该calendar添加<code>moveTo</code>日期将会被移动到‘2012, 6, 1’</b><div id="felement-calendar" style="width:180px;height:180px;"></div><br/><br/>
+<script>
+$('#felement-calendar').calendar({
+    current:new Date()
+});
+$('#cc').calendar({
+	//<!-- @reg:onSelect=tooltip{content:'给calendar设置<code>onSelect<code>'} -->
+	onSelect: function(date){
+		alert(date.getFullYear()+":"+(date.getMonth()+1)+":"+date.getDate());
+	}
+});
+//<!-- @reg:moveTo=tooltip{content:'给calendar添加moveTo方法'} -->
+$('#felement-calendar').calendar('moveTo', new Date(2012, 6, 1));
+</script>

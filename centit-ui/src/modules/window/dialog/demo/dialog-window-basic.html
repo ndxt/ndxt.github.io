@@ -1,0 +1,48 @@
+<p class="codeIgnore">窗口控件是一个浮动和可拖拽的面板可以用作应用程序窗口。默认情况下，窗口可以移动，调整大小和关闭。它的内容也可以被定义为静态HTML或通过AJAX动态加载。</p>
+<p class="codeIgnore warn">注意：因为窗口<code>window</code>是完全继承自面板<code>panel</code>，所以<code>panel</code>里的属性、事件和方法也可以用在窗口里</p>
+<p class="codeIgnore title"></p>
+<!-- @reg:.window=tooltip{content:'调用<code>window</code>方法可以创建一个窗口，并可以设置窗口属性'} -->
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="$('#window-basic').window('open');">打开</a>
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="$('#window-basic').window('close');">关闭</a>
+<div id="window-basic" class="easyui-window">窗口的内容</div>
+<script type="text/javascript">
+	$(function() {
+		$("#window-basic").window({
+			//<!-- @reg:iconCls=tooltip{content:'定义窗口标题前的图标'} -->
+			iconCls : "icon-save",
+			//<!-- @reg:title=tooltip{content:'定义窗口的标题内容'} -->
+			title : "基础窗口",
+			//<!-- @reg:collapsible=tooltip{content:'定义是否显示可折叠按钮'} -->
+			collapsible : true,
+			//<!-- @reg:minimizable=tooltip{content:'定义是否显示最小化按钮'} -->
+			minimizable : true,
+			//<!-- @reg:maximizable=tooltip{content:'定义是否显示最大化按钮'} -->
+			maximizable : true,
+			//<!-- @reg:closable=tooltip{content:'定义是否显示关闭按钮'} -->
+			closable : true,
+			//<!-- @reg:closed=tooltip{content:'定义是否可以关闭窗口'} -->
+			closed : true,
+			//<!-- @reg:zIndex=tooltip{content:'窗口Z轴坐标'} -->
+			zIndex : 9000,
+			//<!-- @reg:draggable=tooltip{content:'定义是否能够拖拽窗口'} -->
+			draggable : true,
+			//<!-- @reg:resizable=tooltip{content:'定义是否能够改变窗口大小'} -->
+			resizable : true,
+			//<!-- @reg:shadow=tooltip{content:'定义是否显示窗口阴影'} -->
+			shadow : true,
+			//<!-- @reg:inline=tooltip{content:'定义如何布局窗口，如果为true，窗口将显示在它的父容器中，否则将显示在所有元素的上面'} -->
+			inline : false,
+			//<!-- @reg:modal=tooltip{content:'定义是否将窗体显示为模式化窗口'} -->
+			modal : false
+		});
+	});
+</script>
+<style type="text/css">
+	#window-basic {
+		width: 500px;
+		height: 300px;
+		line-height: 300px;
+		padding: 10px;
+		text-align: center;
+	}
+</style>

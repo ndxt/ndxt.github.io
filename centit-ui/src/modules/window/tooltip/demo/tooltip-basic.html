@@ -1,0 +1,28 @@
+<p class="codeIgnore">通过给标签添加通用类<code>easyui-tooltip</code>添加提示框</p>
+<p class="codeIgnore title">静态设置</p>
+<!-- 静态设置 -->
+<p class="codeIgnore">
+	该提示可以使用每个标签的title属性，
+	<!-- @reg:easyui-tooltip=tooltip{content:'只要设置<code>class=\'easyui-tooltip\'</code>，就能添加一个提示框'} -->
+	<!-- @reg:title=tooltip{content:'通过设置<code>title=\'这是一个静态提示消息\'</code>，可以改变提示内容'} -->
+	<a href="javascript:void(0);" class="easyui-tooltip" title="这是一个静态提示消息" style="margin: 0;">鼠标悬停这</a>
+	显示提示。
+</p>
+<p class="codeIgnore title">动态设置</p>
+<!-- 动态设置 -->
+<p class="codeIgnore">
+	也可以动态设置提示框和内容，
+	<a id="dynamic-setting" href="javascript:void(0);" style="margin: 0;">鼠标悬停这</a>
+	显示提示。
+</p>
+<script type="text/javascript">
+	$(function() {
+		//<!-- @reg:tooltip=tooltip{content:'调用<code>tooltip</code>方法进行动态设置'} -->
+		$("#dynamic-setting").tooltip({
+			//<!-- @reg:content=tooltip{content:'通过设置<code>content</code>，可以改变提示内容'} -->
+			content : function() {
+				return "这是一个动态提示消息";
+			}
+		});
+	});
+</script>

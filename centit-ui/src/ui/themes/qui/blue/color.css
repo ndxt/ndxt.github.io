@@ -1,0 +1,120 @@
+.textinput {
+	background: url(images/textinput_bg.jpg) repeat-x scroll left top #ffffff;
+	border-color: #a2b3bd;
+	color: #336699;
+}
+
+body > .layout-panel-north {
+	background: url(images/bs_bannerright.jpg) bottom right no-repeat;
+}
+
+body > .layout-panel-north #header {
+	background: url(images/bs_bannerleft.jpg) left bottom no-repeat;
+}
+
+#main_header {
+	background: url(images/bs_bannerleft.jpg) bottom left no-repeat;
+}
+
+#main_header .header-tool {
+	background: transparent;
+}
+
+/*菜单*/
+.menu-search .textbox .textbox-prompt {
+	background: url("images/textinput_bg.jpg") repeat-x;
+}
+
+.menu-container, #main_menu {
+	background: #F1F8FF;
+}
+.menu-container .menu-split{
+	background: url(images/bs_arrbg.jpg) repeat-y;
+}
+.menu-container .menu-split .menu-split-center{
+	background: url(images/bs_left.jpg) no-repeat;
+}
+
+/*搞死人的定制展开*/
+body > .layout-expand-west {
+	background: url(images/bs_arrbg.jpg) repeat-y;
+}
+body > .layout-expand-west a.layout-button-right {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	background: url(images/bs_right.jpg) no-repeat;
+}
+
+.menu-container .panel, .menu-container .panel-body {
+	background: #F1F8FF;
+}
+.menu-container a {
+	color: #000;
+}
+
+/*菜单 搜索*/
+.menu-search-panel {
+	background: #F1F8FF;
+}
+
+/*菜单 一级*/
+#main_menu .tree-file {
+	background: url(images/titlebar_arrow.gif) no-repeat;
+}
+#main_menu .tree-node.found > .tree-title a, #main_menu .tree-node.found > .tree-title {
+	color: rgb(166, 0, 0);
+}
+#main_menu .accordion-header {
+	background: url(images/titlebar.jpg) center top no-repeat;
+}
+
+#main_menu .accordion-header-selected, #main_menu .accordion-header:hover {
+	background: url(images/titlebar-active.jpg) center top no-repeat;
+}
+#main_menu .accordion-header .panel-title{
+	color: #3a3c3b;
+}
+#main_menu .accordion-header-selected .panel-title{
+	color: #0f317f;
+}
+
+/*菜单 二级*/
+#main_menu .tree > li > .tree-node {
+	background: url(images/titlebar_itemBg.jpg) no-repeat;
+}
+#main_menu .tree > li > .tree-node:hover, #main_menu .tree > li > .tree-node.tree-node-selected {
+	background: url(images/titlebar_itemBgHover.jpg) no-repeat;
+}
+
+/*菜单 三级*/
+#main_menu .tree > li ul .tree-node.tree-node-selected {
+	background: #F1F8FF;
+}
+#main_menu .tree-node.found > .tree-title a, #main_menu .tree > li ul .tree-node.tree-node-selected > .tree-title a {
+	color: rgb(166, 0, 0);
+}
+
+#main_footer {
+	color: #fff;
+	background: url(images/bs_footcenter.jpg) repeat-x;
+}
+
+#menu_tab > .tabs-header .tabs-inner {
+	color: #0E2D5F;
+	border-color:#C0C0C0;
+	background:url(images/tab2.gif) repeat-x;
+}
+
+#menu_tab > .tabs-header li:hover .tabs-inner{
+	color: #0E2D5F;
+	border-color:#4cb2f7;
+}
+
+#menu_tab > .tabs-header li.tabs-selected .tabs-inner {
+	color: #fff;
+	border-color:#005494;
+}
+
+#menu_tab > .tabs-header .tabs-close {
+background: url('images/tabs_icon.png') no-repeat;
+}

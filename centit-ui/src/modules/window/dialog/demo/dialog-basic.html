@@ -1,0 +1,27 @@
+<p class="codeIgnore">对话框是一种特殊类型的窗口，它在顶部有一个工具栏，在底部有一个按钮栏。对话框右上角<b>默认只有一个关闭按钮</b>，但可以配置对话框的属性显示其他工具，如<code>collapsible</code>，<code>minimizable</code>，<code>maximizable</code>工具等。</p>
+<p class="codeIgnore warn">注意：因为对话框<code>dialog</code>是完全继承自窗口<code>window</code>，所以<code>window</code>里的属性、事件和方法也可以用在对话框里</p>
+<p class="codeIgnore title"></p>
+<!-- @reg:.dialog=tooltip{content:'调用<code>dialog</code>方法可以创建一个对话框，并可以设置对话框属性'} -->
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="$('#dialog-basic-d').dialog('open');">打开</a>
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="$('#dialog-basic-d').dialog('close');">关闭</a>
+<div id="dialog-basic-d" class="easyui-dialog">对话框的内容</div>
+<script type="text/javascript">
+	$(function() {
+		$("#dialog-basic-d").dialog({
+			iconCls : "icon-save",
+			title : "基础对话框",
+			closed : true,
+			//<!-- @reg:collapsible=tooltip{content:'和<code>window</code>一样，这里也可以设置这个属性'} -->
+			collapsible : true
+		});
+	});
+</script>
+<style type="text/css">
+	#dialog-basic-d {
+		width: 500px;
+		height: 300px;
+		line-height: 300px;
+		padding: 10px;
+		text-align: center;
+	}
+</style>

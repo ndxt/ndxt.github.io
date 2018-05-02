@@ -1,0 +1,34 @@
+.icon-jm {
+	width: 45px;
+	height: 45px;
+}
+.icon-jm.icon-jm-dashboard {
+	width: 45px;
+	height: 45px;
+	background: url("images/icon01.png") no-repeat;
+}
+.icon-jm.icon-jm-components {
+	width: 45px;
+	height: 45px;
+	background: url("images/icon02.png") no-repeat;
+}
+.icon-jm.icon-jm-tables {
+	width: 45px;
+	height: 45px;
+	background: url("images/icon03.png") no-repeat;
+}
+.icon-jm.icon-jm-form {
+	width: 45px;
+	height: 45px;
+	background: url("images/icon04.png") no-repeat;
+}
+.icon-jm.icon-jm-multilevel {
+	width: 45px;
+	height: 45px;
+	background: url("images/icon05.png") no-repeat;
+}
+.icon-jm.icon-jm-config {
+	width: 45px;
+	height: 45px;
+	background: url("images/icon06.png") no-repeat;
+}

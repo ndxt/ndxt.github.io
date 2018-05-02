@@ -1,0 +1,11 @@
+.new {
+	display: none;
+}
+
+.old {	
+	display: block;
+}
+
+body {
+	background: #fff;
+}

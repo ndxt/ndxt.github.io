@@ -1,0 +1,51 @@
+<p class="codeIgnore">面板有很多事件，例如<code>onBeforeLoad、onLoad、onBeforeOpen、onOpen等等</code></p>
+<div class="easyui-panel" id="panel_a67fe16d3cb3af71"
+	data-options="href:'modules/components/panels/demo/panels-remote-page.html', collapsible:true,minimizable:true,maximizable:true,closable:true" title="联系方式" style="width: 500px; height: 150px;">
+</div>
+<br>
+<div class="easyui-panel" id="panel_logPanelEvent" title="事件日志" style="height: 150px;"></div>
+<script>
+	
+	function logPanelEvent(text) {
+		var body = $('#panel_logPanelEvent');
+		
+		body.html(body.html() + '<p style="line-height: 20px;">'+text+'</p>');
+		body.scrollTop(body[0].scrollHeight);
+	}
+	
+	$('#panel_a67fe16d3cb3af71').panel({
+		onBeforeLoad: function() {
+			logPanelEvent('onBeforeLoad')
+		},
+		onLoad: function() {
+			logPanelEvent('onLoad')
+		},
+		onBeforeOpen: function() {
+			logPanelEvent('onBeforeOpen')
+		},
+		onOpen: function() {
+			logPanelEvent('onOpen')
+		},
+		onBeforeCollapse: function() {
+			logPanelEvent('onBeforeCollapse')
+		},
+		onCollapse: function() {
+			logPanelEvent('onCollapse')
+		},
+		onBeforeExpand: function() {
+			logPanelEvent('onBeforeExpand')
+		},
+		onExpand: function() {
+			logPanelEvent('onExpand')
+		},
+		onMaximize: function() {
+			logPanelEvent('onMaximize')
+		},
+		onMinimize: function() {
+			logPanelEvent('onMinimize')
+		},
+		onRestore: function() {
+			logPanelEvent('onRestore')
+		},
+	});
+</script>

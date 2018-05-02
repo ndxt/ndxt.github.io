@@ -1,0 +1,51 @@
+<p class="codeIgnore">combobox的属性有<code>multiple、groupField、formatter、loader</code></p>
+<a href="javascript:void(0)" class="easyui-linkbutton" onclick="comboboxmultiple()">多选下拉框</a>&nbsp;<input class="easyui-combobox" id="combobox-multiple" name="language" data-options="valueField:'id',textField:'text',url:'modules/form/form-combobox/datas/combobox.json'"><br/><br/>
+<a href="javascript:void(0)" class="easyui-linkbutton" onclick="comboboxgroups()">选项分组</a>&nbsp;<input class="easyui-combobox" id="combobox-groups" name="language" data-options="valueField:'id',textField:'text',url:'modules/form/form-combobox/datas/comboboxgroups.json'"><br/><br/>
+<a href="javascript:void(0)" class="easyui-linkbutton" onclick="comboboxformat()">自定义列表项的格式</a>&nbsp;<input class="easyui-combobox" id="combobox-format" name="language" data-options="valueField:'id',textField:'text',url:'modules/form/form-combobox/datas/comboboxformat.json'"><br/><br/>
+<a href="javascript:void(0)" class="easyui-linkbutton" onclick="comboboxJSONP()">远程检索数据</a>&nbsp;<input class="easyui-combobox" id="combobox-JSONP" name="language" data-options="valueField:'id',textField:'text',mode:'remote'"><br/><br/>
+<script>
+	function comboboxmultiple(){
+	//<!-- @reg:multiple=tooltip{content:'设置下拉框是否为多选框'} -->
+		$('#combobox-multiple').combobox({multiple:true});
+	}
+	function comboboxgroups(){
+		//<!-- @reg:groupField=tooltip{content:'设置下拉框为分组多选框'} -->
+		$('#combobox-groups').combobox({groupField:'group'});
+	}
+	function comboboxformat(){
+		//<!-- @reg:formatter=tooltip{content:'自定义下拉选项的格式'} -->
+		$('#combobox-format').combobox({formatter:function(row){
+			 var s='<span style="font-weight:bold">'+ row.text +'</span><br/>'+'<span style="color:#888">' + row.desc + '</span>';
+            return s;
+		}});
+
+    }
+   function comboboxJSONP(){
+   	//<!-- @reg:loader=tooltip{content:'检索远程数据'} -->
+		$('#combobox-JSONP').combobox({loader:function(param,success,error){
+			var q = param.q || '';
+            if (q.length <= 2){return false}
+            $.ajax({
+                url:'http://gd.geobytes.com/AutoCompleteCity',
+                dataType: 'jsonp',
+                data: {
+                    q: q
+                },
+                success: function(data){
+                    var items = $.map(data, function(item,index){
+                        return {
+                            id: index,
+                            name: item
+                        };
+                    });
+                    success(items);
+                },
+                error: function(){
+                    error.apply(this, arguments);
+                }
+            });
+		}});
+
+    }
+
+</script>

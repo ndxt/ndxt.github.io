@@ -1,0 +1,58 @@
+<p class="codeIgnore">基础<code>Form</code></p>
+<form id="felement-basic" method="post">
+	    <table cellpadding="5">
+	    		<tr>
+	    			<td>Name:</td>
+	    			<td><input class="easyui-textbox" type="text" name="name" data-options="required:true"></input></td>
+	    		</tr>
+	    		<tr>
+	    			<td>Email:</td>
+	    			<td><input class="easyui-textbox" type="text" name="email" data-options="required:true,validType:'email'"></input></td>
+	    		</tr>
+	    		<tr>
+	    			<td>Subject:</td>
+	    			<td><input class="easyui-textbox" type="text" name="subject" data-options="required:true"></input></td>
+	    		</tr>
+	    		<tr>
+	    			<td>Message:</td>
+	    			<td><input class="easyui-textbox" name="message" data-options="multiline:true" style="height:60px"></input></td>
+	    		</tr>
+	    		<tr>
+	    			<td>Language:</td>
+	    			<td>
+	    				<select class="easyui-combobox" name="language">
+	    					<option value="ar">Arabic</option>
+							<option value="bg">Bulgarian</option>
+							<option value="ca">Catalan</option>
+							<option value="zh-cht">Chinese Traditional</option>
+							<option value="cs">Czech</option>
+							<option value="da">Danish</option>
+							<option value="nl">Dutch</option>
+							<option value="en" selected="selected">English</option>
+							<option value="et">Estonian</option>
+							<option value="fi">Finnish</option>
+							<option value="fr">French</option>
+							<option value="de">German</option>
+							<option value="el">Greek</option>
+							<option value="ht">Haitian Creole</option>
+							<option value="he">Hebrew</option>
+							<option value="hi">Hindi</option>
+				            <option value="uk">Ukrainian</option>
+							<option value="vi">Vietnamese</option>
+						</select>
+	    			</td>
+	    		</tr>
+	    </table>
+</form>
+<div style="text-align:center;padding:5px">
+	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">提交</a>
+	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">清除</a>
+</div>
+<script>
+function submitForm(){
+			$('#felement-basic').form('submit');
+		}
+function clearForm(){
+			$('#felement-basic').form('clear');
+		}
+</script>

@@ -1,0 +1,147 @@
+<!--id:trees_filter -->
+<p class="codeIgnore">通过给树设定<code>filter</code>方法属性，再调用方法<code>doFilter</code>进行数据过滤</p>
+<div class="easyui-panel" id="panel_6733fde093e3df93" style="margin-bottom: 10px;">
+	<input class="easyui-textbox" id="input_6733fde093e3df93" data-options="height: 24" />
+</div>
+
+<style>
+	#tree_6733fde093e3df93 b {
+		margin: 0; padding: 0; color: red; background: yellow;
+	}
+</style>
+
+<script>
+	$('#input_6733fde093e3df93').textbox({
+		prompt: '输入名称过滤',
+		icons:[{
+	    	iconCls:'icon-filter',
+	    	handler:function(e){
+//<!-- @reg:doFilter=tooltip{content:'调用<code>doFilter</code>方法开始过滤'} -->
+	     		$('#tree_6733fde093e3df93').tree('doFilter', $(e.data.target).textbox('getValue'));
+    		}
+		}]
+	});
+	
+	$('#tree_6733fde093e3df93').tree({
+//<!-- @reg:filter=tooltip{content:'自己定义过滤方法<code>filter</code>，返回<b>true</b>不过滤，<b>false</b>或者<b>undefined</b>过滤'} -->
+//<!-- @reg:q=tooltip{content:'过滤字符串'} -->
+//<!-- @reg:node=tooltip{content:'树节点'} -->
+		filter: function(q, node){
+			function removeMark(text, target, tree) {
+				if (/<b>(.*?)<\/b>/.test(text)) {
+					text = text.replace(/<b>(.*?)<\/b>/ig, '$1');
+					tree.tree('update', {
+						target: target,
+						text: text
+					});
+				}
+				
+				return text;
+			}
+			
+			var tree = $(this);
+			var target = $('#'+node.domId);
+			var text = node.text;
+			
+			text = removeMark(text, target, tree);
+			if (!q) {
+				return true;
+			}
+			
+			// 满足条件
+			if (text.toLowerCase().indexOf(q.toLowerCase()) >= 0) {
+//<!-- @reg:expandTo=tooltip{content:'<code>expandTo</code>方法会展开指定节点'} -->
+				tree.tree('expandTo', target);
+//<!-- @reg:update=tooltip{content:'<code>update</code>方法更新指定节点内容'} -->
+				tree.tree('update', {
+					target: target,
+					text: node.text.split(q).join('<b>'+q+'</b>')
+				});
+				return true;
+			}
+		}
+	});
+</script>
+
+<ul class="easyui-tree" id="tree_6733fde093e3df93">
+    <li>
+        <span>南大先腾</span>
+        <ul>
+            <li>
+            	<span>总经理室</span>
+				<ul>
+					<li>王锦东</li>
+					<li>王卿</li>
+					<li>孟波波</li>
+					<li>杨淮生</li>
+					<li>穆欣</li>
+				</ul>
+            </li>
+            <li data-options="state:'closed'">
+            	<span>办公室</span>
+				<ul>
+					<li>吴斌芳</li>
+					<li>李勇宁</li>
+					<li>袁萍</li>
+					<li>吴泓</li>
+				</ul>
+            </li>
+			<li data-options="state:'closed'">
+            	<span>财务部</span>
+				<ul>
+					<li>严瑾</li>
+					<li>蒋惠宁</li>
+				</ul>
+            </li>
+			<li data-options="state:'closed'">
+            	<span>技术支持部</span>
+				<ul>
+					<li>赵明</li>
+					<li>吴慧冬</li>
+					<li>张波</li>
+					<li>杨震</li>
+					<li>吴惠阳</li>
+					<li>浮君君</li>
+					<li>王帅</li>
+					<li>袁志龙</li>
+					<li>裘俊</li>
+					<li>陈落雁</li>
+				</ul>
+            </li>
+			<li data-options="state:'closed'">
+            	<span>电子政务事业部</span>
+				<ul>
+					<li>丁璞</li>
+					<li>丁雯娟</li>
+					<li>乔宁</li>
+					<li>何计松</li>
+					<li>何锋</li>
+					<li>刘志强</li>
+					<li>刘杰</li>
+					<li>刘梦瑾</li>
+					<li>向盈</li>
+					<li>吴金峰</li>
+				</ul>
+            </li>
+			<li data-options="state:'closed'">
+            	<span>研发部</span>
+				<ul>
+					<li>丁丁</li>
+					<li>刘杰</li>
+					<li>朱宵玉</li>
+					<li>李婷茹</li>
+					<li>杨晶晶</li>
+					<li>林钟毓</li>
+					<li>汪杰</li>
+					<li>秦涛</li>
+					<li>蒋冬宁</li>
+					<li>黄何</li>
+					<li>秦涛</li>
+					<li>蒋冬宁</li>
+					<li>黄何</li>
+				</ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+	

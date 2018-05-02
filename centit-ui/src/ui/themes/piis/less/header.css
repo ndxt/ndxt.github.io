@@ -1,0 +1,194 @@
+/*HEADER*/
+body > .layout-panel-north {
+    box-shadow: 0px 0px 6px rgb(97, 96, 96);
+    z-index: 999;
+}
+#header {    height: 50px;
+    border: none;
+        position: initial;
+    background-color:#2d8bce;
+	 -moz-box-shadow: 2px 2px 3px #919191;
+    -webkit-box-shadow: 2px 2px 3px #919191;
+    box-shadow: 2px 2px 3px #919191;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#919191')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#919191');
+    }
+
+#header .title{
+	position: absolute;
+    top: 5px;
+    left: 44px;
+    width: 245px;
+    height: 41px;
+    background: url(images/header-title.png) no-repeat;
+    border: none;
+}
+
+#title-system{
+	line-height: 60px;
+	font-size:35px;
+	color :#f0f0f0;
+	font-family : 微软雅黑;
+	font-style: normal;
+	word-spacing:8px; 
+	letter-spacing: 5px;
+	text-align:left;
+	padding-left:70px;
+	margin-top:70px;
+}
+
+/*HEADER > 工具栏*/
+#header .toolbar {
+    position: absolute;
+    right: 0;
+	top: 16px;
+}
+#header .toolbar .easyui-linkbutton {
+	width: 94px;
+	padding: 0;
+	
+	border-radius: 0;
+	border: none;
+	color: #fff;
+}
+#header .toolbar .easyui-linkbutton:last-child {
+	border-right: none;
+}
+#header .toolbar .l-btn-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    position: absolute;
+    left: -1px;
+    background-position: 0px 3px;
+    background-size: 70% 70%;
+    margin-top: -10px;
+    font-size: 1px;
+}
+
+
+#header .toolbar .l-btn-text {
+	text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+
+#header .toolbar #userName {
+	width: 160px;
+}
+
+#header .toolbar #userName .l-btn-text {
+	width: 112px;
+}
+
+#header .toolbar .l-btn-plain:hover {
+    background: none;
+}
+#header .toolbar .panel-body{
+    padding: 0;
+    background: transparent;
+}
+#btn_exit_fullscreen, #btn_fullscreen {
+	background: #5FC041;
+}
+#btn_modifypassword, #btn_logout {
+	background: #00A8EC;
+}
+#btn_modifypassword:hover {
+	background: #F79E26;
+}
+#btn_logout:hover {
+	background: #D32C2C;
+}
+
+/*HEADER > 工具栏 > SKIN*/
+#toolbar_skin .skin {
+}
+
+
+#nav	{
+       display: block;
+    width: 200px;
+    /* margin: 50px; */
+    position: absolute;
+    right: 180px;
+    top: 21px;
+        z-index: 999;
+	}
+#nav h3{ 
+    cursor: pointer;
+    line-height: 22px;
+    height: 30px;
+    color: #fff;
+    font-size: 24px;
+	}
+#nav a{
+    display: block;
+    line-height: 28px;
+    color: #6f809c;
+    background: #ebf3f8;
+    margin: 16px 2px;
+	}
+	
+	
+#nav a p {
+    display: -webkit-inline-box;
+    padding-left: 4px;
+    width: 60px;
+
+	}
+#nav a span {
+	display: inline;
+	   padding-left: 4px;
+
+	}
+		
+	
+#nav p.circle_name {
+width: 58px;
+    height: 58px;
+    background: #3d8cbf;
+    border-radius: 50%;
+    margin: 12px auto;
+    color: #fff;
+    line-height: 58px;
+    text-align: center;
+
+	}
+#nav a:hover{background-color:#eee; color:#000;}
+#nav div{
+    display: none;
+    /* border: 1px solid #000; */
+    border-top: none;
+    position: fixed;
+    background: #fff;
+    width: 240px;
+    border-radius: 4px;
+    box-shadow: aquamarine;
+    box-shadow: 10px 10px 5px #444;
+    -moz-box-shadow: 10px 10px 5px #444;
+    -webkit-box-shadow: 0px 2px 6px #9A9A9A;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
