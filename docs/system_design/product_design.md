@@ -103,9 +103,11 @@ java的配置类一般位于项目的config包中。配置类一般有一下几�
 4. framework-system-cloud 就是centit-ip的基于spring cloud的实现，负责系统维护工作，和提供基础元素的访问接口。
 5. framework-cloud-client 是 centit-ip-app的spring cloud的实现。
 6. framework-cloud-demo 类似于 centit-ip-app-demo 是基于spring cloud进行业务开发的示例代码，开发人员可以将这个项目复制，并作为业务开发基础。
+7. config-server 是基于git的集中配置管理平台。
 
 基于spring cloud的项目和集成平台后端的接口规范是一样的，所以可以用相同的前段代码。eureka可以自动做多个微服务实例的负载均衡，server-gateway的负载均衡可以用nginx来做。所以这个微服务架构是可以处理高并发的业务的。
 
+**这个项目很特殊，几乎所有业务代码都是引用了集成平台，其自身的代码大多数都是和spring cloud整合的代码；所以如果需要新建基于spring cloud的微服务平台可以直接复制这个项目的所有代码作为项目的起点。**
 ## 前段框架
 
 目前前端框架是基于EasyUI做的，项目参见[centit-ui](https://github.com/ndxt/centit-ui)，文档参见[centit-ui文档](../centit-ui)。我们正在开发基于Vue的前段框架，敬请期待。
