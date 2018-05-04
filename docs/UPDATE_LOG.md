@@ -3,8 +3,9 @@ sidebar: auto
 ---
 # 历史更新记录
 
-## 2018-5-3
-添加[包依赖管理项目](https://github.com/ndxt/centit-framework-dependencies)。
+## 2018-5-4
+
+添加[包依赖管理项目](https://github.com/ndxt/centit-framework-dependencies)，发现版本\*.\*.1805。
 
 
 ## 2018-4-2

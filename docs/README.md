@@ -2,7 +2,7 @@
 sidebar: auto
 ---
 
-[南大先腾](http://www.centit.com/)一直注重在技术领域的研发投入，公司2008年成立基础研发部（现改名为技术管理中心），公司目前有300人，其中研发人员200余人，技术管理中心有30多人，占研发团队的15%。
+[南大先腾](http://www.centit.com/)一直注重在技术领域的研发投入，公司2008年成立基础研发部（现改名为技术管理中心），公司目前有300余人，其中研发人员200余人，技术管理中心有30多人，占研发团队的15%。
 
 “诚信、敬业、高效、共享”是南大先腾的企业文化。“共享”不仅仅是企业内部共享经营成果，还表示南大先腾愿意与技术领域的同仁共享技术研发成果。技术管理中心从2016年启动了开源计划，将公司技术应用经验、基础研发平台、研发工具等等从行业业务中剥离出来，并在[https://github.com/ndxt](https://github.com/ndxt)上开源，文档参见[https://ndxt.github.io/](https://ndxt.github.io/)。 任何个人或企业都可以免费使用。
 
@@ -86,26 +86,31 @@ sidebar: auto
 
 1. 添加持久化包依赖
 ```xml
-<dependencies>
-    <!-- 添加持久化框架包和对应的配置类包，推荐jdbc 也可以使用 hibernate或者mybatis-->
-    <dependency>
+<project>
+    <parent>
+        <artifactId>framework-release-dependencies</artifactId>
         <groupId>com.centit.framework</groupId>
-        <artifactId>centit-persistence-jdbc</artifactId>
-        <version>${centit.persistence.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>com.centit.framework</groupId>
-        <artifactId>centit-persistence-jdbc-config</artifactId>
-        <version>${centit.persistence.version}</version>
-    </dependency>
-    <!-- 添加数据库jdbc驱动包，根据项目实际情况添加-->
-    <dependency>
-        <groupId>mysql</groupId>
-        <artifactId>mysql-connector-java</artifactId>
-        <version>${mysql.version}</version>
-        <scope>runtime</scope>
-    </dependency>
-</dependencies>    
+        <version>1.0.1805</version>
+    </parent>
+    <!-- 框架相关依赖包信息不需要指定版本号-->
+    <dependencies>
+        <!-- 添加持久化框架包和对应的配置类包，推荐jdbc 也可以使用 hibernate或者mybatis-->
+        <dependency>
+            <groupId>com.centit.framework</groupId>
+            <artifactId>centit-persistence-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.centit.framework</groupId>
+            <artifactId>centit-persistence-jdbc-config</artifactId>
+        </dependency>
+        <!-- 添加数据库jdbc驱动包，根据项目实际情况添加-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
+</project>
 ```
 2. 添加数据源配置信息，在system.properties添加jdbc链接信息。
 
@@ -114,7 +119,7 @@ sidebar: auto
 ```java
 
 @Configuration
-@Import({JdbcConfig.class /*添加jdbc配置类*/,......})
+@Import({JdbcConfig.class /*添加jdbc配置类*/,/*...其他配置类...*/})
 @ComponentScan(basePackages = {"com.centit","com.otherpackage"},
         excludeFilters = @ComponentScan.Filter(value = org.springframework.stereotype.Controller.class))
 public class ServiceConfig {
