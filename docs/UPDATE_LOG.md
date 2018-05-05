@@ -5,7 +5,16 @@ sidebar: auto
 
 ## 2018-5-4
 
-添加[包依赖管理项目](https://github.com/ndxt/centit-framework-dependencies)，发现版本\*.\*.1805。
+添加[包依赖管理项目](https://github.com/ndxt/centit-framework-dependencies)，并发现版本\*.\*.1805。
+
+请将使用框架的项目继承framework-release-dependencies，版本号为1.0；没有用1.0.1805使用为1.0.1805发行了有错误，不能修改。
+```xml
+    <parent>
+        <artifactId>framework-release-dependencies</artifactId>
+        <groupId>com.centit.framework</groupId>
+        <version>1.0</version>
+    </parent>
+```
 
 
 ## 2018-4-2

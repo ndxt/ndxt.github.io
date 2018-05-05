@@ -90,7 +90,7 @@ sidebar: auto
     <parent>
         <artifactId>framework-release-dependencies</artifactId>
         <groupId>com.centit.framework</groupId>
-        <version>1.0.1805</version>
+        <version>1.0</version>
     </parent>
     <!-- 框架相关依赖包信息不需要指定版本号-->
     <dependencies>
