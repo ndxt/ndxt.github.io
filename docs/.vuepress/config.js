@@ -12,8 +12,8 @@ module.exports = {
     ],
     sidebar: {
       '/system_design/': [
-        'technical_design',
         'concept_design',
+        'technical_design',
         'product_design'
       ],
       '/projects/': [
