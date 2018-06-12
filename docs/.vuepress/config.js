@@ -23,12 +23,6 @@ module.exports = {
         'centit-database',
         'centit-presistence',
         'centit-scaffold',
-        'centit-framework',
-      /*'centit-framework-system',
-        'centit-integration-platform',
-        'centit-framework-cloud',
-        'centit-ui-easyui',
-        'centit-ui-vue',*/
         'centit-cas',
         'centit-fileserver',
         'centit-stat',
