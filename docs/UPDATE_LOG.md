@@ -3,6 +3,22 @@ sidebar: auto
 ---
 # 历史更新记录
 
+## 2018-6-19
+
+发布版本*.*.1806详细版本号参见[framework-release-dependencies](https://github.com/ndxt/centit-framework-dependencies/blob/master/framework-release-dependencies/pom.xml)。主要更新：
+
+1. 取消对MsgPusher包的依赖。
+2. 将流水号生成业务作为一个特定的功能从框架中剥离。
+3. 整理flyway初始化脚本。
+4. 添加安全认证策略，比如：
+     - 添加权限拦截规则配置项（access.resource.must.be.assigned）：配置到菜单的url都被拦截，必须分配给角色才可以访问。
+     - 添加配置不拦截url的配置项（security.ignore.url，多个用逗号隔开）。
+     - 添加配置浏览器对url中分号校验的配置项（http.firewall.allowSemicolon）（spring security-4.3.13默认不支持url中包含分号）
+5. 修改bug：
+     - IUnitInfo添加getUnitShortName()接口
+     - 获取机构所有角色接口bug
+     - 获取菜单bug
+
 ## 2018-5-4
 
 添加[包依赖管理项目](https://github.com/ndxt/centit-framework-dependencies)，并发现版本\*.\*.1805。
