@@ -3,6 +3,13 @@ sidebar: auto
 ---
 # 历史更新记录
 
+## 2018-8-24
+
+发布版本\*.\*.1808详细版本号参见[framework-release-dependencies](https://github.com/ndxt/centit-framework-dependencies/blob/master/framework-release-dependencies/pom.xml)。主要更新：
+
+1. 缓存机制的更新，框架的主版本号也从 4.1.* 更改为 4.2.* 了。项目可以直接更新版本号，相关接口没有变化。
+2. 修改一些不常运行到但是很重要的bug，建议更新。
+
 ## 2018-6-19
 
 发布版本*.*.1806详细版本号参见[framework-release-dependencies](https://github.com/ndxt/centit-framework-dependencies/blob/master/framework-release-dependencies/pom.xml)。主要更新：
