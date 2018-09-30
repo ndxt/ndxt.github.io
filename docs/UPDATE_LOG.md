@@ -3,6 +3,13 @@ sidebar: auto
 ---
 # 历史更新记录
 
+## 2018-9-30
+
+发布版本\*.\*.1809详细版本号参见[framework-release-dependencies](https://github.com/ndxt/centit-framework-dependencies/blob/master/framework-release-dependencies/pom.xml)。主要更新：
+
+1. 持久化层添加了数据版本的统一处理方法。
+2. 修改一些不常运行到但是很重要的bug，建议更新。
+
 ## 2018-8-24
 
 发布版本\*.\*.1808详细版本号参见[framework-release-dependencies](https://github.com/ndxt/centit-framework-dependencies/blob/master/framework-release-dependencies/pom.xml)。主要更新：
