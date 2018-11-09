@@ -18,6 +18,7 @@ login.cas.casHome = http://localhost:8080/centit-cas
 如果使用其他的配置方式就需要将这两个属性都配置为false，然后自行编写对应的配置类。
 
 ## 密码加密方式
+
 使用用户名密码配置时，密码是要加密为密文存储的，笔者认为一个好的密码加密方式应该具备一下特点：
 1. 密文不可逆，就是无法从密文知道密码，这个一般用散列的方式，比如：md5，SHA-1等散列算法。
 2. 相同的密码密文不能都是一样，所以一般在散列算法中“加盐”，并且为了提高破解难度可能会多次散列。
@@ -36,7 +37,9 @@ Spring security 4.* 版本以后推荐使用 org.springframework.security.crypto
 # session管理
 
 ## session的内容
+
 用户登录后框架会创建一个 [CentitUserDetails](https://github.com/ndxt/centit-framework/blob/master/framework-core/src/main/java/com/centit/framework/security/model/CentitUserDetails.java) 对象。它包含：
+
 1. 用户的基本信息
 2. 用户的岗位信息
 3. 用户的权限信息
@@ -44,4 +47,9 @@ Spring security 4.* 版本以后推荐使用 org.springframework.security.crypto
 5. 用户的设置信息
 
 ## session持久化
+
 Session可以存放在内存中，也可以存放在数据库比如H2或者Redis数据库中。需要实现[SessionRegistry](https://github.com/ndxt/centit-framework/blob/master/framework-core/src/main/java/com/centit/framework/security/model/MemorySessionRegistryImpl.java) 接口。
+
+# 用户的身份识别
+
+一般请求可以通过携带cookie的方式来说明自己的身份，在无法使用cookie的情况下可以在request的header的Authorization属性中设置token，这个token在用户以ajax形式认证时服务器返回的信息中包括这个值，客户端需要保存好这个token。
