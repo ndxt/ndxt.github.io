@@ -50,6 +50,13 @@ Spring security 4.* 版本以后推荐使用 org.springframework.security.crypto
 
 Session可以存放在内存中，也可以存放在数据库比如H2或者Redis数据库中。需要实现[SessionRegistry](https://github.com/ndxt/centit-framework/blob/master/framework-core/src/main/java/com/centit/framework/security/model/MemorySessionRegistryImpl.java) 接口。
 
-# 用户的身份识别
+# 用户登录
+## 登录方式
+
+1. 系统集成的spring security 有多种登录方式，可以通过配置实现用户名密码登录、ldap登录、cas单点登录等等。
+2. 为了提供进程间通讯，提供给应用程序客户端的登录方式"/system/mainframe/loginasclient"这个和spring security 提供的login接口一样，不同的是这个提供了特别的授权方式，让登录的服务可以访问系统提供的服务接口。
+3. 第三方认证互信接口"/system/mainframe/loginasthird"，调用这个接口需要提供ThirdPartyCheckUserDetails类型的bean它需要开发人员自己实现第三方认证机制。
+
+## 身份识别
 
 一般请求可以通过携带cookie的方式来说明自己的身份，在无法使用cookie的情况下可以在request的header的Authorization属性中设置token，这个token在用户以ajax形式认证时服务器返回的信息中包括这个值，客户端需要保存好这个token。
