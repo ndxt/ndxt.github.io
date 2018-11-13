@@ -6,12 +6,15 @@
 
 # 数据字典
 
-# 数据缓存
-CodeRepositoryCache
+和数据字典相关的对象有两个，一个式catalog（类别），一个式dictionary（字典）。
 
-[用静态变量缓存数据](https://blog.csdn.net/code_fan/article/details/81316281)
+1. catalog 类别中描述了，数字字典的内容，形式（列表或者树形），各个字段的名称和取值范围。
+2. dictionary 字典为数据明细，除了代码（code）数值（value）对，还有状态、排序、描述等信息。这些字段在每个类别中都可以有不同的解释。
+
+# 数据缓存
+
+框架中的[CodeRepositoryCache](https://github.com/ndxt/centit-framework/blob/master/framework-core/src/main/java/com/centit/framework/components/CodeRepositoryCache.java)类，将上面的所有主数据用[用静态变量缓存数据](https://blog.csdn.net/code_fan/article/details/81316281)。框架通过[CodeRepositoryUtil](https://github.com/ndxt/centit-framework/blob/master/framework-core/src/main/java/com/centit/framework/components/CodeRepositoryUtil.java)类提供了一组静态方法访问缓存类，请不要直接方位缓存对象。
 
 # 代码映射
-##  类CodeRepositoryUtil
 
-## 注解@DictionaryMap
+框架提供了一个注解DictionaryMap，将这个注解添加到po对应的属性上面，在将这个对象通过框架中的[DictionaryMapUtils](https://github.com/ndxt/centit-framework/blob/master/framework-core/src/main/java/com/centit/framework/core/dao/DictionaryMapUtils.java)类转换为json是会自动添加对应的数据字典值。
