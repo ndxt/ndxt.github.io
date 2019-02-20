@@ -2,6 +2,12 @@
 sidebar: auto
 ---
 # 历史更新记录
+## 2019-2-20
+发布版本\*.\*.1812详细版本号参见[framework-release-dependencies](https://github.com/ndxt/centit-framework-dependencies/blob/master/framework-release-dependencies/pom.xml)。主要更新：
+
+1. 添加了swagger2, 并为框架中的接口编写了对应文档
+2. 新增WrapUpResponseBody注解，让接口代码写的根简洁，更好调试。
+3. 纠正了对Spring session错误用法，让不同应用之间session共享更加方便。
 
 ## 2018-9-30
 
